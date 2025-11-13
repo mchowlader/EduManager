@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\bin\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.deps.json
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\bin\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\bin\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\refint\EduSystem.StudentIdentity.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\EduSystem.StudentIdentity.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Infrastructure\obj\Debug\net10.0\ref\EduSystem.StudentIdentity.Infrastructure.dll

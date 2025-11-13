@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Billing.Api/1.0.0": {
+        "dependencies": {
+          "EduSystem.Billing.Application": "1.0.0",
+          "EduSystem.Billing.Infrastructure": "1.0.0",
+          "EduSystem.Billing.Shared": "1.0.0"
+        },
+        "runtime": {
+          "EduSystem.Billing.Api.dll": {}
+        }
+      },
+      "EduSystem.Billing.Application/1.0.0": {
+        "runtime": {
+          "EduSystem.Billing.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduSystem.Billing.Infrastructure/1.0.0": {
+        "runtime": {
+          "EduSystem.Billing.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduSystem.Billing.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.Billing.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Billing.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Billing.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Billing.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Billing.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

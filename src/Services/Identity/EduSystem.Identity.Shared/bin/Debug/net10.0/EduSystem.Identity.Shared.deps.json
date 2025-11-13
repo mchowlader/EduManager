@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Identity.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.Identity.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Identity.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

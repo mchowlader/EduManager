@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\refint\EduSystem.Identity.Shared.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\ref\EduSystem.Identity.Shared.dll

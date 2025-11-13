@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Notifications.Api/1.0.0": {
+        "dependencies": {
+          "EduSystem.Notifications.Application": "1.0.0",
+          "EduSystem.Notifications.Infrastructure": "1.0.0",
+          "EduSystem.Notifications.Shared": "1.0.0"
+        },
+        "runtime": {
+          "EduSystem.Notifications.Api.dll": {}
+        }
+      },
+      "EduSystem.Notifications.Application/1.0.0": {
+        "runtime": {
+          "EduSystem.Notifications.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduSystem.Notifications.Infrastructure/1.0.0": {
+        "runtime": {
+          "EduSystem.Notifications.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduSystem.Notifications.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.Notifications.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Notifications.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Notifications.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Notifications.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Notifications.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

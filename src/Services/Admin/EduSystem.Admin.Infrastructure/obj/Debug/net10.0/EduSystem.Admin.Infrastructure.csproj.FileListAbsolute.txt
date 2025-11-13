@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\bin\Debug\net10.0\EduSystem.Admin.Infrastructure.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\bin\Debug\net10.0\EduSystem.Admin.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\bin\Debug\net10.0\EduSystem.Admin.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\refint\EduSystem.Admin.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\EduSystem.Admin.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\obj\Debug\net10.0\ref\EduSystem.Admin.Infrastructure.dll

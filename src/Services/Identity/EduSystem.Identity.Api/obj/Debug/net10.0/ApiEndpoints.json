@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
+    "Method": "RegisterTenant",
+    "RelativePath": "api/tenants/register",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "EduSystem.Identity.Application.DTOs.TenantRegistrationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Tenants"
+    ],
+    "EndpointName": "RegisterTenant"
+  }
+]

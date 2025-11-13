@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\bin\Debug\net10.0\EduSystem.Identity.Domain.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\bin\Debug\net10.0\EduSystem.Identity.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\bin\Debug\net10.0\EduSystem.Identity.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\refint\EduSystem.Identity.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\EduSystem.Identity.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\obj\Debug\net10.0\ref\EduSystem.Identity.Domain.dll

@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\bin\Debug\net10.0\EduSystem.StudentIdentity.Application.deps.json
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\bin\Debug\net10.0\EduSystem.StudentIdentity.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\bin\Debug\net10.0\EduSystem.StudentIdentity.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\refint\EduSystem.StudentIdentity.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\EduSystem.StudentIdentity.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\StudentIdentity\EduSystem.StudentIdentity.Application\obj\Debug\net10.0\ref\EduSystem.StudentIdentity.Application.dll

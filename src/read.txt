@@ -1,0 +1,12 @@
+dotnet sln EduSystem.slnx add Services\Identity\EduSystem.Identity.Api
+dotnet sln EduSystem.slnx add Services\Identity\EduSystem.Identity.Application
+dotnet sln EduSystem.slnx add Services\Identity\EduSystem.Identity.Domain
+dotnet sln EduSystem.slnx add Services\Identity\EduSystem.Identity.Infrastructure
+dotnet sln EduSystem.slnx add Services\Identity\EduSystem.Identity.Shared
+
+
+dotnet new web -n EduSystem.StudentIdentity.Api -f net10.0 --no-https
+dotnet new classlib -n EduSystem.StudentIdentity.Application-f net10.0
+dotnet new classlib -n EduSystem.StudentIdentity.Domain-f net10.0
+dotnet new classlib -n EduSystem.StudentIdentity.Infrastructure-f net10.0
+dotnet new classlib -n EduSystem.StudentIdentity.Shared-f net10.0

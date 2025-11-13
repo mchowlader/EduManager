@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\refint\EduSystem.Report.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\ref\EduSystem.Report.Application.dll

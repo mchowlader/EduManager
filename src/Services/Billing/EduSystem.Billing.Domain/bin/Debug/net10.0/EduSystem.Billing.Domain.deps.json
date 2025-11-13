@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Billing.Domain/1.0.0": {
+        "runtime": {
+          "EduSystem.Billing.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Billing.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

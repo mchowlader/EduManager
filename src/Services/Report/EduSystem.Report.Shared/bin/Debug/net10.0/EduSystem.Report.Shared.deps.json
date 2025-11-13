@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Report.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.Report.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Report.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

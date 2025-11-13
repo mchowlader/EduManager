@@ -1,0 +1,56 @@
+<Solution>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Admin/">
+    <Project Path="Services/Admin/EduSystem.Admin.Api/EduSystem.Admin.Api.csproj" />
+    <Project Path="Services/Admin/EduSystem.Admin.Application/EduSystem.Admin.Application.csproj" />
+    <Project Path="Services/Admin/EduSystem.Admin.Domain/EduSystem.Admin.Domain.csproj" />
+    <Project Path="Services/Admin/EduSystem.Admin.Infrastructure/EduSystem.Admin.Infrastructure.csproj" />
+    <Project Path="Services/Admin/EduSystem.Admin.Shared/EduSystem.Admin.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Attendance/">
+    <Project Path="Services/Attendance/EduSystem.Attendance.Api/EduSystem.Attendance.Api.csproj" />
+    <Project Path="Services/Attendance/EduSystem.Attendance.Application/EduSystem.Attendance.Application.csproj" />
+    <Project Path="Services/Attendance/EduSystem.Attendance.Domain/EduSystem.Attendance.Domain.csproj" />
+    <Project Path="Services/Attendance/EduSystem.Attendance.Infrastructure/EduSystem.Attendance.Infrastructure.csproj" />
+    <Project Path="Services/Attendance/EduSystem.Attendance.Shared/EduSystem.Attendance.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Billing/">
+    <Project Path="Services/Billing/EduSystem.Billing.Api/EduSystem.Billing.Api.csproj" />
+    <Project Path="Services/Billing/EduSystem.Billing.Application/EduSystem.Billing.Application.csproj" />
+    <Project Path="Services/Billing/EduSystem.Billing.Domain/EduSystem.Billing.Domain.csproj" />
+    <Project Path="Services/Billing/EduSystem.Billing.Infrastructure/EduSystem.Billing.Infrastructure.csproj" />
+    <Project Path="Services/Billing/EduSystem.Billing.Shared/EduSystem.Billing.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Identity/">
+    <Project Path="Services/Identity/EduSystem.Identity.Api/EduSystem.Identity.Api.csproj" />
+    <Project Path="Services/Identity/EduSystem.Identity.Application/EduSystem.Identity.Application.csproj" />
+    <Project Path="Services/Identity/EduSystem.Identity.Domain/EduSystem.Identity.Domain.csproj" />
+    <Project Path="Services/Identity/EduSystem.Identity.Infrastructure/EduSystem.Identity.Infrastructure.csproj" />
+    <Project Path="Services/Identity/EduSystem.Identity.Shared/EduSystem.Identity.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Notifications/">
+    <Project Path="Services/Notifications/EduSystem.Notifications.Api/EduSystem.Notifications.Api.csproj" />
+    <Project Path="Services/Notifications/EduSystem.Notifications.Application/EduSystem.Notifications.Application.csproj" />
+    <Project Path="Services/Notifications/EduSystem.Notifications.Domain/EduSystem.Notifications.Domain.csproj" />
+    <Project Path="Services/Notifications/EduSystem.Notifications.Infrastructure/EduSystem.Notifications.Infrastructure.csproj" />
+    <Project Path="Services/Notifications/EduSystem.Notifications.Shared/EduSystem.Notifications.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Report/">
+    <Project Path="Services/Report/EduSystem.Report.Api/EduSystem.Report.Api.csproj" />
+    <Project Path="Services/Report/EduSystem.Report.Application/EduSystem.Report.Application.csproj" />
+    <Project Path="Services/Report/EduSystem.Report.Domain/EduSystem.Report.Domain.csproj" />
+    <Project Path="Services/Report/EduSystem.Report.Infrastructure/EduSystem.Report.Infrastructure.csproj" />
+    <Project Path="Services/Report/EduSystem.Report.Shared/EduSystem.Report.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/StudentIdentity/">
+    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Api/EduSystem.StudentIdentity.Api.csproj" />
+    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Application/EduSystem.StudentIdentity.Application.csproj" />
+    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Domain/EduSystem.StudentIdentity.Domain.csproj" />
+    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Infrastructure/EduSystem.StudentIdentity.Infrastructure.csproj" />
+    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Shared/EduSystem.StudentIdentity.Shared.csproj" />
+  </Folder>
+  <Folder Name="/UI/">
+    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj" />
+    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web/EduSystem.UI.Web.csproj" />
+  </Folder>
+</Solution>

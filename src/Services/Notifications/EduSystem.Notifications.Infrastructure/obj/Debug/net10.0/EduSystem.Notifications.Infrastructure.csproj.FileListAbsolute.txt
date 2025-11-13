@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\bin\Debug\net10.0\EduSystem.Notifications.Infrastructure.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\bin\Debug\net10.0\EduSystem.Notifications.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\bin\Debug\net10.0\EduSystem.Notifications.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\refint\EduSystem.Notifications.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\EduSystem.Notifications.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\obj\Debug\net10.0\ref\EduSystem.Notifications.Infrastructure.dll

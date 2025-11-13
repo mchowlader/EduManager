@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EduSystem.StudentIdentity.Application\EduSystem.StudentIdentity.Application.csproj" />
+    <ProjectReference Include="..\EduSystem.StudentIdentity.Infrastructure\EduSystem.StudentIdentity.Infrastructure.csproj" />
+    <ProjectReference Include="..\EduSystem.StudentIdentity.Shared\EduSystem.StudentIdentity.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

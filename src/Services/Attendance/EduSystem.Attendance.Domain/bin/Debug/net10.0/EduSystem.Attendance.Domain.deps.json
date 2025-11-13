@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "EduSystem.Attendance.Domain/1.0.0": {
+        "runtime": {
+          "EduSystem.Attendance.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EduSystem.Attendance.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
