@@ -29,7 +29,6 @@ public class RegisterTenantCommandHandler(
     {
         var dto = request.Registration;
 
-        // ১. Slug uniqueness validate করুন
         if (await _tenantRepository.ExistsAsync(dto!.Slug))
             return Result<Guid>.Failure("Tenant with the same slug already exists.");
 
@@ -37,13 +36,10 @@ public class RegisterTenantCommandHandler(
 
         try
         {
-            // ২. Database তৈরি করুন
             connectionString = await _dbProvisioner.CreateDatabaseAsync(dto.Slug);
 
-            // ৩. Transaction শুরু করুন
             await _unitOfWork.BeginTransactionAsync();
 
-            // ৪. Tenant তৈরি করুন
             var tenant = await CreateTenantAsync(dto, connectionString);
             if (tenant == null)
             {
@@ -52,7 +48,6 @@ public class RegisterTenantCommandHandler(
                 return Result<Guid>.Failure("Failed to create tenant.");
             }
 
-            // ৫. Admin user তৈরি করুন
             var tenantAdmin = await CreateTenantAdminAsync(tenant, dto);
             if (tenantAdmin == null)
             {
@@ -61,17 +56,14 @@ public class RegisterTenantCommandHandler(
                 return Result<Guid>.Failure("Failed to create admin user.");
             }
 
-            // ৬. সব ঠিক থাকলে commit করুন
             await _unitOfWork.CommitAsync();
 
             return Result<Guid>.Success(tenant.Id);
         }
         catch (Exception ex)
         {
-            // Transaction rollback করুন
             await _unitOfWork.RollbackAsync();
 
-            // Database drop করুন
             if (connectionString != null)
             {
                 await CleanupDatabaseAsync(dto.Slug);
@@ -80,7 +72,6 @@ public class RegisterTenantCommandHandler(
             return Result<Guid>.Failure("Tenant registration failed: " + ex.Message);
         }
     }
-
     private async Task<Tenant?> CreateTenantAsync(TenantRegistrationDto dto, string connectionString)
     {
         var tenant = new Tenant

@@ -46,11 +46,11 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
                 await using var createCmd = new SqlCommand(createDbQuery, connection);
                 await createCmd.ExecuteNonQueryAsync();
 
-                Console.WriteLine($"✅ Database '{dbName}' created successfully!");
+                Console.WriteLine($"Database '{dbName}' created successfully!");
             }
             else
             {
-                Console.WriteLine($"ℹ️ Database '{dbName}' already exists.");
+                Console.WriteLine($"Database '{dbName}' already exists.");
             }
         }
 
@@ -72,7 +72,7 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
         using var connection = new SqlConnection(_masterConnectionString);
         await connection.OpenAsync();
 
-        // সব connection close করুন
+        // all connection close 
         var closeConnections = $@"
         ALTER DATABASE [{databaseName}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
     ";
@@ -82,7 +82,7 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
             await command.ExecuteNonQueryAsync();
         }
 
-        // Database drop করুন
+        // Database drop 
         var dropDatabase = $"DROP DATABASE [{databaseName}];";
         using (var command = new SqlCommand(dropDatabase, connection))
         {
