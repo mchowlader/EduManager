@@ -64,6 +64,52 @@
           }
         }
       },
+      "MassTransit/8.5.5": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit.Abstractions": "8.5.5"
+        },
+        "compile": {
+          "lib/net9.0/MassTransit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MassTransit.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MassTransit.Abstractions/8.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/MassTransit.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MassTransit.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MassTransit.RabbitMQ/8.5.5": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit": "8.5.5",
+          "RabbitMQ.Client": "7.1.2"
+        },
+        "compile": {
+          "lib/net9.0/MassTransit.RabbitMqTransport.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/MassTransit.RabbitMqTransport.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MediatR/13.1.0": {
         "type": "package",
         "dependencies": {
@@ -1203,6 +1249,19 @@
           }
         }
       },
+      "RabbitMQ.Client/7.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -1536,15 +1595,15 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/9.0.4": {
+      "System.Security.Cryptography.ProtectedData/10.0.0": {
         "type": "package",
         "compile": {
-          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net10.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net10.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
@@ -1596,6 +1655,9 @@
         "dependencies": {
           "EduSystem.Identity.Domain": "1.0.0",
           "EduSystem.Identity.Shared": "1.0.0",
+          "EduSystem.Shared.Event": "1.0.0",
+          "EduSystem.Shared.Infrastructure": "1.0.0",
+          "EduSystem.Shared.Messaging": "1.0.0",
           "MediatR": "13.1.0"
         },
         "compile": {
@@ -1623,7 +1685,8 @@
           "EduSystem.Identity.Application": "1.0.0",
           "EduSystem.Identity.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
+          "System.Security.Cryptography.ProtectedData": "10.0.0"
         },
         "compile": {
           "bin/placeholder/EduSystem.Identity.Infrastructure.dll": {}
@@ -1640,6 +1703,44 @@
         },
         "runtime": {
           "bin/placeholder/EduSystem.Identity.Shared.dll": {}
+        }
+      },
+      "EduSystem.Shared.Event/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.Shared.Event.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.Shared.Event.dll": {}
+        }
+      },
+      "EduSystem.Shared.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
+        }
+      },
+      "EduSystem.Shared.Messaging/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EduSystem.Shared.Event": "1.0.0",
+          "EduSystem.Shared.Infrastructure": "1.0.0",
+          "MassTransit": "8.5.5",
+          "MassTransit.RabbitMQ": "8.5.5",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EduSystem.Shared.Messaging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.Shared.Messaging.dll": {}
         }
       }
     }
@@ -1732,6 +1833,69 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "MassTransit/8.5.5": {
+      "sha512": "bSg8k5q+rP1s+dIGXLLbctqDGdIkfDjdxwNWtCUH7xNCN9ZuM7mqSPQPIFgaYIi34e81m4FqAqo4CAHuWPkhRA==",
+      "type": "package",
+      "path": "masstransit/8.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net472/MassTransit.dll",
+        "lib/net472/MassTransit.xml",
+        "lib/net8.0/MassTransit.dll",
+        "lib/net8.0/MassTransit.xml",
+        "lib/net9.0/MassTransit.dll",
+        "lib/net9.0/MassTransit.xml",
+        "lib/netstandard2.0/MassTransit.dll",
+        "lib/netstandard2.0/MassTransit.xml",
+        "masstransit.8.5.5.nupkg.sha512",
+        "masstransit.nuspec",
+        "mt-logo-small.png"
+      ]
+    },
+    "MassTransit.Abstractions/8.5.5": {
+      "sha512": "0mn2Ay17dD6z5tgSLjbVRlldSbL9iowzFEfVgVfBXVG5ttz9dSWeR4TrdD6pqH93GWXp4CvSmF8i1HqxLX7DZw==",
+      "type": "package",
+      "path": "masstransit.abstractions/8.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net472/MassTransit.Abstractions.dll",
+        "lib/net472/MassTransit.Abstractions.xml",
+        "lib/net8.0/MassTransit.Abstractions.dll",
+        "lib/net8.0/MassTransit.Abstractions.xml",
+        "lib/net9.0/MassTransit.Abstractions.dll",
+        "lib/net9.0/MassTransit.Abstractions.xml",
+        "lib/netstandard2.0/MassTransit.Abstractions.dll",
+        "lib/netstandard2.0/MassTransit.Abstractions.xml",
+        "masstransit.abstractions.8.5.5.nupkg.sha512",
+        "masstransit.abstractions.nuspec",
+        "mt-logo-small.png"
+      ]
+    },
+    "MassTransit.RabbitMQ/8.5.5": {
+      "sha512": "UxWn4o90YVMF9PBkJeoskOFPneh6YtnI1fLJHtvZiSAG0eoiRrWPGa+6FQCvjkQ/ljCKfjzok2eGZc/vmNZ01A==",
+      "type": "package",
+      "path": "masstransit.rabbitmq/8.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGet.README.md",
+        "lib/net472/MassTransit.RabbitMqTransport.dll",
+        "lib/net472/MassTransit.RabbitMqTransport.xml",
+        "lib/net8.0/MassTransit.RabbitMqTransport.dll",
+        "lib/net8.0/MassTransit.RabbitMqTransport.xml",
+        "lib/net9.0/MassTransit.RabbitMqTransport.dll",
+        "lib/net9.0/MassTransit.RabbitMqTransport.xml",
+        "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll",
+        "lib/netstandard2.0/MassTransit.RabbitMqTransport.xml",
+        "masstransit.rabbitmq.8.5.5.nupkg.sha512",
+        "masstransit.rabbitmq.nuspec",
+        "mt-logo-small.png"
       ]
     },
     "MediatR/13.1.0": {
@@ -3744,6 +3908,23 @@
         "packageIcon.png"
       ]
     },
+    "RabbitMQ.Client/7.1.2": {
+      "sha512": "y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
+      "type": "package",
+      "path": "rabbitmq.client/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/RabbitMQ.Client.dll",
+        "lib/net8.0/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.7.1.2.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/10.0.1": {
       "sha512": "177+JNAV5TNvy8gLCdrcWBY9n2jdkxiHQDY4vhaExeqUpKrOqDatCcm/kW3kze60GqfnZ2NobD/IKiAPOL+CEw==",
       "type": "package",
@@ -4228,15 +4409,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/9.0.4": {
-      "sha512": "o94k2RKuAce3GeDMlUvIXlhVa1kWpJw95E6C9LwW0KlG0nj5+SgCiIxJ2Eroqb9sLtG1mEMbFttZIBZ13EJPvQ==",
+    "System.Security.Cryptography.ProtectedData/10.0.0": {
+      "sha512": "qy6C3gQRTrfhFfuiIYU1jNwWfFdJpBVo1BARW7jgMm1zTEm3LRzLLyOLJGaAuKE+nZCGkEP71y4rj9NWjqLGdQ==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/9.0.4",
+      "path": "system.security.cryptography.protecteddata/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
@@ -4245,6 +4425,8 @@
         "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
+        "lib/net10.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net10.0/System.Security.Cryptography.ProtectedData.xml",
         "lib/net462/System.Security.Cryptography.ProtectedData.dll",
         "lib/net462/System.Security.Cryptography.ProtectedData.xml",
         "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
@@ -4257,7 +4439,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
+        "system.security.cryptography.protecteddata.10.0.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -4332,6 +4514,21 @@
       "type": "project",
       "path": "../EduSystem.Identity.Shared/EduSystem.Identity.Shared.csproj",
       "msbuildProject": "../EduSystem.Identity.Shared/EduSystem.Identity.Shared.csproj"
+    },
+    "EduSystem.Shared.Event/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj",
+      "msbuildProject": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj"
+    },
+    "EduSystem.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
+    },
+    "EduSystem.Shared.Messaging/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj",
+      "msbuildProject": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4339,6 +4536,7 @@
       "EduSystem.Identity.Application >= 1.0.0",
       "EduSystem.Identity.Infrastructure >= 1.0.0",
       "EduSystem.Identity.Shared >= 1.0.0",
+      "EduSystem.Shared.Messaging >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.0",
       "Swashbuckle.AspNetCore >= 10.0.1"
@@ -4385,6 +4583,9 @@
             },
             "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj": {
               "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj"
+            },
+            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
             }
           }
         }

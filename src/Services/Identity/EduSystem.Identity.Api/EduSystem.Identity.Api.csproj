@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Application\EduSystem.Identity.Application.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Infrastructure\EduSystem.Identity.Infrastructure.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Shared\EduSystem.Identity.Shared.csproj" />

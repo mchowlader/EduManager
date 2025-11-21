@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oDN9cykfkE4=",
+  "dgSpecHash": "jwLgJy+1inI=",
   "success": true,
   "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
   "expectedPackageFiles": [
@@ -34,8 +34,7 @@
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.jsinterop\\10.0.0\\microsoft.jsinterop.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.0\\microsoft.jsinterop.webassembly.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.0\\microsoft.net.illink.tasks.10.0.0.nupkg.sha512",
-    "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.0\\microsoft.net.sdk.webassembly.pack.10.0.0.nupkg.sha512",
-    "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\10.0.0\\microsoft.netcore.app.runtime.mono.browser-wasm.10.0.0.nupkg.sha512"
+    "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.0\\microsoft.net.sdk.webassembly.pack.10.0.0.nupkg.sha512"
   ],
   "logs": []
 }

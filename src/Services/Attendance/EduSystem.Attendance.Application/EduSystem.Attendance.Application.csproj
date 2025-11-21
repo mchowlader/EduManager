@@ -13,4 +13,8 @@
     <Folder Include="Validators\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EduSystem.Attendance.Infrastructure\EduSystem.Attendance.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

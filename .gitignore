@@ -1,2 +1,63 @@
-# Ignore Visual Studio workspace files
-.vs/
+# Build Folders
+bin/
+obj/
+out/
+
+# VS Code / Rider / Visual Studio
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+*.vs/
+*.vcxproj.user
+*.dbmdl
+
+# Publish Output
+*.Publish.xml
+*.azurePubxml
+*.pubxml.user
+
+# NuGet
+*.nupkg
+# NuGet Packages folder
+packages/
+# NuGet v3
+*.nuget.cache
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# Coverage
+*.coverage
+*.coveragexml
+*.opencover.xml
+TestResults/
+coverage/
+
+# MSBuild
+*.log
+*.tlog/
+*.lastbuildstate
+*.vsmdi
+*.cachefile
+
+# Others
+*.DS_Store
+*.bak
+*.swp
+*.tmp
+
+# ASP.NET temporary files
+App_Data/

@@ -207,8 +207,8 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.446bhdmzwt.wasm
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.7b4n2gu3ue.pdb
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.ruhjl7o3ym.wasm
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.o8m5lqkkwe.pdb
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.js.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.f7yamg8acn.wasm.gz
@@ -418,8 +418,8 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.446bhdmzwt.wasm.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.7b4n2gu3ue.pdb.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.ruhjl7o3ym.wasm.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\EduSystem.UI.Web.Client.o8m5lqkkwe.pdb.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\EduSystem.UI.Web.Client.staticwebassets.runtime.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\bin\Debug\net10.0\EduSystem.UI.Web.Client.staticwebassets.endpoints.json
@@ -1060,9 +1060,9 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\8gd5mjg284-{0}-tjcz0u77k5-tjcz0u77k5.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\vv9jkceo1d-{0}-tptq2av103-tptq2av103.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\p6i9356lbq-{0}-lfu7j35m59-lfu7j35m59.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\vmsbsmpe8a-{0}-446bhdmzwt-446bhdmzwt.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\sbs0iy89j1-{0}-7b4n2gu3ue-7b4n2gu3ue.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\5i13gk8xgd-{0}-3fzjevy10q-3fzjevy10q.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\vmsbsmpe8a-{0}-ruhjl7o3ym-ruhjl7o3ym.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\sbs0iy89j1-{0}-o8m5lqkkwe-o8m5lqkkwe.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\compressed\5i13gk8xgd-{0}-9hm5jj5xw5-9hm5jj5xw5.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json.cache
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.development.json

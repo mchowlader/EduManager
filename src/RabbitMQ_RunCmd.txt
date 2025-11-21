@@ -1,0 +1,8 @@
+ cd "C:\Program Files\RabbitMQ Server\rabbitmq_server-4.2.0\sbin"
+
+# Management plugin enable 
+.\rabbitmq-plugins.bat enable rabbitmq_management
+
+# RabbitMQ restart 
+.\rabbitmq-service.bat stop
+.\rabbitmq-service.bat start

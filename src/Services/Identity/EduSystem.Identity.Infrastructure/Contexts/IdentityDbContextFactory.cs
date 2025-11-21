@@ -12,9 +12,7 @@ public class IdentityDbContextFactory : IDesignTimeDbContextFactory<IdentityDbCo
         var apiPath = Path.Combine(basePath, "..", "EduSystem.Identity.Api");
 
         if (!Directory.Exists(apiPath))
-        {
             apiPath = Path.Combine(basePath);
-        }
 
         var configuration = new ConfigurationBuilder()
             .SetBasePath(apiPath)

@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Shared\Events\EduSystem.Shared.Event\EduSystem.Shared.Event.csproj" />
+    <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Domain\EduSystem.Identity.Domain.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Shared\EduSystem.Identity.Shared.csproj" />
   </ItemGroup>

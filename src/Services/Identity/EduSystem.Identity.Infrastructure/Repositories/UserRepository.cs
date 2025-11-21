@@ -15,11 +15,10 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
             await context.SaveChangesAsync();
             return user;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
            return null!;
         }
-
     }
 
     public async Task<User?> GetByEmailAsync(string email)

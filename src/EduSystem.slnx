@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/Services/" />
+  <Folder Name="/Services/">
+    <File Path="migration dbcontext run process.txt" />
+  </Folder>
   <Folder Name="/Services/Admin/">
     <Project Path="Services/Admin/EduSystem.Admin.Api/EduSystem.Admin.Api.csproj" />
     <Project Path="Services/Admin/EduSystem.Admin.Application/EduSystem.Admin.Application.csproj" />
@@ -41,6 +43,16 @@
     <Project Path="Services/Report/EduSystem.Report.Domain/EduSystem.Report.Domain.csproj" />
     <Project Path="Services/Report/EduSystem.Report.Infrastructure/EduSystem.Report.Infrastructure.csproj" />
     <Project Path="Services/Report/EduSystem.Report.Shared/EduSystem.Report.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Services/Shared/">
+    <File Path="RabbitMQ_RunCmd.txt" />
+    <Project Path="Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj" Id="b2381d9a-c319-4f6a-a93a-047c0897ef24" />
+  </Folder>
+  <Folder Name="/Services/Shared/Events/">
+    <Project Path="Services/Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj" Id="bf1e3088-0618-4206-9740-b2cee38b840f" />
+  </Folder>
+  <Folder Name="/Services/Shared/Messaging/">
+    <Project Path="Services/Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj" Id="3ff04559-5345-45c0-a3af-09b9f2f25e7d" />
   </Folder>
   <Folder Name="/Services/StudentIdentity/">
     <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Api/EduSystem.StudentIdentity.Api.csproj" />

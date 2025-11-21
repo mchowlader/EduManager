@@ -3,6 +3,8 @@ using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Event;
+using EduSystem.Shared.Messaging;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -17,14 +19,15 @@ public class RegisterTenantCommandHandler(
     IUserRepository userRepository,
     IPasswordHasher passwordHasher,
     ITenantDatabaseProvisioner dbProvisioner,
-    IUnitOfWork unitOfWork) : IRequestHandler<RegisterTenantCommand, Result<Guid>>
+    IUnitOfWork unitOfWork,
+    IEventBus eventBus) : IRequestHandler<RegisterTenantCommand, Result<Guid>>
 {
     private readonly ITenantRepository _tenantRepository = tenantRepository;
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IPasswordHasher _passwordHasher = passwordHasher;
     private readonly ITenantDatabaseProvisioner _dbProvisioner = dbProvisioner;
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
-
+    private readonly IEventBus _eventBus = eventBus;
     public async Task<Result<Guid>> Handle(RegisterTenantCommand request, CancellationToken cancellationToken)
     {
         var dto = request.Registration;
@@ -37,7 +40,6 @@ public class RegisterTenantCommandHandler(
         try
         {
             connectionString = await _dbProvisioner.CreateDatabaseAsync(dto.Slug);
-
             await _unitOfWork.BeginTransactionAsync();
 
             var tenant = await CreateTenantAsync(dto, connectionString);
@@ -57,6 +59,16 @@ public class RegisterTenantCommandHandler(
             }
 
             await _unitOfWork.CommitAsync();
+
+            await _eventBus
+            .PublishAsync(new TenantDatabaseCreatedEvent
+            {
+                TenantId = tenant.Id,
+                TenantSlug = tenant.Slug!,
+                EncryptedConnectionString = connectionString,
+                CreatedAt = DateTime.UtcNow
+            }, cancellationToken)
+            .ConfigureAwait(false);
 
             return Result<Guid>.Success(tenant.Id);
         }
@@ -114,8 +126,7 @@ public class RegisterTenantCommandHandler(
         }
         catch
         {
-            // Database cleanup এ সমস্যা হলেও ignore করুন
-            // লগ করতে পারেন যদি প্রয়োজন হয়
+            //implement logging here to log the failure of database cleanup
         }
     }
 }

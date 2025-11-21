@@ -1,0 +1,10 @@
+1. Go to the Infructructure project directory:
+   ```bash
+   cd D:\MCH\PetProject\EduManager\src\Services
+   cd EduSystem.Attendance.Infrastructure 
+   ```
+2. Run the Entity Framework Core migration command:
+   ```bash
+   dotnet build
+   dotnet ef migrations add InitialCreate --startup-project ../EduSystem.Attendance.Api
+   ```
