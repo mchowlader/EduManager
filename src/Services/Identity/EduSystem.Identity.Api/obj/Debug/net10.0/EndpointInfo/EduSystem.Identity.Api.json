@@ -5,18 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/test-config": {
-      "get": {
-        "tags": [
-          "EduSystem.Identity.Api"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/tenants/register": {
       "post": {
         "tags": [
@@ -84,9 +72,6 @@
     }
   },
   "tags": [
-    {
-      "name": "EduSystem.Identity.Api"
-    },
     {
       "name": "Tenants"
     }

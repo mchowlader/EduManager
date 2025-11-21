@@ -1670,6 +1670,9 @@
       "EduSystem.Identity.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EduSystem.Identity.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/EduSystem.Identity.Domain.dll": {}
         },

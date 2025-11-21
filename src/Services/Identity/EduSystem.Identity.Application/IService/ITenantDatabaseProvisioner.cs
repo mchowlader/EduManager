@@ -2,6 +2,7 @@
 
 public interface ITenantDatabaseProvisioner
 {
-    Task<string> CreateDatabaseAsync(string tenantSlug);
-    Task DropDatabaseAsync(string tenantSlug);
+    //Task<bool> CreateDatabaseAsync(string tenantSlug, out string connectionString);
+    Task<(bool Success, string EncryptedConnectionString)> CreateDatabaseAsync(string tenantSlug);
+    Task<bool> DropDatabaseAsync(string tenantSlug);
 }

@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "EduSystem.Identity.Domain/1.0.0": {
+        "dependencies": {
+          "EduSystem.Identity.Shared": "1.0.0"
+        },
         "runtime": {
           "EduSystem.Identity.Domain.dll": {}
+        }
+      },
+      "EduSystem.Identity.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.Identity.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "EduSystem.Identity.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.Identity.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

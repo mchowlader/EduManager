@@ -17,144 +17,42 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
         _connectionStringEncryptor = connectionStringEncryptor;
     }
 
-    //public async Task<string> CreateDatabaseAsync(string tenantSlug)
-    //{
-    //    // 1. Tenant-specific database name
-    //    var dbName = $"EduSystem_{tenantSlug}";
-
-    //    // 2. Parse master connection string
-    //    var builder = new SqlConnectionStringBuilder(_masterConnectionString);
-
-    //    // 3. Connect to 'master' database to create new database
-    //    var originalDatabase = builder.InitialCatalog;
-    //    builder.InitialCatalog = "master";
-    //    var masterConnection = builder.ConnectionString;
-
-    //    // 4. Create new database if not exists
-    //    await using (var connection = new SqlConnection(masterConnection))
-    //    {
-    //        await connection.OpenAsync();
-
-    //        // Check if database exists
-    //        var checkDbQuery = $"SELECT database_id FROM sys.databases WHERE Name = '{dbName}'";
-    //        await using var checkCmd = new SqlCommand(checkDbQuery, connection);
-    //        var exists = await checkCmd.ExecuteScalarAsync();
-
-    //        if (exists == null)
-    //        {
-    //            // Create new database
-    //            var createDbQuery = $"CREATE DATABASE [{dbName}]";
-    //            await using var createCmd = new SqlCommand(createDbQuery, connection);
-    //            await createCmd.ExecuteNonQueryAsync();
-
-    //            //Console.WriteLine($"Database '{dbName}' created successfully!");
-    //        }
-    //        else
-    //        {
-    //            //Console.WriteLine($"Database '{dbName}' already exists.");
-    //        }
-    //    }
-
-    //    // 5. Create tenant-specific connection string
-    //    builder.InitialCatalog = dbName;
-    //    var tenantConnectionString = builder.ConnectionString;
-
-    //    // 6. Create tables in the new tenant database using TenantDbContext
-    //    // TODO: এখানে TenantDbContext ব্যবহার করতে হবে (School/Student tables এর জন্য)
-    //    // এখনকার জন্য শুধু database create করছি
-
-    //    return tenantConnectionString;
-    //}
-
-    //public async Task<string> CreateDatabaseAsync_v2(string tenantSlug)
-    //{
-    //    var dbName = $"EduSystem_{tenantSlug}";
-    //    var dbUser = $"tenant_{tenantSlug}_user";
-    //    var dbPassword = await GenerateSecurePassword();
-
-    //    var builder = new SqlConnectionStringBuilder(_masterConnectionString);
-    //    var orginalDatabase = builder.InitialCatalog;
-    //    builder.InitialCatalog = "master";
-    //    var masterConnection = builder.ConnectionString;
-
-    //    await using (var connection = new SqlConnection(masterConnection))
-    //    {
-    //        await connection.OpenAsync();
-
-    //        var checkDbQuery = $"SELECT database_id FROM sys.database WHERE = '{dbName}'";
-    //        await using var checkCmd = new SqlCommand(checkDbQuery, connection);
-    //        var exits = await checkCmd.ExecuteScalarAsync();
-
-    //        if (exits is null)
-    //        {
-    //            var createDbQuery = $"CREATE DATABASE [{dbName}]";
-    //            await using var createCmd = new SqlCommand(createDbQuery, connection);
-    //            var count = await createCmd.ExecuteNonQueryAsync(); //new to update line not need to store value of affected row amount
-    //        }
-    //        else
-    //            return $"Database '{dbName}' already exits";
-
-    //        var createLoginQuery = $@"
-    //            IF NOT EXITS (SELECT * FROM sys.server_principals WHERE name = '{dbUser}')
-    //            BEGIN
-    //                CREATE LOGIN [{dbUser}] WITH PASSWORD = '{dbPassword}';
-    //            END";
-
-    //        await using var loginCmd = new SqlCommand(createLoginQuery, connection);
-    //        await loginCmd.ExecuteNonQueryAsync();
-
-    //        connection.ChangeDatabase(dbName);
-
-    //        var createUserQuery = $@"
-    //            IF NOT EXITS (SELECT * FROM sys.database_principals WHERE name = {dbUser})
-    //            BEGIN
-    //                CREATE USER [{dbUser}] FOR LOGIN [{dbUser}];
-    //                ALTER ROLE db_owner ADD MEMBER [{dbUser}]
-    //            END";
-    //        await using var userCmd = new SqlCommand(createUserQuery, connection);
-    //        await userCmd.ExecuteNonQueryAsync();
-    //    }
-
-    //    // Tenant connection string
-    //    builder.InitialCatalog = dbName;
-    //    builder.UserID = dbUser;
-    //    builder.Password = dbPassword;
-    //    builder.IntegratedSecurity = false;
-    //    var tenantConnectionString = builder.ConnectionString;
-
-    //    var tenantsConnectionString = builder.ConnectionString;
-    //    var isEncrypted  = _connectionStringEncryptor.Encrypt(tenantsConnectionString, out string encryptedConn);
-
-    //    if(!isEncrypted)
-    //        return"Failed to encrypt connection string";
-
-    //    return encryptedConn;
-    //}
-
-    public async Task DropDatabaseAsync(string tenantSlug)
+    public async Task<bool> DropDatabaseAsync(string tenantSlug)
     {
         var databaseName = $"EduSystem_{tenantSlug}";
 
-        using var connection = new SqlConnection(_masterConnectionString);
-        await connection.OpenAsync();
+        try
+        {
+            using var connection = new SqlConnection(_masterConnectionString);
+            await connection.OpenAsync();
 
-        // all connection close 
-        var closeConnections = $@"
+            // Close all connections
+            var closeConnections = $@"
             ALTER DATABASE [{databaseName}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
         ";
 
-        using (var command = new SqlCommand(closeConnections, connection))
-        {
-            await command.ExecuteNonQueryAsync();
-        }
+            using (var command = new SqlCommand(closeConnections, connection))
+            {
+                await command.ExecuteNonQueryAsync();
+            }
 
-        // Database drop 
-        var dropDatabase = $"DROP DATABASE [{databaseName}];";
-        using (var command = new SqlCommand(dropDatabase, connection))
+            // Drop database
+            var dropDatabase = $"DROP DATABASE [{databaseName}];";
+            using (var command = new SqlCommand(dropDatabase, connection))
+            {
+                await command.ExecuteNonQueryAsync();
+            }
+
+            return true; // Success
+        }
+        catch (Exception ex)
         {
-            await command.ExecuteNonQueryAsync();
+            // Optional: log the exception
+            Console.WriteLine(ex.Message);
+            return false; // Failure
         }
     }
+
     private async Task<string> GenerateSecurePassword()
     {
         const string validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@$?_-";
@@ -194,17 +92,26 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
     /// <summary>
     /// Create database
     /// </summary>
-    private async Task CreateDatabaseAsync(SqlConnection connection, string dbName)
+    private async Task<bool> CreateDatabaseAsync(SqlConnection connection, string dbName)
     {
         var query = $"CREATE DATABASE [{dbName}]";
-        await using var cmd = new SqlCommand(query, connection);
-        await cmd.ExecuteNonQueryAsync();
+        try
+        {
+            await using var cmd = new SqlCommand(query, connection);
+            await cmd.ExecuteNonQueryAsync();
+            return true;
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
     }
 
     /// <summary>
     /// Create login
     /// </summary>
-    private async Task CreateLoginAsync(SqlConnection connection, string user, string password)
+    private async Task<bool> CreateLoginAsync(SqlConnection connection, string user, string password)
     {
         var query = $@"
         IF NOT EXISTS (SELECT * FROM sys.server_principals WHERE name = '{user}')
@@ -212,8 +119,17 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
             CREATE LOGIN [{user}] WITH PASSWORD = '{password}';
         END";
 
-        await using var cmd = new SqlCommand(query, connection);
-        await cmd.ExecuteNonQueryAsync();
+        try
+        {
+            await using var cmd = new SqlCommand(query, connection);
+            await cmd.ExecuteNonQueryAsync();
+            return true;   // success
+        }
+        catch (Exception ex)
+        {
+            // log error if you want
+            return false;  // failed
+        }
     }
 
     /// <summary>
@@ -246,13 +162,75 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
         return builder.ConnectionString;
     }
 
-    public async Task<string> CreateDatabaseAsync(string tenantSlug)
+    //public async Task<(bool Success, string EncryptedConnectionString)> CreateDatabaseAsync(string tenantSlug)
+    //{
+    //    var dbName = $"EduSystem_{tenantSlug}";
+    //    var dbUser = $"tenant_{tenantSlug}_user";
+
+    //    var dbPassword = await GenerateSecurePassword();
+
+    //    if (string.IsNullOrWhiteSpace(dbPassword))
+    //        return "Failed to generate secure DB password";
+
+    //    var masterConnection = GetMasterConnectionString();
+
+    //    if(string.IsNullOrWhiteSpace(masterConnection))
+    //        return "Master connection string is invalid";
+
+    //    await using (var connection = new SqlConnection(masterConnection))
+    //    {
+    //        await connection.OpenAsync();
+
+    //        if (!await DatabaseExistsAsync(connection, dbName))
+    //        {
+    //            try
+    //            {
+    //                await CreateDatabaseAsync(connection, dbName);
+    //            }
+    //            catch (Exception ex)
+    //            {
+    //                if (await DatabaseExistsAsync(connection, dbName))
+    //                    return $"Database '{dbName}' already exists";
+    //                else
+    //                    return ex.StackTrace ?? "DB Creation Failed";
+    //            }
+    //        }
+    //        else
+    //        {
+    //            return $"Database '{dbName}' already exists";
+    //        }
+
+    //        var isLoginCreated = await CreateLoginAsync(connection, dbUser, dbPassword);
+
+    //        if (!isLoginCreated)
+    //            return "";
+
+    //        connection.ChangeDatabase(dbName);
+    //        await CreateUserAndAssignRoleAsync(connection, dbUser);
+    //    }
+
+    //    var tenantConnectionString = BuildTenantConnectionString(dbName, dbUser, dbPassword);
+
+    //    if (!_connectionStringEncryptor.Encrypt(tenantConnectionString, out string encrypted))
+    //        return "Failed to encrypt connection string";
+
+    //    return encrypted;
+    //}
+
+    public async Task<(bool Success, string EncryptedConnectionString)> CreateDatabaseAsync(string tenantSlug)
     {
         var dbName = $"EduSystem_{tenantSlug}";
         var dbUser = $"tenant_{tenantSlug}_user";
+
         var dbPassword = await GenerateSecurePassword();
 
+        if (string.IsNullOrWhiteSpace(dbPassword))
+            return (false, "Failed to generate secure DB password");
+
         var masterConnection = GetMasterConnectionString();
+
+        if (string.IsNullOrWhiteSpace(masterConnection))
+            return (false, "Master connection string is invalid");
 
         await using (var connection = new SqlConnection(masterConnection))
         {
@@ -260,14 +238,27 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
 
             if (!await DatabaseExistsAsync(connection, dbName))
             {
-                await CreateDatabaseAsync(connection, dbName);
+                try
+                {
+                    await CreateDatabaseAsync(connection, dbName);
+                }
+                catch (Exception ex)
+                {
+                    if (await DatabaseExistsAsync(connection, dbName))
+                        return (false, $"Database '{dbName}' already exists");
+                    else
+                        return (false, ex.StackTrace ?? "DB Creation Failed");
+                }
             }
             else
             {
-                return $"Database '{dbName}' already exists";
+                return (false, $"Database '{dbName}' already exists");
             }
 
-            await CreateLoginAsync(connection, dbUser, dbPassword);
+            var isLoginCreated = await CreateLoginAsync(connection, dbUser, dbPassword);
+
+            if (!isLoginCreated)
+                return (false, "Failed to create login");
 
             connection.ChangeDatabase(dbName);
             await CreateUserAndAssignRoleAsync(connection, dbUser);
@@ -276,8 +267,8 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
         var tenantConnectionString = BuildTenantConnectionString(dbName, dbUser, dbPassword);
 
         if (!_connectionStringEncryptor.Encrypt(tenantConnectionString, out string encrypted))
-            return "Failed to encrypt connection string";
+            return (false, "Failed to encrypt connection string");
 
-        return encrypted;
+        return (true, encrypted);
     }
 }

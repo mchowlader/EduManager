@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "EduSystem.Identity.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.Identity.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.Identity.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EduSystem.Identity.Shared/1.0.0": {
+      "type": "project",
+      "path": "../EduSystem.Identity.Shared/EduSystem.Identity.Shared.csproj",
+      "msbuildProject": "../EduSystem.Identity.Shared/EduSystem.Identity.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "EduSystem.Identity.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

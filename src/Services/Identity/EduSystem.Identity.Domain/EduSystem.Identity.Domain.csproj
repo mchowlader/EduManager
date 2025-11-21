@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EduSystem.Identity.Shared\EduSystem.Identity.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

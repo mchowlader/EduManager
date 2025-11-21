@@ -906,7 +906,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
