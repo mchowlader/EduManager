@@ -1,4 +1,4 @@
-﻿using EduSystem.Attendance.Application.EventHandlers;
+﻿using EduSystem.Attendance.Infrastructure.EventHandlers;
 using EduSystem.Attendance.Infrastructure.Contexts;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging;
@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddHealthChecks();
 // Connection String Encryptor
 builder.Services.AddSingleton<IConnectionStringEncryptor, ConnectionStringEncryptor>();
 builder.Services.AddDbContext<AttendanceDbContext>(options =>
@@ -56,4 +56,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
+app.MapHealthChecks("/health");
 app.Run();

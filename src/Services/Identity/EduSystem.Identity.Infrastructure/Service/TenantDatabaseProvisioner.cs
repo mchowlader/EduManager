@@ -125,7 +125,7 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
             await cmd.ExecuteNonQueryAsync();
             return true;   // success
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             // log error if you want
             return false;  // failed
@@ -161,61 +161,6 @@ public class TenantDatabaseProvisioner : ITenantDatabaseProvisioner
 
         return builder.ConnectionString;
     }
-
-    //public async Task<(bool Success, string EncryptedConnectionString)> CreateDatabaseAsync(string tenantSlug)
-    //{
-    //    var dbName = $"EduSystem_{tenantSlug}";
-    //    var dbUser = $"tenant_{tenantSlug}_user";
-
-    //    var dbPassword = await GenerateSecurePassword();
-
-    //    if (string.IsNullOrWhiteSpace(dbPassword))
-    //        return "Failed to generate secure DB password";
-
-    //    var masterConnection = GetMasterConnectionString();
-
-    //    if(string.IsNullOrWhiteSpace(masterConnection))
-    //        return "Master connection string is invalid";
-
-    //    await using (var connection = new SqlConnection(masterConnection))
-    //    {
-    //        await connection.OpenAsync();
-
-    //        if (!await DatabaseExistsAsync(connection, dbName))
-    //        {
-    //            try
-    //            {
-    //                await CreateDatabaseAsync(connection, dbName);
-    //            }
-    //            catch (Exception ex)
-    //            {
-    //                if (await DatabaseExistsAsync(connection, dbName))
-    //                    return $"Database '{dbName}' already exists";
-    //                else
-    //                    return ex.StackTrace ?? "DB Creation Failed";
-    //            }
-    //        }
-    //        else
-    //        {
-    //            return $"Database '{dbName}' already exists";
-    //        }
-
-    //        var isLoginCreated = await CreateLoginAsync(connection, dbUser, dbPassword);
-
-    //        if (!isLoginCreated)
-    //            return "";
-
-    //        connection.ChangeDatabase(dbName);
-    //        await CreateUserAndAssignRoleAsync(connection, dbUser);
-    //    }
-
-    //    var tenantConnectionString = BuildTenantConnectionString(dbName, dbUser, dbPassword);
-
-    //    if (!_connectionStringEncryptor.Encrypt(tenantConnectionString, out string encrypted))
-    //        return "Failed to encrypt connection string";
-
-    //    return encrypted;
-    //}
 
     public async Task<(bool Success, string EncryptedConnectionString)> CreateDatabaseAsync(string tenantSlug)
     {

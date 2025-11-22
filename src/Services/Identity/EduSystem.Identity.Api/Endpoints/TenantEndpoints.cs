@@ -4,12 +4,11 @@ using MediatR;
 
 namespace EduSystem.Identity.Api.Endpoints;
 
-public static class TenantEndpoints
+public class TenantEndpoints : IEndpoints
 {
-    public static void MapTenantEndpoints(this IEndpointRouteBuilder app)
+    public static void MapEndpoints(IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/tenants").WithTags("Tenants");
-
         group.MapPost("/register", RegisterTenant)
             .WithName("RegisterTenant");
 

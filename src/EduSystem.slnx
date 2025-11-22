@@ -9,6 +9,13 @@
     <Project Path="Services/Admin/EduSystem.Admin.Infrastructure/EduSystem.Admin.Infrastructure.csproj" />
     <Project Path="Services/Admin/EduSystem.Admin.Shared/EduSystem.Admin.Shared.csproj" />
   </Folder>
+  <Folder Name="/Services/ApplicationUsers/">
+    <Project Path="Services/ApplicationUsers/EduSystem.ApplicationUsers.Api/EduSystem.ApplicationUsers.Api.csproj" Id="0da77474-cf02-446e-b99d-c14cbbd71088" />
+    <Project Path="Services/ApplicationUsers/EduSystem.ApplicationUsers.Application/EduSystem.ApplicationUsers.Application.csproj" Id="c049c5f6-4d89-4329-a9e9-37034a969528" />
+    <Project Path="Services/ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj" Id="f112d286-dee6-46d2-ba70-8510ddf3fdea" />
+    <Project Path="Services/ApplicationUsers/EduSystem.ApplicationUsers.Infrastructure/EduSystem.ApplicationUsers.Infrastructure.csproj" Id="12988a8f-2bd0-477b-b94e-ba155097a009" />
+    <Project Path="Services/ApplicationUsers/EduSystem.ApplicationUsers.Shared/EduSystem.ApplicationUsers.Shared.csproj" Id="6ab6f697-b984-47d3-b6d9-160b9ea63856" />
+  </Folder>
   <Folder Name="/Services/Attendance/">
     <Project Path="Services/Attendance/EduSystem.Attendance.Api/EduSystem.Attendance.Api.csproj" />
     <Project Path="Services/Attendance/EduSystem.Attendance.Application/EduSystem.Attendance.Application.csproj" />
@@ -53,13 +60,6 @@
   </Folder>
   <Folder Name="/Services/Shared/Messaging/">
     <Project Path="Services/Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj" Id="3ff04559-5345-45c0-a3af-09b9f2f25e7d" />
-  </Folder>
-  <Folder Name="/Services/StudentIdentity/">
-    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Api/EduSystem.StudentIdentity.Api.csproj" />
-    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Application/EduSystem.StudentIdentity.Application.csproj" />
-    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Domain/EduSystem.StudentIdentity.Domain.csproj" />
-    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Infrastructure/EduSystem.StudentIdentity.Infrastructure.csproj" />
-    <Project Path="Services/StudentIdentity/EduSystem.StudentIdentity.Shared/EduSystem.StudentIdentity.Shared.csproj" />
   </Folder>
   <Folder Name="/UI/">
     <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj" />

@@ -5,6 +5,44 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/health/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Get health status",
+        "operationId": "HealthCheck",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health/ping": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Simple ping test",
+        "operationId": "Ping",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/tenants/register": {
       "post": {
         "tags": [
@@ -72,6 +110,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Health"
+    },
     {
       "name": "Tenants"
     }

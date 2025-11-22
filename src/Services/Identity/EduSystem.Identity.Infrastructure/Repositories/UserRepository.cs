@@ -2,36 +2,21 @@
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Infrastructure.Contexts;
 using EduSystem.Identity.Shared.Common;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSystem.Identity.Infrastructure.Repositories;
 
 public class UserRepository(IdentityDbContext context) : IUserRepository
 {
-    public async Task<Result<User>> CreateAsync(User user)
+    public async Task AddAsync(User user)
     {
-        if (user == null)
-            return Result<User>.Failure("User cannot be null.");
-
-        try
-        {
-            await context.Users.AddAsync(user);
-            await context.SaveChangesAsync();
-
-            return Result<User>.Success(user);
-        }
-        catch (DbUpdateException dbEx)
-        {
-            // Optional: log dbEx here
-            return Result<User>.Failure("Database update failed: " + dbEx.Message);
-        }
-        catch (Exception ex)
-        {
-            // Optional: log ex here
-            return Result<User>.Failure("An unexpected error occurred: " + ex.Message);
-        }
+        await context.Users.AddAsync(user);
+        await context.SaveChangesAsync();
     }
 
+    public async Task<bool> IsEmailExistsAsync(string email) =>
+        await context.Users.AnyAsync(u => u.Email == email);
 
     public async Task<User?> GetByEmailAsync(string email)
     {

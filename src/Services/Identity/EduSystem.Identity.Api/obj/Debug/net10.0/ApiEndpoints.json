@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.HealthApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_0",
+    "RelativePath": "api/health/health",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Health"
+    ],
+    "EndpointName": "HealthCheck",
+    "Summary": "Get health status"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.HealthApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_1",
+    "RelativePath": "api/health/ping",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Health"
+    ],
+    "EndpointName": "Ping",
+    "Summary": "Simple ping test"
+  },
+  {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
     "Method": "RegisterTenant",
     "RelativePath": "api/tenants/register",

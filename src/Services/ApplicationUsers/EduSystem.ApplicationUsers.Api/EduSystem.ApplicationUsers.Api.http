@@ -1,0 +1,6 @@
+@EduSystem.ApplicationUsers.Api_HostAddress = http://localhost:5291
+
+GET {{EduSystem.ApplicationUsers.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

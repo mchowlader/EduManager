@@ -52,7 +52,7 @@ public abstract class BaseMigrationHandler<TDbContext> : IConsumer<TenantDatabas
                 await dbContext.Database.MigrateAsync(context.CancellationToken);
 
                 _logger.LogInformation(
-                    $"[{ServiceName}] ✅ Migrations applied successfully for tenant: {@event.TenantSlug}");
+                    $"[{ServiceName}] Migrations applied successfully for tenant: {@event.TenantSlug}");
 
                 await _eventBus.PublishAsync(new ServiceMigrationCompletedEvent
                 {

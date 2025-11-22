@@ -5,15 +5,13 @@ using EduSystem.Shared.Messaging.Handlers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace EduSystem.Attendance.Application.EventHandlers;
+namespace EduSystem.Attendance.Infrastructure.EventHandlers;
 
 public class TenantDatabaseCreatedEventHandler : BaseMigrationHandler<AttendanceDbContext>
 {
     protected override string ServiceName => "Attendance";
 
-    public TenantDatabaseCreatedEventHandler(
-        IConnectionStringEncryptor encryptor,
-        IEventBus eventBus,
+    public TenantDatabaseCreatedEventHandler(IConnectionStringEncryptor encryptor, IEventBus eventBus,
         ILogger<TenantDatabaseCreatedEventHandler> logger)
         : base(encryptor, eventBus, logger)
     {
