@@ -10,11 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 10.0.x   
-      - run: dotnet restore src/EduManager.slnx
-      - run: dotnet build src/EduManager.slnx --no-restore --configuration Release
-      - run: dotnet test src/E the src/ directory, but none is found, resulting in failure.
+          dotnet-version: 10.0.x
 
-        EduManager.slnx --no-build --configuration Release
+      - name: Restore dependencies
+        run: dotnet restore src/EduSystem.slnx
+        
+      - name: Build
+        run: dotnet build src/EduSystem.slnx --no-restore --configuration Release
+      
+      - name: Run tests
+        run: dotnet test src/EduSystem.slnx --no-build --configuration Release
