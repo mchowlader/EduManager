@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "EduSystem.UI.Web.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-7O7V6oIKeIio3xAs0PLH3Z3BKme2IGHuE3jjt6e86W0=",
+    "hash": "sha256-DyTEFtigidtGgQP+XDKK1HR02JFrolRAiCC3xY7FnvE=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -1039,15 +1039,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "EduSystem.UI.Web.Client.wasm",
-        "name": "EduSystem.UI.Web.Client.4r3c4a6gnr.wasm",
-        "integrity": "sha256-ABaFJdek2LO6Oz+uy9b9A5rKkZ8UdcgTeGhzDloefVg="
+        "name": "EduSystem.UI.Web.Client.4vbo7qbr8p.wasm",
+        "integrity": "sha256-ENG726LdCjRfRwLyznpCPOrImBbv55GQxz80rtX3SkI="
       }
     ],
     "pdb": [
       {
         "virtualPath": "EduSystem.UI.Web.Client.pdb",
-        "name": "EduSystem.UI.Web.Client.gz438jbfg5.pdb",
-        "integrity": "sha256-/N+4xSyNShEqDUveUVqiQtwN3IxdGFnCEZ3B4ERyCW0="
+        "name": "EduSystem.UI.Web.Client.jv52labc85.pdb",
+        "integrity": "sha256-P9cCYt097cYo3A6gnqfaQEPON1bGZ+5VQev3UIbEUNk="
       }
     ],
     "libraryInitializers": [

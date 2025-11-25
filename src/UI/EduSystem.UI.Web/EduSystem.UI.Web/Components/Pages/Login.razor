@@ -1,0 +1,625 @@
+@page "/login"
+@using EduSystem.UI.Web.Client.Models
+@using System.Text.Json
+@inject IHttpClientFactory HttpClientFactory
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<PageTitle>Login - EduManager</PageTitle>
+
+<div class="login-wrapper">
+    <div class="split-container">
+        <!-- Left Side: Branding & Info -->
+        <div class="info-side">
+            <div class="brand-content">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h1>EduManager</h1>
+                </div>
+                
+                <h2 class="tagline">Welcome Back!</h2>
+                <p class="description">
+                    Sign in to access your school's management dashboard and stay connected with your educational community.
+                </p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Secure Access</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Real-time Updates</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Easy Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="abstract-shape shape-1"></div>
+            <div class="abstract-shape shape-2"></div>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="form-side">
+            <div class="form-header">
+                <h3>Sign In</h3>
+                <p>Enter your credentials to continue</p>
+            </div>
+
+            <EditForm Model="@Model" OnValidSubmit="HandleLogin" FormName="LoginForm">
+                <DataAnnotationsValidator />
+                
+                <div class="input-group-modern">
+                    <InputText id="tenantSlug" class="modern-input" @bind-Value="Model.TenantSlug" placeholder=" " />
+                    <label for="tenantSlug">School Slug (e.g., dhaka-high-school)</label>
+                    <ValidationMessage For="@(() => Model.TenantSlug)" />
+                </div>
+
+                <div class="input-group-modern">
+                    <InputText id="email" type="email" class="modern-input" @bind-Value="Model.Email" placeholder=" " />
+                    <label for="email">Email Address</label>
+                    <ValidationMessage For="@(() => Model.Email)" />
+                </div>
+
+                <div class="input-group-modern">
+                    <InputText id="password" type="password" class="modern-input" @bind-Value="Model.Password" placeholder=" " />
+                    <label for="password">Password</label>
+                    <ValidationMessage For="@(() => Model.Password)" />
+                </div>
+
+                @if (!string.IsNullOrEmpty(ErrorMessage))
+                {
+                    <div class="error-alert">
+                        <span class="error-icon">⚠</span>
+                        @ErrorMessage
+                    </div>
+                }
+
+                <button type="submit" class="submit-btn" disabled="@IsSubmitting">
+                    @if (IsSubmitting)
+                    {
+                        <span class="spinner"></span>
+                        <span>Signing In...</span>
+                    }
+                    else
+                    {
+                        <span>Sign In <span class="arrow">→</span></span>
+                    }
+                </button>
+                
+                <div class="register-link">
+                    Don't have a school account? <a href="/registration">Register here</a>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel Model { get; set; } = new();
+    private bool IsSubmitting { get; set; }
+    private string? ErrorMessage { get; set; }
+
+    private async Task HandleLogin()
+    {
+        IsSubmitting = true;
+        ErrorMessage = null;
+
+        try
+        {
+            var client = HttpClientFactory.CreateClient("IdentityApi");
+            // Assuming the endpoint will be /api/auth/login or similar. 
+            // Since it doesn't exist yet, this will likely fail 404, but the UI is ready.
+            var response = await client.PostAsJsonAsync("/api/auth/login", Model);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Navigation.NavigateTo("/dashboard");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                ErrorMessage = $"Login failed: {response.ReasonPhrase}. {errorContent}";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            IsSubmitting = false;
+        }
+    }
+}
+
+<style>
+    /* Global Reset & Font */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --primary-color: #4f46e5;
+        --primary-hover: #4338ca;
+        --text-dark: #111827;
+        --text-light: #6b7280;
+        --bg-light: #f3f4f6;
+        --white: #ffffff;
+    }
+
+    /* Hide the layout wrapper and navigation on this page */
+    nav, header, aside, .nav-menu, .sidebar {
+        display: none !important;
+    }
+
+    /* Remove all padding and margins from layout containers */
+    .page, main, article, .content, .top-row {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Default: No scroll for desktop */
+    body {
+        overflow: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    html {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .login-wrapper {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3f4f6;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .split-container {
+        display: flex;
+        width: 90%;
+        max-width: 1000px; /* Slightly smaller for login */
+        height: 80vh;
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Left Side: Branding */
+    .info-side {
+        flex: 1;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: #ffffff;
+        padding: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .brand-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        backdrop-filter: blur(5px);
+    }
+
+    .logo-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: white;
+    }
+
+    .logo-area h1 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin: 0;
+        color: white;
+    }
+
+    .tagline {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        color: white;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+        max-width: 350px;
+    }
+
+    .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: white;
+    }
+
+    .check-icon {
+        width: 20px;
+        height: 20px;
+        background: #10b981;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Abstract Shapes */
+    .abstract-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.6;
+    }
+
+    .shape-1 {
+        width: 250px;
+        height: 250px;
+        background: #ec4899;
+        top: -40px;
+        right: -40px;
+    }
+
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        background: #3b82f6;
+        bottom: -40px;
+        left: -40px;
+    }
+
+    /* Right Side: Form */
+    .form-side {
+        flex: 1;
+        padding: 40px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    .form-header {
+        margin-bottom: 24px;
+    }
+
+    .form-header h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 6px;
+    }
+
+    .form-header p {
+        color: #6b7280;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    /* Modern Inputs */
+    .input-group-modern {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .modern-input {
+        width: 100% !important;
+        height: 50px !important;
+        padding: 12px 16px !important;
+        border: 2px solid #e5e7eb !important;
+        border-radius: 10px !important;
+        font-size: 1rem !important;
+        color: #1f2937 !important;
+        background: transparent !important;
+        transition: all 0.2s ease !important;
+        appearance: none !important;
+        box-shadow: none !important;
+    }
+
+    .modern-input:focus {
+        border-color: #4f46e5 !important;
+        outline: none !important;
+        box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1) !important;
+    }
+
+    .input-group-modern label {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: #9ca3af;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        background: #ffffff;
+        padding: 0 4px;
+        z-index: 10;
+    }
+
+    .modern-input:focus + label,
+    .modern-input:not(:placeholder-shown) + label {
+        top: 0;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        color: #4f46e5;
+        font-weight: 600;
+    }
+
+    /* Validation Messages */
+    .validation-message {
+        color: #ef4444;
+        font-size: 0.8rem;
+        margin-top: 4px;
+        display: block;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+        width: 100%;
+        height: 50px;
+        background: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .submit-btn:hover {
+        background: #4338ca;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+
+    .submit-btn:disabled {
+        background: #9ca3af;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .arrow {
+        transition: transform 0.2s ease;
+    }
+
+    .submit-btn:hover .arrow {
+        transform: translateX(4px);
+    }
+
+    /* Error Alert */
+    .error-alert {
+        background: #fef2f2;
+        border: 1px solid #fee2e2;
+        color: #991b1b;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .register-link {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #6b7280;
+    }
+
+    .register-link a {
+        color: #4f46e5;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+
+    /* Spinner */
+    .spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s linear infinite;
+    }
+
+    @@keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* Tablet and below */
+    @@media (max-width: 1024px) {
+        .split-container {
+            width: 95%;
+        }
+
+        .tagline {
+            font-size: 1.7rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.6rem;
+        }
+    }
+
+    /* Mobile */
+    @@media (max-width: 768px) {
+        body {
+            overflow: auto;
+        }
+
+        .login-wrapper {
+            min-height: 100vh;
+            height: auto;
+            padding: 10px;
+        }
+
+        .split-container {
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 16px;
+        }
+
+        .info-side {
+            padding: 30px 20px;
+            min-height: auto;
+        }
+
+        .logo-area h1 {
+            font-size: 1.5rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+        }
+
+        .description {
+            font-size: 0.9rem;
+        }
+
+        .form-side {
+            padding: 30px 20px;
+        }
+
+        .form-header h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Small mobile */
+    @@media (max-width: 480px) {
+        .login-wrapper {
+            padding: 0;
+        }
+
+        .split-container {
+            border-radius: 0;
+            min-height: 100vh;
+        }
+
+        .info-side {
+            padding: 20px 15px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.3rem;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+        }
+
+        .description {
+            font-size: 0.85rem;
+        }
+
+        .feature-item {
+            font-size: 0.85rem;
+        }
+
+        .form-side {
+            padding: 20px 15px;
+        }
+
+        .form-header h3 {
+            font-size: 1.3rem;
+        }
+
+        .form-header p {
+            font-size: 0.85rem;
+        }
+
+        .input-group-modern {
+            margin-bottom: 16px;
+        }
+
+        .modern-input {
+            height: 45px !important;
+            font-size: 0.95rem !important;
+        }
+
+        .submit-btn {
+            height: 45px;
+            font-size: 0.95rem;
+        }
+    }
+</style>

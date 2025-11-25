@@ -14,6 +14,11 @@ namespace EduSystem.UI.Web
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
 
+            builder.Services.AddHttpClient("IdentityApi", client =>
+            {
+                client.BaseAddress = new Uri("http://localhost:5268");
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
