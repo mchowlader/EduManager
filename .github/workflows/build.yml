@@ -12,7 +12,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
-      - run: dotnet restore
-      - run: dotnet build src/ --no-restore --configuration Release
-      - run: dotnet test src/ --no-build --configuration Release
+          dotnet-version: 10.0.x   
+      - run: dotnet restore src/EduManager.slnx
+      - run: dotnet build src/EduManager.slnx --no-restore --configuration Release
+      - run: dotnet test src/E the src/ directory, but none is found, resulting in failure.
+
+        EduManager.slnx --no-build --configuration Release
