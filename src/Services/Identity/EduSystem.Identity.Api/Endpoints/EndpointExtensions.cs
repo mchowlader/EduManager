@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 
 namespace EduSystem.Identity.Api.Endpoints;
 

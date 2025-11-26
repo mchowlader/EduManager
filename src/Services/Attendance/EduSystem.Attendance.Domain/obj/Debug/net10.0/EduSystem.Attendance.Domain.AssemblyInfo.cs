@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.Attendance.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+992b1abb15d915acceb091a9fe84f31de4e74c75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce3c7b537992668d26fd2b5d57f6340431571198")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.Attendance.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.Attendance.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

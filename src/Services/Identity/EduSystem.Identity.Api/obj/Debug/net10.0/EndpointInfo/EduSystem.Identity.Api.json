@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "EduSystem.Identity.Api",
-    "version": "1.0"
+    "title": "EduSystem Identity API",
+    "version": "v1"
   },
   "paths": {
     "/api/health/health": {
@@ -43,17 +43,19 @@
         }
       }
     },
-    "/api/tenants/register": {
+    "/api/v1/tenants/register": {
       "post": {
         "tags": [
           "Tenants"
         ],
-        "operationId": "RegisterTenant",
+        "summary": "Register a new tenant (V1)",
+        "description": "Creates a new tenant in the system - Version 1",
+        "operationId": "RegisterTenantV1",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TenantRegistrationDto"
+                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.TenantRegistrationDto"
               }
             }
           },
@@ -61,7 +63,20 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
           }
         }
       }
@@ -69,7 +84,7 @@
   },
   "components": {
     "schemas": {
-      "TenantRegistrationDto": {
+      "EduSystem.Identity.Application.DTOs.TenantRegistrationDto": {
         "type": "object",
         "properties": {
           "schoolName": {

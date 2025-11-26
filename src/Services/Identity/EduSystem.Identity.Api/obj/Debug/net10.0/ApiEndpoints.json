@@ -47,8 +47,8 @@
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
-    "Method": "RegisterTenant",
-    "RelativePath": "api/tenants/register",
+    "Method": "RegisterTenantV1",
+    "RelativePath": "api/v1/tenants/register",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -61,14 +61,62 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
         "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
       }
     ],
     "Tags": [
       "Tenants"
     ],
-    "EndpointName": "RegisterTenant"
+    "EndpointName": "RegisterTenantV1",
+    "Description": "Creates a new tenant in the system - Version 1",
+    "Summary": "Register a new tenant (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
+    "Method": "RegisterTenantV2",
+    "RelativePath": "api/v2/tenants/register",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "EduSystem.Identity.Application.DTOs.TenantRegistrationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "Tenants"
+    ],
+    "EndpointName": "RegisterTenantV2",
+    "Description": "Creates a new tenant in the system - Version 2",
+    "Summary": "Register a new tenant (V2)"
   }
 ]

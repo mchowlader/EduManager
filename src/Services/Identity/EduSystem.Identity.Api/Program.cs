@@ -1,3 +1,4 @@
+using Asp.Versioning.ApiExplorer;
 using EduSystem.Identity.Api.DependencyResolver;
 using EduSystem.Identity.Api.Endpoints;
 using EduSystem.Identity.Application.Commands;
@@ -21,12 +22,17 @@ builder.Services
     .AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 app.UseSwagger();
-app.UseSwaggerUI(c =>
+app.UseSwaggerUI(options =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "EduSystem Tenant API v1");
-    c.RoutePrefix = "swagger";
+    foreach (var description in provider.ApiVersionDescriptions)
+    {
+        options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
+                                $"EduSystem API {description.GroupName}");
+    }
 });
+
 app.MapEndpoints();
 app.Run();

@@ -236,3 +236,8 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSystem.Identity.Api.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSystem.Identity.Api.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\ref\EduSystem.Identity.Api.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Asp.Versioning.Abstractions.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Asp.Versioning.Http.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Asp.Versioning.Mvc.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Asp.Versioning.Mvc.ApiExplorer.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll

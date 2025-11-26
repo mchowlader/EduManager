@@ -11,3 +11,4 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
