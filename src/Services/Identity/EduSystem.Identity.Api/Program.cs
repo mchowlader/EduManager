@@ -12,10 +12,16 @@ using EduSystem.Identity.Infrastructure.Service;
 using EduSystem.Identity.Infrastructure.Services;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt",rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Host.UseSerilog(logger);
 builder.Services
     .AddSwaggerConfiguration(builder.Configuration)
     .AddApiServices(builder.Configuration)
@@ -24,6 +30,16 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseExceptionHandler("/api/error");
+app.UseHttpsRedirection();
 app.UseSwaggerConfiguration();
 app.MapEndpoints();
+
+// Program.cs
+app.MapGet("/test-fail", () =>
+{
+    throw new Exception("This is a test exception!");
+});
+
+app.Run();
 app.Run();

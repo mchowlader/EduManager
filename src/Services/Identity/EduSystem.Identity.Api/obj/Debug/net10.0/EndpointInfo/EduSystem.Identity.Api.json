@@ -2,9 +2,22 @@
   "openapi": "3.0.4",
   "info": {
     "title": "EduSystem Identity API",
+    "description": "Identity and Tenant Management API - Version 1",
     "version": "v1"
   },
   "paths": {
+    "/test-fail": {
+      "get": {
+        "tags": [
+          "EduSystem.Identity.Api"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/health/health": {
       "get": {
         "tags": [
@@ -125,6 +138,9 @@
     }
   },
   "tags": [
+    {
+      "name": "EduSystem.Identity.Api"
+    },
     {
       "name": "Health"
     },

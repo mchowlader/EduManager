@@ -56,7 +56,12 @@ public class TenantEndpoints : IEndpoints
         var command = new RegisterTenantCommand { Registration = dto };
         var result = await mediator.Send(command);
         return result.IsSuccess
-            ? Results.Ok(new { tenantId = result.Data, version = "v2", message = "Using version 2" })
+            ? Results.Ok(new
+            {
+                tenantId = result.Data,
+                version = "v2",
+                message = result.ErrorMessage ?? "Tenant registered successfully."
+            })
             : Results.BadRequest(new { errors = result.Errors });
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.Report.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce3c7b537992668d26fd2b5d57f6340431571198")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787f649946654f005576d966f2f79d01afb65b47")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.Report.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.Report.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

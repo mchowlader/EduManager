@@ -1,0 +1,73 @@
+2025-11-26 14:32:39.053 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-11-26 14:32:39.874 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-11-26 14:32:39.943 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-11-26 14:32:40.036 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-26 14:32:40.036 +06:00 [INF] Hosting environment: Development
+2025-11-26 14:32:40.036 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-11-26 14:32:40.223 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 292.2243ms
+2025-11-26 14:32:40.246 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-11-26 14:32:43.046 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-11-26 14:32:43.046 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-26 14:32:43.081 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 35.0194ms
+2025-11-26 14:32:43.106 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.4566ms
+2025-11-26 14:32:43.252 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-11-26 14:32:43.271 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.0363ms
+2025-11-26 14:34:16.731 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-11-26 14:34:16.739 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 8.1969ms
+2025-11-26 14:35:37.029 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v2/tenants/register - application/json 260
+2025-11-26 14:35:37.052 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV2'
+2025-11-26 14:35:37.071 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-26 14:35:40.081 +06:00 [INF] Executed DbCommand (101ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-26 14:35:40.913 +06:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 200), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 100), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tenants] ([Id], [BannerUrl], [ConnectionString], [CreatedAt], [IsActive], [LogoUrl], [Name], [PrimaryColor], [SecondaryColor], [Slug], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-11-26 14:35:41.386 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-26 14:35:41.480 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 256), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [IsActive], [PasswordHash], [PhoneNumber], [Role], [TenantId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-11-26 14:35:41.496 +06:00 [INF] Publishing event: TenantDatabaseCreatedEvent
+2025-11-26 14:35:41.799 +06:00 [INF] Event published: TenantDatabaseCreatedEvent
+2025-11-26 14:35:44.900 +06:00 [INF] Setting HTTP status code 200.
+2025-11-26 14:35:44.905 +06:00 [INF] Writing value of type '<>f__AnonymousType5`3' as Json.
+2025-11-26 14:35:44.911 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV2'
+2025-11-26 14:35:44.929 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v2/tenants/register - 200 null application/json; charset=utf-8 7899.8454ms
+2025-11-26 14:39:16.835 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html?urls.primaryName=EduSystem+API+v2 - null null
+2025-11-26 14:39:16.895 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html?urls.primaryName=EduSystem+API+v2 - 200 null text/html;charset=utf-8 59.8837ms
+2025-11-26 14:39:16.986 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-26 14:39:16.986 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-11-26 14:39:16.987 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 1.0747ms
+2025-11-26 14:39:17.002 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.2906ms
+2025-11-26 14:39:17.227 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-11-26 14:39:17.232 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.7162ms
+2025-11-26 14:40:00.763 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v2/tenants/register - application/json 260
+2025-11-26 14:40:00.765 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV2'
+2025-11-26 14:40:00.810 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-26 14:40:22.760 +06:00 [INF] Setting HTTP status code 400.
+2025-11-26 14:40:22.766 +06:00 [INF] Writing value of type '<>f__AnonymousType4`1' as Json.
+2025-11-26 14:40:22.766 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV2'
+2025-11-26 14:40:22.767 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v2/tenants/register - 400 null application/json; charset=utf-8 22003.8577ms

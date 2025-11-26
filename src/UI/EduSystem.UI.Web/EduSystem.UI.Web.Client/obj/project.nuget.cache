@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8npJSPkDiLA=",
+  "dgSpecHash": "jwLgJy+1inI=",
   "success": true,
   "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.aspnetcore.components.web\\10.0.0\\microsoft.aspnetcore.components.web.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.0\\microsoft.aspnetcore.components.webassembly.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.aspnetcore.metadata\\10.0.0\\microsoft.aspnetcore.metadata.10.0.0.nupkg.sha512",
+    "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.dotnet.hotreload.webassembly.browser\\10.0.100\\microsoft.dotnet.hotreload.webassembly.browser.10.0.100.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0\\microsoft.extensions.configuration.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.0\\microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.0\\microsoft.extensions.configuration.binder.10.0.0.nupkg.sha512",

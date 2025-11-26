@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.Billing.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+992b1abb15d915acceb091a9fe84f31de4e74c75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787f649946654f005576d966f2f79d01afb65b47")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.Billing.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.Billing.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
