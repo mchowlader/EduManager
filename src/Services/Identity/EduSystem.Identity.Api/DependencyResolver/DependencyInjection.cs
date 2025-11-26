@@ -17,7 +17,7 @@ public static class DependencyInjection
         .AddApiVersioning(options =>
         {
             options.DefaultApiVersion = new ApiVersion(1, 0);
-            options.AssumeDefaultVersionWhenUnspecified = true; // true করুন
+            options.AssumeDefaultVersionWhenUnspecified = false;
             options.ReportApiVersions = true;
             options.ApiVersionReader = new UrlSegmentApiVersionReader();
         })
@@ -27,24 +27,8 @@ public static class DependencyInjection
             options.SubstituteApiVersionInUrl = true;
         });
 
-        services.AddSwaggerGen(option =>
-        {
-            option.CustomSchemaIds(type => type.FullName);
-
-            option.SwaggerDoc("v1", new OpenApiInfo
-            {
-                Title = "EduSystem Identity API",
-                Version = "v1"
-            });
-
-            option.SwaggerDoc("v2", new OpenApiInfo
-            {
-                Title = "EduSystem Identity API",
-                Version = "v2"
-            });
-        });
-
         services.AddEventBus(configuration);
+
         return services;
     }
 }

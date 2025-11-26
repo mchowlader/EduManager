@@ -79,7 +79,7 @@
       "Tenants"
     ],
     "EndpointName": "RegisterTenantV1",
-    "Description": "Creates a new tenant in the system - Version 1",
+    "Description": "\u26A0\uFE0F This version is deprecated. Please use V2.",
     "Summary": "Register a new tenant (V1)"
   },
   {

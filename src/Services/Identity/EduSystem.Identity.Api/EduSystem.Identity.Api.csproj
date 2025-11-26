@@ -25,4 +25,8 @@
     <ProjectReference Include="..\EduSystem.Identity.Shared\EduSystem.Identity.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
 </Project>

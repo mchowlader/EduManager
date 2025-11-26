@@ -12,6 +12,7 @@ public class TenantEndpoints : IEndpoints
     {
         var versionSet = app.NewApiVersionSet()
             .HasApiVersion(new ApiVersion(1, 0))
+            .HasDeprecatedApiVersion(new ApiVersion(1, 0))
             .HasApiVersion(new ApiVersion(2, 0))
             .ReportApiVersions()
             .Build();
@@ -24,7 +25,7 @@ public class TenantEndpoints : IEndpoints
         groupV1.MapPost("/register", RegisterTenantV1)
             .WithName("RegisterTenantV1")
             .WithSummary("Register a new tenant (V1)")
-            .WithDescription("Creates a new tenant in the system - Version 1")
+            .WithDescription("⚠️ This version is deprecated. Please use V2.")
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 

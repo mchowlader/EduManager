@@ -49,7 +49,7 @@
           "Tenants"
         ],
         "summary": "Register a new tenant (V1)",
-        "description": "Creates a new tenant in the system - Version 1",
+        "description": "⚠️ This version is deprecated. Please use V2.",
         "operationId": "RegisterTenantV1",
         "requestBody": {
           "content": {

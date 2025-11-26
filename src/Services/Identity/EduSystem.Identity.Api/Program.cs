@@ -17,22 +17,13 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
+    .AddSwaggerConfiguration(builder.Configuration)
     .AddApiServices(builder.Configuration)
     .AddApplicationServices(builder.Configuration)
     .AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
-var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
-app.UseSwagger();
-app.UseSwaggerUI(options =>
-{
-    foreach (var description in provider.ApiVersionDescriptions)
-    {
-        options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
-                                $"EduSystem API {description.GroupName}");
-    }
-});
-
+app.UseSwaggerConfiguration();
 app.MapEndpoints();
 app.Run();
