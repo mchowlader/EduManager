@@ -1,6 +1,13 @@
-﻿namespace EduSystem.ApplicationUsers.Api.EndPoints;
+namespace EduSystem.ApplicationUsers.Api.EndPoints;
 
+/// <summary>
+/// Interface for all endpoint classes
+/// </summary>
 public interface IEndpoints
 {
-    static abstract void MapEndPoints();
+    /// <summary>
+    /// Map endpoints to the application
+    /// </summary>
+    /// <param name="app">Endpoint route builder</param>
+    static abstract void MapEndPoints(IEndpointRouteBuilder app);
 }

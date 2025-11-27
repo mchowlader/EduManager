@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ApplicationUsers\EduSystem.ApplicationUsers.Domain\EduSystem.ApplicationUsers.Domain.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Application\EduSystem.Identity.Application.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Domain\EduSystem.Identity.Domain.csproj" />
   </ItemGroup>

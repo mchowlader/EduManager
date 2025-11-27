@@ -1,4 +1,5 @@
-﻿using EduSystem.Shared.Infrastructure.Security;
+using Asp.Versioning;
+using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging.Extensions;
 
 namespace EduSystem.ApplicationUsers.Api.DependencyResolver;
@@ -10,7 +11,22 @@ public static class DependencyInjection
         services.AddSingleton<IConnectionStringEncryptor, ConnectionStringEncryptor>();
         services.AddHealthChecks();
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+        services.AddOpenApi();
+
+        services
+        .AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.AssumeDefaultVersionWhenUnspecified = false;
+            options.ReportApiVersions = true;
+            options.ApiVersionReader = new UrlSegmentApiVersionReader();
+        })
+        .AddApiExplorer(options =>
+        {
+            options.GroupNameFormat = "'v'VVV";
+            options.SubstituteApiVersionInUrl = true;
+        });
+
         services.AddEventBus(configuration);
 
         return services;

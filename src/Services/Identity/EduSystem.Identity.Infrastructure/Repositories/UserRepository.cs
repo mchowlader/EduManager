@@ -1,4 +1,4 @@
-﻿using EduSystem.Identity.Domain.Entities;
+using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Infrastructure.Contexts;
 using EduSystem.Identity.Shared.Common;
@@ -44,5 +44,25 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
     {
         context.Users.Update(user);
         await context.SaveChangesAsync();
+    }
+
+    public Task<User?> GetByRefreshTokenAsync(string refreshToken)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<User>> GetByRoleAsync(UserRole role)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> UpdateLastLoginAsync(Guid userId, DateTime loginTime)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<bool> ClearRefreshTokenAsync(Guid userId)
+    {
+        throw new NotImplementedException();
     }
 }

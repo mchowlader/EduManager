@@ -12,6 +12,7 @@ public static class DependencyInjection
         services.AddSingleton<IConnectionStringEncryptor, ConnectionStringEncryptor>();
         services.AddHealthChecks();
         services.AddEndpointsApiExplorer();
+        services.AddOpenApi();
 
         services
         .AddApiVersioning(options =>

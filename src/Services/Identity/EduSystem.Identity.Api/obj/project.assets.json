@@ -1893,6 +1893,16 @@
           }
         }
       },
+      "EduSystem.ApplicationUsers.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
+        }
+      },
       "EduSystem.Identity.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1929,6 +1939,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "EduSystem.ApplicationUsers.Domain": "1.0.0",
           "EduSystem.Identity.Application": "1.0.0",
           "EduSystem.Identity.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.0",
@@ -5061,6 +5072,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EduSystem.ApplicationUsers.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj",
+      "msbuildProject": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj"
     },
     "EduSystem.Identity.Application/1.0.0": {
       "type": "project",

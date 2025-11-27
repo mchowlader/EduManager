@@ -12,26 +12,26 @@ public class GlobalErrorApi : IEndpoints
             .WithTags("Error");
 
         group.Map("/", (HttpContext context, ILogger<GlobalErrorApi> logger) =>
-        {
-            var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
-            var exception = exceptionFeature?.Error;
-            var traceId = context.TraceIdentifier;
+            {
+                var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
+                var exception = exceptionFeature?.Error;
+                var traceId = context.TraceIdentifier;
 
-            logger.LogError(exception,
-                "Error ID: {TraceId} | Path: {Path} | Message: {Message}",
-                traceId,
-                context.Request.Path,
-                exception?.Message);
+                logger.LogError(exception,
+                    "Error ID: {TraceId} | Path: {Path} | Message: {Message}",
+                    traceId,
+                    context.Request.Path,
+                    exception?.Message);
 
-            return Results.Problem(
-                title: "An error occurred",
-                statusCode: StatusCodes.Status500InternalServerError,
-                extensions: new Dictionary<string, object?>
-                {
-                    {"traceId", context.TraceIdentifier   }
-                }
-            );
-
-        });
+                return Results.Problem(
+                    title: "An error occurred",
+                    statusCode: StatusCodes.Status500InternalServerError,
+                    extensions: new Dictionary<string, object?>
+                    {
+                        {"traceId", context.TraceIdentifier}
+                    }
+                );
+            }
+        );
     }
 }

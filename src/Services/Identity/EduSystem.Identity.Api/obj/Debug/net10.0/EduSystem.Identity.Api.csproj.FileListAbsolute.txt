@@ -250,3 +250,5 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Serilog.Sinks.Console.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\Serilog.Sinks.File.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.pdb

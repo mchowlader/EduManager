@@ -1,4 +1,5 @@
-﻿using EduSystem.Identity.Domain.Entities;
+using EduSystem.Identity.Domain.Entities;
+using EduSystem.Identity.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSystem.Identity.Infrastructure.Contexts;
@@ -13,26 +14,8 @@ public class IdentityDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasIndex(e => e.Email).IsUnique();
-            entity.Property(e => e.Email).HasMaxLength(256).IsRequired();
-            entity.Property(e => e.PasswordHash).IsRequired();
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new TenantConfiguration());
 
-            entity.HasOne(e => e.Tenant)
-                .WithMany()
-                .HasForeignKey(e => e.TenantId)
-                .OnDelete(DeleteBehavior.Restrict);
-        });
-
-        modelBuilder.Entity<Tenant>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasIndex(e => e.Slug).IsUnique();
-            entity.Property(e => e.Name).HasMaxLength(200).IsRequired();
-            entity.Property(e => e.Slug).HasMaxLength(100).IsRequired();
-            entity.Property(e => e.ConnectionString).IsRequired();
-        });
     }
 }

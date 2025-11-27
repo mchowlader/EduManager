@@ -2049,6 +2049,16 @@
           }
         }
       },
+      "EduSystem.ApplicationUsers.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
+        }
+      },
       "EduSystem.Identity.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -5282,6 +5292,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "EduSystem.ApplicationUsers.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj",
+      "msbuildProject": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj"
+    },
     "EduSystem.Identity.Application/1.0.0": {
       "type": "project",
       "path": "../EduSystem.Identity.Application/EduSystem.Identity.Application.csproj",
@@ -5316,6 +5331,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "BCrypt.Net-Next >= 4.0.3",
+      "EduSystem.ApplicationUsers.Domain >= 1.0.0",
       "EduSystem.Identity.Application >= 1.0.0",
       "EduSystem.Identity.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.0",
@@ -5360,6 +5376,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\ApplicationUsers\\EduSystem.ApplicationUsers.Domain\\EduSystem.ApplicationUsers.Domain.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\ApplicationUsers\\EduSystem.ApplicationUsers.Domain\\EduSystem.ApplicationUsers.Domain.csproj"
+            },
             "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Application\\EduSystem.Identity.Application.csproj": {
               "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Application\\EduSystem.Identity.Application.csproj"
             },
