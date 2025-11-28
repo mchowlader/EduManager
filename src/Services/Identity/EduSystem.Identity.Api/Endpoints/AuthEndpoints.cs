@@ -67,6 +67,33 @@ public class AuthEndpoints : IEndpoints
             .Produces<object>(StatusCodes.Status400BadRequest)
             .Produces<object>(StatusCodes.Status401Unauthorized);
 
+        // Forgot password (optional)
+        groupV1.MapPost("/forgot-password", ForgotPasswordV1)
+            .WithName("ForgotPasswordV1")
+            .WithSummary("Request password reset (V1)")
+            .WithDescription("Send password reset link to user's email")
+            .AllowAnonymous()
+            .Produces<object>(StatusCodes.Status200OK)
+            .Produces<object>(StatusCodes.Status400BadRequest);
+
+        // Reset password (optional)
+        groupV1.MapPost("/reset-password", ResetPasswordV1)
+            .WithName("ResetPasswordV1")
+            .WithSummary("Reset password (V1)")
+            .WithDescription("Reset password using token from email")
+            .AllowAnonymous()
+            .Produces<object>(StatusCodes.Status200OK)
+            .Produces<object>(StatusCodes.Status400BadRequest);
+
+        // Verify token (optional - for testing)
+        groupV1.MapGet("/verify-token", VerifyTokenV1)
+            .WithName("VerifyTokenV1")
+            .WithSummary("Verify JWT token (V1)")
+            .WithDescription("Check if current JWT token is valid")
+            .RequireAuthorization()
+            .Produces<object>(StatusCodes.Status200OK)
+            .Produces<object>(StatusCodes.Status401Unauthorized);
+
     }
 
     // Login handler
@@ -182,7 +209,6 @@ public class AuthEndpoints : IEndpoints
         });
     }
 
-
     // Change password handler
     private static async Task<IResult> ChangePasswordV1(
         ChangePasswordRequestDto request,
@@ -192,7 +218,7 @@ public class AuthEndpoints : IEndpoints
     {
         var userIdClaim = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-        if(string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+        if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
         {
             return Results.Unauthorized();
         }
@@ -206,7 +232,7 @@ public class AuthEndpoints : IEndpoints
 
         var result = await mediator.Send(command, cancellationToken);
 
-        if(!result.IsSuccess)
+        if (!result.IsSuccess)
         {
             return Results.BadRequest(new
             {
@@ -219,6 +245,74 @@ public class AuthEndpoints : IEndpoints
         {
             success = true,
             message = "Password changed successfully"
+        });
+    }
+
+    // Forgot password handler
+    private static async Task<IResult> ForgotPasswordV1(
+        ForgotPasswordRequestDto request,
+        IMediator mediator,
+        CancellationToken cancellationToken)
+    {
+        var command = new ForgotPasswordCommand
+        {
+            Email = request.Email
+        };
+
+        var result = await mediator.Send(command, cancellationToken).ConfigureAwait(false);
+
+        // Always return success for security (don't reveal if email exists)
+        return Results.Ok(new
+        {
+            success = true,
+            message = "If the email exists, a password reset link has been sent."
+        });
+    }
+
+    // Reset password handler
+    private static async Task<IResult> ResetPasswordV1(
+        ResetPasswordRequestDto request,
+        IMediator mediator,
+        CancellationToken cancellationToken)
+    {
+        var command = new ResetPasswordCommand
+        {
+            Token = request.Token,
+            NewPassword = request.NewPassword
+        };
+
+        var result = await mediator.Send(command, cancellationToken).ConfigureAwait(false);
+
+        if (!result.IsSuccess)
+        {
+            return Results.BadRequest(new
+            {
+                success = false,
+                message = result.ErrorMessage,
+                errors = new[] { result.ErrorMessage }
+            });
+        }
+
+        return Results.Ok(new
+        {
+            success = true,
+            message = "Password reset successfully"
+        });
+    }
+
+    // Verify token handler
+    private static IResult VerifyTokenV1(HttpContext context)
+    {
+        return Results.Ok(new
+        {
+            success = true,
+            message = "Token is valid",
+            data = new
+            {
+                isAuthenticated = context.User.Identity?.IsAuthenticated ?? false,
+                userId = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+                role = context.User.FindFirst(ClaimTypes.Role)?.Value
+            }
         });
     }
 }

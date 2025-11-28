@@ -38,7 +38,10 @@ namespace EduSystem.Attendance.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Attendances");
+                    b.HasIndex("AttendenctUserId", "AttendanceAt")
+                        .HasDatabaseName("IX_Attendances_User_Date");
+
+                    b.ToTable("Attendances", (string)null);
                 });
 #pragma warning restore 612, 618
         }

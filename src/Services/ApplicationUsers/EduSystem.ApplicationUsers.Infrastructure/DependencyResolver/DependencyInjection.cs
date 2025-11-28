@@ -19,7 +19,7 @@ public static class DependencyInjection
 
         services.AddDbContext<AppUserDbContext>((serviceProvider, option) =>
         {
-            //option.UseSqlServer(configuration.GetConnectionString("AppUserConnectionString"));
+            option.UseSqlServer(configuration.GetConnectionString("MasterDBConnection"));
             option.AddInterceptors(serviceProvider.GetRequiredService<AuditInterceptor>());
         });
 

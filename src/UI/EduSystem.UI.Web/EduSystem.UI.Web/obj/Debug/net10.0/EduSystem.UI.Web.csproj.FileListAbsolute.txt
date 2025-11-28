@@ -44,6 +44,7 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\Components\Layout\ReconnectModal.razor.rz.scp.css
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\Components\Pages\Registration.razor.rz.scp.css
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\bundle\EduSystem.UI.Web.styles.css
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\projectbundle\EduSystem.UI.Web.bundle.scp.css
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\f9o902iofb-{0}-99zm1jdh75-99zm1jdh75.gz
@@ -96,6 +97,8 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\jy0fzf3k94-{0}-0i02oychrm-0i02oychrm.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\4knh3vcapm-{0}-j8lzlu28q6-j8lzlu28q6.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\9kz0lfx0iy-{0}-u1n4jc5v46-u1n4jc5v46.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\8j0gpc9clu-{0}-h815563gnu-h815563gnu.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\gpazupbcky-{0}-h815563gnu-h815563gnu.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.build.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.build.json.cache
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.development.json
@@ -107,7 +110,3 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.pdb
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\ref\EduSystem.UI.Web.dll
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\scopedcss\Components\Pages\Registration.razor.rz.scp.css
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\8j0gpc9clu-{0}-h815563gnu-h815563gnu.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\gpazupbcky-{0}-h815563gnu-h815563gnu.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

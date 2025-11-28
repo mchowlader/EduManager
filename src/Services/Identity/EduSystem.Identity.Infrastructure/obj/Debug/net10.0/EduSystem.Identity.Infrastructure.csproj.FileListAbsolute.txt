@@ -48,12 +48,14 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastruc
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.runtimeconfig.json
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Application.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Event.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Messaging.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Application.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Shared.pdb
@@ -72,5 +74,3 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastruc
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\obj\Debug\net10.0\EduSystem.Identity.Infrastructure.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\obj\Debug\net10.0\EduSystem.Identity.Infrastructure.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\obj\Debug\net10.0\ref\EduSystem.Identity.Infrastructure.dll
-D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.dll
-D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.pdb

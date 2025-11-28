@@ -21,6 +21,8 @@ var app = builder.Build();
 
 app.UseExceptionHandler("/api/error");
 app.UseHttpsRedirection();
+app.UseAuthentication();  
+app.UseAuthorization();
 app.UseSwaggerConfiguration();
 app.MapEndpoints();
 app.Run();

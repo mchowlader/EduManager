@@ -48,11 +48,13 @@ D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infras
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Infrastructure.runtimeconfig.json
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Infrastructure.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Infrastructure.pdb
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Application.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Event.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Messaging.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Messaging.pdb
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Application.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Event.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.pdb

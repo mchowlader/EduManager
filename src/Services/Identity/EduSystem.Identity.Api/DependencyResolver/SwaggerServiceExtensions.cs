@@ -1,5 +1,5 @@
 using Asp.Versioning.ApiExplorer;
-using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 
 namespace EduSystem.Identity.Api.DependencyResolver;
 
@@ -28,6 +28,32 @@ public static class SwaggerServiceExtensions
                 Version = "v2",
                 Description = "Identity and Tenant Management API - Version 2"
             });
+
+            // Add JWT Authentication
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                Name = "Authorization",
+                Type = SecuritySchemeType.Http,
+                Scheme = "Bearer",
+                BearerFormat = "JWT",
+                In = ParameterLocation.Header,
+                Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\""
+            });
+
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    new string[] {}
+                }
+            });
         });
 
         return services;
@@ -36,11 +62,11 @@ public static class SwaggerServiceExtensions
     public static IApplicationBuilder UseSwaggerConfiguration(
         this WebApplication app)
     {
-        var swaggerEnabled = app.Configuration.GetValue<bool>("Swagger:Enabled", false);
+        var swaggerEnabled = app.Configuration.GetValue<bool>("Swagger:Enabled", true);
 
         if (!swaggerEnabled)
         {
-            return app; 
+            return app;
         }
 
         var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();

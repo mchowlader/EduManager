@@ -1,4 +1,4 @@
-﻿using EduSystem.Identity.Application.DTOs;
+using EduSystem.Identity.Application.DTOs;
 using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
@@ -41,6 +41,7 @@ public class RegisterTenantCommandHandler(
         string? connectionString = null;
         bool success = false;
         Result<User>? tenantAdminResult = null;
+
         try
         {
             // 1. Create Database
@@ -62,7 +63,7 @@ public class RegisterTenantCommandHandler(
             }
             var tenant = tenantResult.Data!;
 
-            // 4. Create Tenant Admin
+            // 4. Create Tenant Admin with EduAdmin role
             tenantAdminResult = await CreateTenantAdminAsync(tenant, dto);
             if (!tenantAdminResult.IsSuccess)
             {
@@ -80,6 +81,8 @@ public class RegisterTenantCommandHandler(
                 TenantId = tenant.Id,
                 TenantSlug = tenant.Slug!,
                 EncryptedConnectionString = connectionString,
+                AdminUserId = tenantAdmin.Id,
+                AdminEmail = tenantAdmin.Email,
                 CreatedAt = DateTime.UtcNow
             }, cancellationToken).ConfigureAwait(false);
 
@@ -113,7 +116,10 @@ public class RegisterTenantCommandHandler(
                 ConnectionString = connectionString,
                 IsActive = true,
                 PrimaryColor = dto.PrimaryColor,
-                SecondaryColor = dto.SecondaryColor
+                SecondaryColor = dto.SecondaryColor,
+                LogoUrl = null,
+                BannerUrl = null,
+                CreatedAt = DateTime.UtcNow
             };
 
             var createdTenant = await _tenantRepository.CreateAsync(tenant);
@@ -136,6 +142,11 @@ public class RegisterTenantCommandHandler(
         
         try
         {
+            // Check if email already exists
+            var isEmailExists = await _userRepository.IsEmailExistsAsync(dto.AdminEmail);
+            if (isEmailExists)
+                return Result<User>.Failure("Email already exists.");
+
             var tenantAdmin = new User
             {
                 Id = Guid.NewGuid(),
@@ -145,13 +156,14 @@ public class RegisterTenantCommandHandler(
                 PhoneNumber = dto.PhoneNumber,
                 TenantId = tenant.Id,
                 Role = UserRole.EduAdmin,
-                IsActive = true
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
             };
 
-            var isEmailExits = await _userRepository.IsEmailExistsAsync(tenantAdmin.Email);
+            //var isEmailExits = await _userRepository.IsEmailExistsAsync(tenantAdmin.Email);
 
-            if(isEmailExits)
-                return Result<User>.Failure("Email already exits.");
+            //if(isEmailExits)
+            //    return Result<User>.Failure("Email already exits.");
 
             await _userRepository.AddAsync(tenantAdmin);
 
@@ -190,10 +202,8 @@ public class RegisterTenantCommandHandler(
 
             // Optional: log failure
             if (!string.IsNullOrWhiteSpace(errorMessage))
-            {
                 // e.g., _logger.LogError(errorMessage);
                 Console.WriteLine($"Tenant cleanup: {errorMessage}");
-            }
         }
         catch (Exception ex)
         {

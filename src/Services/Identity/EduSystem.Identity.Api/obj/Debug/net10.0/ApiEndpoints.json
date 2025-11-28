@@ -46,6 +46,291 @@
     "Summary": "Simple ping test"
   },
   {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "ChangePasswordV1",
+    "RelativePath": "api/v1/auth/change-password",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EduSystem.Identity.Application.DTOs.ChangePasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "ChangePasswordV1",
+    "Description": "Change password for authenticated user",
+    "Summary": "Change user password (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "ForgotPasswordV1",
+    "RelativePath": "api/v1/auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EduSystem.Identity.Application.DTOs.ForgotPasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "ForgotPasswordV1",
+    "Description": "Send password reset link to user\u0027s email",
+    "Summary": "Request password reset (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "LoginV1",
+    "RelativePath": "api/v1/auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EduSystem.Identity.Application.DTOs.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "LoginV1",
+    "Description": "Authenticate user and return JWT tokens",
+    "Summary": "User login (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "LogoutV1",
+    "RelativePath": "api/v1/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "LogoutV1",
+    "Description": "Invalited users\u0027s refresh token",
+    "Summary": "User Logout (v1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "GetCurrentUserV1",
+    "RelativePath": "api/v1/auth/me",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "GetCurrentUserV1",
+    "Description": "Retrieve current user information from JWT token",
+    "Summary": "Get current authenticated user (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "RefreshTokenV1",
+    "RelativePath": "api/v1/auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "EduSystem.Identity.Application.DTOs.RefreshTokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "RefreshTokenV1",
+    "Description": "Refresh JWT access and refresh tokens",
+    "Summary": "Refresh JWT tokens (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "ResetPasswordV1",
+    "RelativePath": "api/v1/auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EduSystem.Identity.Application.DTOs.ResetPasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "ResetPasswordV1",
+    "Description": "Reset password using token from email",
+    "Summary": "Reset password (V1)"
+  },
+  {
+    "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
+    "Method": "VerifyTokenV1",
+    "RelativePath": "api/v1/auth/verify-token",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ],
+    "Tags": [
+      "Authentication"
+    ],
+    "EndpointName": "VerifyTokenV1",
+    "Description": "Check if current JWT token is valid",
+    "Summary": "Verify JWT token (V1)"
+  },
+  {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
     "Method": "RegisterTenantV1",
     "RelativePath": "api/v1/tenants/register",
@@ -118,21 +403,5 @@
     "EndpointName": "RegisterTenantV2",
     "Description": "Creates a new tenant in the system - Version 2",
     "Summary": "Register a new tenant (V2)"
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
-    "RelativePath": "test-fail",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

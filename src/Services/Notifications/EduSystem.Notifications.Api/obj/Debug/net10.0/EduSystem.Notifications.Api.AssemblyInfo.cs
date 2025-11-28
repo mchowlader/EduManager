@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.Notifications.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787f649946654f005576d966f2f79d01afb65b47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0f398a9ca71b5dfbf7e4c5fa9a1b1a6ad000aba")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.Notifications.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.Notifications.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

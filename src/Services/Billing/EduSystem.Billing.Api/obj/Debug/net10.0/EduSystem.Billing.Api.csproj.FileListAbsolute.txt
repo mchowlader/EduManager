@@ -77,7 +77,6 @@ D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debu
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\staticwebassets.development.json
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\swae.build.ex.cache
-D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\EduSyste.830A52C9.Up2Date
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\EduSystem.Billing.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\obj\Debug\net10.0\refint\EduSystem.Billing.Api.dll

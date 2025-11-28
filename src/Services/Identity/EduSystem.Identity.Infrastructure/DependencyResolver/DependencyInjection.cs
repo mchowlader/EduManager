@@ -1,4 +1,5 @@
-﻿using EduSystem.Identity.Application.IService;
+using EduSystem.Identity.Application.IService;
+using EduSystem.Identity.Application.Settings;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Infrastructure.Contexts;
 using EduSystem.Identity.Infrastructure.Repositories;
@@ -22,6 +23,23 @@ public static class DependencyInjection
         services.AddScoped<ITenantDatabaseProvisioner, TenantDatabaseProvisioner>();
         services.AddDbContext<IdentityDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("MasterDBConnection")));
+
+        services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
+
+
+        // Services
+        services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IEmailService, EmailService>();
+
+        // Settings Registration - Direct Injection (No Interface Needed)
+        var emailSettings = new EmailSettings();
+        configuration.GetSection("EmailSettings").Bind(emailSettings);
+        services.AddSingleton(emailSettings); // Direct class registration
+
+        var jwtSettings = new JwtSettings();
+        configuration.GetSection("JwtSettings").Bind(jwtSettings);
+        services.AddSingleton(jwtSettings); // Direct class registration
+
 
         return services;
     }

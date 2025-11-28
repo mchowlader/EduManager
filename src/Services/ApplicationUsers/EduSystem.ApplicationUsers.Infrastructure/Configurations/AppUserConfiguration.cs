@@ -30,6 +30,6 @@ public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
         builder.Property(e => e.PhoneConfirmed).HasDefaultValue(false);
         builder.Property(e => e.AccessFailedCount).HasDefaultValue(0);
         builder.Property(e => e.LockoutEnabled).HasDefaultValue(true);
-        builder.Property(e => e.CreatedAt).HasDefaultValue("GETUTCDATE()");
+        builder.Property(e => e.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
     }
 }
