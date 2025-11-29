@@ -19,13 +19,14 @@ builder.Services
 var app = builder.Build();
 
 // Middleware
+app.UseExceptionHandler("/api/error");
+app.UseHttpsRedirection();
+app.UseSwaggerConfiguration();
 app.UseSwagger();
 app.UseSwaggerUI();
-app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseMultiTenancy();
 app.UseAuthorization();
 app.MapControllers();
-
 app.MapHealthChecks("/health");
 app.Run();

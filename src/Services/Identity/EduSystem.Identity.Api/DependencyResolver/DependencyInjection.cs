@@ -41,8 +41,6 @@ public static class DependencyInjection
         // MassTransit with Consumer
         services.AddMassTransit(x =>
         {
-            x.AddConsumer<TenantDatabaseCreatedEventHandler>();
-
             x.UsingRabbitMq((context, cfg) =>
             {
                 var rabbitMqHost = configuration["RabbitMQ:Host"] ?? "localhost";
@@ -63,7 +61,6 @@ public static class DependencyInjection
                     intervalDelta: TimeSpan.FromSeconds(2)
                 ));
 
-                cfg.ConfigureEndpoints(context);
             });
         });
 

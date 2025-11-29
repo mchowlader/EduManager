@@ -12,7 +12,7 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
     public async Task AddAsync(User user)
     {
         await context.Users.AddAsync(user);
-        await context.SaveChangesAsync();
+        //await context.SaveChangesAsync();
     }
 
     public async Task<bool> IsEmailExistsAsync(string email) =>

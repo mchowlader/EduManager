@@ -1,4 +1,5 @@
-﻿using EduSystem.Identity.Application.Commands;
+using EduSystem.Identity.Application.Commands;
+using EduSystem.Identity.Application.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,7 +9,6 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
-        // Application service registrations go here
 
         services.AddMediatR(cfg =>
         {

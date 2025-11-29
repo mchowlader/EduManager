@@ -1,6 +1,7 @@
-﻿using MassTransit;
+using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 namespace EduSystem.Shared.Messaging.Extensions;
 
 public static class ServiceCollectionExtensions

@@ -1,9 +1,9 @@
 using EduSystem.ApplicationUsers.Application.IService;
-using EduSystem.ApplicationUsers.Infrastructure.Contexts;
-using EduSystem.ApplicationUsers.Infrastructure.Interceptors;
+using EduSystem.ApplicationUsers.Infrastructure.EventHandlers;
 using EduSystem.ApplicationUsers.Infrastructure.Service;
 using EduSystem.ApplicationUsers.Infrastructure.Services;
-using Microsoft.EntityFrameworkCore;
+using EduSystem.Shared.Messaging;
+using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,13 +17,36 @@ public static class DependencyInjection
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddHttpContextAccessor();
 
-        services.AddDbContext<AppUserDbContext>((serviceProvider, option) =>
+        services.AddMassTransit(x =>
         {
-            option.UseSqlServer(configuration.GetConnectionString("MasterDBConnection"));
-            option.AddInterceptors(serviceProvider.GetRequiredService<AuditInterceptor>());
+            x.AddConsumer<TenantDatabaseCreatedEventHandler>();
+
+            x.UsingRabbitMq((context, cfg) =>
+            {
+                var rabbitMqConfig = configuration.GetSection("RabbitMQ");
+                cfg.Host(rabbitMqConfig["Host"] ?? "localhost", h =>
+                {
+                    h.Username(rabbitMqConfig["Username"] ?? "guest");
+                    h.Password(rabbitMqConfig["Password"] ?? "guest");
+                });
+
+                cfg.ReceiveEndpoint("attendance-tenant-database-created", e =>
+                {
+                    e.UseMessageRetry(r => r.Intervals(
+                        TimeSpan.FromSeconds(1),
+                        TimeSpan.FromSeconds(2),
+                        TimeSpan.FromSeconds(5)
+                    ));
+
+                    e.PrefetchCount = 16;
+                    e.ConcurrentMessageLimit = 1;
+
+                    e.ConfigureConsumer<TenantDatabaseCreatedEventHandler>(context);
+                });
+            });
         });
 
-        services.AddScoped<AuditInterceptor>();
+        services.AddScoped<IEventBus, MassTransitEventBus>();
 
         return services;
     }

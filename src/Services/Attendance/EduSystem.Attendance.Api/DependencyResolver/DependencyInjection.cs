@@ -18,6 +18,8 @@ public static class DependencyInjection
         services.AddEndpointsApiExplorer();
         services.AddOpenApi();
         services.AddSingleton<IConnectionStringEncryptor, ConnectionStringEncryptor>();
+        services.AddAuthentication();
+        services.AddAuthorization();
         services
         .AddApiVersioning(options =>
         {
@@ -32,11 +34,20 @@ public static class DependencyInjection
             options.SubstituteApiVersionInUrl = true;
         });
 
-
-        services.AddDbContext<AttendanceDbContext>((serviceProvider, option) =>
+        services.AddDbContext<AttendanceDbContext>((serviceProvider, options) =>
         {
-            option.UseSqlServer(configuration.GetConnectionString("MasterDBConnection"));
-            option.AddInterceptors(serviceProvider.GetRequiredService<AuditInterceptor>());
+            var masterConnection = configuration.GetConnectionString("MasterDBConnection");
+
+            options.UseSqlServer(masterConnection, sqlOptions =>
+            {
+                sqlOptions.CommandTimeout(60);
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 3,
+                    maxRetryDelay: TimeSpan.FromSeconds(10),
+                    errorNumbersToAdd: null);
+            });
+
+            options.AddInterceptors(serviceProvider.GetRequiredService<AuditInterceptor>());
         });
 
         return services;

@@ -97,7 +97,7 @@ public class RegisterTenantCommandHandler(
         finally
         {
             // Ensure cleanup only if something failed
-            if (!success || connectionString != null || (tenantAdminResult == null || !tenantAdminResult.IsSuccess))
+            if (!success || connectionString == null || (tenantAdminResult == null || !tenantAdminResult.IsSuccess))
                 await HandleFailureAsync(dto.Slug);
         }
     }

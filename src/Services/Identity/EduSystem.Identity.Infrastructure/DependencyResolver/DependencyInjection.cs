@@ -13,33 +13,39 @@ namespace EduSystem.Identity.Infrastructure.DependencyResolver;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureServices(
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
-        // Infrastructure service registrations go here
-        services.AddScoped<IUnitOfWork, UnitOfWork>();
-        services.AddScoped<ITenantRepository, TenantRepository>();
-        services.AddScoped<IUserRepository, UserRepository>();
-        services.AddScoped<IPasswordHasher, PasswordHasher>();
-        services.AddScoped<ITenantDatabaseProvisioner, TenantDatabaseProvisioner>();
+        // Database
         services.AddDbContext<IdentityDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("MasterDBConnection")));
 
-        services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
+        // JWT Settings
+        var jwtSettings = new JwtSettings();
+        configuration.GetSection("JwtSettings").Bind(jwtSettings);
 
+        if (string.IsNullOrEmpty(jwtSettings.SecretKey) || jwtSettings.SecretKey.Length < 32)
+            throw new InvalidOperationException("JWT SecretKey must be at least 32 characters");
+
+        services.AddSingleton(jwtSettings);
+
+        // Email Settings
+        var emailSettings = new EmailSettings();
+        configuration.GetSection("EmailSettings").Bind(emailSettings);
+        services.AddSingleton(emailSettings);
+
+        // Repositories
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<ITenantRepository, TenantRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
 
         // Services
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IEmailService, EmailService>();
-
-        // Settings Registration - Direct Injection (No Interface Needed)
-        var emailSettings = new EmailSettings();
-        configuration.GetSection("EmailSettings").Bind(emailSettings);
-        services.AddSingleton(emailSettings); // Direct class registration
-
-        var jwtSettings = new JwtSettings();
-        configuration.GetSection("JwtSettings").Bind(jwtSettings);
-        services.AddSingleton(jwtSettings); // Direct class registration
-
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<ITenantDatabaseProvisioner, TenantDatabaseProvisioner>();
 
         return services;
     }

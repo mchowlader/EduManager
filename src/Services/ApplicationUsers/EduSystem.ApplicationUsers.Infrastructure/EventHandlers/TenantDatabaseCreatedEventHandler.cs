@@ -1,4 +1,4 @@
-﻿using EduSystem.ApplicationUsers.Infrastructure.Contexts;
+using EduSystem.ApplicationUsers.Infrastructure.Contexts;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging;
 using EduSystem.Shared.Messaging.Handlers;
@@ -9,7 +9,7 @@ namespace EduSystem.ApplicationUsers.Infrastructure.EventHandlers;
 
 public class TenantDatabaseCreatedEventHandler : BaseMigrationHandler<AppUserDbContext>
 {
-    public TenantDatabaseCreatedEventHandler(IConnectionStringEncryptor encryptor, IEventBus eventBus, 
+    public TenantDatabaseCreatedEventHandler(IConnectionStringEncryptor encryptor, IEventBus eventBus,
         ILogger<TenantDatabaseCreatedEventHandler> logger)
         : base(encryptor, eventBus, logger)
     {

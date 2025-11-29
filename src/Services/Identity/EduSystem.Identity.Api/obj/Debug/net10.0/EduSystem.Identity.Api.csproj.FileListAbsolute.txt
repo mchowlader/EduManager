@@ -248,6 +248,7 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\staticwebassets.development.json
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\swae.build.ex.cache
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSyste.7436716E.Up2Date
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSystem.Identity.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\refint\EduSystem.Identity.Api.dll

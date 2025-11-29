@@ -1,4 +1,3 @@
-﻿using EduSystem.Attendance.Infrastructure.Contexts;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging;
 using EduSystem.Shared.Messaging.Handlers;
