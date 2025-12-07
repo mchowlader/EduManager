@@ -202,8 +202,9 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Class")
-                        .HasColumnType("int");
+                    b.Property<string>("Class")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -219,22 +220,23 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Department")
-                        .HasColumnType("int");
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<long>("PermanentAddressId")
+                    b.Property<long?>("PermanentAddressId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Phone")
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
-                    b.Property<long>("PresentAddressId")
+                    b.Property<long?>("PresentAddressId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -244,6 +246,11 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DateOfBirthNo")
+                        .IsUnique();
+
+                    b.HasIndex("Name");
 
                     b.HasIndex("PermanentAddressId");
 
@@ -288,7 +295,8 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<long?>("PresentAddressId")
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("PresentAddressId");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -298,7 +306,14 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("Name");
+
                     b.HasIndex("PermanentAddressId");
+
+                    b.HasIndex("Phone");
 
                     b.HasIndex("PresentAddressId");
 
@@ -310,22 +325,22 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
                         .WithMany()
                         .HasForeignKey("PermanentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
                         .WithMany()
                         .HasForeignKey("PresentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Student", "Student")
                         .WithMany("FamilyInfos")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Teacher", "Teacher")
                         .WithMany("FamilyInfos")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("PermanentAddress");
 
@@ -341,14 +356,12 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
                         .WithMany()
                         .HasForeignKey("PermanentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
                         .WithMany()
                         .HasForeignKey("PresentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("PermanentAddress");
 
@@ -360,12 +373,12 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
                         .WithMany()
                         .HasForeignKey("PermanentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
                         .WithMany()
                         .HasForeignKey("PresentAddressId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("PermanentAddress");
 

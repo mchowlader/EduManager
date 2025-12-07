@@ -28,7 +28,7 @@ public class AppUserDbContext : DbContext
     {
         _tenantContext = tenantContext;
         _encryptor = encryptor;
-        _masterConnectionString = configuration.GetConnectionString("DefaultConnection")
+        _masterConnectionString = configuration.GetConnectionString("MasterDBConnection")
             ?? throw new InvalidOperationException("Master connection string not found");
     }
 

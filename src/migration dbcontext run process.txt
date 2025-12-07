@@ -8,3 +8,17 @@
    dotnet build
    dotnet ef migrations add InitialCreate --startup-project ../EduSystem.Attendance.Api
    ```
+
+   3. Register tanant request json
+   ```
+	   {
+		  "schoolName": "Kamegha Muslim Secondary School",
+		  "slug": "KameghaMuslim",
+		  "adminEmail": "kalmegha@gmail.com",
+		  "adminPassword": "KameghaMuslim",
+		  "adminFullName": "Kamegha Muslim",
+		  "phoneNumber": "01710025023",
+		  "primaryColor": "red",
+		  "secondaryColor": "green"
+		}
+   ```

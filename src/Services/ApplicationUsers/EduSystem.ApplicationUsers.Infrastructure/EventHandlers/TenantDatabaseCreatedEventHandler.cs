@@ -15,7 +15,7 @@ public class TenantDatabaseCreatedEventHandler : BaseMigrationHandler<AppUserDbC
     {
     }
 
-    protected override string ServiceName => "ApplicationUser";
+    protected override string ServiceName => "ApplicationUsers";
 
     protected override AppUserDbContext CreateDbContext(DbContextOptions<AppUserDbContext> options)
     {

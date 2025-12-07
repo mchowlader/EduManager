@@ -1,0 +1,184 @@
+2025-12-02 21:42:07.699 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-02 21:42:07.996 +06:00 [INF] Configured endpoint attendance-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-02 21:42:08.149 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-02 21:42:08.763 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-02 21:42:08.779 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-02 21:42:08.802 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-02 21:42:08.802 +06:00 [INF] Hosting environment: Development
+2025-12-02 21:42:08.802 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-02 21:42:09.539 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 786.2525ms
+2025-12-02 21:42:09.558 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-02 21:42:13.109 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.css - null null
+2025-12-02 21:42:13.109 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - null null
+2025-12-02 21:42:13.122 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - null null
+2025-12-02 21:42:13.164 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.css - 200 152 text/css 50.9034ms
+2025-12-02 21:42:13.164 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - 200 23649 text/css 55.6508ms
+2025-12-02 21:42:13.166 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 44.1656ms
+2025-12-02 21:42:13.198 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-02 21:42:13.208 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.js - null null
+2025-12-02 21:42:13.210 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 12.336ms
+2025-12-02 21:42:13.285 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.js - 200 null application/javascript;charset=utf-8 76.9305ms
+2025-12-02 21:42:13.330 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-02 21:42:13.340 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-02 21:42:13.355 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 23.508ms
+2025-12-02 21:42:13.402 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.2423ms
+2025-12-02 21:42:13.731 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-02 21:42:13.745 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.8151ms
+2025-12-02 22:03:43.208 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-02 22:03:43.827 +06:00 [INF] Configured endpoint attendance-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-02 22:03:44.230 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-02 22:03:45.025 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-02 22:03:45.109 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-02 22:03:45.110 +06:00 [INF] Hosting environment: Development
+2025-12-02 22:03:45.110 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-02 22:03:45.175 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-02 22:03:45.521 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 508.245ms
+2025-12-02 22:03:45.586 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-02 22:04:06.040 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-02 22:04:06.042 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-02 22:04:06.355 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 316.9197ms
+2025-12-02 22:04:06.390 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 351.8653ms
+2025-12-02 22:04:07.306 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-02 22:04:07.370 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 64.0162ms
+2025-12-02 22:14:00.912 +06:00 [INF] [ApplicationUser] 📨 Received migration event for tenant: canada
+2025-12-02 22:14:00.912 +06:00 [INF] [ApplicationUser] ⏳ Waiting 3 seconds before migration...
+2025-12-02 22:14:06.293 +06:00 [INF] [ApplicationUser] 🔄 Applying migrations (Attempt 1/5)
+2025-12-02 22:14:06.312 +06:00 [WRN] [ApplicationUser] ❌ Migration failed (Attempt 1/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:06.352 +06:00 [INF] [ApplicationUser] ⏳ Waiting 2 seconds before retry...
+2025-12-02 22:14:08.352 +06:00 [INF] [ApplicationUser] 🔄 Applying migrations (Attempt 2/5)
+2025-12-02 22:14:08.366 +06:00 [WRN] [ApplicationUser] ❌ Migration failed (Attempt 2/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:08.366 +06:00 [INF] [ApplicationUser] ⏳ Waiting 4 seconds before retry...
+2025-12-02 22:14:12.368 +06:00 [INF] [ApplicationUser] 🔄 Applying migrations (Attempt 3/5)
+2025-12-02 22:14:12.380 +06:00 [WRN] [ApplicationUser] ❌ Migration failed (Attempt 3/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:12.380 +06:00 [INF] [ApplicationUser] ⏳ Waiting 8 seconds before retry...
+2025-12-02 22:14:20.390 +06:00 [INF] [ApplicationUser] 🔄 Applying migrations (Attempt 4/5)
+2025-12-02 22:14:20.414 +06:00 [WRN] [ApplicationUser] ❌ Migration failed (Attempt 4/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:20.414 +06:00 [INF] [ApplicationUser] ⏳ Waiting 16 seconds before retry...
+2025-12-02 22:14:36.426 +06:00 [INF] [ApplicationUser] 🔄 Applying migrations (Attempt 5/5)
+2025-12-02 22:14:36.445 +06:00 [WRN] [ApplicationUser] ❌ Migration failed (Attempt 5/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:36.446 +06:00 [ERR] [ApplicationUser] ❌ FAILED: Could not apply migrations after 5 attempts
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:14:36.449 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2025-12-02 22:14:36.646 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2025-12-02 22:27:55.069 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-02 22:27:55.493 +06:00 [INF] Configured endpoint applicationuser-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-02 22:27:55.661 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-02 22:27:56.176 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-02 22:27:56.243 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-02 22:27:56.243 +06:00 [INF] Hosting environment: Development
+2025-12-02 22:27:56.243 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-02 22:27:56.246 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-02 22:27:56.405 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 244.3135ms
+2025-12-02 22:27:56.458 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-02 22:29:04.713 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-02 22:29:04.713 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-02 22:29:04.759 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 47.5216ms
+2025-12-02 22:29:04.783 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.4166ms
+2025-12-02 22:29:04.887 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-02 22:29:04.897 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.4022ms
+2025-12-02 22:31:34.164 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Dhaka 
+2025-12-02 22:31:34.165 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 3 seconds before migration...
+2025-12-02 22:31:41.302 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 1/5)
+2025-12-02 22:31:41.328 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 1/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:31:41.351 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 2 seconds before retry...
+2025-12-02 22:31:56.723 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 2/5)
+2025-12-02 22:31:56.733 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 2/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:31:56.733 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 4 seconds before retry...
+2025-12-02 22:32:00.891 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 3/5)
+2025-12-02 22:32:00.909 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 3/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:32:00.910 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 8 seconds before retry...
+2025-12-02 22:32:10.454 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 4/5)
+2025-12-02 22:32:10.464 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 4/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:32:10.465 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 16 seconds before retry...
+2025-12-02 22:32:29.943 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 5/5)
+2025-12-02 22:32:29.960 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 5/5). Error: Failed to decrypt connection string
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:32:29.960 +06:00 [ERR] [ApplicationUsers] ❌ FAILED: Could not apply migrations after 5 attempts
+System.InvalidOperationException: Failed to decrypt connection string
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 534
+2025-12-02 22:32:29.963 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2025-12-02 22:32:32.733 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2025-12-02 22:33:47.791 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2025-12-02 22:33:47.900 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 110.1613ms
+2025-12-02 22:33:47.953 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-02 22:33:47.953 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-02 22:33:47.954 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 1.2183ms
+2025-12-02 22:33:47.971 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.3288ms
+2025-12-02 22:33:48.113 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-02 22:33:48.114 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1.4242ms
+2025-12-02 22:33:48.199 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - null null
+2025-12-02 22:33:48.224 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - 200 628 image/png 24.8639ms
+2025-12-02 22:39:37.776 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Cumilla
+2025-12-02 22:39:37.839 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 3 seconds before migration...
+2025-12-02 22:39:37.874 +06:00 [WRN] [ApplicationUsers] ⚠️ Migration cancelled during initial delay
+2025-12-02 22:39:37.893 +06:00 [ERR] Consumer Channel Shutdown: "rabbitmq://localhost/applicationuser-tenant-database-created" - amq.ctag-jtJJuR1Uy8jA-Mvlu-tZUQ, Concurrent Peak: 1
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=491, text='Channel is already closed: AMQP close-reason, initiated by Library, code=541, text='Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..', classId=0, methodId=0, exception=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ReceiveAsync(Socket socket, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.ReceiveAsync(Memory`1 buffer, SocketFlags socketFlags, Boolean fromNetworkStream, CancellationToken cancellationToken)
+   at System.Net.Sockets.NetworkStream.ReadAsync(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeReader.<ReadInternalAsync>g__Core|40_0(StreamPipeReader reader, Nullable`1 minimumSize, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.IO.Pipelines.StreamPipeReader.<ReadInternalAsync>g__Core|40_0(StreamPipeReader reader, Nullable`1 minimumSize, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at System.IO.Pipelines.StreamPipeReader.ReadInternalAsync(Nullable`1 minimumSize, CancellationToken cancellationToken)
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFromPipeAsync(PipeReader reader, UInt32 maxInboundMessageBodySize, InboundFrame frame, CancellationToken mainLoopCancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFromPipeAsync(PipeReader reader, UInt32 maxInboundMessageBodySize, InboundFrame frame, CancellationToken mainLoopCancellationToken)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrameAsync(InboundFrame frame, CancellationToken mainLoopCancellationToken)
+   at RabbitMQ.Client.Framing.Connection.ReceiveLoopAsync(CancellationToken mainLoopCancellationToken)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(Action action, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder.SetResult()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFromPipeAsync(PipeReader reader, UInt32 maxInboundMessageBodySize, InboundFrame frame, CancellationToken mainLoopCancellationToken)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore`1.SignalCompletion()
+   at System.IO.Pipelines.StreamPipeReader.<ReadInternalAsync>g__Core|40_0(StreamPipeReader reader, Nullable`1 minimumSize, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.MoveNext()
+   at System.Net.Sockets.SocketAsyncEventArgs.<>c.<.cctor>b__174_0(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading.ThreadPoolTypedWorkItemQueue.System.Threading.IThreadPoolWorkItem.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+   at System.Threading.Thread.StartCallback()
+--- End of stack trace from previous location ---
+
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.StreamPipeReader.<ReadInternalAsync>g__Core|40_0(StreamPipeReader reader, Nullable`1 minimumSize, CancellationTokenSource tokenSource, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFromPipeAsync(PipeReader reader, UInt32 maxInboundMessageBodySize, InboundFrame frame, CancellationToken mainLoopCancellationToken)
+   at RabbitMQ.Client.Framing.Connection.ReceiveLoopAsync(CancellationToken mainLoopCancellationToken)
+   at RabbitMQ.Client.Framing.Connection.MainLoop()', classId=0, methodId=0
+   at MassTransit.RabbitMqTransport.RabbitMqReceiveLockContext.Complete() in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/RabbitMqReceiveLockContext.cs:line 30
+   at MassTransit.Transports.PendingReceiveLockContext.Execute(Func`2 action, Boolean clearLockContext) in /_/src/MassTransit/Transports/PendingReceiveLockContext.cs:line 76
+   at MassTransit.Transports.PendingReceiveLockContext.Execute(Func`2 action, Boolean clearLockContext) in /_/src/MassTransit/Transports/PendingReceiveLockContext.cs:line 89
+   at MassTransit.Transports.ReceivePipeDispatcher.Dispatch(ReceiveContext context, ReceiveLockContext receiveLock) in /_/src/MassTransit/Transports/ReceivePipeDispatcher.cs:line 71
+   at MassTransit.Transports.ReceivePipeDispatcher.Dispatch(ReceiveContext context, ReceiveLockContext receiveLock) in /_/src/MassTransit/Transports/ReceivePipeDispatcher.cs:line 108
+   at MassTransit.Transports.ReceivePipeDispatcher.Dispatch(ReceiveContext context, ReceiveLockContext receiveLock) in /_/src/MassTransit/Transports/ReceivePipeDispatcher.cs:line 115
+   at MassTransit.RabbitMqTransport.RabbitMqBasicConsumer.HandleBasicDeliverAsync(String consumerTag, UInt64 deliveryTag, Boolean redelivered, String exchange, String routingKey, IReadOnlyBasicProperties properties, ReadOnlyMemory`1 body, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/RabbitMqBasicConsumer.cs:line 106

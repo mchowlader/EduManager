@@ -1,5 +1,6 @@
 using Asp.Versioning;
 using EduSystem.Identity.Infrastructure.EventHandlers;
+using EduSystem.Shared.Event;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging;
 using MassTransit;
@@ -52,6 +53,11 @@ public static class DependencyInjection
                 {
                     h.Username(rabbitMqUsername);
                     h.Password(rabbitMqPassword);
+                });
+                // IMPORTANT: Configure message topology for fanout
+                cfg.Publish<TenantDatabaseCreatedEvent>(p =>
+                {
+                    p.ExchangeType = "fanout";
                 });
 
                 cfg.UseMessageRetry(r => r.Exponential(

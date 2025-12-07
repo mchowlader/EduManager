@@ -1,7 +1,9 @@
 using EduSystem.ApplicationUsers.Application.IService;
 using EduSystem.ApplicationUsers.Infrastructure.EventHandlers;
+using EduSystem.ApplicationUsers.Infrastructure.Interceptors;
 using EduSystem.ApplicationUsers.Infrastructure.Service;
 using EduSystem.ApplicationUsers.Infrastructure.Services;
+using EduSystem.Shared.Event;
 using EduSystem.Shared.Messaging;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +18,7 @@ public static class DependencyInjection
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddHttpContextAccessor();
-
+        services.AddScoped<AuditInterceptor>();
         services.AddMassTransit(x =>
         {
             x.AddConsumer<TenantDatabaseCreatedEventHandler>();
@@ -30,16 +32,19 @@ public static class DependencyInjection
                     h.Password(rabbitMqConfig["Password"] ?? "guest");
                 });
 
-                cfg.ReceiveEndpoint("attendance-tenant-database-created", e =>
+                cfg.ReceiveEndpoint("applicationusers-tenant-database-created", e =>
                 {
-                    e.UseMessageRetry(r => r.Intervals(
-                        TimeSpan.FromSeconds(1),
-                        TimeSpan.FromSeconds(2),
-                        TimeSpan.FromSeconds(5)
-                    ));
+                    // CRITICAL: Bind to the fanout exchange
+                    e.Bind<TenantDatabaseCreatedEvent>();
 
-                    e.PrefetchCount = 16;
-                    e.ConcurrentMessageLimit = 1;
+                    // Sequential processing - one message at a time
+                    e.UseConcurrencyLimit(1);
+                    e.PrefetchCount = 1;
+                    e.UseMessageRetry(r => r.Intervals(
+                        TimeSpan.FromSeconds(2),
+                        TimeSpan.FromSeconds(5),
+                        TimeSpan.FromSeconds(10)
+                    ));
 
                     e.ConfigureConsumer<TenantDatabaseCreatedEventHandler>(context);
                 });

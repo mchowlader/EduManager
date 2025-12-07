@@ -8,19 +8,24 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 {
     public void Configure(EntityTypeBuilder<Student> builder)
     {
-        // Table
         builder.ToTable("Students");
-
-        // Primary Key
         builder.HasKey(s => s.Id);
 
-        // Properties
         builder.Property(s => s.Name)
             .IsRequired()
             .HasMaxLength(100);
 
         builder.Property(s => s.Phone)
             .HasMaxLength(15);
+
+        // ✅ EXPLICIT NULLABLE CONFIGURATION
+        builder.Property(s => s.PresentAddressId)
+            .HasColumnType("bigint")  
+            .IsRequired(false);       
+
+        builder.Property(s => s.PermanentAddressId)
+            .HasColumnType("bigint")  
+            .IsRequired(false);       
 
         builder.Property(s => s.DateOfBirth)
             .IsRequired();
@@ -30,26 +35,32 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
             .HasMaxLength(50);
 
         builder.Property(s => s.Class)
-            .IsRequired();
+            .IsRequired()
+            .HasConversion<string>();
 
         builder.Property(s => s.Department)
-            .IsRequired();
+            .IsRequired()
+            .HasConversion<string>();
 
-        // Addresses
+        // Relationships
         builder.HasOne(s => s.PresentAddress)
             .WithMany()
             .HasForeignKey(s => s.PresentAddressId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(s => s.PermanentAddress)
             .WithMany()
             .HasForeignKey(s => s.PermanentAddressId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
 
-        // Family relationship
         builder.HasMany(s => s.FamilyInfos)
             .WithOne(f => f.Student)
             .HasForeignKey(f => f.StudentId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasIndex(s => s.Name);
+        builder.HasIndex(s => s.DateOfBirthNo).IsUnique();
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AddInitateTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -60,10 +60,10 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
-                    PresentAddressId = table.Column<long>(type: "bigint", nullable: false),
-                    PermanentAddressId = table.Column<long>(type: "bigint", nullable: false),
-                    Class = table.Column<int>(type: "int", nullable: false),
-                    Department = table.Column<int>(type: "int", nullable: false),
+                    PresentAddressId = table.Column<long>(type: "bigint", nullable: true),
+                    PermanentAddressId = table.Column<long>(type: "bigint", nullable: true),
+                    Class = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Department = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateOfBirthNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -79,13 +79,13 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         column: x => x.PermanentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Students_Addresses_PresentAddressId",
                         column: x => x.PresentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -112,13 +112,13 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         column: x => x.PermanentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Teachers_Addresses_PresentAddressId",
                         column: x => x.PresentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -147,25 +147,25 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         column: x => x.PermanentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Families_Addresses_PresentAddressId",
                         column: x => x.PresentAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Families_Students_StudentId",
                         column: x => x.StudentId,
                         principalTable: "Students",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Families_Teachers_TeacherId",
                         column: x => x.TeacherId,
                         principalTable: "Teachers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -201,6 +201,17 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                 column: "TeacherId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Students_DateOfBirthNo",
+                table: "Students",
+                column: "DateOfBirthNo",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Students_Name",
+                table: "Students",
+                column: "Name");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Students_PermanentAddressId",
                 table: "Students",
                 column: "PermanentAddressId");
@@ -211,9 +222,25 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                 column: "PresentAddressId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Teachers_Email",
+                table: "Teachers",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teachers_Name",
+                table: "Teachers",
+                column: "Name");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Teachers_PermanentAddressId",
                 table: "Teachers",
                 column: "PermanentAddressId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teachers_Phone",
+                table: "Teachers",
+                column: "Phone");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Teachers_PresentAddressId",

@@ -1,0 +1,258 @@
+2025-12-08 00:40:43.604 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-08 00:40:44.219 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-08 00:40:44.967 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-08 00:40:45.355 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-08 00:40:45.466 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-08 00:40:45.466 +06:00 [INF] Hosting environment: Development
+2025-12-08 00:40:45.469 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-08 00:40:45.892 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 543.3361ms
+2025-12-08 00:40:45.926 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-08 00:41:04.850 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-08 00:41:05.364 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-08 00:41:05.983 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-08 00:41:06.384 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-08 00:41:06.475 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-08 00:41:06.476 +06:00 [INF] Hosting environment: Development
+2025-12-08 00:41:06.476 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-08 00:41:06.720 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 363.6327ms
+2025-12-08 00:41:06.744 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-08 00:41:14.395 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-08 00:41:14.492 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 97.9949ms
+2025-12-08 00:41:14.544 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-08 00:41:14.547 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-08 00:41:14.574 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 29.8466ms
+2025-12-08 00:41:14.595 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.4456ms
+2025-12-08 00:41:14.690 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-08 00:41:14.704 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.368ms
+2025-12-08 00:41:26.216 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/tenants/register - application/json 277
+2025-12-08 00:41:26.244 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:41:26.267 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-08 00:41:33.860 +06:00 [INF] Executed DbCommand (105ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:41:33.932 +06:00 [INF] 🔧 Starting database provisioning for tenant: KameghaMuslim
+2025-12-08 00:41:34.028 +06:00 [INF] 📦 Creating database: EduSystem_KameghaMuslim
+2025-12-08 00:41:35.312 +06:00 [INF] ✅ Database created: EduSystem_KameghaMuslim
+2025-12-08 00:41:35.313 +06:00 [INF] 👤 Creating login: tenant_KameghaMuslim_user
+2025-12-08 00:41:35.331 +06:00 [INF] Login already exists: tenant_KameghaMuslim_user
+2025-12-08 00:41:35.331 +06:00 [INF] ✅ Login created: tenant_KameghaMuslim_user
+2025-12-08 00:41:35.331 +06:00 [INF] 🔐 Creating user and assigning permissions in: EduSystem_KameghaMuslim
+2025-12-08 00:41:35.967 +06:00 [INF] ✅ User created and permissions assigned
+2025-12-08 00:41:35.970 +06:00 [INF] 🔍 Verifying tenant connection...
+2025-12-08 00:41:35.973 +06:00 [INF] 🔄 Connection verification attempt 1/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:41:36.099 +06:00 [WRN] ⚠️ Connection attempt 1 failed. Error: Login failed for user 'tenant_KameghaMuslim_user'. (Number: 18456)
+2025-12-08 00:41:37.104 +06:00 [INF] 🔄 Connection verification attempt 2/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:41:37.147 +06:00 [WRN] ⚠️ Connection attempt 2 failed. Error: Login failed for user 'tenant_KameghaMuslim_user'. (Number: 18456)
+2025-12-08 00:41:38.150 +06:00 [INF] 🔄 Connection verification attempt 3/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:41:38.189 +06:00 [WRN] ⚠️ Connection attempt 3 failed. Error: Login failed for user 'tenant_KameghaMuslim_user'. (Number: 18456)
+2025-12-08 00:41:39.203 +06:00 [INF] 🔄 Connection verification attempt 4/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:41:39.238 +06:00 [WRN] ⚠️ Connection attempt 4 failed. Error: Login failed for user 'tenant_KameghaMuslim_user'. (Number: 18456)
+2025-12-08 00:41:40.250 +06:00 [INF] 🔄 Connection verification attempt 5/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:41:40.279 +06:00 [WRN] ⚠️ Connection attempt 5 failed. Error: Login failed for user 'tenant_KameghaMuslim_user'. (Number: 18456)
+2025-12-08 00:41:40.279 +06:00 [ERR] ❌ Connection verification failed: Cannot connect after 5 attempts: Login failed for user 'tenant_KameghaMuslim_user'.
+2025-12-08 00:41:40.347 +06:00 [INF] ✅ Cleaned up database: EduSystem_KameghaMuslim
+2025-12-08 00:41:40.409 +06:00 [INF] ✅ Cleaned up login: tenant_KameghaMuslim_user
+2025-12-08 00:41:40.415 +06:00 [INF] 🗑️ Dropping database: EduSystem_KameghaMuslim
+2025-12-08 00:41:40.497 +06:00 [INF] ✅ Cleaned up database: EduSystem_KameghaMuslim
+2025-12-08 00:41:40.503 +06:00 [INF] ✅ Cleaned up login: tenant_KameghaMuslim_user
+2025-12-08 00:41:40.503 +06:00 [INF] ✅ Database and login dropped successfully
+2025-12-08 00:41:40.511 +06:00 [INF] Setting HTTP status code 400.
+2025-12-08 00:41:40.516 +06:00 [INF] Writing value of type '<>f__AnonymousType11`1' as Json.
+2025-12-08 00:41:40.528 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:41:40.543 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/tenants/register - 400 null application/json; charset=utf-8 14326.8974ms
+2025-12-08 00:42:24.217 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/tenants/register - application/json 277
+2025-12-08 00:42:24.221 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:42:26.416 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:42:26.417 +06:00 [INF] 🔧 Starting database provisioning for tenant: KameghaMuslim
+2025-12-08 00:42:26.448 +06:00 [INF] 📦 Creating database: EduSystem_KameghaMuslim
+2025-12-08 00:42:27.635 +06:00 [INF] ✅ Database created: EduSystem_KameghaMuslim
+2025-12-08 00:42:27.636 +06:00 [INF] 👤 Creating login: tenant_KameghaMuslim_user
+2025-12-08 00:42:28.146 +06:00 [INF] ✅ Login created successfully: tenant_KameghaMuslim_user
+2025-12-08 00:42:28.146 +06:00 [INF] ✅ Login created: tenant_KameghaMuslim_user
+2025-12-08 00:42:28.146 +06:00 [INF] 🔐 Creating user and assigning permissions in: EduSystem_KameghaMuslim
+2025-12-08 00:42:28.756 +06:00 [INF] ✅ User created and permissions assigned
+2025-12-08 00:42:28.757 +06:00 [INF] 🔍 Verifying tenant connection...
+2025-12-08 00:42:28.757 +06:00 [INF] 🔄 Connection verification attempt 1/5 for: EduSystem_KameghaMuslim
+2025-12-08 00:42:28.774 +06:00 [INF] ✅ Connection verified on attempt 1
+2025-12-08 00:42:28.774 +06:00 [INF] ✅ Connection verified successfully
+2025-12-08 00:42:28.791 +06:00 [INF] 🎉 Database provisioning completed successfully for: KameghaMuslim
+2025-12-08 00:42:29.158 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 200), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 100), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tenants] ([Id], [BannerUrl], [ConnectionString], [CreatedAt], [IsActive], [LogoUrl], [Name], [PrimaryColor], [SecondaryColor], [Slug], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-12-08 00:42:29.194 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:42:29.930 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 256), @p3='?' (Size = 200), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 512), @p8='?' (Size = 512), @p9='?' (DbType = DateTime2), @p10='?' (Size = 20), @p11='?' (Size = 512), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Guid), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [LastLoginAt], [LastPasswordChangedAt], [LockoutEnd], [PasswordHash], [PasswordResetToken], [PasswordResetTokenExpiry], [PhoneNumber], [RefreshToken], [RefreshTokenExpiryTime], [Role], [TenantId], [UpdatedAt])
+OUTPUT INSERTED.[IsActive], INSERTED.[LoginAttempts]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-12-08 00:42:29.995 +06:00 [INF] Publishing event: TenantDatabaseCreatedEvent
+2025-12-08 00:42:30.347 +06:00 [INF] Event published: TenantDatabaseCreatedEvent
+2025-12-08 00:42:30.348 +06:00 [INF] Setting HTTP status code 200.
+2025-12-08 00:42:30.349 +06:00 [INF] Writing value of type '<>f__AnonymousType10`2' as Json.
+2025-12-08 00:42:30.352 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:42:30.354 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/tenants/register - 200 null application/json; charset=utf-8 6136.4657ms
+2025-12-08 00:46:00.534 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/tenants/register - application/json 281
+2025-12-08 00:46:00.537 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:46:00.670 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:46:00.671 +06:00 [INF] 🔧 Starting database provisioning for tenant: KameghaMuslim2
+2025-12-08 00:46:00.716 +06:00 [INF] 📦 Creating database: EduSystem_KameghaMuslim2
+2025-12-08 00:46:02.019 +06:00 [INF] ✅ Database created: EduSystem_KameghaMuslim2
+2025-12-08 00:46:02.019 +06:00 [INF] 👤 Creating login: tenant_KameghaMuslim2_user
+2025-12-08 00:46:02.544 +06:00 [INF] ✅ Login created successfully: tenant_KameghaMuslim2_user
+2025-12-08 00:46:02.544 +06:00 [INF] ✅ Login created: tenant_KameghaMuslim2_user
+2025-12-08 00:46:02.544 +06:00 [INF] 🔐 Creating user and assigning permissions in: EduSystem_KameghaMuslim2
+2025-12-08 00:46:03.209 +06:00 [INF] ✅ User created and permissions assigned
+2025-12-08 00:46:03.210 +06:00 [INF] 🔍 Verifying tenant connection...
+2025-12-08 00:46:03.210 +06:00 [INF] 🔄 Connection verification attempt 1/5 for: EduSystem_KameghaMuslim2
+2025-12-08 00:46:03.261 +06:00 [INF] ✅ Connection verified on attempt 1
+2025-12-08 00:46:03.261 +06:00 [INF] ✅ Connection verified successfully
+2025-12-08 00:46:03.262 +06:00 [INF] 🎉 Database provisioning completed successfully for: KameghaMuslim2
+2025-12-08 00:46:03.297 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 200), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 100), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tenants] ([Id], [BannerUrl], [ConnectionString], [CreatedAt], [IsActive], [LogoUrl], [Name], [PrimaryColor], [SecondaryColor], [Slug], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-12-08 00:46:03.299 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:46:03.658 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 256), @p3='?' (Size = 200), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 512), @p8='?' (Size = 512), @p9='?' (DbType = DateTime2), @p10='?' (Size = 20), @p11='?' (Size = 512), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Guid), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [LastLoginAt], [LastPasswordChangedAt], [LockoutEnd], [PasswordHash], [PasswordResetToken], [PasswordResetTokenExpiry], [PhoneNumber], [RefreshToken], [RefreshTokenExpiryTime], [Role], [TenantId], [UpdatedAt])
+OUTPUT INSERTED.[IsActive], INSERTED.[LoginAttempts]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-12-08 00:46:03.660 +06:00 [INF] Publishing event: TenantDatabaseCreatedEvent
+2025-12-08 00:46:03.665 +06:00 [INF] Event published: TenantDatabaseCreatedEvent
+2025-12-08 00:46:03.666 +06:00 [INF] Setting HTTP status code 200.
+2025-12-08 00:46:03.666 +06:00 [INF] Writing value of type '<>f__AnonymousType10`2' as Json.
+2025-12-08 00:46:03.666 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:46:03.667 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/tenants/register - 200 null application/json; charset=utf-8 3132.2927ms
+2025-12-08 00:47:58.664 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/tenants/register - application/json 281
+2025-12-08 00:47:58.665 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:47:58.730 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:47:58.730 +06:00 [INF] 🔧 Starting database provisioning for tenant: KameghaMuslim3
+2025-12-08 00:47:58.784 +06:00 [INF] 📦 Creating database: EduSystem_KameghaMuslim3
+2025-12-08 00:48:00.032 +06:00 [INF] ✅ Database created: EduSystem_KameghaMuslim3
+2025-12-08 00:48:00.032 +06:00 [INF] 👤 Creating login: tenant_KameghaMuslim3_user
+2025-12-08 00:48:00.546 +06:00 [INF] ✅ Login created successfully: tenant_KameghaMuslim3_user
+2025-12-08 00:48:00.546 +06:00 [INF] ✅ Login created: tenant_KameghaMuslim3_user
+2025-12-08 00:48:00.546 +06:00 [INF] 🔐 Creating user and assigning permissions in: EduSystem_KameghaMuslim3
+2025-12-08 00:48:01.153 +06:00 [INF] ✅ User created and permissions assigned
+2025-12-08 00:48:01.154 +06:00 [INF] 🔍 Verifying tenant connection...
+2025-12-08 00:48:01.154 +06:00 [INF] 🔄 Connection verification attempt 1/5 for: EduSystem_KameghaMuslim3
+2025-12-08 00:48:01.205 +06:00 [INF] ✅ Connection verified on attempt 1
+2025-12-08 00:48:01.205 +06:00 [INF] ✅ Connection verified successfully
+2025-12-08 00:48:01.205 +06:00 [INF] 🎉 Database provisioning completed successfully for: KameghaMuslim3
+2025-12-08 00:48:01.236 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 200), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 100), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tenants] ([Id], [BannerUrl], [ConnectionString], [CreatedAt], [IsActive], [LogoUrl], [Name], [PrimaryColor], [SecondaryColor], [Slug], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-12-08 00:48:01.241 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-08 00:48:01.567 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 256), @p3='?' (Size = 200), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 512), @p8='?' (Size = 512), @p9='?' (DbType = DateTime2), @p10='?' (Size = 20), @p11='?' (Size = 512), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Guid), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [LastLoginAt], [LastPasswordChangedAt], [LockoutEnd], [PasswordHash], [PasswordResetToken], [PasswordResetTokenExpiry], [PhoneNumber], [RefreshToken], [RefreshTokenExpiryTime], [Role], [TenantId], [UpdatedAt])
+OUTPUT INSERTED.[IsActive], INSERTED.[LoginAttempts]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-12-08 00:48:01.569 +06:00 [INF] Publishing event: TenantDatabaseCreatedEvent
+2025-12-08 00:48:01.574 +06:00 [INF] Event published: TenantDatabaseCreatedEvent
+2025-12-08 00:48:01.574 +06:00 [INF] Setting HTTP status code 200.
+2025-12-08 00:48:01.574 +06:00 [INF] Writing value of type '<>f__AnonymousType10`2' as Json.
+2025-12-08 00:48:01.575 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-08 00:48:01.612 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/tenants/register - 200 null application/json; charset=utf-8 2911.2836ms
+2025-12-08 00:48:35.429 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 102
+2025-12-08 00:48:35.435 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-08 00:48:35.648 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-08 00:48:35.975 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-08 00:48:36.107 +06:00 [INF] Executed DbCommand (10ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-08 00:48:36.121 +06:00 [INF] Setting HTTP status code 200.
+2025-12-08 00:48:36.129 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-08 00:48:36.139 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-08 00:48:36.139 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 710.4343ms
+2025-12-08 00:49:35.966 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/logout - null 0
+2025-12-08 00:49:35.985 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-08 00:49:36.076 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-08 00:49:36.078 +06:00 [ERR] Error ID: 40000026-0002-fe00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-08 00:49:36.120 +06:00 [INF] Setting HTTP status code 500.
+2025-12-08 00:49:36.130 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-08 00:49:36.141 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-08 00:49:36.142 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-08 00:49:36.143 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/logout - 500 null application/problem+json 177.1586ms

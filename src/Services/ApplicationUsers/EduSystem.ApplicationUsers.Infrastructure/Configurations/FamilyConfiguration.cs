@@ -8,10 +8,13 @@ public class FamilyConfiguration : IEntityTypeConfiguration<Family>
 {
     public void Configure(EntityTypeBuilder<Family> builder)
     {
+        // Table
         builder.ToTable("Families");
 
+        // Primary Key
         builder.HasKey(f => f.Id);
 
+        // Properties
         builder.Property(f => f.Name)
             .IsRequired()
             .HasMaxLength(100);
@@ -22,31 +25,53 @@ public class FamilyConfiguration : IEntityTypeConfiguration<Family>
         builder.Property(f => f.Description)
             .HasMaxLength(500);
 
-        // RelationWith enum
         builder.Property(f => f.RelationWith)
             .IsRequired();
 
-        // Optional relationship to Student
+        // FK: StudentId (Guid?)
+        builder.Property(f => f.StudentId)
+            .IsRequired(false); // EF maps Guid? → uniqueidentifier
+
+        // FK: TeacherId (Guid?)
+        builder.Property(f => f.TeacherId)
+            .IsRequired(false);
+
+        // FK: PresentAddressId (bigint)
+        builder.Property(f => f.PresentAddressId)
+            .HasColumnType("bigint")
+            .IsRequired(false);
+
+        // FK: PermanentAddressId (bigint)
+        builder.Property(f => f.PermanentAddressId)
+            .HasColumnType("bigint")
+            .IsRequired(false);
+
+        // Relationship: Student
         builder.HasOne(f => f.Student)
             .WithMany(s => s.FamilyInfos)
             .HasForeignKey(f => f.StudentId)
+            .IsRequired(false)
             .OnDelete(DeleteBehavior.SetNull);
 
-        // Optional relationship to Teacher
+        // Relationship: Teacher
         builder.HasOne(f => f.Teacher)
             .WithMany(t => t.FamilyInfos)
             .HasForeignKey(f => f.TeacherId)
+            .IsRequired(false)
             .OnDelete(DeleteBehavior.SetNull);
 
-        // Optional addresses
+        // Relationship: Present Address
         builder.HasOne(f => f.PresentAddress)
             .WithMany()
-            .HasForeignKey("PresentAddressId")
-            .OnDelete(DeleteBehavior.SetNull);
+            .HasForeignKey(f => f.PresentAddressId)
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
 
+        // Relationship: Permanent Address
         builder.HasOne(f => f.PermanentAddress)
             .WithMany()
-            .HasForeignKey("PermanentAddressId")
-            .OnDelete(DeleteBehavior.SetNull);
+            .HasForeignKey(f => f.PermanentAddressId)
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
