@@ -1,15 +1,18 @@
-﻿
+﻿@inject NavigationManager NavigationManager
+
 <MudNavMenu>
     <MudNavLink Href="/" Icon="@Icons.Material.Filled.Dashboard" Match="NavLinkMatch.All">
         Dashboard
     </MudNavLink>
-
-    <MudNavLink Href="/teacher" Icon="@Icons.Material.Filled.Class">
-        Teacher
-    </MudNavLink>
-    <MudNavLink Href="/students" Icon="@Icons.Material.Filled.Person">
-        Students
-    </MudNavLink>
+    <MudNavGroup Title="Defianation" Icon="@Icons.Material.Filled.MenuBook" Expanded="@IsDefinitionExpanded()">
+        
+        <MudNavLink Href="/teachers" Icon="@Icons.Material.Filled.Class">
+            Teachers
+        </MudNavLink>
+        <MudNavLink Href="/students" Icon="@Icons.Material.Filled.Person">
+            Students
+        </MudNavLink>
+    </MudNavGroup>
 
     <MudNavLink Href="/classes" Icon="@Icons.Material.Filled.Class">
         Classes
@@ -34,3 +37,10 @@
     </MudNavLink>
 </MudNavMenu>
 
+@code {
+    private bool IsDefinitionExpanded()
+    {
+        var currentUrl = NavigationManager.Uri.ToLower();
+        return currentUrl.Contains("/teachers") || currentUrl.Contains("/students");
+    }
+}

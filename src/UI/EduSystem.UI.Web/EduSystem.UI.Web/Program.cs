@@ -12,6 +12,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddMudServices();
 builder.Services.AddScoped<IStudentService, MockStudentService>();
+builder.Services.AddScoped<ITeacherService, MockTeacherService>();
 
 builder.Services.AddHttpClient("IdentityApi",client =>
 {

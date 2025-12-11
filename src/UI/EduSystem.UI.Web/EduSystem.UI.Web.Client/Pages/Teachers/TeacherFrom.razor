@@ -1,0 +1,99 @@
+﻿@page "/teachers/add"
+@page "/teachers/edit/{Id:long}"
+@using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Services
+@inject ITeacherService teacherService
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudText Typo="Typo.h5" Class="mb-4">@(Id == 0 ? "Add New Teacher" : "Edit Teacher")</MudText>
+
+    <MudPaper Class="pa-4">
+        <MudForm>
+            <MudGrid>
+                <!-- Basic Info -->
+                <MudItem xs="12">
+                     <MudText Typo="Typo.subtitle1" Color="Color.Primary">Basic Information</MudText>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="teacher.Name" Label="Full Name" Required="true" RequiredError="Name is required!" />
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="teacher.Phone" Label="Phone Number" Required="true" RequiredError="Phone number is required!"/>
+                </MudItem>
+                 <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="teacher.Email" Label="Email Address" Required="true" RequiredError="Email is required!"/>
+                </MudItem>
+
+                <!-- Address Info (Simplified for UI Demo) -->
+                <MudItem xs="12">
+                    <MudDivider Class="my-2" />
+                    <MudText Typo="Typo.subtitle1" Color="Color.Primary">Present Address</MudText>
+                </MudItem>
+                <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="teacher.PresentAddress?.HouseNo" Label="House No" />
+                </MudItem>
+                <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="teacher.PresentAddress?.RoadNo" Label="Road No" />
+                </MudItem>
+                <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="teacher.PresentAddress?.District" Label="District" />
+                </MudItem>
+
+                <!-- Action Buttons -->
+                <MudItem xs="12" Class="d-flex justify-end mt-4">
+                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="Cancel" Class="mr-2">Cancel</MudButton>
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Save">Save</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudForm>
+    </MudPaper>
+
+</MudContainer>
+
+@code{
+    [Parameter] public long Id { get; set; }
+
+    private TeacherModel teacher = new();
+    private MudForm? form;
+    private bool success;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id != 0)
+            teacher = await teacherService.GetTeacherByIdAsync(Id);
+        else
+        {
+            teacher.PresentAddress = new Address();
+            teacher.PermanentAddress = new Address();
+        }
+    }
+
+    private async Task Save()
+    {
+        if (form is not null)
+        {
+            await form.Validate();
+            if(success)
+            {
+                if(Id == 0)
+                {
+                    await teacherService.CreateTeacherAsync(teacher);
+                    Snackbar.Add("Teacher created successfully!", Severity.Success);
+                }
+                else
+                {
+                    await teacherService.UpdateTeacherAsync(teacher);
+                    Snackbar.Add("Teacher updated successfully!", Severity.Success);
+                }
+                Navigation.NavigateTo("/teachers");
+            }
+        }
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/teachers");
+    }
+}
