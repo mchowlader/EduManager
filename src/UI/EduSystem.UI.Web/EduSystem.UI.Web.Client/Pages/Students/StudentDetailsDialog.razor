@@ -56,8 +56,8 @@
 </MudDialog>
 
 @code {
-    [CascadingParameter] IDialogReference? DialogReference { get; set; }
+    [CascadingParameter] IMudDialogInstance? DialogInstance { get; set; }
     [Parameter] public Student Student { get; set; } = new Student();
 
-    private void Cancel() => DialogReference?.Close();
+    private void Cancel() => DialogInstance.Cancel();
 }

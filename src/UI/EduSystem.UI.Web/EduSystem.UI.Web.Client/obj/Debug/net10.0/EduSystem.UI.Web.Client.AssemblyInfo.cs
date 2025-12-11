@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+830bb4c57341b0b6e3aef5bcf1528f72d45e155f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e07daf163168cdbd0c840f2a8781dbf4766baeb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
