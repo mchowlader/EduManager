@@ -1,0 +1,176 @@
+﻿@page "/register"
+@using MudBlazor
+@layout AuthLayout
+@rendermode InteractiveServer
+@inject IHttpClientFactory HttpClientFactory
+@inject NavigationManager Navigation
+
+<PageTitle>Registration - EduSystem</PageTitle>
+
+
+
+<div class="auth-page">
+    <div class="glass-card">
+        <!-- Brand/Info Section -->
+        <div class="brand-panel">
+            <div class="brand-content">
+                <MudIcon Icon="@Icons.Material.Filled.School" Size="Size.Large" Style="font-size: 3.5rem; margin-bottom: 1.5rem;" />
+
+                <MudText Typo="Typo.h4" Style="font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px;">
+                    EduSystem
+                </MudText>
+
+                <MudText Typo="Typo.body1" Style="opacity: 0.9; margin-bottom: 2.5rem;">
+                    Empowering education with modern technology.
+                </MudText>
+
+                <MudStack Spacing="3" Class="d-none d-md-flex">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                        <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" />
+                        <MudText Typo="Typo.body2">Smart Management</MudText>
+                    </MudStack>
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                        <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" />
+                        <MudText Typo="Typo.body2">Secure & Reliable</MudText>
+                    </MudStack>
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                        <MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" />
+                        <MudText Typo="Typo.body2">24/7 Support</MudText>
+                    </MudStack>
+                </MudStack>
+            </div>
+        </div>
+
+        <!-- Registration Form Section -->
+        <div class="form-panel">
+            <div class="form-header">
+                <MudText Typo="Typo.h5" Style="font-weight: 700; color: #2d3748;">Create Account</MudText>
+                <MudText Typo="Typo.caption" Style="color: #718096;">Start your journey with us today</MudText>
+            </div>
+
+            <MudStack Spacing="1">
+                <!-- Reduced spacing -->
+                <MudGrid Spacing="2">
+                    <MudItem xs="12">
+                        <MudTextField @bind-Value="_registerModel.Name"
+                                      Label="School Name"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+
+                    <MudItem xs="12">
+                        <MudTextField @bind-Value="_registerModel.Slug"
+                                      Label="School ID (Slug)"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      HelperText="URL friendly ID (e.g. school-dhaka)"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_registerModel.AdminName"
+                                      Label="Admin Name"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_registerModel.AdminEmail"
+                                      Label="Admin Email"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      InputType="InputType.Email"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+
+                    <MudItem xs="12">
+                        <MudTextField @bind-Value="_registerModel.Password"
+                                      Label="Password"
+                                      InputType="@_passwordInputType"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@(_showPassword? Icons.Material.Filled.Visibility : Icons.Material.Filled.VisibilityOff)"
+                                      OnAdornmentClick="TogglePasswordVisibility"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+                </MudGrid>
+
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           FullWidth="true"
+                           Size="Size.Large"
+                           Class="mt-4 py-2"
+                           Style="border-radius: 8px; font-weight: 600; text-transform: none;"
+                           OnClick="HandleRegister"
+                           Disabled="_isLoading">
+                    @if (_isLoading)
+                    {
+                        <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                        <span>Creating...</span>
+                    }
+                    else
+                    {
+                        <span>Register Institute</span>
+                    }
+                </MudButton>
+
+                <MudText Typo="Typo.body2" Align="Align.Center" Style="margin-top: 1rem; color: #718096;">
+                    Already have an account? <MudLink Href="/login" Style="font-weight: 600; color: #667eea;">Log In</MudLink>
+                </MudText>
+            </MudStack>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegisterModel _registerModel = new();
+    private bool _isLoading = false;
+    private bool _showPassword = false;
+    private InputType _passwordInputType = InputType.Password;
+
+    private void TogglePasswordVisibility()
+    {
+        _showPassword = !_showPassword;
+        _passwordInputType = _showPassword ? InputType.Text : InputType.Password;
+    }
+
+    private async Task HandleRegister()
+    {
+        _isLoading = true;
+
+        try
+        {
+            var client = HttpClientFactory.CreateClient("IdentityApi");
+            var response = await client.PostAsJsonAsync("api/tenant/register", _registerModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var tenantId = await response.Content.ReadAsStringAsync();
+                Navigation.NavigateTo($"/login?tenant={tenantId}");
+            }
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+    public class RegisterModel
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Slug { get; set; } = string.Empty;
+        public string AdminName { get; set; } = string.Empty;
+        public string AdminEmail { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string? PrimaryColor { get; set; } = "#667eea";
+        public string? SecondaryColor { get; set; } = "#764ba2";
+    }
+}

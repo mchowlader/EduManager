@@ -1,0 +1,39 @@
+<MudDrawerHeader Class="d-flex align-center gap-2 px-4">
+    <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" />
+    <MudText Typo="Typo.h6" Style="font-weight: 700; color: white;">
+        EduSystem
+    </MudText>
+</MudDrawerHeader>
+<MudNavMenu>
+    <MudNavLink Href="/" Icon="@Icons.Material.Filled.Dashboard" Match="NavLinkMatch.All">
+        Dashboard
+    </MudNavLink>
+
+   <MudNavLink Href="/teacher" Icon="@Icons.Material.Filled.Class">
+        Teacher
+    </MudNavLink>
+    <MudNavLink Href="/students" Icon="@Icons.Material.Filled.Person">
+        Students
+    </MudNavLink>
+    <MudNavLink Href="/classes" Icon="@Icons.Material.Filled.Class">
+        Classes
+    </MudNavLink>
+
+    <MudNavLink Href="/attendance" Icon="@Icons.Material.Filled.CheckCircle">
+        Attendance
+    </MudNavLink>
+
+    <MudNavLink Href="/exams" Icon="@Icons.Material.Filled.Assignment">
+        Exams
+    </MudNavLink>
+
+    <MudNavLink Href="/results" Icon="@Icons.Material.Filled.AssignmentTurnedIn">
+        Results
+    </MudNavLink>
+
+    <MudDivider Class="my-2" />
+
+    <MudNavLink Href="/settings" Icon="@Icons.Material.Filled.Settings">
+        Settings
+    </MudNavLink>
+</MudNavMenu>

@@ -1,14 +1,14 @@
+using EduSystem.UI.Web.Client.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MudBlazor.Services;
 
-namespace EduSystem.UI.Web.Client
-{
-    internal class Program
-    {
-        static async Task Main(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-            await builder.Build().RunAsync();
-        }
-    }
-}
+
+builder.Services.AddMudServices();
+builder.Services.AddScoped<IStudentService, MockStudentService>();
+builder.Services.AddScoped(sp =>
+    new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) }
+);
+
+await builder.Build().RunAsync();

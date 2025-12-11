@@ -1,0 +1,127 @@
+@page "/students"
+@using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Services
+@inject IStudentService StudentService
+@inject NavigationManager Navigation
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@rendermode InteractiveAuto
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-4">
+    <div class="d-flex justify-space-between align-center mb-4">
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="font-weight: 700;">Students</MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="AddStudent">
+            Add New Student
+        </MudButton>
+    </div>
+
+    <MudTable Items="@students" Dense="true" Hover="true" Bordered="true" Striped="true" Filter="new Func<Student,bool>(FilterFunc1)" Loading="@loading">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Student List</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString" Placeholder="Search by Name" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>ID</MudTh>
+            <MudTh>Name</MudTh>
+            <MudTh>Class</MudTh>
+            <MudTh>Department</MudTh>
+            <MudTh>Phone</MudTh>
+            <MudTh Style="text-align:center">Actions</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="ID">@context.Id</MudTd>
+            <MudTd DataLabel="Name">
+                <div class="d-flex align-center">
+                    <MudAvatar Color="Color.Primary" Size="Size.Small" Class="mr-2">@context.Name.Substring(0, 1)</MudAvatar>
+                    @context.Name
+                </div>
+            </MudTd>
+            <MudTd DataLabel="Class">
+                <MudChip T="string" Size="Size.Small" Color="Color.Info" Variant="Variant.Text">@context.Class</MudChip>
+            </MudTd>
+            <MudTd DataLabel="Department">@context.Department</MudTd>
+            <MudTd DataLabel="Phone">@context.Phone</MudTd>
+            <MudTd DataLabel="Actions" Style="text-align:center">
+                <MudTooltip Text="View Details">
+                    <MudIconButton Icon="@Icons.Material.Filled.Visibility" Color="Color.Info" Size="Size.Small" OnClick="@(() => ViewDetails(context))" />
+                </MudTooltip>
+                <MudTooltip Text="Edit">
+                    <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Warning" Size="Size.Small" OnClick="@(() => EditStudent(context.Id))" />
+                </MudTooltip>
+                <MudTooltip Text="Delete">
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" Size="Size.Small" OnClick="@(() => DeleteStudent(context))" />
+                </MudTooltip>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</MudContainer>
+
+@code {
+    private List<Student> students = new List<Student>();
+    private string searchString = "";
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        loading = true;
+        students = await StudentService.GetAllStudentsAsync();
+        loading = false;
+    }
+
+    private void AddStudent()
+    {
+        Navigation.NavigateTo("/students/add");
+    }
+
+    private void EditStudent(long id)
+    {
+        Navigation.NavigateTo($"/students/edit/{id}");
+    }
+
+    private async Task ViewDetails(Student student)
+    {
+        var parameters = new DialogParameters<StudentDetailsDialog> { { x => x.Student, student } };
+        var options = new DialogOptions { CloseOnEscapeKey = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+        
+        await DialogService.ShowAsync<StudentDetailsDialog>("Student Details", parameters, options);
+    }
+
+    private async Task DeleteStudent(Student student)
+    {
+        bool? result = await DialogService.ShowMessageBox(
+            "Delete Student", 
+            $"Are you sure you want to delete {student.Name}?", 
+            yesText:"Delete", cancelText:"Cancel");
+
+        if (result == true)
+        {
+             await StudentService.DeleteStudentAsync(student.Id);
+             await LoadData();
+             Snackbar.Add("Student deleted", Severity.Success);
+        }
+    }
+
+    private bool FilterFunc1(Student student) => FilterFunc(student, searchString);
+
+    private bool FilterFunc(Student student, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (student.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (student.Phone?.Contains(searchString) == true)
+            return true;
+        if ($"{student.Id}".Contains(searchString))
+             return true;
+        return false;
+    }
+}

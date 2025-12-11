@@ -1,0 +1,66 @@
+2025-12-09 00:11:37.166 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-09 00:11:37.703 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-09 00:11:38.373 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-09 00:11:38.651 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-09 00:11:38.718 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-09 00:11:38.719 +06:00 [INF] Hosting environment: Development
+2025-12-09 00:11:38.720 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-09 00:11:38.965 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 324.4455ms
+2025-12-09 00:11:39.026 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-09 00:12:07.336 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-09 00:12:07.416 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 81.2549ms
+2025-12-09 00:12:07.518 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-09 00:12:07.518 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-09 00:12:07.523 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 4.212ms
+2025-12-09 00:12:07.590 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.6978ms
+2025-12-09 00:12:07.793 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-09 00:12:07.811 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.5712ms
+2025-12-09 00:12:49.132 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/tenants/register - application/json 291
+2025-12-09 00:12:49.155 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-09 00:12:49.171 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-09 00:12:51.579 +06:00 [INF] Executed DbCommand (65ms) [Parameters=[@slug='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tenants] AS [t]
+        WHERE [t].[Slug] = @slug) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-09 00:12:51.621 +06:00 [INF] 🔧 Starting database provisioning for tenant: KameghaMuslim
+2025-12-09 00:12:51.902 +06:00 [INF] 📦 Creating database: EduSystem_KameghaMuslim
+2025-12-09 00:12:53.119 +06:00 [INF] ✅ Database created: EduSystem_KameghaMuslim
+2025-12-09 00:12:53.120 +06:00 [INF] 👤 Creating login: tenant_KameghaMuslim_user
+2025-12-09 00:12:53.931 +06:00 [INF] ✅ Login created successfully: tenant_KameghaMuslim_user
+2025-12-09 00:12:53.931 +06:00 [INF] ✅ Login created: tenant_KameghaMuslim_user
+2025-12-09 00:12:53.931 +06:00 [INF] 🔐 Creating user and assigning permissions in: EduSystem_KameghaMuslim
+2025-12-09 00:12:54.491 +06:00 [INF] ✅ User created and permissions assigned
+2025-12-09 00:12:54.493 +06:00 [INF] 🔍 Verifying tenant connection...
+2025-12-09 00:12:54.497 +06:00 [INF] 🔄 Connection verification attempt 1/5 for: EduSystem_KameghaMuslim
+2025-12-09 00:12:54.809 +06:00 [INF] ✅ Connection verified on attempt 1
+2025-12-09 00:12:54.810 +06:00 [INF] ✅ Connection verified successfully
+2025-12-09 00:12:54.823 +06:00 [INF] 🎉 Database provisioning completed successfully for: KameghaMuslim
+2025-12-09 00:12:55.397 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 200), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 100), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tenants] ([Id], [BannerUrl], [ConnectionString], [CreatedAt], [IsActive], [LogoUrl], [Name], [PrimaryColor], [SecondaryColor], [Slug], [UpdatedAt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+2025-12-09 00:12:55.428 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-09 00:12:56.030 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 256), @p3='?' (Size = 200), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 512), @p8='?' (Size = 512), @p9='?' (DbType = DateTime2), @p10='?' (Size = 20), @p11='?' (Size = 512), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Guid), @p15='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [Email], [FullName], [LastLoginAt], [LastPasswordChangedAt], [LockoutEnd], [PasswordHash], [PasswordResetToken], [PasswordResetTokenExpiry], [PhoneNumber], [RefreshToken], [RefreshTokenExpiryTime], [Role], [TenantId], [UpdatedAt])
+OUTPUT INSERTED.[IsActive], INSERTED.[LoginAttempts]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-12-09 00:12:56.084 +06:00 [INF] Publishing event: TenantDatabaseCreatedEvent
+2025-12-09 00:12:56.326 +06:00 [INF] Event published: TenantDatabaseCreatedEvent
+2025-12-09 00:12:56.332 +06:00 [INF] Setting HTTP status code 200.
+2025-12-09 00:12:56.335 +06:00 [INF] Writing value of type '<>f__AnonymousType10`2' as Json.
+2025-12-09 00:12:56.342 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/tenants/register => RegisterTenantV1'
+2025-12-09 00:12:56.355 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/tenants/register - 200 null application/json; charset=utf-8 7223.0926ms

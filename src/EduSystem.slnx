@@ -58,11 +58,14 @@
   <Folder Name="/Services/Shared/Events/">
     <Project Path="Services/Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj" Id="bf1e3088-0618-4206-9740-b2cee38b840f" />
   </Folder>
+  <Folder Name="/Services/Shared/Gateway/">
+    <Project Path="Services/Shared/Gateway/EduSystem.ApiGateway/EduSystem.ApiGateway.csproj" Id="95fffc43-e720-4080-9c52-f92ed3411e76" />
+  </Folder>
   <Folder Name="/Services/Shared/Messaging/">
     <Project Path="Services/Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj" Id="3ff04559-5345-45c0-a3af-09b9f2f25e7d" />
   </Folder>
   <Folder Name="/UI/">
-    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj" />
-    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web/EduSystem.UI.Web.csproj" />
+    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj" Id="32e27d98-7a9e-4f68-9fd7-8d8eacdd7654" />
+    <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web/EduSystem.UI.Web.csproj" Id="f68cc9c9-a8a4-4d51-b2b4-c250b47a6167" />
   </Folder>
 </Solution>

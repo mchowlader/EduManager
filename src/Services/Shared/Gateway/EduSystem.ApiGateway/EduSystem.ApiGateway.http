@@ -1,0 +1,6 @@
+@EduSystem.ApiGateway_HostAddress = http://localhost:5158
+
+GET {{EduSystem.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

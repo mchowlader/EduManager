@@ -1,8 +1,137 @@
-html, body {
+html,
+body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Default Theme Background - can be overridden by specific page styles if needed */
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
 }
 
-a, .btn-link {
+/* --- Global Auth / Glass Card Theme --- */
+
+.auth-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    /* Prevent body scroll if possible */
+}
+
+/* Shared Glass Card Style */
+.glass-card {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 85vh;
+    /* Fixed height relative to viewport */
+    max-height: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.brand-panel {
+    flex: 0.8;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-panel::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.brand-content {
+    position: relative;
+    z-index: 1;
+}
+
+.form-panel {
+    flex: 1.2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    overflow-y: auto;
+}
+
+.form-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Custom Scrollbar for form panel */
+.form-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.form-panel::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+}
+
+.form-panel::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+@media (max-width: 960px) {
+    .glass-card {
+        flex-direction: column;
+        height: auto;
+        max-height: 95vh;
+    }
+
+    .brand-panel {
+        padding: 1.5rem;
+        flex: 0 0 auto;
+        text-align: center;
+    }
+
+    .brand-panel .mud-stack {
+        display: none;
+        /* Hide features list on mobile to save space */
+    }
+
+    .form-panel {
+        padding: 1.5rem;
+    }
+}
+
+/* --- End Global Theme --- */
+
+a,
+.btn-link {
     color: #006bb7;
 }
 
@@ -12,8 +141,12 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .content {
@@ -42,19 +175,381 @@ h1:focus {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
     color: var(--bs-secondary-color);
     text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
     text-align: start;
+}
+
+/* --- MudBlazor Drawer Styling --- */
+.mud-drawer {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    width: 260px !important;
+    z-index: 1300 !important;
+}
+
+.mud-drawer.mud-drawer-open {
+    width: 260px !important;
+}
+
+.mud-drawer.mud-drawer-close {
+    width: 0 !important;
+}
+
+.mud-drawer .mud-drawer-content {
+    background: transparent !important;
+    width: 260px !important;
+}
+
+/* --- Sidebar Navigation Styling --- */
+/* Target MudBlazor components specifically when inside the MudDrawer */
+
+/* --- Sidebar Navigation Styling --- */
+/* Target MudBlazor components specifically when inside the MudDrawer */
+
+.mud-drawer .mud-nav-link,
+.sidebar .mud-nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    /* Soft white text */
+    text-decoration: none !important;
+    /* No underline */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 2px 8px;
+    /* Spacing between items */
+    transition: all 0.2s ease-in-out;
+}
+
+.mud-drawer .mud-nav-link .mud-nav-link-icon,
+.sidebar .mud-nav-link .mud-nav-link-icon {
+    color: rgba(255, 255, 255, 0.8) !important;
+    /* Soft white icons */
+}
+
+/* Hover Effect - Glass style */
+.mud-drawer .mud-nav-link:hover,
+.sidebar .mud-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.mud-drawer .mud-nav-link:hover .mud-nav-link-icon,
+.sidebar .mud-nav-link:hover .mud-nav-link-icon {
+    color: white !important;
+}
+
+/* Active/Selected State */
+.mud-drawer .mud-nav-link.mud-nav-link-active,
+.sidebar .mud-nav-link.mud-nav-link-active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    /* Brighter glass background */
+    color: white !important;
+    font-weight: 600;
+}
+
+.mud-drawer .mud-nav-link.mud-nav-link-active .mud-nav-link-icon,
+.sidebar .mud-nav-link.mud-nav-link-active .mud-nav-link-icon {
+    color: white !important;
+}
+
+/* Nav Groups (for collapsible items) */
+.mud-drawer .mud-nav-group-text,
+.sidebar .mud-nav-group-text {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.mud-drawer .mud-nav-group-icon,
+.sidebar .mud-nav-group-icon {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Header Text */
+.mud-drawer .mud-drawer-header h6,
+.sidebar .mud-drawer-header h6 {
+    color: white !important;
+    font-weight: 700;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+
+/* Ensure NavMenu icons are sized correctly for the mini bar */
+.sidebar.collapsed .mud-nav-link {
+    padding-left: 12px;
+    justify-content: center;
+}
+
+/* When hovering collapsed sidebar, restore justify */
+.sidebar.collapsed:hover .mud-nav-link {
+    justify-content: flex-start;
+}
+
+/* Hide Navigation Text when collapsed */
+/* We target the span that MudBlazor uses for text, or rely on overflow hidden if structure is complex. 
+   MudNavLink renders text inside a .mud-nav-link-text class. 
+*/
+.sidebar.collapsed .mud-nav-link .mud-nav-link-text {
+    display: none;
+}
+
+.sidebar.collapsed:hover .mud-nav-link .mud-nav-link-text {
+    display: block;
+}
+
+/* --- End Sidebar Navigation --- */
+
+/* --- Card System Redesign --- */
+
+/* Top Performer Card */
+.student-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rank-measure {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+}
+
+.student-info {
+    margin-top: 1rem;
+}
+
+.student-name {
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.student-class {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-bottom: 0.75rem;
+}
+
+.student-gpa {
+    background: #ebf4ff;
+    color: #4299e1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Event Card (Ticket Style) */
+.event-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-left: 4px solid #667eea;
+    /* Default accent */
+    transition: all 0.2s;
+}
+
+.event-card:hover {
+    background: #fdfdfd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.event-date-mini {
+    text-align: center;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 1px solid #edf2f7;
+    min-width: 60px;
+}
+
+.event-date-day {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1;
+}
+
+.event-date-month {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Leave Card */
+.leave-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.leave-info {
+    flex: 1;
+    margin-left: 0.75rem;
+}
+
+.leave-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2d3748;
+}
+
+.leave-type {
+    font-size: 0.75rem;
+    color: #e53e3e;
+    /* Red for leave */
+    background: #fff5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/* --- Dashboard Glass Stats --- */
+.glass-stat-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.glass-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+/* --- Top Bar Redesign --- */
+.top-bar-glass,
+.mud-appbar.top-bar-glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+    height: 4rem !important;
+    min-height: 4rem !important;
+    padding: 0 1.5rem !important;
+}
+
+.mud-appbar.top-bar-glass .mud-toolbar-gutters {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.user-profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background 0.2s;
+}
+
+.user-profile-section:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: #a0aec0;
 }

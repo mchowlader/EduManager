@@ -1,4 +1,7 @@
 is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
 build_property.TargetFramework = net10.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
@@ -26,6 +29,30 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Auth/ForgotPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoXEZvcmdvdFBhc3N3b3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Auth/LoginForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoXExvZ2luRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Auth/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoXFJlZ2lzdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Layout/AuthLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcQXV0aExheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,20 +61,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/RegistrationSuccess.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3RyYXRpb25TdWNjZXNzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Routes.razor]
@@ -58,10 +73,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-3kojng97fw
-
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ycoqjp9sgj
@@ -69,7 +80,3 @@ build_metadata.AdditionalFiles.CssScope = b-ycoqjp9sgj
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-p0eq3992kh
-
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web/Components/Pages/Registration.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWdpc3RyYXRpb24ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-5c9q7mlg22

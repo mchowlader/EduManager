@@ -8,7 +8,7 @@
       },
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "applicationUrl": "http://localhost:5270"
+      "applicationUrl": "http://localhost:5087"
     },
     "https": {
       "commandName": "Project",
@@ -18,7 +18,7 @@
       },
       "dotnetRunMessages": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
-      "applicationUrl": "https://localhost:7270;http://localhost:5270"
+      "applicationUrl": "https://localhost:5001;http://localhost:5087"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -33,8 +33,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:5692/",
-      "sslPort": 44395
+      "applicationUrl": "http://localhost:14083/",
+      "sslPort": 44315
     }
   }
 }

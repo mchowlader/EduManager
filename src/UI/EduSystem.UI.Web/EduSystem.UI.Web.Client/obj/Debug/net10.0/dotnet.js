@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "EduSystem.UI.Web.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-10Mm3h2FgAGZEvvpEYFGdT4n1Rfp5faxZXQRgMufPek=",
+    "hash": "sha256-l7GW5Pqz1ykYKX0SwiTVd0851Ra/5bWLX9i00yGZxNc=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -84,8 +84,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Microsoft.DotNet.HotReload.WebAssembly.Browser.wasm",
-        "name": "Microsoft.DotNet.HotReload.WebAssembly.Browser.ttbwk6q8rt.wasm",
-        "integrity": "sha256-H/Bfgf0MP/7LYv2KEJTe2yFHdkRe4kJcJNqL5FnO9pM="
+        "name": "Microsoft.DotNet.HotReload.WebAssembly.Browser.vdogoxs6cm.wasm",
+        "integrity": "sha256-c1tB08GIbOIai2bA4PgA2IQ6tQSbxkg1YfB8lhzFdh4="
       },
       {
         "virtualPath": "Microsoft.Extensions.Configuration.wasm",
@@ -148,6 +148,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "integrity": "sha256-1N2/rCQl/eAmYr1rfjJ32aMFRrX+RN35cCdm1VkbWGo="
       },
       {
+        "virtualPath": "Microsoft.Extensions.Localization.wasm",
+        "name": "Microsoft.Extensions.Localization.bvn14pws96.wasm",
+        "integrity": "sha256-6UgMJoVZBfDdfzYR0aKVK6BWArxpXC1qiQDDjiXw/L4="
+      },
+      {
+        "virtualPath": "Microsoft.Extensions.Localization.Abstractions.wasm",
+        "name": "Microsoft.Extensions.Localization.Abstractions.o4jp2hcm79.wasm",
+        "integrity": "sha256-GJNjpp2mlMIYboBhzukWw5r2Z24PsB0E9Gj9VoTGKEI="
+      },
+      {
         "virtualPath": "Microsoft.Extensions.Logging.wasm",
         "name": "Microsoft.Extensions.Logging.05o184w673.wasm",
         "integrity": "sha256-dEjzt1uKX3R6EmoJQrRj6zcO9nfGtBCBS4OOMUzbXIg="
@@ -186,6 +196,11 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.JSInterop.WebAssembly.wasm",
         "name": "Microsoft.JSInterop.WebAssembly.9udcqny0aq.wasm",
         "integrity": "sha256-EQfaQose2do/RGDJFP6YWTTeOWA2gufnJurZZZh2XLU="
+      },
+      {
+        "virtualPath": "MudBlazor.wasm",
+        "name": "MudBlazor.mwezwdoi15.wasm",
+        "integrity": "sha256-NqqmRDAnNGFOUST8TWt07KcU6YW3hGxP62PdgDMCah4="
       },
       {
         "virtualPath": "Microsoft.CSharp.wasm",
@@ -1039,15 +1054,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "EduSystem.UI.Web.Client.wasm",
-        "name": "EduSystem.UI.Web.Client.7ihittnvqq.wasm",
-        "integrity": "sha256-4dWgptK0+oTqpJcmV+l5G7sP8ab5ewhavVtiqwnHo3c="
+        "name": "EduSystem.UI.Web.Client.oo17bomyfo.wasm",
+        "integrity": "sha256-uNBCwsvu1db+70scymKWanU16kPOecDe0ryrvZAJtZo="
       }
     ],
     "pdb": [
       {
         "virtualPath": "EduSystem.UI.Web.Client.pdb",
-        "name": "EduSystem.UI.Web.Client.rownjdtagw.pdb",
-        "integrity": "sha256-xWMqAsRfXCGyMb5g05OCk/76IB0PC55ibZ0uiR/YFqU="
+        "name": "EduSystem.UI.Web.Client.0afqfv67sr.pdb",
+        "integrity": "sha256-KMV8ekItkhL+IF+c+1yNwBVls9gH3AasRW128k+rwRY="
       }
     ],
     "libraryInitializers": [

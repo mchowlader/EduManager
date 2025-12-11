@@ -1,0 +1,133 @@
+@page "/students/add"
+@page "/students/edit/{Id:long}"
+@using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Services
+@inject IStudentService StudentService
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+@rendermode InteractiveAuto
+
+<MudContainer MaxWidth="MaxWidth.Medium">
+    <MudText Typo="Typo.h5" Class="mb-4">@(Id == 0 ? "Add New Student" : "Edit Student")</MudText>
+
+    <MudPaper Class="pa-4">
+        <MudForm @ref="form" @bind-IsValid="@success">
+            <MudGrid>
+                <!-- Basic Info -->
+                <MudItem xs="12">
+                     <MudText Typo="Typo.subtitle1" Color="Color.Primary">Basic Information</MudText>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="student.Name" Label="Full Name" Required="true" RequiredError="Name is required!" />
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="student.Phone" Label="Phone Number" />
+                </MudItem>
+                 <MudItem xs="12" md="6">
+                    <MudDatePicker @bind-Date="dateOfBirth" Label="Date of Birth" />
+                </MudItem>
+                 <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="student.DateOfBirthNo" Label="Birth Registration No" />
+                </MudItem>
+
+                <!-- Academic Info -->
+                <MudItem xs="12">
+                    <MudDivider Class="my-2"/>
+                    <MudText Typo="Typo.subtitle1" Color="Color.Primary">Academic</MudText>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudSelect T="ClassCategory" Label="Class" @bind-Value="student.Class">
+                        @foreach (ClassCategory item in Enum.GetValues(typeof(ClassCategory)))
+                        {
+                            <MudSelectItem Value="@item">@item</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                     <MudSelect T="DepartmentCategory" Label="Department" @bind-Value="student.Department">
+                        @foreach (DepartmentCategory item in Enum.GetValues(typeof(DepartmentCategory)))
+                        {
+                            <MudSelectItem Value="@item">@item</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+
+                 <!-- Address Info (Simplified for UI Demo) -->
+                <MudItem xs="12">
+                    <MudDivider Class="my-2"/>
+                    <MudText Typo="Typo.subtitle1" Color="Color.Primary">Present Address</MudText>
+                </MudItem>
+                 <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="student.DetailsPresentAddress.HouseNo" Label="House No" />
+                </MudItem>
+                 <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="student.DetailsPresentAddress.RoadNo" Label="Road No" />
+                </MudItem>
+                 <MudItem xs="12" md="4">
+                    <MudTextField @bind-Value="student.DetailsPresentAddress.District" Label="District" />
+                </MudItem>
+
+                 <!-- Form Actions -->
+                <MudItem xs="12" Class="d-flex justify-end mt-4">
+                    <MudButton OnClick="Cancel" Variant="Variant.Text" Color="Color.Secondary" Class="mr-2">Cancel</MudButton>
+                    <MudButton OnClick="Save" Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!success)">Save</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudForm>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    [Parameter] public long Id { get; set; }
+
+    private Student student = new Student();
+    private MudForm? form;
+    private bool success;
+    private DateTime? dateOfBirth;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id != 0)
+        {
+            student = await StudentService.GetStudentByIdAsync(Id);
+            dateOfBirth = student.DateOfBirth;
+        }
+        else
+        {
+            // Initialize nested objects to avoid NullReference in binding
+            student.DetailsPresentAddress = new Address();
+            student.DetailsPermanentAddress = new Address();
+        }
+    }
+    private async Task Save()
+    {
+        if (form != null)
+        {
+            await form.Validate();
+            if (success)
+            {
+                if (dateOfBirth.HasValue)
+                {
+                    student.DateOfBirth = dateOfBirth.Value;
+                }
+
+                if (Id == 0)
+                {
+                    await StudentService.CreateStudentAsync(student);
+                    Snackbar.Add("Student created successfully!", Severity.Success);
+                }
+                else
+                {
+                    await StudentService.UpdateStudentAsync(student);
+                    Snackbar.Add("Student updated successfully!", Severity.Success);
+                }
+                Navigation.NavigateTo("/students");
+            }
+        }
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/students");
+    }
+}

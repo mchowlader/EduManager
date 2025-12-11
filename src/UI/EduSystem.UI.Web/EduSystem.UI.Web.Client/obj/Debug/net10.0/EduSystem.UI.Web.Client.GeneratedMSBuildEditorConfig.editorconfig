@@ -5,6 +5,9 @@ build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.VerifyReferenceTrimCompatibility = 
 build_property.VerifyReferenceAotCompatibility = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
 build_property.TargetFramework = net10.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
@@ -28,10 +31,34 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Pages/Students/StudentDetailsDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcU3R1ZGVudERldGFpbHNEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Pages/Students/StudentForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcU3R1ZGVudEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Pages/Students/StudentList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcU3R1ZGVudExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MCH/PetProject/EduManager/src/UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-x0w194raum

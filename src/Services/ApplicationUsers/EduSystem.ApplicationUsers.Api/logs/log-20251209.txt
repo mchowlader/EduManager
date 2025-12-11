@@ -1,0 +1,27 @@
+2025-12-09 00:11:38.429 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-09 00:11:38.962 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-09 00:11:39.193 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-09 00:11:39.809 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-09 00:11:39.913 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-09 00:11:39.915 +06:00 [INF] Hosting environment: Development
+2025-12-09 00:11:39.915 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-09 00:11:40.061 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-09 00:11:40.129 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 322.6488ms
+2025-12-09 00:11:40.167 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-09 00:12:00.924 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-09 00:12:00.924 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-09 00:12:00.961 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 37.3622ms
+2025-12-09 00:12:00.968 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.771ms
+2025-12-09 00:12:01.152 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-09 00:12:01.166 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.9153ms
+2025-12-09 00:12:56.721 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: KameghaMuslim
+2025-12-09 00:12:56.721 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 3 seconds before migration...
+2025-12-09 00:12:59.729 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 1/5)
+2025-12-09 00:12:59.737 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_KameghaMuslim;Integrated Security=False;User ID=tenant_KameghaMuslim_user;Password=F!W0-DMttZC7QTN8;Trust Server Certificate=True
+2025-12-09 00:12:59.738 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-09 00:13:02.244 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-09 00:13:02.272 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-09 00:13:02.378 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-09 00:13:03.037 +06:00 [INF] [ApplicationUsers] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2025-12-09 00:13:03.039 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2025-12-09 00:13:03.181 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
