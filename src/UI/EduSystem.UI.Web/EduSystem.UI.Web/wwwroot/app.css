@@ -197,7 +197,6 @@ h1:focus {
 /* --- MudBlazor Drawer Styling --- */
 .mud-drawer {
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    width: 260px !important;
     z-index: 1300 !important;
 }
 
@@ -210,12 +209,8 @@ h1:focus {
 }
 
 .mud-drawer .mud-drawer-content {
-    background: transparent !important;
-    width: 260px !important;
+    /* Removed fixed width to allow Mini drawer to collapse */
 }
-
-/* --- Sidebar Navigation Styling --- */
-/* Target MudBlazor components specifically when inside the MudDrawer */
 
 /* --- Sidebar Navigation Styling --- */
 /* Target MudBlazor components specifically when inside the MudDrawer */

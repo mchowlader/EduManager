@@ -7,9 +7,11 @@
 <MudSnackbarProvider />
 
 <MudLayout>
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" 
+                   Style="@($"position: fixed; top: 10px; left: {(_drawerOpen ? "270px" : "70px")}; z-index: 2000; color: #4a5568 !important; transition: left 0.3s ease-in-out;")" />
+
     <MudAppBar Elevation="0" Class="top-bar-glass" Fixed="true">
-        <!-- Menu Icon removed as per request -->
-        <MudText Typo="Typo.h6" Class="d-none d-md-block" style="font-weight: 600; color: #4a5568;">Dashboard</MudText>
+        <MudText Typo="Typo.h6" Class="d-none d-md-block" style="font-weight: 600; color: #4a5568; margin-left: 50px;">Dashboard</MudText>
         <MudSpacer />
         
         <!-- User Profile Section -->
@@ -24,9 +26,24 @@
 
     <MudDrawer @bind-Open="@_drawerOpen" 
                Elevation="1" 
-               Variant="@DrawerVariant.Responsive" 
+               Variant="@DrawerVariant.Mini" 
+               OpenMiniOnHover="true"
                ClipMode="DrawerClipMode.Never" 
                Class="mud-drawer-gradient">
+        <MudDrawerHeader Class="d-flex align-center gap-2 px-3">
+             @if (_drawerOpen)
+             {
+                <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" />
+                <MudText Typo="Typo.h6" Style="font-weight: 700; color: white; white-space:nowrap;">
+                    EduSystem
+                </MudText>
+             }
+             else 
+             {
+                 <!-- Show icon in mini mode centered if desired, or hide everything to keep stripped look clean -->
+                 <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" Class="mx-auto" />
+             }
+        </MudDrawerHeader>
         <NavMenu />
     </MudDrawer>
 
@@ -45,4 +62,9 @@
 
 @code {
     private bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
 }
