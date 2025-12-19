@@ -1,4 +1,5 @@
 using EduSystem.UI.Web.Client.Models;
+using EduSystem.UI.Web.Client.Models.Common;
 
 namespace EduSystem.UI.Web.Client.Services
 {
@@ -27,8 +28,8 @@ namespace EduSystem.UI.Web.Client.Services
                     Name = $"Teacher {i}",
                     Phone = $"017000000{i:00}",
                     Email = "teacher@gmail.com",
-                    PresentAddress = new Address { HouseNo = $"H-{i}", RoadNo = $"R-{i}", District = "Dhaka", Thana = "Mirpur" },
-                    PermanentAddress = new Address { HouseNo = $"H-{i}", RoadNo = $"R-{i}", District = "Borisal", Thana = "Sadar" }
+                    PresentAddress = new AddressModel { HouseNo = $"H-{i}", RoadNo = $"R-{i}", District = "Dhaka", Thana = "Mirpur" },
+                    PermanentAddress = new AddressModel { HouseNo = $"H-{i}", RoadNo = $"R-{i}", District = "Borisal", Thana = "Sadar" }
                 });
             }
         }

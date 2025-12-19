@@ -1,0 +1,60 @@
+@using EduSystem.UI.Web.Client.Models
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudGrid>
+            <MudItem xs="12">
+                <MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Teacher.Name</MudText>
+                <MudDivider Class="mb-4" />
+            </MudItem>
+
+            <!-- Personal Info -->
+            <MudItem xs="12" md="6">
+                <MudText Typo="Typo.subtitle2" Color="Color.Secondary">Personal Information</MudText>
+                <MudList T="string" Dense="true" DisablePadding="true">
+                    <MudListItem Text="@($"Phone: {Teacher.Phone}")" Icon="@Icons.Material.Filled.Phone" />
+                </MudList>
+            </MudItem>
+
+            <!-- Academic Info -->
+            <MudItem xs="12" md="6">
+                <MudText Typo="Typo.subtitle2" Color="Color.Secondary">Academic Information</MudText>
+                <MudList T="string" Dense="true" DisablePadding="true">
+                    <MudListItem Text="@($"Class: {Teacher.Designation}")" Icon="@Icons.Material.Filled.Class" />
+                </MudList>
+            </MudItem>
+
+             <!-- Address Info -->
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2" Color="Color.Secondary" Class="mt-2">Address</MudText>
+                 <MudGrid>
+                     <MudItem xs="12" sm="6">
+                         <MudPaper Class="pa-3" Elevation="0" Outlined="true">
+                             <MudText Typo="Typo.caption">Present Address</MudText>
+                            <MudText Typo="Typo.body2">@Teacher.PresentAddress</MudText>
+                         </MudPaper>
+                     </MudItem>
+                     <MudItem xs="12" sm="6">
+                         <MudPaper Class="pa-3" Elevation="0" Outlined="true">
+                             <MudText Typo="Typo.caption">Permanent Address</MudText>
+                             <MudText Typo="Typo.body2">
+                                 @($"{Teacher.PermanentAddress?.HouseNo}, {Teacher.PermanentAddress?.RoadNo}, {Teacher.PermanentAddress?.District}")
+                             </MudText>
+                         </MudPaper>
+                     </MudItem>
+                 </MudGrid>
+            </MudItem>
+        </MudGrid>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Close</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance? DialogInstance { get; set; }
+    [Parameter] public TeacherModel Teacher { get; set; } = new TeacherModel();
+
+    private void Cancel() => DialogInstance.Cancel();
+}

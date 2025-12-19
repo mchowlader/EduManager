@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using EduSystem.UI.Web.Services
+@inject ITenantService TenantService
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,24 +9,72 @@
     <base href="/" />
     <title>EduSystem</title>
     <ResourcePreloader />
+    
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    @using Microsoft.AspNetCore.Components.Web
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
     <!-- MudBlazor CSS -->
     <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+    
+    <!-- Bootstrap (optional - remove if not using) -->
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="@Assets["app.css"]" />
     <link rel="stylesheet" href="@Assets["EduSystem.UI.Web.styles.css"]" />
+    
     <ImportMap />
     <link rel="icon" type="image/svg+xml" href="icon.svg" />
-    <HeadOutlet @rendermode="RenderMode.InteractiveAuto" />
+    
+    <!-- SERVER SIDE DYNAMIC THEME INJECTION (Zero Flicker) -->
+    @{
+        // This runs on the server before the HTML is sent to the browser
+        var theme = _tenantTheme; 
+    }
+    <style>
+        :root {
+            --tenant-primary: @theme.PrimaryColor;
+            --tenant-secondary: @theme.SecondaryColor;
+            --tenant-sidebar-bg: @theme.SidebarColor;
+        }
+        
+        /* Apply to MudBlazor or Custom Elements immediately */
+        .mud-drawer-gradient {
+            background: linear-gradient(135deg, var(--tenant-primary) 0%, var(--tenant-secondary) 100%) !important;
+        }
+        
+        .tenant-primary-text { color: var(--tenant-primary) !important; }
+        .tenant-primary-bg { background-color: var(--tenant-primary) !important; }
+    </style>
+    
+    <!-- Dynamic Favicon -->
+    <link rel="icon" id="tenant-favicon" type="image/png" href="@theme.LogoUrl" />
+    
+    <HeadOutlet @rendermode="RenderMode.InteractiveServer" />
 </head>
 <body>
     <EduSystem.UI.Web.Components.Routes @rendermode="RenderMode.InteractiveServer" />
+
     <ReconnectModal />
+    
+    <!-- Scripts -->
     <script src="@Assets["_framework/blazor.web.js"]"></script>
-    <!-- MudBlazor JS -->
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 </body>
 </html>
+
+@code {
+    private TenantTheme _tenantTheme = new TenantTheme();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // This runs during the HTTP Request (SSR)
+        _tenantTheme = await TenantService.GetTenantThemeAsync();
+    }
+}

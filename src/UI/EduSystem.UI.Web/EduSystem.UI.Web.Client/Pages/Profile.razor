@@ -1,0 +1,277 @@
+@page "/profile"
+@using EduSystem.UI.Web.Client.Models.AuthClient
+@using EduSystem.UI.Web.Client.Services.Auth
+@using Microsoft.AspNetCore.Components.Authorization
+@using MudBlazor
+@attribute [Authorize]
+@inject CustomAuthenticationStateProvider AuthStateProvider
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProviderBase
+
+<PageTitle>Profile - EduSystem</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-8">
+    @if (_isLoading)
+    {
+        <div class="d-flex justify-center align-center" style="height: 60vh;">
+            <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Large" />
+        </div>
+    }
+    else if (_userInfo != null)
+    {
+        <MudGrid>
+            <!-- Profile Header Card -->
+            <MudItem xs="12">
+                <MudPaper Class="profile-header-card pa-8" Elevation="4">
+                    <div class="d-flex flex-column align-center flex-md-row align-md-end gap-6">
+                        <div class="profile-avatar-wrapper">
+                            <MudAvatar Color="Color.Primary" Style="height:150px; width:150px; font-size:4rem; border: 4px solid white; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
+                                @GetUserInitials()
+                            </MudAvatar>
+                            <div class="avatar-badge">
+                                <MudIcon Icon="@Icons.Material.Filled.CheckCircle" Color="Color.Success" />
+                            </div>
+                        </div>
+                        
+                        <div class="profile-title-section flex-1">
+                            <div class="d-flex justify-space-between align-end w-100">
+                                <div>
+                                    <MudText Typo="Typo.h3" Style="font-weight: 900; color: #1e293b; letter-spacing: -1px;">
+                                        @_userInfo.FullName
+                                    </MudText>
+                                    <div class="d-flex align-center gap-2 mt-1">
+                                        <MudChip T="string" Color="Color.Primary" Size="Size.Small" Variant="Variant.Filled" Style="font-weight: 700;">
+                                            @_userInfo.Role
+                                        </MudChip>
+                                        <MudText Typo="Typo.body1" Style="color: #64748b;">
+                                            <MudIcon Icon="@Icons.Material.Filled.LocationOn" Size="Size.Small" Class="mr-1" />
+                                            Dhaka, Bangladesh
+                                        </MudText>
+                                    </div>
+                                </div>
+                                <div class="d-none d-md-block">
+                                    <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Edit" Style="border-radius: 12px; text-transform: none; font-weight: 700;">
+                                        Edit Profile
+                                    </MudButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </MudPaper>
+            </MudItem>
+
+            <!-- Detailed Info Section -->
+            <MudItem xs="12" md="4">
+                <MudStack Spacing="6">
+                    <MudPaper Class="pa-6" Style="border-radius: 20px;" Elevation="2">
+                        <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Contact Information</MudText>
+                        <MudStack Spacing="4">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <MudIcon Icon="@Icons.Material.Filled.Email" Size="Size.Small" />
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Email Address</span>
+                                    <span class="info-value">@_userInfo.Email</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <MudIcon Icon="@Icons.Material.Filled.Phone" Size="Size.Small" />
+                                </div>
+                                <div class="info-content">
+                                    <span class="info-label">Phone Number</span>
+                                    <span class="info-value">@(_userInfo.PhoneNumber ?? "Not provided")</span>
+                                </div>
+                            </div>
+                        </MudStack>
+                    </MudPaper>
+
+                    @if (_tenantInfo != null)
+                    {
+                        <MudPaper Class="pa-6" Style="border-radius: 20px;" Elevation="2">
+                            <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Institution Details</MudText>
+                            <div class="d-flex align-center gap-4">
+                                @if (!string.IsNullOrEmpty(_tenantInfo.LogoUrl))
+                                {
+                                    <MudImage Src="@_tenantInfo.LogoUrl" Width="60" Height="60" Style="border-radius: 12px; object-fit: cover;" />
+                                }
+                                else
+                                {
+                                    <div class="tenant-placeholder">
+                                        <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Primary" />
+                                    </div>
+                                }
+                                <div>
+                                    <MudText Style="font-weight: 700; color: #1e293b;">@_tenantInfo.Name</MudText>
+                                    <MudText Typo="Typo.caption" Style="color: #64748b;">Domain: @_tenantInfo.Slug</MudText>
+                                </div>
+                            </div>
+                        </MudPaper>
+                    }
+                </MudStack>
+            </MudItem>
+
+            <MudItem xs="12" md="8">
+                <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6" Style="border-radius: 20px;">
+                    <MudTabPanel Text="Overview" Icon="@Icons.Material.Filled.Dashboard">
+                        <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Account Activity</MudText>
+                        <MudAlert Severity="Severity.Info" Variant="Variant.Outlined" Class="mb-4">
+                            Your account is currently <strong>Active</strong>. You have full access to all institutional resources.
+                        </MudAlert>
+                        <MudGrid>
+                            <MudItem xs="12" sm="6">
+                                <div class="stat-mini-card">
+                                    <MudText Typo="Typo.caption">Total Classes</MudText>
+                                    <MudText Typo="Typo.h5" Style="font-weight: 800;">12</MudText>
+                                </div>
+                            </MudItem>
+                            <MudItem xs="12" sm="6">
+                                <div class="stat-mini-card">
+                                    <MudText Typo="Typo.caption">Pending Tasks</MudText>
+                                    <MudText Typo="Typo.h5" Style="font-weight: 800; color: #ef4444;">04</MudText>
+                                </div>
+                            </MudItem>
+                        </MudGrid>
+                    </MudTabPanel>
+                    <MudTabPanel Text="Settings" Icon="@Icons.Material.Filled.Settings">
+                        <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Account Settings</MudText>
+                        <MudSwitch T="bool" Label="Email Notifications" Color="Color.Primary" Checked="true" />
+                        <MudSwitch T="bool" Label="Security Alerts" Color="Color.Primary" Checked="true" />
+                        <MudButton Variant="Variant.Outlined" Color="Color.Error" Class="mt-4" StartIcon="@Icons.Material.Filled.LockReset">
+                            Change Password
+                        </MudButton>
+                    </MudTabPanel>
+                </MudTabs>
+            </MudItem>
+        </MudGrid>
+    }
+</MudContainer>
+
+<style>
+    .profile-header-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .profile-header-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--mud-palette-primary-lighten) 0%, transparent 70%);
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .profile-avatar-wrapper {
+        position: relative;
+    }
+
+    .avatar-badge {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: white;
+        border-radius: 50%;
+        padding: 4px;
+        display: flex;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .info-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mud-palette-primary);
+    }
+
+    .info-content {
+        display: flex;
+        flex-column: column;
+    }
+
+    .info-label {
+        font-size: 0.75rem;
+        color: #64748b;
+        font-weight: 500;
+        display: block;
+    }
+
+    .info-value {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1e293b;
+    }
+
+    .tenant-placeholder {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stat-mini-card {
+        padding: 1.5rem;
+        background: #f8fafc;
+        border-radius: 16px;
+        border: 1px solid #edf2f7;
+    }
+</style>
+
+@code {
+    private UserInfo? _userInfo;
+    private TenantInfo? _tenantInfo;
+    private bool _isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadUserData();
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        try
+        {
+            _userInfo = await AuthStateProvider.GetUserInfoAsync();
+            _tenantInfo = await AuthStateProvider.GetTenantInfoAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading user data: {ex.Message}");
+        }
+        finally
+        {
+            _isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private string GetUserInitials()
+    {
+        if (string.IsNullOrEmpty(_userInfo?.FullName)) return "?";
+        var parts = _userInfo.FullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length >= 2) return $"{parts[0][0]}{parts[1][0]}".ToUpper();
+        return parts[0][0].ToString().ToUpper();
+    }
+}

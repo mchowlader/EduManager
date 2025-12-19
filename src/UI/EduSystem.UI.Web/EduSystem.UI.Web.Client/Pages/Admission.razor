@@ -1,0 +1,191 @@
+@page "/admission"
+@layout AuthLayout
+@using MudBlazor
+@inject ISnackbar Snackbar
+@inject NavigationManager Navigation
+
+<PageTitle>Online Admission - EduSystem</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-10 mb-10">
+    <MudPaper Elevation="4" Class="pa-8" Style="border-radius: 24px; position: relative; overflow: hidden;">
+        <div class="admission-header-accent"></div>
+        
+        <div class="d-flex align-center gap-4 mb-8">
+            <div class="admission-icon-box">
+                <MudIcon Icon="@Icons.Material.Filled.Assignment" Color="Color.Primary" Size="Size.Large" />
+            </div>
+            <div>
+                <MudText Typo="Typo.h4" Style="font-weight: 900; color: #1e293b;">Online Admission</MudText>
+                <MudText Typo="Typo.body1" Style="color: #64748b;">Please fill out the form carefully to apply for admission.</MudText>
+            </div>
+        </div>
+
+        <MudStepper @ref="_stepper" NonLinear="false" Style="border-radius: 16px;">
+            <!-- Step 1: Student Information -->
+            <MudStep Title="Personal Info" Icon="@Icons.Material.Filled.Person">
+                <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Student Information</MudText>
+                <MudGrid>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.FullName" Label="Student Full Name" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudDatePicker @bind-Date="_model.DateOfBirth" Label="Date of Birth" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudSelect T="string" @bind-Value="_model.Gender" Label="Gender" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense">
+                            <MudSelectItem Value="@("Male")">Male</MudSelectItem>
+                            <MudSelectItem Value="@("Female")">Female</MudSelectItem>
+                            <MudSelectItem Value="@("Other")">Other</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudSelect T="string" @bind-Value="_model.BloodGroup" Label="Blood Group" Variant="Variant.Outlined" Margin="Margin.Dense">
+                            <MudSelectItem Value="@("A+")">A+</MudSelectItem>
+                            <MudSelectItem Value="@("A-")">A-</MudSelectItem>
+                            <MudSelectItem Value="@("B+")">B+</MudSelectItem>
+                            <MudSelectItem Value="@("B-")">B-</MudSelectItem>
+                            <MudSelectItem Value="@("O+")">O+</MudSelectItem>
+                            <MudSelectItem Value="@("O-")">O-</MudSelectItem>
+                            <MudSelectItem Value="@("AB+")">AB+</MudSelectItem>
+                            <MudSelectItem Value="@("AB-")">AB-</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                </MudGrid>
+            </MudStep>
+
+            <!-- Step 2: Academic Preference -->
+            <MudStep Title="Academic Info" Icon="@Icons.Material.Filled.School">
+                <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Academic Preference</MudText>
+                <MudGrid>
+                    <MudItem xs="12" md="6">
+                        <MudSelect T="string" @bind-Value="_model.Level" Label="Level (School/College)" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense">
+                            <MudSelectItem Value="@("School")">School (Primary/High School)</MudSelectItem>
+                            <MudSelectItem Value="@("College")">College / High School (11-12)</MudSelectItem>
+                        </MudSelect>
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.ApplyingClass" Label="Class / Grade / Semester" Placeholder="e.g. Class 6, HSC 1st Year" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudTextField @bind-Value="_model.GroupDepartment" Label="Group / Department / Version" Placeholder="e.g. Science, Commerce, Arts, English Version" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                </MudGrid>
+                <MudAlert Severity="Severity.Info" Class="mt-4" Variant="Variant.Outlined">
+                    Ensure your selected Level matches your previous academic records.
+                </MudAlert>
+            </MudStep>
+
+            <!-- Step 3: Guardian Details -->
+            <MudStep Title="Family Info" Icon="@Icons.Material.Filled.FamilyRestroom">
+                <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Guardian Information</MudText>
+                <MudGrid>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.FatherName" Label="Father's Name" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.MotherName" Label="Mother's Name" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.GuardianPhone" Label="Guardian Phone Number" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.FatherOccupation" Label="Father's Occupation" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                </MudGrid>
+            </MudStep>
+
+            <!-- Step 4: Contact & Review -->
+            <MudStep Title="Review & Submit" Icon="@Icons.Material.Filled.CheckCircle">
+                <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700;">Contact & Final Review</MudText>
+                <MudGrid>
+                    <MudItem xs="12">
+                        <MudTextField @bind-Value="_model.PresentAddress" Label="Present Address" Lines="3" Required="true" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.EmergencyContact" Label="Emergency Contact Name" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_model.EmergencyPhone" Label="Emergency Contact Phone" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                    </MudItem>
+                </MudGrid>
+                
+                <div class="mt-6 pa-4" style="background: #f8fafc; border-radius: 12px; border: 1px dashed #cbd5e1;">
+                    <MudCheckBox @bind-Value="_termsAccepted" Label="I certify that the information provided is true and accurate to the best of my knowledge." Color="Color.Primary" />
+                </div>
+
+                <div class="d-flex justify-end mt-8">
+                    <MudButton Variant="Variant.Filled" 
+                               Color="Color.Primary" 
+                               Size="Size.Large"
+                               Disabled="@(!_termsAccepted)"
+                               OnClick="HandleSubmit"
+                               Style="border-radius: 12px; font-weight: 700; padding: 0.8rem 3rem;">
+                        Submit Application
+                    </MudButton>
+                </div>
+            </MudStep>
+        </MudStepper>
+
+        <div class="mt-8 d-flex justify-center">
+            <MudLink OnClick="@(() => Navigation.NavigateTo("/"))" Color="Color.Secondary" Style="font-weight: 600;">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Class="mr-1" /> Back to Website
+            </MudLink>
+        </div>
+    </MudPaper>
+</MudContainer>
+
+<style>
+    .admission-header-accent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--mud-palette-primary) 0%, var(--mud-palette-secondary) 100%);
+    }
+
+    .admission-icon-box {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: rgba(var(--mud-palette-primary-rgb), 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mud-stepper-nav {
+        margin-bottom: 2rem !important;
+    }
+</style>
+
+@code {
+    private MudStepper _stepper = default!;
+    private AdmissionModel _model = new();
+    private bool _termsAccepted = false;
+
+    private void HandleSubmit()
+    {
+        // For now, simulate success
+        Snackbar.Add("Application Submitted Successfully!", Severity.Success);
+        Navigation.NavigateTo("/");
+    }
+
+    public class AdmissionModel
+    {
+        public string? FullName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string? Gender { get; set; }
+        public string? BloodGroup { get; set; }
+        public string? Level { get; set; }
+        public string? ApplyingClass { get; set; }
+        public string? GroupDepartment { get; set; }
+        public string? FatherName { get; set; }
+        public string? MotherName { get; set; }
+        public string? GuardianPhone { get; set; }
+        public string? FatherOccupation { get; set; }
+        public string? PresentAddress { get; set; }
+        public string? EmergencyContact { get; set; }
+        public string? EmergencyPhone { get; set; }
+    }
+}

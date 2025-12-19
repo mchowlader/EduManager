@@ -1,53 +1,136 @@
 ﻿@inherits LayoutComponentBase
+@using EduSystem.UI.Web.Client.Services.Auth
+@using EduSystem.UI.Web.Services
 @using MudBlazor
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthService AuthService
+@inject ITenantService TenantService
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+    
 
-<MudThemeProvider />
+<MudThemeProvider Theme="@_currentTheme" />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudIconButton Icon="@Icons.Material.Filled.Menu" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" 
-                   Style="@($"position: fixed; top: 10px; left: {(_drawerOpen ? "270px" : "70px")}; z-index: 2000; color: #4a5568 !important; transition: left 0.3s ease-in-out;")" />
+    <!-- Hamburger Menu Button -->
+    <AuthorizeView>
+        <Authorized>
+            <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                           Edge="Edge.Start"
+                           OnClick="@DrawerToggle"
+                           Style="@GetMenuButtonStyle()" />
+        </Authorized>
+    </AuthorizeView>
 
-    <MudAppBar Elevation="0" Class="top-bar-glass" Fixed="true">
-        <MudText Typo="Typo.h6" Class="d-none d-md-block" style="font-weight: 600; color: #4a5568; margin-left: 50px;">Dashboard</MudText>
+    <!-- Top AppBar -->
+    <MudAppBar Elevation="0" Class="top-bar-glass" Fixed="true" Style="@GetAppBarStyle()">
+        <MudText Typo="Typo.h6"
+                 Class="d-none d-md-block"
+                 Style="font-weight: 600; margin-left: 50px;">
+            @GetCurrentPageTitle()
+        </MudText>
         <MudSpacer />
-        
+
+        <!-- Tenant Info (optional) -->
+        @if (!string.IsNullOrEmpty(_tenantName))
+        {
+            <MudChip T="string"
+                     Size="Size.Small"
+                     Class="mr-4 d-none d-sm-flex tenant-primary-bg"
+                     Style="color: white;">
+                @_tenantName
+            </MudChip>
+        }
+
         <!-- User Profile Section -->
         <div class="user-profile-section">
             <div class="d-flex flex-column align-end mr-2 d-none d-sm-flex">
-                <span class="user-name">Admin User</span>
-                <span class="user-role">Administrator</span>
+                <span class="user-name">@_userName</span>
+                <span class="user-role">@_userRole</span>
             </div>
-            <div class="user-avatar">AD</div>
+            <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight">
+                <ActivatorContent>
+                    <MudAvatar Color="Color.Primary" Style="cursor: pointer;" Class="tenant-primary-bg">
+                        @GetUserInitials()
+                    </MudAvatar>
+                </ActivatorContent>
+                <ChildContent>
+                    <AuthorizeView>
+                        <Authorized>
+                            <MudMenuItem Icon="@Icons.Material.Filled.Person" OnClick="@GoToProfile">
+                                Profile
+                            </MudMenuItem>
+                            <MudMenuItem Icon="@Icons.Material.Filled.Settings" OnClick="@GoToSettings">
+                                Settings
+                            </MudMenuItem>
+                            <MudDivider />
+                            <MudMenuItem Icon="@Icons.Material.Filled.Logout" OnClick="@Logout">
+                                Logout
+                            </MudMenuItem>
+                        </Authorized>
+                        <NotAuthorized>
+                            <MudMenuItem Icon="@Icons.Material.Filled.Login" OnClick="@(() => Navigation.NavigateTo("/login"))">
+                                Login to Portal
+                            </MudMenuItem>
+                            <MudMenuItem Icon="@Icons.Material.Filled.AppRegistration" OnClick="@(() => Navigation.NavigateTo("/register"))">
+                                Register Institute
+                            </MudMenuItem>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </ChildContent>
+            </MudMenu>
         </div>
     </MudAppBar>
 
-    <MudDrawer @bind-Open="@_drawerOpen" 
-               Elevation="1" 
-               Variant="@DrawerVariant.Mini" 
-               OpenMiniOnHover="true"
-               ClipMode="DrawerClipMode.Never" 
-               Class="mud-drawer-gradient">
-        <MudDrawerHeader Class="d-flex align-center gap-2 px-3">
-             @if (_drawerOpen)
-             {
-                <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" />
-                <MudText Typo="Typo.h6" Style="font-weight: 700; color: white; white-space:nowrap;">
-                    EduSystem
-                </MudText>
-             }
-             else
-             {
-                 <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" Class="mx-auto" />
-             }
-        </MudDrawerHeader>
-        <NavMenu />
-    </MudDrawer>
-    
-    <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-4 pt-4">
+    <!-- Side Drawer -->
+    <AuthorizeView>
+        <Authorized>
+            <MudDrawer @bind-Open="@_drawerOpen"
+                       Elevation="1"
+                       Variant="@DrawerVariant.Mini"
+                       OpenMiniOnHover="true"
+                       ClipMode="DrawerClipMode.Never"
+                       Class="mud-drawer-gradient">
+                <MudDrawerHeader Class="d-flex align-center gap-2 px-3" Style="@GetDrawerHeaderStyle()">
+                    @if (_drawerOpen)
+                    {
+                        @if (!string.IsNullOrEmpty(_tenantLogo))
+                        {
+                            <img src="@_tenantLogo" alt="Logo" style="height: 40px; width: 40px; border-radius: 8px;" />
+                        }
+                        else
+                        {
+                            <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" />
+                        }
+                        <MudText Typo="Typo.h6" Style="font-weight: 700; color: white; white-space:nowrap;">
+                            @(_tenantName ?? "EduSystem")
+                        </MudText>
+                    }
+                    else
+                    {
+                        @if (!string.IsNullOrEmpty(_tenantLogo))
+                        {
+                            <img src="@_tenantLogo" alt="Logo" style="height: 40px; width: 40px; border-radius: 8px;" class="mx-auto" />
+                        }
+                        else
+                        {
+                            <MudIcon Icon="@Icons.Material.Filled.School" Color="Color.Inherit" Size="Size.Large" Class="mx-auto" />
+                        }
+                    }
+                </MudDrawerHeader>
+                <NavMenu />
+            </MudDrawer>
+        </Authorized>
+    </AuthorizeView>
+
+    <!-- Main Content -->
+    <MudMainContent Style="@GetMainContentStyle()">
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="my-4 pt-4">
             @Body
         </MudContainer>
     </MudMainContent>
@@ -59,11 +142,187 @@
     <span class="dismiss">🗙</span>
 </div>
 
+<style>
+    .top-bar-glass {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.8) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .user-profile-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .user-name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #2d3748;
+        line-height: 1.2;
+    }
+
+    .user-role {
+        font-size: 0.75rem;
+        color: #718096;
+        line-height: 1.2;
+    }
+</style>
+
 @code {
     private bool _drawerOpen = true;
+    private MudTheme _currentTheme = new MudTheme();
+    private string _userName = "Loading...";
+    private string _userRole = "";
+    private string _tenantName = "";
+    private string _tenantLogo = "";
+    // Access colors via CSS variables primarily, but keep these for MudTheme if needed
+    private string _primaryColor = "#5E35B1"; 
 
-    void DrawerToggle()
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthStateTask { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTenantTheme();
+        await LoadUserInfo();
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadUserInfo();
+    }
+
+    private async Task LoadTenantTheme()
+    {
+        try
+        {
+            var theme = await TenantService.GetTenantThemeAsync();
+
+            _currentTheme = new MudTheme
+            {
+                PaletteLight = new PaletteLight
+                {
+                    Primary = theme.PrimaryColor,
+                    Secondary = theme.SecondaryColor,
+                    AppbarBackground = "rgba(255, 255, 255, 0.8)",
+                    DrawerBackground = theme.SidebarColor
+                }
+            };
+            
+            _tenantName = "EduSystem"; // Or get from theme if available
+            _tenantLogo = theme.LogoUrl;
+            _primaryColor = theme.PrimaryColor;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Theme load error: {ex.Message}");
+        }
+    }
+
+    private async Task LoadUserInfo()
+    {
+        try
+        {
+            var authState = await AuthStateTask;
+            var user = authState.User;
+
+            if (user.Identity?.IsAuthenticated == true)
+            {
+                _userName = user.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value ?? user.Identity.Name ?? "User";
+                _userRole = user.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? "Member";
+            }
+            else
+            {
+                _userName = "Guest User";
+                _userRole = "Visitor";
+                _drawerOpen = false;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"User info load error: {ex.Message}");
+            _userName = "Guest User";
+            _userRole = "Visitor";
+        }
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        StateHasChanged();
+    }
+
+    private void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
+    }
+
+    private string GetMenuButtonStyle()
+    {
+        return $"position: fixed; top: 10px; left: {(_drawerOpen ? "270px" : "70px")}; z-index: 2000; color: var(--tenant-primary, {_primaryColor}) !important; transition: left 0.3s ease-in-out;";
+    }
+
+    private string GetAppBarStyle()
+    {
+        return "background-color: rgba(255, 255, 255, 0.9);";
+    }
+
+    private string GetDrawerHeaderStyle()
+    {
+        return "background: rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.2);";
+    }
+
+    private string GetMainContentStyle()
+    {
+        return "background-color: #f7fafc; min-height: 100vh;";
+    }
+
+    private string GetCurrentPageTitle()
+    {
+        var path = new Uri(Navigation.Uri).AbsolutePath.Trim('/').ToLower();
+
+        return path switch
+        {
+            "" or "dashboard" => "Dashboard",
+            "teachers" => "Teachers Management",
+            "students" => "Students Management",
+            "teachersattendance" => "Teachers Attendance",
+            "studentsattendance" => "Students Attendance",
+            "classes" => "Classes",
+            "exams" => "Exams",
+            "results" => "Results",
+            "settings" => "Settings",
+            _ => "EduSystem"
+        };
+    }
+
+    private string GetUserInitials()
+    {
+        if (string.IsNullOrEmpty(_userName) || _userName == "Loading...")
+            return "?";
+
+        var parts = _userName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length >= 2)
+            return $"{parts[0][0]}{parts[1][0]}".ToUpper();
+
+        return parts.Length > 0 ? parts[0][0].ToString().ToUpper() : "?";
+    }
+
+    private void GoToProfile() => Navigation.NavigateTo("/profile");
+    private void GoToSettings() => Navigation.NavigateTo("/settings");
+
+    private async Task Logout()
+    {
+        if (AuthStateProvider is CustomAuthenticationStateProvider customProvider)
+        {
+            await customProvider.MarkUserAsLoggedOut();
+        }
+        Navigation.NavigateTo("/", true);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
     }
 }

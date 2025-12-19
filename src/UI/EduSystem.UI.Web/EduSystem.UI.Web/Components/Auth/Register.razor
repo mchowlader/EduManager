@@ -101,6 +101,24 @@
                                       Required="true"
                                       FullWidth="true" />
                     </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudColorPicker Label="Primary Brand Color" 
+                                        @bind-Text="_registerModel.PrimaryColor" 
+                                        Style="@($"color: {_registerModel.PrimaryColor};")" 
+                                        Placeholder="Select Color" 
+                                        ColorPickerView="ColorPickerView.Palette"
+                                        Variant="Variant.Outlined"
+                                        Margin="Margin.Dense" />
+                    </MudItem>
+                    <MudItem xs="12" md="6">
+                        <MudColorPicker Label="Secondary Brand Color" 
+                                        @bind-Text="_registerModel.SecondaryColor" 
+                                        Style="@($"color: {_registerModel.SecondaryColor};")" 
+                                        Placeholder="Select Color" 
+                                        ColorPickerView="ColorPickerView.Palette"
+                                        Variant="Variant.Outlined"
+                                        Margin="Margin.Dense" />
+                    </MudItem>
                 </MudGrid>
 
                 <MudButton Variant="Variant.Filled"
@@ -149,7 +167,7 @@
         try
         {
             var client = HttpClientFactory.CreateClient("IdentityApi");
-            var response = await client.PostAsJsonAsync("api/tenant/register", _registerModel);
+            var response = await client.PostAsJsonAsync("api/v1/tenants/register", _registerModel);
 
             if (response.IsSuccessStatusCode)
             {

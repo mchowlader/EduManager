@@ -1,13 +1,15 @@
 ﻿@page "/login"
 @using MudBlazor
+@using EduSystem.UI.Web.Client.Models.AuthClient
+@using EduSystem.UI.Web.Client.Services.Auth
+@using Microsoft.AspNetCore.Components.Authorization
 @layout AuthLayout
 @rendermode InteractiveServer
 @inject IHttpClientFactory HttpClientFactory
 @inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
 
 <PageTitle>Login - EduSystem</PageTitle>
-
-
 
 <div class="auth-page">
     <div class="glass-card">
@@ -53,6 +55,15 @@
                               InputType="InputType.Email"
                               Adornment="Adornment.Start"
                               AdornmentIcon="@Icons.Material.Filled.Email"
+                              Required="true"
+                              FullWidth="true" />
+                <MudTextField @bind-Value="_loginModel.TenantSlug"
+                              Label="Tenant Slug"
+                              Variant="Variant.Outlined"
+                              Margin="Margin.Dense"
+                              InputType="InputType.Text"
+                              Adornment="Adornment.Start"
+                              AdornmentIcon="@Icons.Material.Filled.Newspaper"
                               Required="true"
                               FullWidth="true" />
 
@@ -108,12 +119,14 @@
 
     [SupplyParameterFromQuery]
     public string? Tenant { get; set; }
+    
+    [Inject] ISnackbar Snackbar { get; set; } = default!;
 
     protected override void OnInitialized()
     {
         if (!string.IsNullOrEmpty(Tenant))
         {
-            // Ideally pre-fill tenant info if applicable, or just used for context
+            _loginModel.TenantSlug = Tenant;
         }
     }
 
@@ -126,17 +139,66 @@
     private async Task HandleLogin()
     {
         _isLoading = true;
-        // Simulate login delay for UI testing
-        await Task.Delay(1000); 
-        
-        // TODO: Implement actual login logic here
-        
-        _isLoading = false;
+        try
+        {
+            var client = HttpClientFactory.CreateClient("IdentityApi");
+            
+            if (!string.IsNullOrEmpty(Tenant))
+            {
+                _loginModel.TenantSlug = Tenant;
+            }
+
+            var response = await client.PostAsJsonAsync("api/v1/auth/login", _loginModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                
+                if (result != null && result.Success)
+                {
+                    // Store Token and User info via the Provider
+                    if (AuthStateProvider is CustomAuthenticationStateProvider customProvider)
+                    {
+                        await customProvider.MarkUserAsAuthenticated(result);
+                    }
+                    
+                    Snackbar.Add("Login Successful!", Severity.Success);
+                    
+                    // Redirect to Dashboard
+                    Navigation.NavigateTo("/", true); // Force load to ensure layout refreshes with new auth state
+                }
+                else
+                {
+                    Snackbar.Add(result?.Message ?? "Login failed.", Severity.Error);
+                }
+            }
+            else
+            {
+                var error = await response.Content.ReadFromJsonAsync<ErrorResponse>();
+                Snackbar.Add(error?.Message ?? "Login failed. Please check your credentials.", Severity.Error);
+            }
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Connection error: {ex.Message}", Severity.Error);
+        }
+        finally
+        {
+            _isLoading = false;
+        }
     }
 
     public class LoginModel
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
+        public string? TenantSlug { get; set; }
+    }
+    
+    public class ErrorResponse
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; } = string.Empty;
+        public string[]? Errors { get; set; }
     }
 }

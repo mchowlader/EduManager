@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@* @page "/"
 @using Microsoft.AspNetCore.Components.Web
 @rendermode RenderMode.InteractiveAuto
 
@@ -288,4 +288,533 @@
     // Donut Data
     public double[] data = { 750, 500 }; // Boys, Girls
     public string[] labels = { "Boys (60%)", "Girls (40%)" };
+} *@
+@page "/"
+@using EduSystem.UI.Web.Client.Models.AuthClient
+@using EduSystem.UI.Web.Client.Services.Auth
+@using Microsoft.AspNetCore.Components.Authorization
+@using EduSystem.UI.Web.Client.Services
+@using Microsoft.JSInterop
+@rendermode InteractiveAuto
+@inject CustomAuthenticationStateProvider AuthStateProvider
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+@inject AuthenticationStateProvider AuthStateProviderBase
+
+<PageTitle>EduSystem - Education Management</PageTitle>
+
+<!-- Visitor Portal Header (Visible only to Guests) -->
+<AuthorizeView>
+    <NotAuthorized>
+        <!-- Premium Image Slider for Visitors -->
+        <div class="visitor-banner-container mb-8">
+            <MudCarousel Class="mud-width-full banner-slider" 
+                         Style="height:450px; border-radius: 24px;" 
+                         ShowArrows="true" 
+                         ShowBullets="true" 
+                         AutoCycle="true" 
+                         TData="string">
+                <MudCarouselItem Transition="Transition.Fade">
+                    <div class="banner-slide">
+                        <img src="/images/banner/campus.png" alt="Campus" class="banner-img" />
+                        <div class="banner-overlay">
+                            <MudText Typo="Typo.h3" Class="banner-title">Empowering the Future of Education</MudText>
+                            <MudText Typo="Typo.h6" Class="banner-subtitle mb-6">Experience the next generation of campus management.</MudText>
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(() => Navigation.NavigateTo("/admission"))" StartIcon="@Icons.Material.Filled.School" Size="Size.Large" Style="border-radius: 12px; font-weight: 700; padding: 10px 24px;">Online Admission</MudButton>
+                        </div>
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem Transition="Transition.Fade">
+                    <div class="banner-slide">
+                        <img src="/images/banner/classroom.png" alt="Classroom" class="banner-img" />
+                        <div class="banner-overlay">
+                            <MudText Typo="Typo.h3" Class="banner-title">Smart Learning Environments</MudText>
+                            <MudText Typo="Typo.h6" Class="banner-subtitle">Modern tools for modern students and educators.</MudText>
+                        </div>
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem Transition="Transition.Fade">
+                    <div class="banner-slide">
+                        <img src="/images/banner/graduation.png" alt="Graduation" class="banner-img" />
+                        <div class="banner-overlay">
+                            <MudText Typo="Typo.h3" Class="banner-title">Celebrate Every Milestone</MudText>
+                            <MudText Typo="Typo.h6" Class="banner-subtitle">From first day to graduation, we're with you.</MudText>
+                        </div>
+                    </div>
+                </MudCarouselItem>
+            </MudCarousel>
+        </div>
+    </NotAuthorized>
+    <Authorized>
+        <div class="member-welcome-bar mb-6 pa-6">
+             <MudText Typo="Typo.h4" Style="font-weight: 900; color: #1e293b;">
+                Welcome Back, @(_userInfo?.FullName ?? "Member")! 👋
+            </MudText>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+<!-- Universal Dashboard UI (Visible to Everyone) -->
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="glass-stat-card">
+            <div class="stat-icon-wrapper">
+                <MudIcon Icon="@Icons.Material.Filled.People" />
+            </div>
+            <div class="stat-content">
+                <span class="stat-value">1,250</span>
+                <span class="stat-label">Total Students</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="glass-stat-card" style="border-bottom: 4px solid #3cba92;">
+            <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);">
+                <MudIcon Icon="@Icons.Material.Filled.Person" />
+            </div>
+            <div class="stat-content">
+                <span class="stat-value">50</span>
+                <span class="stat-label">Total Teachers</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="glass-stat-card" style="border-bottom: 4px solid #f7b42c;">
+            <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #ffc107 0%, #f7b42c 100%);">
+                <MudIcon Icon="@Icons.Material.Filled.Class" />
+            </div>
+            <div class="stat-content">
+                <span class="stat-value">25</span>
+                <span class="stat-label">Total Classes</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <div class="glass-stat-card" style="border-bottom: 4px solid #21cbf3;">
+            <div class="stat-icon-wrapper" style="background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);">
+                <MudIcon Icon="@Icons.Material.Filled.CheckCircle" />
+            </div>
+            <div class="stat-content">
+                <span class="stat-value">95%</span>
+                <span class="stat-label">Attendance Rate</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12 col-lg-8 mb-4">
+        <div class="glass-panel">
+            <div class="widget-header">
+                <span class="widget-title">Attendance Overview</span>
+                <AuthorizeView>
+                    <Authorized>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" Size="Size.Small">View Report</MudButton>
+                    </Authorized>
+                </AuthorizeView>
+            </div>
+            <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="300px" ChartOptions="@chartOptions"></MudChart>
+        </div>
+    </div>
+    
+    <div class="col-12 col-lg-4 mb-4">
+        <div class="glass-panel d-flex flex-column align-center justify-center">
+            <div class="widget-header w-100">
+                <span class="widget-title">Student Ratio</span>
+            </div>
+            <MudChart ChartType="ChartType.Donut" Width="100%" Height="250px" InputData="@data" InputLabels="@labels">
+                <CustomGraphics>
+                    <text class="donut-inner-text" x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="2">Total</text>
+                    <text class="donut-inner-text" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5" font-weight="bold">1,250</text>
+                </CustomGraphics>
+            </MudChart>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <AuthorizeView>
+        <Authorized>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="glass-panel">
+                    <div class="widget-header">
+                        <span class="widget-title">
+                            <MudIcon Icon="@Icons.Material.Filled.PieChart" Color="Color.Primary" Class="mr-2" /> 
+                            Financial Overview
+                        </span>
+                    </div>
+                    
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="vis-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                     <div class="vis-label">Today's Collection</div>
+                                     <MudIcon Icon="@Icons.Material.Filled.ArrowUpward" Color="Color.Success" Size="Size.Small" />
+                                </div>
+                                <div class="vis-value mt-2">৳ 50k</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="vis-card">
+                                 <div class="d-flex justify-content-between align-items-start">
+                                     <div class="vis-label">Pending Dues</div>
+                                     <MudIcon Icon="@Icons.Material.Filled.Warning" Color="Color.Error" Size="Size.Small" />
+                                </div>
+                                <div class="vis-value mt-2 text-danger">৳ 200k</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="vis-label">Monthly Target</span>
+                            <span class="font-weight-bold" style="color: #4a5568">60%</span>
+                        </div>
+                        <MudProgressLinear Color="Color.Success" Value="60" Rounded="true" Size="Size.Large" Striped="true" />
+                    </div>
+                </div>
+            </div>
+        </Authorized>
+    </AuthorizeView>
+
+    <div class="col-12 col-md-6 mb-4">
+        <div class="glass-panel">
+            <div class="widget-header">
+                <span class="widget-title">
+                     <MudIcon Icon="@Icons.Material.Filled.CalendarMonth" Color="Color.Secondary" Class="mr-2" />
+                     Upcoming Events
+                </span>
+            </div>
+            <div class="mt-3">
+                <div class="event-card">
+                    <div class="event-date-mini">
+                        <div class="event-date-day">12</div>
+                        <div class="event-date-month">JAN</div>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-title">Math Final Exam</div>
+                        <div class="list-subtitle">Main Hall • 10:00 AM</div>
+                    </div>
+                    <MudChip T="string" Color="Color.Error" Size="Size.Small" Variant="Variant.Filled">Exam</MudChip>
+                </div>
+                
+                <div class="event-card" style="border-left-color: #38a169;">
+                    <div class="event-date-mini">
+                        <div class="event-date-day">20</div>
+                        <div class="event-date-month">DEC</div>
+                    </div>
+                    <div class="list-content">
+                        <div class="list-title">Winter Vacation</div>
+                        <div class="list-subtitle">School Closed (10 Days)</div>
+                    </div>
+                    <MudChip T="string" Color="Color.Success" Size="Size.Small" Variant="Variant.Filled">Holiday</MudChip>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .glass-stat-card {
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border-bottom: 4px solid #5E35B1;
+    }
+
+    .stat-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 800;
+        display: block;
+        color: #1e293b;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    .glass-panel {
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .widget-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .widget-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1e293b;
+        display: flex;
+        align-items: center;
+    }
+
+    .vis-card {
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        border: 1px solid #edf2f7;
+    }
+
+    .vis-label {
+        font-size: 0.75rem;
+        color: #718096;
+        font-weight: 600;
+    }
+
+    .vis-value {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2d3748;
+    }
+
+    .event-card {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 0.75rem;
+        border-left: 4px solid #ef4444;
+    }
+
+    .event-date-mini {
+        text-align: center;
+        padding-right: 1rem;
+        border-right: 1px solid #edf2f7;
+        margin-right: 1rem;
+        min-width: 50px;
+    }
+
+    .event-date-day {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #1e293b;
+        line-height: 1;
+    }
+
+    .event-date-month {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #64748b;
+    }
+
+    .list-content {
+        flex: 1;
+    }
+
+    .list-title {
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.95rem;
+    }
+
+    .list-subtitle {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    .visitor-hero {
+        background: radial-gradient(circle at top right, rgba(25, 118, 210, 0.05), transparent),
+                    radial-gradient(circle at bottom left, rgba(233, 30, 99, 0.05), transparent);
+        border-radius: 32px;
+        margin-bottom: 2rem;
+    }
+    /* Banner Slider Styles */
+    .visitor-banner-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .banner-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 10s ease;
+    }
+
+    .mud-carousel-item-active .banner-img {
+        transform: scale(1.1);
+    }
+
+    .banner-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.1) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10%;
+        color: white;
+    }
+
+    .banner-title {
+        font-weight: 900;
+        letter-spacing: -1px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        max-width: 600px;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .banner-subtitle {
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 500px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .mud-carousel-bullets {
+        bottom: 24px !important;
+    }
+
+    .mud-carousel-bullets .mud-button-root {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .mud-carousel-bullets .mud-button-root.mud-ripple-active {
+        color: white !important;
+    }
+</style>
+
+@code {
+    private UserInfo? _userInfo;
+    private TenantInfo? _tenantInfo;
+    private bool _isLoading = true;
+
+    // Chart Data
+    public List<ChartSeries> Series = new List<ChartSeries>()
+    {
+        new ChartSeries() { Name = "Attendance", Data = new double[] { 90, 85, 92, 95, 94, 98, 96, 95, 99 } }
+    };
+    public string[] XAxisLabels = { "Jan 1", "Jan 2", "Jan 3", "Jan 4", "Jan 5", "Jan 6", "Jan 7", "Jan 8", "Jan 9" };
+
+    public ChartOptions chartOptions = new ChartOptions(){
+        ChartPalette = new string[] { "#1976d2" }
+    };
+
+    // Donut Data
+    public double[] data = { 750, 500 }; 
+    public string[] labels = { "Boys (60%)", "Girls (40%)" };
+
+    [SupplyParameterFromQuery(Name = "auth")]
+    public string? AuthData { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthStateProviderBase.AuthenticationStateChanged += OnAuthenticationStateChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(AuthData))
+                {
+                    var authJson = Uri.UnescapeDataString(AuthData);
+                    var loginResponse = System.Text.Json.JsonSerializer.Deserialize<LoginResponse>(authJson);
+
+                    if (loginResponse != null)
+                    {
+                        await AuthStateProvider.MarkUserAsAuthenticated(loginResponse);
+                        Navigation.NavigateTo("/", replace: true);
+                        return;
+                    }
+                }
+
+                await LoadUserData();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading auth data: {ex.Message}");
+                _isLoading = false;
+                StateHasChanged();
+            }
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        try
+        {
+            _userInfo = await AuthStateProvider.GetUserInfoAsync();
+            _tenantInfo = await AuthStateProvider.GetTenantInfoAsync();
+
+            var authState = await AuthStateProviderBase.GetAuthenticationStateAsync();
+            if (!authState.User.Identity?.IsAuthenticated ?? true)
+            {
+                _userInfo = null;
+                _tenantInfo = null;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading user data: {ex.Message}");
+            _userInfo = null;
+            _tenantInfo = null;
+        }
+        finally
+        {
+            _isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async void OnAuthenticationStateChanged(Task<AuthenticationState> task)
+    {
+        await LoadUserData();
+    }
+
+    private async Task Logout()
+    {
+        await AuthStateProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+
+    public void Dispose()
+    {
+        AuthStateProviderBase.AuthenticationStateChanged -= OnAuthenticationStateChanged;
+    }
 }

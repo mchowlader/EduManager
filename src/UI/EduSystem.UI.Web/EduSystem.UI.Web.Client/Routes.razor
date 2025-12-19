@@ -1,17 +1,29 @@
-﻿<Router AppAssembly="@typeof(Program).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <MudContainer>
-                <MudAlert Severity="Severity.Error" Class="my-4">
-                    <MudText Typo="Typo.h5"> 404 - Page Not Found</MudText>
-                    <MudText>Sorry, the page you are looking for could not be found.</MudText>
-                </MudAlert>
-            </MudContainer>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using EduSystem.UI.Web.Client.Pages
+
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(Program).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData">
+                <NotAuthorized>
+                    <RedirectToAccessDenied />
+                </NotAuthorized>
+            </AuthorizeRouteView>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+    </Router>
+</CascadingAuthenticationState>
+
+@code {
+    private class RedirectToLogin : ComponentBase
+    {
+        [Inject] NavigationManager Navigation { get; set; } = default!;
+        protected override void OnInitialized() => Navigation.NavigateTo("/login", true);
+    }
+
+    private class RedirectToAccessDenied : ComponentBase
+    {
+        [Inject] NavigationManager Navigation { get; set; } = default!;
+        protected override void OnInitialized() => Navigation.NavigateTo("/access-denied", true);
+    }
+}

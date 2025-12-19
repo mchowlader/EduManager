@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "EduSystem.UI.Web.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-e4OYFFD5hK3q4yY8MkTw9AqdbVy1yb4WglGDHZUKKAU=",
+    "hash": "sha256-oAcD3kMX69Z8HDEFRuQ5Gx0e+RZuYte2KpBgF4MquU8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -61,6 +61,11 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.AspNetCore.Components.wasm",
         "name": "Microsoft.AspNetCore.Components.i180xx2qq9.wasm",
         "integrity": "sha256-SlKk2Iszf1CasiPULCl216i2/uWoh0CI0Z1VbByD88w="
+      },
+      {
+        "virtualPath": "Microsoft.AspNetCore.Components.Authorization.wasm",
+        "name": "Microsoft.AspNetCore.Components.Authorization.7ilgpiasal.wasm",
+        "integrity": "sha256-IU7weBju45GAbaj+ijz1yhyd5WE86RZLVYjypYnvybE="
       },
       {
         "virtualPath": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -1054,15 +1059,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "EduSystem.UI.Web.Client.wasm",
-        "name": "EduSystem.UI.Web.Client.69hfa9xva0.wasm",
-        "integrity": "sha256-GuMvMoRQBuU0SfRGBVfjiwcPPWBWD647V+DswJ5Po54="
+        "name": "EduSystem.UI.Web.Client.k83dgzuv1t.wasm",
+        "integrity": "sha256-pG1qjo78Extnjr7QhyHJ1UM9TxrmEK462J6o8EY65sQ="
       }
     ],
     "pdb": [
       {
         "virtualPath": "EduSystem.UI.Web.Client.pdb",
-        "name": "EduSystem.UI.Web.Client.ew37lywzx0.pdb",
-        "integrity": "sha256-fsyuQhJFyAhAqTxWbYtXx5sJ71YY/TdNKmSiksvIiWw="
+        "name": "EduSystem.UI.Web.Client.0vtza14nhy.pdb",
+        "integrity": "sha256-7G/BV1Ig5cVU0nWsjaOq5DcUDqJWea1VnKJUiv+5sRs="
       }
     ],
     "libraryInitializers": [

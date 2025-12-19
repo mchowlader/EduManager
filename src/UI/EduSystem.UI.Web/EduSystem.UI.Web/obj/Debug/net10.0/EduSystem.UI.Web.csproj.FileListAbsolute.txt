@@ -78,7 +78,6 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\jy0fzf3k94-{0}-0i02oychrm-0i02oychrm.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\4knh3vcapm-{0}-wmp8iwak4q-wmp8iwak4q.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\9kz0lfx0iy-{0}-2lgipwaf5j-2lgipwaf5j.gz
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\8j0gpc9clu-{0}-808pqb2uck-808pqb2uck.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\gpazupbcky-{0}-ua5kndvt95-ua5kndvt95.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.build.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.build.json.cache
@@ -88,7 +87,6 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.dll
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\refint\EduSystem.UI.Web.dll
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.pdb
-D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\EduSystem.UI.Web.Client.runtimeconfig.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\EduSystem.UI.Web.Client.staticwebassets.runtime.json
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\EduSystem.UI.Web.Client.staticwebassets.endpoints.json
@@ -113,3 +111,5 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSyste.82FA3B92.Up2Date
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\ref\EduSystem.UI.Web.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\8j0gpc9clu-{0}-ua5kndvt95-ua5kndvt95.gz
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

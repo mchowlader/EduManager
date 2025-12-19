@@ -151,7 +151,7 @@ public class RegisterTenantCommandHandler(
             {
                 Id = Guid.NewGuid(),
                 Email = dto.AdminEmail,
-                PasswordHash = _passwordHasher.Hash(dto.AdminPassword),
+                PasswordHash = _passwordHasher.Hash(dto.AdminPassword.Trim()),
                 FullName = dto.AdminFullName,
                 PhoneNumber = dto.PhoneNumber,
                 TenantId = tenant.Id,
@@ -159,6 +159,11 @@ public class RegisterTenantCommandHandler(
                 IsActive = true,
                 CreatedAt = DateTime.UtcNow
             };
+            
+            // DEBUG LOGGING
+            Console.WriteLine($"[REGISTER] Password: '{dto.AdminPassword}'");
+            Console.WriteLine($"[REGISTER] Generated Hash: '{tenantAdmin.PasswordHash}'");
+            // END DEBUG
 
             //var isEmailExits = await _userRepository.IsEmailExistsAsync(tenantAdmin.Email);
 

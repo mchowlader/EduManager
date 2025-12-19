@@ -1,6 +1,8 @@
 ﻿@page "/teachers/add"
 @page "/teachers/edit/{Id:long}"
+@attribute [Authorize]
 @using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Models.Common
 @using EduSystem.UI.Web.Client.Services
 @inject ITeacherService teacherService
 @inject NavigationManager Navigation
@@ -24,6 +26,9 @@
                 </MudItem>
                  <MudItem xs="12" md="6">
                     <MudTextField @bind-Value="teacher.Email" Label="Email Address" Required="true" RequiredError="Email is required!"/>
+                </MudItem>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="teacher.Designation" Label="Designation" Required="true" RequiredError="Designation is required!" />
                 </MudItem>
 
                 <!-- Address Info (Simplified for UI Demo) -->
@@ -65,8 +70,8 @@
             teacher = await teacherService.GetTeacherByIdAsync(Id);
         else
         {
-            teacher.PresentAddress = new Address();
-            teacher.PermanentAddress = new Address();
+            teacher.PresentAddress = new AddressModel();
+            teacher.PermanentAddress = new AddressModel();
         }
     }
 

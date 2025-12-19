@@ -57,7 +57,7 @@
 
 @code {
     [CascadingParameter] IMudDialogInstance? DialogInstance { get; set; }
-    [Parameter] public Student Student { get; set; } = new Student();
+    [Parameter] public StudentModel Student { get; set; } = new StudentModel();
 
     private void Cancel() => DialogInstance.Cancel();
 }
