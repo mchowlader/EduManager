@@ -235,6 +235,9 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
             var identity = new ClaimsIdentity(claims, "jwt");
             var user = new ClaimsPrincipal(identity);
 
+            // Set a cookie for server-side sync (Slightly simplified for demo, in production use secure flags)
+            await SetCookieAsync("edu_auth_token", loginResponse.Data.AccessToken, 12);
+
             // Notify authentication state changed
             NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(user)));
         }
@@ -254,6 +257,9 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
             await RemoveLocalStorageItemAsync("refreshToken");
             await RemoveLocalStorageItemAsync("userInfo");
             await RemoveLocalStorageItemAsync("tenantInfo");
+
+            // Remove server-side sync cookie
+            await RemoveCookieAsync("edu_auth_token");
 
             // Notify that authentication state has changed
             NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(_anonymous)));
@@ -396,6 +402,32 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
         catch (TaskCanceledException)
         {
             Console.WriteLine($"[AUTH] Task cancelled while removing {key}");
+        }
+    }
+
+    private async Task SetCookieAsync(string name, string value, int hours)
+    {
+        try
+        {
+            var expires = DateTime.Now.AddHours(hours).ToString("R");
+            var cookie = $"{name}={value}; expires={expires}; path=/; SameSite=Lax; Secure";
+            await _jsRuntime.InvokeVoidAsync("eval", $"document.cookie = '{cookie}'");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[AUTH] Error setting cookie: {ex.Message}");
+        }
+    }
+
+    private async Task RemoveCookieAsync(string name)
+    {
+        try
+        {
+            await _jsRuntime.InvokeVoidAsync("eval", $"document.cookie = '{name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax; Secure'");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[AUTH] Error removing cookie: {ex.Message}");
         }
     }
 

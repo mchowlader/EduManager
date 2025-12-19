@@ -113,3 +113,8 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\ref\EduSystem.UI.Web.dll
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\compressed\8j0gpc9clu-{0}-ua5kndvt95-ua5kndvt95.gz
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db5f534bbf62d6d956f0f3f501d52e95a21d2e5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ee722542ae6de91d5f5aa55f8b838f874f559f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.UI.Web.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
