@@ -8,6 +8,7 @@
 @inject IHttpClientFactory HttpClientFactory
 @inject NavigationManager Navigation
 @inject AuthenticationStateProvider AuthStateProvider
+@inject ISnackbar Snackbar
 
 <PageTitle>Login - EduSystem</PageTitle>
 
@@ -17,17 +18,17 @@
         <div class="brand-panel">
             <div class="brand-content">
                 <MudIcon Icon="@Icons.Material.Filled.School" Size="Size.Large" Style="font-size: 3.5rem; margin-bottom: 1.5rem;" />
-                
+
                 <MudText Typo="Typo.h4" Style="font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px;">
                     EduSystem
                 </MudText>
-                
+
                 <MudText Typo="Typo.body1" Style="opacity: 0.9; margin-bottom: 2.5rem;">
                     Welcome back! Please login to your account.
                 </MudText>
 
                 <MudStack Spacing="3" Class="d-none d-md-flex">
-                   <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
                         <MudIcon Icon="@Icons.Material.Filled.Security" Size="Size.Small" />
                         <MudText Typo="Typo.body2">Secure Authentication</MudText>
                     </MudStack>
@@ -47,7 +48,7 @@
             </div>
 
             <MudStack Spacing="2">
-                
+
                 <MudTextField @bind-Value="_loginModel.Email"
                               Label="Email Address"
                               Variant="Variant.Outlined"
@@ -57,6 +58,7 @@
                               AdornmentIcon="@Icons.Material.Filled.Email"
                               Required="true"
                               FullWidth="true" />
+
                 <MudTextField @bind-Value="_loginModel.TenantSlug"
                               Label="Tenant Slug"
                               Variant="Variant.Outlined"
@@ -79,8 +81,8 @@
                               FullWidth="true" />
 
                 <div class="d-flex justify-space-between align-center mt-1">
-                     <MudCheckBox @bind-Value="@_rememberMe" Label="Remember me" Color="Color.Primary" Size="Size.Small" Dense="true"></MudCheckBox>
-                     <MudLink Href="/forgot-password" Underline="Underline.Hover" Style="font-size: 0.875rem; color: #667eea;">Forgot Password?</MudLink>
+                    <MudCheckBox @bind-Value="@_rememberMe" Label="Remember me" Color="Color.Primary" Size="Size.Small" Dense="true"></MudCheckBox>
+                    <MudLink Href="/forgot-password" Underline="Underline.Hover" Style="font-size: 0.875rem; color: #667eea;">Forgot Password?</MudLink>
                 </div>
 
                 <MudButton Variant="Variant.Filled"
@@ -93,7 +95,7 @@
                            Disabled="_isLoading">
                     @if (_isLoading)
                     {
-                        <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2"/>
+                        <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
                         <span>Signing In...</span>
                     }
                     else
@@ -105,6 +107,7 @@
                 <MudText Typo="Typo.body2" Align="Align.Center" Style="margin-top: 1.5rem; color: #718096;">
                     Don't have an account? <MudLink Href="/register" Style="font-weight: 600; color: #667eea;">Register Institute</MudLink>
                 </MudText>
+
             </MudStack>
         </div>
     </div>
@@ -119,8 +122,6 @@
 
     [SupplyParameterFromQuery]
     public string? Tenant { get; set; }
-    
-    [Inject] ISnackbar Snackbar { get; set; } = default!;
 
     protected override void OnInitialized()
     {
@@ -141,41 +142,40 @@
         _isLoading = true;
         try
         {
-            var client = HttpClientFactory.CreateClient("IdentityApi");
-            
+            var client = HttpClientFactory.CreateClient("GatewayClient");
+
             if (!string.IsNullOrEmpty(Tenant))
             {
                 _loginModel.TenantSlug = Tenant;
             }
 
-            var response = await client.PostAsJsonAsync("api/v1/auth/login", _loginModel);
+            var response = await client.PostAsJsonAsync("/api/identity/v1/auth/login", _loginModel);
 
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
-                
+
                 if (result != null && result.Success)
                 {
-                    // Store Token and User info via the Provider
                     if (AuthStateProvider is CustomAuthenticationStateProvider customProvider)
                     {
                         await customProvider.MarkUserAsAuthenticated(result);
                     }
-                    
+
                     Snackbar.Add("Login Successful!", Severity.Success);
-                    
-                    // Redirect to Dashboard
-                    Navigation.NavigateTo("/", true); // Force load to ensure layout refreshes with new auth state
+                    Navigation.NavigateTo("/", true);
                 }
                 else
                 {
-                    Snackbar.Add(result?.Message ?? "Login failed.", Severity.Error);
+                    var errorMsg = result?.Message ?? "Login failed.";
+                    Snackbar.Add(errorMsg, Severity.Error);
                 }
             }
             else
             {
                 var error = await response.Content.ReadFromJsonAsync<ErrorResponse>();
-                Snackbar.Add(error?.Message ?? "Login failed. Please check your credentials.", Severity.Error);
+                var errorMsg = error?.Message ?? $"Login failed. Status: {response.StatusCode}";
+                Snackbar.Add(errorMsg, Severity.Error);
             }
         }
         catch (Exception ex)
@@ -194,7 +194,7 @@
         public string Password { get; set; } = string.Empty;
         public string? TenantSlug { get; set; }
     }
-    
+
     public class ErrorResponse
     {
         public bool Success { get; set; }
