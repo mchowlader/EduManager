@@ -231,3 +231,32 @@ WHERE [Id] = @p17;
 2025-12-21 09:26:31.590 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
 2025-12-21 09:26:31.606 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
 2025-12-21 09:26:31.620 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 4305.4619ms
+2025-12-21 09:45:57.731 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-21 09:45:58.285 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 09:45:58.828 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-21 09:45:58.948 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-21 09:45:59.042 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 09:45:59.042 +06:00 [INF] Hosting environment: Development
+2025-12-21 09:45:59.042 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-21 09:45:59.230 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 293.9791ms
+2025-12-21 09:45:59.246 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-21 09:46:07.578 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-21 09:46:07.664 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 87.7401ms
+2025-12-21 09:46:07.780 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-21 09:46:07.780 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - null null
+2025-12-21 09:46:07.781 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - null null
+2025-12-21 09:46:07.781 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 09:46:07.797 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-21 09:46:07.799 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - 200 144929 text/css 53.0018ms
+2025-12-21 09:46:07.802 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-21 09:46:07.802 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 20.849ms
+2025-12-21 09:46:07.807 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-21 09:46:07.808 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 61.6212ms
+2025-12-21 09:46:07.824 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-21 09:46:07.831 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 49.8409ms
+2025-12-21 09:46:07.871 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.6088ms
+2025-12-21 09:46:08.003 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-21 09:46:08.034 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.2664ms
+2025-12-21 09:46:08.035 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - null null
+2025-12-21 09:46:08.036 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-21 09:46:08.037 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - 200 628 image/png 1.6965ms
