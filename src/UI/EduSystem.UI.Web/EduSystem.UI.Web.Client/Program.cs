@@ -22,6 +22,7 @@
 
 using EduSystem.UI.Web.Client.Services;
 using EduSystem.UI.Web.Client.Services.Auth;
+using EduSystem.UI.Web.Client.Services.Base;
 using EduSystem.UI.Web.Client.HttpHandlers;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -33,6 +34,10 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddMudServices();
 builder.Services.AddScoped<IStudentService, MockStudentService>();
 builder.Services.AddScoped<ITeacherService, MockTeacherService>();
+
+// ✅ Industrial Standard API Services
+builder.Services.AddScoped<IApiService, ApiService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // ✅ Gateway URL - appsettings.json থেকে পড়বে
 // WASM mode এ appsettings.json wwwroot folder এ থাকে
@@ -65,6 +70,8 @@ builder.Services.AddScoped(sp =>
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthenticationStateProvider>(provider =>
+    provider.GetRequiredService<CustomAuthenticationStateProvider>());
+builder.Services.AddScoped<IAuthManager>(provider =>
     provider.GetRequiredService<CustomAuthenticationStateProvider>());
 
 await builder.Build().RunAsync();

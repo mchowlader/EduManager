@@ -120,7 +120,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0",
           "Microsoft.DotNet.HotReload.WebAssembly.Browser": "10.0.101",
-          "MudBlazor": "8.15.0"
+          "MudBlazor": "8.15.0",
+          "System.IdentityModel.Tokens.Jwt": "8.15.0"
         },
         "runtime": {
           "EduSystem.UI.Web.Client.dll": {

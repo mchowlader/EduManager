@@ -240,10 +240,10 @@ D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\ob
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\staticwebassets.development.json
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\swae.build.ex.cache
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\EduSyste.15F59EC2.Up2Date
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\EduSystem.Attendance.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\refint\EduSystem.Attendance.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\EduSystem.Attendance.Api.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\EduSystem.Attendance.Api.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\ref\EduSystem.Attendance.Api.dll
-D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

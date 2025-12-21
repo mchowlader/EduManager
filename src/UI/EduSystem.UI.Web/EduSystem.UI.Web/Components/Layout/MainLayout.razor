@@ -3,7 +3,7 @@
 @using EduSystem.UI.Web.Services
 @using MudBlazor
 @using Microsoft.AspNetCore.Components.Authorization
-@inject AuthService AuthService
+@inject IAuthService AuthService
 @inject ITenantService TenantService
 @inject NavigationManager Navigation
 @inject AuthenticationStateProvider AuthStateProvider
@@ -314,10 +314,7 @@
 
     private async Task Logout()
     {
-        if (AuthStateProvider is CustomAuthenticationStateProvider customProvider)
-        {
-            await customProvider.MarkUserAsLoggedOut();
-        }
+        await AuthService.LogoutAsync();
         Navigation.NavigateTo("/", true);
     }
 

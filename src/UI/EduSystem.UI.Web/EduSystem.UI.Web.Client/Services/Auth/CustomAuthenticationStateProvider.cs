@@ -6,7 +6,7 @@ using Microsoft.JSInterop;
 
 namespace EduSystem.UI.Web.Client.Services.Auth;
 
-public class CustomAuthenticationStateProvider : AuthenticationStateProvider
+public class CustomAuthenticationStateProvider : AuthenticationStateProvider, IAuthManager
 {
     private readonly IJSRuntime _jsRuntime;
     private readonly ClaimsPrincipal _anonymous = new(new ClaimsIdentity());
@@ -29,7 +29,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
                 return new AuthenticationState(_anonymous);
 
             var claims = ParseClaimsFromJwt(token);
-            var identity = new ClaimsIdentity(claims, "jwt");
+            var identity = new ClaimsIdentity(claims, "jwt", ClaimTypes.Name, ClaimTypes.Role);
             var user = new ClaimsPrincipal(identity);
 
             return new AuthenticationState(user);
@@ -68,7 +68,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
 
             // Create authenticated user
             var claims = ParseClaimsFromJwt(loginResponse.Data.AccessToken);
-            var identity = new ClaimsIdentity(claims, "jwt");
+            var identity = new ClaimsIdentity(claims, "jwt", ClaimTypes.Name, ClaimTypes.Role);
             var user = new ClaimsPrincipal(identity);
 
             // Set a cookie for server-side sync (Slightly simplified for demo, in production use secure flags)
@@ -273,65 +273,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
 
     private IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
     {
-        var claims = new List<Claim>();
-
-        try
-        {
-            var payload = jwt.Split('.')[1];
-            var jsonBytes = ParseBase64WithoutPadding(payload);
-            var keyValuePairs = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonBytes);
-
-            if (keyValuePairs == null)
-                return claims;
-
-            // Handle roles - can be string or array
-            if (keyValuePairs.TryGetValue("http://schemas.microsoft.com/ws/2008/06/identity/claims/role", out var roles))
-            {
-                if (roles is JsonElement element)
-                {
-                    if (element.ValueKind == JsonValueKind.String)
-                    {
-                        claims.Add(new Claim(ClaimTypes.Role, element.GetString()!));
-                    }
-                    else if (element.ValueKind == JsonValueKind.Array)
-                    {
-                        foreach (var role in element.EnumerateArray())
-                        {
-                            claims.Add(new Claim(ClaimTypes.Role, role.GetString()!));
-                        }
-                    }
-                }
-            }
-
-            // Map standard claims
-            var claimMappings = new Dictionary<string, string>
-            {
-                { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", ClaimTypes.NameIdentifier },
-                { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", ClaimTypes.Email },
-                { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name", ClaimTypes.Name },
-                { "sub", ClaimTypes.NameIdentifier },
-                { "email", ClaimTypes.Email },
-                { "name", ClaimTypes.Name }
-            };
-
-            foreach (var kvp in keyValuePairs)
-            {
-                if (claimMappings.TryGetValue(kvp.Key, out var claimType))
-                {
-                    claims.Add(new Claim(claimType, kvp.Value?.ToString() ?? string.Empty));
-                }
-                else if (kvp.Key != "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")
-                {
-                    claims.Add(new Claim(kvp.Key, kvp.Value?.ToString() ?? string.Empty));
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"[AUTH] Error parsing JWT claims: {ex.Message}");
-        }
-
-        return claims;
+        return JwtClaimParser.ParseClaimsFromJwt(jwt);
     }
 
     private byte[] ParseBase64WithoutPadding(string base64)

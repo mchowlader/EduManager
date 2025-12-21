@@ -473,13 +473,13 @@
                     }
                 }
 
-                await LoadUserData();
+                await InvokeAsync(StateHasChanged);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading auth data: {ex.Message}");
                 _isLoading = false;
-                StateHasChanged();
+                await InvokeAsync(StateHasChanged);
             }
         }
     }
@@ -507,7 +507,7 @@
         finally
         {
             _isLoading = false;
-            StateHasChanged();
+            await InvokeAsync(StateHasChanged);
         }
     }
 
