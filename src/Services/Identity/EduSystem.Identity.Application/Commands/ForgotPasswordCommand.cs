@@ -6,6 +6,7 @@ using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -35,14 +36,14 @@ public class ForgotPasswordCommandHandler(
             return Result<bool>.Success(true);
 
         var resetToken = GenerateSecureToken();
-        var expiryTime = DateTime.UtcNow.AddHours(1);
+        var expiryTime = DateTimeHelper.Now.AddHours(1);
 
         await _tokenRepository.CreateAsync(new PasswordResetToken
         {
             UserId = user.Id,
             Token = resetToken,
             ExpiresAt = expiryTime,
-            CreatedAt = DateTime.UtcNow,
+            CreatedAt = DateTimeHelper.Now,
         });
 
         await _unitOfWork.CommitAsync();

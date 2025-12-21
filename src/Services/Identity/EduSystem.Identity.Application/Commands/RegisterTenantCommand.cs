@@ -4,6 +4,7 @@ using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
 using EduSystem.Shared.Event;
+using EduSystem.Shared.Infrastructure.Utilities;
 using EduSystem.Shared.Messaging;
 using MediatR;
 

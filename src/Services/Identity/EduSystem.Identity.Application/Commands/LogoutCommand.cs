@@ -1,6 +1,7 @@
 using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -27,7 +28,7 @@ public class LogoutCommandHandler(
         // Clear refresh token to invalidate all sessions
         user.RefreshToken = null;
         user.RefreshTokenExpiryTime = null;
-        user.UpdatedAt = DateTime.UtcNow;
+        user.UpdatedAt = DateTimeHelper.Now;
 
         await _userRepository.UpdateAsync(user);
         await _unitOfWork.CommitAsync();

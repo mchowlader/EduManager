@@ -17,17 +17,18 @@ public static class SwaggerServiceExtensions
 
             options.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "EduSystem Identity API",
+                Title = "EduSystem ApplicationUsers API",
                 Version = "v1",
-                Description = "Identity and Tenant Management API - Version 1"
+                Description = "ApplicationUsers and Tenant Management API - Version 1"
             });
 
-            options.SwaggerDoc("v2", new OpenApiInfo
-            {
-                Title = "EduSystem Identity API",
-                Version = "v2",
-                Description = "Identity and Tenant Management API - Version 2"
-            });
+            //optional future versioning
+            //options.SwaggerDoc("v2", new OpenApiInfo
+            //{
+            //    Title = "EduSystem ApplicationUsers API",
+            //    Version = "v2",
+            //    Description = "ApplicationUsers and Tenant Management API - Version 2"
+            //});
         });
 
         return services;

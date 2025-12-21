@@ -4,6 +4,7 @@ using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Application.Settings;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -49,7 +50,7 @@ public class RefreshTokenCommandHandler(
         if (user.RefreshToken != dto.RefreshToken)
             return Result<LoginResponseDto>.Failure("Invalid refresh token.");
 
-        if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        if (user.RefreshTokenExpiryTime <= DateTimeHelper.Now)
             return Result<LoginResponseDto>.Failure("Refresh token has expired.");
 
         // 4. Check if user is still active
@@ -70,14 +71,14 @@ public class RefreshTokenCommandHandler(
 
         // 7. Update refresh token in database
         user.RefreshToken = newRefreshToken;
-        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpirationDays);
+        user.RefreshTokenExpiryTime = DateTimeHelper.Now.AddDays(_jwtSettings.RefreshTokenExpirationDays);
 
         // 8. Return response
         var response = new LoginResponseDto
         {
             AccessToken = newAccessToken,
             RefreshToken = newRefreshToken,
-            ExpiresAt = DateTime.UtcNow.AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
+            ExpiresAt = DateTimeHelper.Now.AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
             User = new UserInfoDto
             {
                 Id = user.Id,

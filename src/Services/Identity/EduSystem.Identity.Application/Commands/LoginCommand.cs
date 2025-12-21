@@ -4,6 +4,7 @@ using EduSystem.Identity.Application.Settings;
 using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 using Microsoft.Extensions.Options;
 
@@ -45,9 +46,9 @@ public class LoginCommandHandler(
         }
 
         // 2. Check account lockout
-        if (user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTime.UtcNow)
+        if (user.LockoutEnd.HasValue && user.LockoutEnd.Value > DateTimeHelper.Now)
         {
-            var remainingMinutes = (int)(user.LockoutEnd.Value - DateTime.UtcNow).TotalMinutes;
+            var remainingMinutes = (int)(user.LockoutEnd.Value - DateTimeHelper.Now).TotalMinutes;
             return Result<LoginResponseDto>.Failure(
                 $"Account is locked due to multiple failed login attempts. Please try again in {remainingMinutes} minutes.");
         }
@@ -63,12 +64,12 @@ public class LoginCommandHandler(
         {
             // Increment login attempts
             user.LoginAttempts++;
-            user.UpdatedAt = DateTime.UtcNow;
+            user.UpdatedAt = DateTimeHelper.Now;
 
             // Lock account after max attempts (using config value)
             if (user.LoginAttempts >= _securitySettings.MaxLoginAttempts)
             {
-                user.LockoutEnd = DateTime.UtcNow.AddMinutes(_securitySettings.AccountLockoutMinutes);
+                user.LockoutEnd = DateTimeHelper.Now.AddMinutes(_securitySettings.AccountLockoutMinutes);
                 await _userRepository.UpdateAsync(user);
                 await _unitOfWork.CommitAsync();
 
@@ -115,12 +116,12 @@ public class LoginCommandHandler(
 
         // 9. Update user login info
         user.RefreshToken = refreshToken;
-        user.RefreshTokenExpiryTime = DateTime.UtcNow
+        user.RefreshTokenExpiryTime = DateTimeHelper.Now
             .AddDays(_jwtSettings.RefreshTokenExpirationDays);
-        user.LastLoginAt = DateTime.UtcNow;
+        user.LastLoginAt = DateTimeHelper.Now;
         user.LoginAttempts = 0; // Reset login attempts on successful login
         user.LockoutEnd = null; // Clear lockout
-        user.UpdatedAt = DateTime.UtcNow;
+        user.UpdatedAt = DateTimeHelper.Now;
 
         await _userRepository.UpdateAsync(user);
         await _unitOfWork.CommitAsync();
@@ -130,7 +131,7 @@ public class LoginCommandHandler(
         {
             AccessToken = accessToken,
             RefreshToken = refreshToken,
-            ExpiresAt = DateTime.UtcNow
+            ExpiresAt = DateTimeHelper.Now
                 .AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
             User = new UserInfoDto
             {

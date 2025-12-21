@@ -1,6 +1,7 @@
 using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -38,7 +39,7 @@ public class ChangePasswordCommandHandler(
             return Result<bool>.Failure("New password cannot be the same as the current password.");
 
         user.PasswordHash = _passwordHasher.Hash(request.NewPassword);
-        user.UpdatedAt = DateTime.UtcNow;
+        user.UpdatedAt = DateTimeHelper.Now;
 
         // Invalidate all existing refresh tokens for security
         user.RefreshToken = null;

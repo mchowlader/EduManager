@@ -135,3 +135,64 @@
 2025-12-21 12:03:13.550 +06:00 [INF] [ApplicationUsers] ✅ Migrations applied successfully for tenant: Shymoli
 2025-12-21 12:03:13.550 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
 2025-12-21 12:03:13.552 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2025-12-21 12:36:53.165 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-21 12:36:53.504 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-21 12:36:53.624 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 12:36:54.074 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-21 12:36:54.137 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 12:36:54.138 +06:00 [INF] Hosting environment: Development
+2025-12-21 12:36:54.138 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-21 12:36:54.153 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-21 12:36:54.341 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 282.8358ms
+2025-12-21 12:36:54.358 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-21 12:37:02.173 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2025-12-21 12:37:02.339 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 166.6586ms
+2025-12-21 12:37:02.406 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.css - null null
+2025-12-21 12:37:02.406 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - null null
+2025-12-21 12:37:02.406 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-21 12:37:02.437 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - null null
+2025-12-21 12:37:02.437 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.js - null null
+2025-12-21 12:37:02.438 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 12:37:02.442 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.js - 200 null application/javascript;charset=utf-8 35.3466ms
+2025-12-21 12:37:02.481 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 42.0512ms
+2025-12-21 12:37:02.499 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - 200 23649 text/css 93.8112ms
+2025-12-21 12:37:02.499 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.css - 200 152 text/css 93.6558ms
+2025-12-21 12:37:02.501 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 95.2301ms
+2025-12-21 12:37:02.723 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 316.7641ms
+2025-12-21 12:37:02.730 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-21 12:37:02.773 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8506ms
+2025-12-21 12:37:02.951 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-21 12:37:02.962 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7427ms
+2025-12-21 12:37:02.976 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - null null
+2025-12-21 12:37:02.978 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - 200 628 image/png 1.8074ms
+2025-12-21 12:37:48.535 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2025-12-21 12:37:48.586 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 50.3306ms
+2025-12-21 12:37:49.045 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - null null
+2025-12-21 12:37:49.046 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.css - null null
+2025-12-21 12:37:49.047 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - 200 23649 text/css 1.4926ms
+2025-12-21 12:37:49.047 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.css - 200 152 text/css 1.0379ms
+2025-12-21 12:37:49.270 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - null null
+2025-12-21 12:37:49.275 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 4.5085ms
+2025-12-21 12:37:49.311 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-21 12:37:49.313 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.js - null null
+2025-12-21 12:37:49.313 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 2.3193ms
+2025-12-21 12:37:49.317 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.js - 200 null application/javascript;charset=utf-8 4.4249ms
+2025-12-21 12:37:49.341 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 12:37:49.343 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 1.3476ms
+2025-12-21 12:37:49.368 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-21 12:37:49.387 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.5716ms
+2025-12-21 12:37:50.093 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-21 12:37:50.095 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1.8606ms
+2025-12-21 12:37:50.221 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - null null
+2025-12-21 12:37:50.222 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - 200 628 image/png 1.1768ms
+2025-12-21 12:39:27.099 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Prime
+2025-12-21 12:39:27.100 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 3 seconds before migration...
+2025-12-21 12:39:30.110 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 1/5)
+2025-12-21 12:39:30.119 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_Prime;Integrated Security=False;User ID=tenant_Prime_user;Password=$BOxlS$Dn3z2FwQ?;Trust Server Certificate=True
+2025-12-21 12:39:30.119 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-21 12:39:33.087 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-21 12:39:33.113 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-21 12:39:33.175 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-21 12:39:33.990 +06:00 [INF] [ApplicationUsers] ✅ Migrations applied successfully for tenant: Prime
+2025-12-21 12:39:33.994 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2025-12-21 12:39:34.169 +06:00 [INF] Event published: ServiceMigrationCompletedEvent

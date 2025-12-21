@@ -4,6 +4,7 @@ using System.Text;
 using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Shared.Common;
+using EduSystem.Shared.Infrastructure.Utilities;
 using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
@@ -36,7 +37,7 @@ public class ResetPasswordCommandHandler(
             return Result<bool>.Failure("Invalid or expired reset token");
 
         // Check if token is expired
-        if(resetToken.ExpiresAt < DateTime.UtcNow)
+        if(resetToken.ExpiresAt < DateTimeHelper.Now)
             return Result<bool>.Failure("Reset token has expired.");
 
         // Check if token is already used
@@ -50,7 +51,7 @@ public class ResetPasswordCommandHandler(
 
         // Update password
         user.PasswordHash = _passwordHasher.Hash(request.NewPassword);
-        user.UpdatedAt = DateTime.UtcNow;
+        user.UpdatedAt = DateTimeHelper.Now;
 
         // Invalidate all refresh tokens
         user.RefreshToken = null;
@@ -58,7 +59,7 @@ public class ResetPasswordCommandHandler(
 
         // Mark token as used
         resetToken.IsUsed = true;
-        resetToken.UsedAt = DateTime.UtcNow;
+        resetToken.UsedAt = DateTimeHelper.Now;
 
         await _userRepository.UpdateAsync(user);
         await _tokenRepository.UpdateAsync(resetToken);
