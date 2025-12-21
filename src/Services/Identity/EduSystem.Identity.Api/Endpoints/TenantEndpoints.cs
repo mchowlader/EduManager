@@ -47,8 +47,8 @@ public class TenantEndpoints : IEndpoints
         var command = new RegisterTenantCommand { Registration = dto };
         var result = await mediator.Send(command);
         return result.IsSuccess
-            ? Results.Ok(new { tenantId = result.Data, version = "v1" })
-            : Results.BadRequest(new { errors = result.Errors });
+            ? Results.Ok(new { success = true, message = "Tenant registered successfully (v1)", data = result.Data })
+            : Results.BadRequest(new { success = false, message = result.ErrorMessage, errors = result.Errors });
     }
 
     private static async Task<IResult> RegisterTenantV2(TenantRegistrationDto dto, IMediator mediator)
@@ -58,10 +58,10 @@ public class TenantEndpoints : IEndpoints
         return result.IsSuccess
             ? Results.Ok(new
             {
-                tenantId = result.Data,
-                version = "v2",
-                message = result.ErrorMessage ?? "Tenant registered successfully."
+                success = true,
+                message = result.ErrorMessage ?? "Tenant registered successfully (v2)",
+                data = result.Data
             })
-            : Results.BadRequest(new { errors = result.Errors });
+            : Results.BadRequest(new { success = false, message = result.ErrorMessage, errors = result.Errors });
     }
 }

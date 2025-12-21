@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Components.Authorization;
 using EduSystem.UI.Web.Client.Services.Auth;
+using EduSystem.UI.Web.Client.Models.AuthClient;
 
 namespace EduSystem.UI.Web.Client.HttpHandlers;
 
@@ -11,6 +12,7 @@ namespace EduSystem.UI.Web.Client.HttpHandlers;
 public class AuthenticationHandler : DelegatingHandler
 {
     private readonly IServiceProvider _serviceProvider;
+    private static readonly SemaphoreSlim _semaphore = new(1, 1);
 
     public AuthenticationHandler(IServiceProvider serviceProvider)
     {
@@ -21,60 +23,107 @@ public class AuthenticationHandler : DelegatingHandler
         HttpRequestMessage request,
         CancellationToken cancellationToken)
     {
-        // Login/Register endpoint এ token লাগবে না
-        var isAuthEndpoint = request.RequestUri?.PathAndQuery.Contains("/auth/login") == true ||
-                            request.RequestUri?.PathAndQuery.Contains("/tenants/register") == true ||
-                            request.RequestUri?.PathAndQuery.Contains("/auth/refresh") == true;
-
-        if (!isAuthEndpoint)
+        var isAnonymous = request.Headers.Contains("X-Allow-Anonymous");
+        
+        if (isAnonymous)
         {
-            // Service Provider থেকে AuthenticationStateProvider get করুন
-            // Scoped service তাই constructor এ inject করা যায় না
-            var authStateProvider = _serviceProvider.GetService<AuthenticationStateProvider>();
-
-            if (authStateProvider is CustomAuthenticationStateProvider customProvider)
-            {
-                try
-                {
-                    var token = await customProvider.GetTokenAsync();
-
-                    if (!string.IsNullOrEmpty(token))
-                    {
-                        // Bearer token add করুন
-                        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                        Console.WriteLine($"[AUTH HANDLER] Token added to: {request.RequestUri?.PathAndQuery}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"[AUTH HANDLER] No token for: {request.RequestUri?.PathAndQuery}");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[AUTH HANDLER] Error getting token: {ex.Message}");
-                }
-            }
+            request.Headers.Remove("X-Allow-Anonymous");
         }
         else
         {
-            Console.WriteLine($"[AUTH HANDLER] Auth endpoint, skipping token: {request.RequestUri?.PathAndQuery}");
+            var authManager = _serviceProvider.GetService<IAuthManager>();
+            if (authManager != null)
+            {
+                var token = await authManager.GetAccessTokenAsync();
+                if (!string.IsNullOrEmpty(token))
+                {
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                }
+            }
         }
 
-        // Request পাঠান
         var response = await base.SendAsync(request, cancellationToken);
 
-        // 401 Unauthorized হলে user logout করে দিন
-        if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized && !isAnonymous)
         {
-            Console.WriteLine("[AUTH HANDLER] 401 Unauthorized - Logging out user");
-
-            var authStateProvider = _serviceProvider.GetService<AuthenticationStateProvider>();
-            if (authStateProvider is CustomAuthenticationStateProvider customProvider)
+            try
             {
-                await customProvider.MarkUserAsLoggedOut();
+                await _semaphore.WaitAsync(cancellationToken);
+
+                // Check again if token was refreshed by another thread
+                var authManager = _serviceProvider.GetRequiredService<IAuthManager>();
+                var currentToken = await authManager.GetAccessTokenAsync();
+                
+                // If the token in the request is different from current, it was already refreshed
+                var requestToken = request.Headers.Authorization?.Parameter;
+                
+                if (currentToken != requestToken && !string.IsNullOrEmpty(currentToken))
+                {
+                    // Token already refreshed, retry with new token
+                    return await RetryRequest(request, currentToken, cancellationToken);
+                }
+
+                // Try to refresh
+                var authService = _serviceProvider.GetRequiredService<IAuthService>();
+                var refreshToken = await authManager.GetRefreshTokenAsync();
+
+                if (!string.IsNullOrEmpty(refreshToken) && !string.IsNullOrEmpty(currentToken))
+                {
+                    var refreshResult = await authService.RefreshTokenAsync(new RefreshTokenRequest 
+                    { 
+                        AccessToken = currentToken, 
+                        RefreshToken = refreshToken 
+                    });
+
+                    if (refreshResult.Success && refreshResult.Data != null)
+                    {
+                        await authManager.UpdateTokensAsync(refreshResult.Data.AccessToken, refreshResult.Data.RefreshToken);
+                        return await RetryRequest(request, refreshResult.Data.AccessToken, cancellationToken);
+                    }
+                }
+
+                // Refresh failed or no refresh token, logout
+                await authManager.MarkUserAsLoggedOut();
+            }
+            finally
+            {
+                _semaphore.Release();
             }
         }
 
         return response;
+    }
+
+    private async Task<HttpResponseMessage> RetryRequest(HttpRequestMessage request, string newToken, CancellationToken cancellationToken)
+    {
+        // Clone the request as it might have been sent already
+        var newRequest = await CloneRequest(request);
+        newRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", newToken);
+        return await base.SendAsync(newRequest, cancellationToken);
+    }
+
+    private async Task<HttpRequestMessage> CloneRequest(HttpRequestMessage request)
+    {
+        var newRequest = new HttpRequestMessage(request.Method, request.RequestUri);
+        
+        // Copy content
+        if (request.Content != null)
+        {
+            var contentBytes = await request.Content.ReadAsByteArrayAsync();
+            newRequest.Content = new ByteArrayContent(contentBytes);
+            
+            foreach (var header in request.Content.Headers)
+            {
+                newRequest.Content.Headers.TryAddWithoutValidation(header.Key, header.Value);
+            }
+        }
+
+        // Copy generic headers
+        foreach (var header in request.Headers)
+        {
+            newRequest.Headers.TryAddWithoutValidation(header.Key, header.Value);
+        }
+
+        return newRequest;
     }
 }

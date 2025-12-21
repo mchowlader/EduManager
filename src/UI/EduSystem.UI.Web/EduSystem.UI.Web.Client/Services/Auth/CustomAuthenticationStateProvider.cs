@@ -106,6 +106,25 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider, IA
         }
     }
 
+    public async Task<string?> GetRefreshTokenAsync()
+    {
+        return await GetLocalStorageItemAsync("refreshToken");
+    }
+
+    public async Task<string?> GetAccessTokenAsync()
+    {
+        return await GetLocalStorageItemAsync("authToken");
+    }
+
+    public async Task UpdateTokensAsync(string accessToken, string refreshToken)
+    {
+        await SetLocalStorageItemAsync("authToken", accessToken);
+        await SetLocalStorageItemAsync("refreshToken", refreshToken);
+        
+        // Also update cookie for server-side sync
+        await SetCookieAsync("edu_auth_token", accessToken, 12);
+    }
+
     public async Task<string> GetTokenAsync()
     {
         try

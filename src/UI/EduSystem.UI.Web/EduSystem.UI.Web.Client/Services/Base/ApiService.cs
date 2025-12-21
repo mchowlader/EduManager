@@ -16,12 +16,15 @@ public class ApiService : IApiService
         _logger = logger;
     }
 
-    public async Task<ApiResponse<T>> GetAsync<T>(string endpoint, string clientName = "GatewayClient")
+    public async Task<ApiResponse<T>> GetAsync<T>(string endpoint, string clientName = "GatewayClient", bool allowAnonymous = false)
     {
         try
         {
             var client = _httpClientFactory.CreateClient(clientName);
-            var response = await client.GetAsync(endpoint);
+            var request = new HttpRequestMessage(HttpMethod.Get, endpoint);
+            if (allowAnonymous) request.Headers.Add("X-Allow-Anonymous", "true");
+            
+            var response = await client.SendAsync(request);
             return await HandleResponse<T>(response);
         }
         catch (Exception ex)
@@ -31,12 +34,16 @@ public class ApiService : IApiService
         }
     }
 
-    public async Task<ApiResponse<TResponse>> PostAsync<TRequest, TResponse>(string endpoint, TRequest data, string clientName = "GatewayClient")
+    public async Task<ApiResponse<TResponse>> PostAsync<TRequest, TResponse>(string endpoint, TRequest data, string clientName = "GatewayClient", bool allowAnonymous = false)
     {
         try
         {
             var client = _httpClientFactory.CreateClient(clientName);
-            var response = await client.PostAsJsonAsync(endpoint, data);
+            var request = new HttpRequestMessage(HttpMethod.Post, endpoint);
+            request.Content = JsonContent.Create(data);
+            if (allowAnonymous) request.Headers.Add("X-Allow-Anonymous", "true");
+
+            var response = await client.SendAsync(request);
             return await HandleResponse<TResponse>(response);
         }
         catch (Exception ex)
@@ -46,12 +53,16 @@ public class ApiService : IApiService
         }
     }
 
-    public async Task<ApiResponse<TResponse>> PutAsync<TRequest, TResponse>(string endpoint, TRequest data, string clientName = "GatewayClient")
+    public async Task<ApiResponse<TResponse>> PutAsync<TRequest, TResponse>(string endpoint, TRequest data, string clientName = "GatewayClient", bool allowAnonymous = false)
     {
         try
         {
             var client = _httpClientFactory.CreateClient(clientName);
-            var response = await client.PutAsJsonAsync(endpoint, data);
+            var request = new HttpRequestMessage(HttpMethod.Put, endpoint);
+            request.Content = JsonContent.Create(data);
+            if (allowAnonymous) request.Headers.Add("X-Allow-Anonymous", "true");
+
+            var response = await client.SendAsync(request);
             return await HandleResponse<TResponse>(response);
         }
         catch (Exception ex)
@@ -61,12 +72,15 @@ public class ApiService : IApiService
         }
     }
 
-    public async Task<ApiResponse<bool>> DeleteAsync(string endpoint, string clientName = "GatewayClient")
+    public async Task<ApiResponse<bool>> DeleteAsync(string endpoint, string clientName = "GatewayClient", bool allowAnonymous = false)
     {
         try
         {
             var client = _httpClientFactory.CreateClient(clientName);
-            var response = await client.DeleteAsync(endpoint);
+            var request = new HttpRequestMessage(HttpMethod.Delete, endpoint);
+            if (allowAnonymous) request.Headers.Add("X-Allow-Anonymous", "true");
+
+            var response = await client.SendAsync(request);
             return await HandleResponse<bool>(response);
         }
         catch (Exception ex)

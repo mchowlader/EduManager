@@ -84,6 +84,10 @@ public class CustomServerAuthenticationStateProvider : ServerAuthenticationState
         }
     }
 
+    public Task<string?> GetRefreshTokenAsync() => Task.FromResult<string?>(null);
+    public Task<string?> GetAccessTokenAsync() => Task.FromResult<string?>(null);
+    public Task UpdateTokensAsync(string accessToken, string refreshToken) => Task.CompletedTask;
+
     private IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
     {
         return JwtClaimParser.ParseClaimsFromJwt(jwt);

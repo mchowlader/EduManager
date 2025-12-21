@@ -1,13 +1,14 @@
 ﻿@page "/register"
 @using MudBlazor
+@using EduSystem.UI.Web.Client.Models.AuthClient
+@using EduSystem.UI.Web.Client.Services.Auth
 @layout AuthLayout
 @rendermode InteractiveServer
-@inject IHttpClientFactory HttpClientFactory
+@inject IAuthService AuthService
 @inject NavigationManager Navigation
+@inject ISnackbar Snackbar
 
 <PageTitle>Registration - EduSystem</PageTitle>
-
-
 
 <div class="auth-page">
     <div class="glass-card">
@@ -49,10 +50,9 @@
             </div>
 
             <MudStack Spacing="1">
-                <!-- Reduced spacing -->
                 <MudGrid Spacing="2">
                     <MudItem xs="12">
-                        <MudTextField @bind-Value="_registerModel.Name"
+                        <MudTextField @bind-Value="_registerModel.SchoolName"
                                       Label="School Name"
                                       Variant="Variant.Outlined"
                                       Margin="Margin.Dense"
@@ -71,8 +71,17 @@
                     </MudItem>
 
                     <MudItem xs="12" md="6">
-                        <MudTextField @bind-Value="_registerModel.AdminName"
+                        <MudTextField @bind-Value="_registerModel.AdminFullName"
                                       Label="Admin Name"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Required="true"
+                                      FullWidth="true" />
+                    </MudItem>
+
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_registerModel.PhoneNumber"
+                                      Label="Phone Number"
                                       Variant="Variant.Outlined"
                                       Margin="Margin.Dense"
                                       Required="true"
@@ -89,8 +98,8 @@
                                       FullWidth="true" />
                     </MudItem>
 
-                    <MudItem xs="12">
-                        <MudTextField @bind-Value="_registerModel.Password"
+                    <MudItem xs="12" md="6">
+                        <MudTextField @bind-Value="_registerModel.AdminPassword"
                                       Label="Password"
                                       InputType="@_passwordInputType"
                                       Variant="Variant.Outlined"
@@ -101,6 +110,7 @@
                                       Required="true"
                                       FullWidth="true" />
                     </MudItem>
+                    
                     <MudItem xs="12" md="6">
                         <MudColorPicker Label="Primary Brand Color" 
                                         @bind-Text="_registerModel.PrimaryColor" 
@@ -149,7 +159,7 @@
 </div>
 
 @code {
-    private RegisterModel _registerModel = new();
+    private RegisterRequest _registerModel = new();
     private bool _isLoading = false;
     private bool _showPassword = false;
     private InputType _passwordInputType = InputType.Password;
@@ -166,29 +176,32 @@
 
         try
         {
-            var client = HttpClientFactory.CreateClient("IdentityApi");
-            var response = await client.PostAsJsonAsync("api/v1/tenants/register", _registerModel);
+            var result = await AuthService.RegisterAsync(_registerModel);
 
-            if (response.IsSuccessStatusCode)
+            if (result.Success)
             {
-                var tenantId = await response.Content.ReadAsStringAsync();
-                Navigation.NavigateTo($"/login?tenant={tenantId}");
+                Snackbar.Add("Registration Successful! Please login.", Severity.Success);
+                Navigation.NavigateTo($"/login?tenant={result.Data}");
             }
+            else
+            {
+                Snackbar.Add(result.Message, Severity.Error);
+                if (result.Errors != null && result.Errors.Any())
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        Snackbar.Add(error, Severity.Error);
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"An unexpected error occurred: {ex.Message}", Severity.Error);
         }
         finally
         {
             _isLoading = false;
         }
-    }
-
-    public class RegisterModel
-    {
-        public string Name { get; set; } = string.Empty;
-        public string Slug { get; set; } = string.Empty;
-        public string AdminName { get; set; } = string.Empty;
-        public string AdminEmail { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-        public string? PrimaryColor { get; set; } = "#667eea";
-        public string? SecondaryColor { get; set; } = "#764ba2";
     }
 }
