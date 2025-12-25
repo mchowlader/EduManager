@@ -168,6 +168,38 @@
           "buildMultiTargeting/MudBlazor.props": {}
         }
       },
+      "Serilog/4.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/Serilog.targets": {}
+        }
+      },
+      "Serilog.Sinks.File/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "compile": {
+          "lib/net9.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/8.15.0": {
         "type": "package",
         "dependencies": {
@@ -183,6 +215,20 @@
           "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "EduSystem.Shared.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Serilog": "4.3.0",
+          "Serilog.Sinks.File": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
         }
       },
       "EduSystem.UI.Web.Client/1.0.0": {
@@ -611,6 +657,57 @@
         "staticwebassets/MudBlazor.min.js"
       ]
     },
+    "Serilog/4.3.0": {
+      "sha512": "+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
+      "type": "package",
+      "path": "serilog/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Serilog.targets",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/net9.0/Serilog.dll",
+        "lib/net9.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.3.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/7.0.0": {
+      "sha512": "fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
+      "type": "package",
+      "path": "serilog.sinks.file/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Sinks.File.dll",
+        "lib/net462/Serilog.Sinks.File.xml",
+        "lib/net471/Serilog.Sinks.File.dll",
+        "lib/net471/Serilog.Sinks.File.xml",
+        "lib/net6.0/Serilog.Sinks.File.dll",
+        "lib/net6.0/Serilog.Sinks.File.xml",
+        "lib/net8.0/Serilog.Sinks.File.dll",
+        "lib/net8.0/Serilog.Sinks.File.xml",
+        "lib/net9.0/Serilog.Sinks.File.dll",
+        "lib/net9.0/Serilog.Sinks.File.xml",
+        "lib/netstandard2.0/Serilog.Sinks.File.dll",
+        "lib/netstandard2.0/Serilog.Sinks.File.xml",
+        "serilog-sink-nuget.png",
+        "serilog.sinks.file.7.0.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
+      ]
+    },
     "System.IdentityModel.Tokens.Jwt/8.15.0": {
       "sha512": "dpodi7ixz6hxK8YCBYAWzm0IA8JYXoKcz0hbCbNifo519//rjUI0fBD8rfNr+IGqq+2gm4oQoXwHk09LX5SqqQ==",
       "type": "package",
@@ -637,6 +734,11 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
+    "EduSystem.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../../Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
+    },
     "EduSystem.UI.Web.Client/1.0.0": {
       "type": "project",
       "path": "../EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj",
@@ -645,10 +747,13 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "EduSystem.Shared.Infrastructure >= 1.0.0",
       "EduSystem.UI.Web.Client >= 1.0.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 10.0.0",
       "MudBlazor >= 8.15.0",
+      "Serilog >= 4.3.0",
+      "Serilog.Sinks.File >= 7.0.0",
       "System.IdentityModel.Tokens.Jwt >= 8.15.0"
     ]
   },
@@ -685,6 +790,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+            },
             "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
               "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj"
             }
@@ -720,6 +828,14 @@
           "MudBlazor": {
             "target": "Package",
             "version": "[8.15.0, )"
+          },
+          "Serilog": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

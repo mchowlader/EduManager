@@ -8,9 +8,12 @@
     ".NETCoreApp,Version=v10.0": {
       "EduSystem.UI.Web/1.0.0": {
         "dependencies": {
+          "EduSystem.Shared.Infrastructure": "1.0.0",
           "EduSystem.UI.Web.Client": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.0",
           "MudBlazor": "8.15.0",
+          "Serilog": "4.3.0",
+          "Serilog.Sinks.File": "7.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.15.0"
         },
         "runtime": {
@@ -104,6 +107,25 @@
           }
         }
       },
+      "Serilog/4.3.0": {
+        "runtime": {
+          "lib/net9.0/Serilog.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.File/7.0.0": {
+        "dependencies": {
+          "Serilog": "4.3.0"
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Sinks.File.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/8.15.0": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "8.15.0",
@@ -113,6 +135,18 @@
           "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "8.15.0.0",
             "fileVersion": "8.15.0.61118"
+          }
+        }
+      },
+      "EduSystem.Shared.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Serilog": "4.3.0",
+          "Serilog.Sinks.File": "7.0.0"
+        },
+        "runtime": {
+          "EduSystem.Shared.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -201,12 +235,31 @@
       "path": "mudblazor/8.15.0",
       "hashPath": "mudblazor.8.15.0.nupkg.sha512"
     },
+    "Serilog/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
+      "path": "serilog/4.3.0",
+      "hashPath": "serilog.4.3.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.File/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
+      "path": "serilog.sinks.file/7.0.0",
+      "hashPath": "serilog.sinks.file.7.0.0.nupkg.sha512"
+    },
     "System.IdentityModel.Tokens.Jwt/8.15.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-dpodi7ixz6hxK8YCBYAWzm0IA8JYXoKcz0hbCbNifo519//rjUI0fBD8rfNr+IGqq+2gm4oQoXwHk09LX5SqqQ==",
       "path": "system.identitymodel.tokens.jwt/8.15.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.15.0.nupkg.sha512"
+    },
+    "EduSystem.Shared.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "EduSystem.UI.Web.Client/1.0.0": {
       "type": "project",

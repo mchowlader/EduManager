@@ -1,4 +1,5 @@
 ﻿@page "/login"
+@using EduSystem.Shared.Infrastructure.LogHelper
 @using MudBlazor
 @using EduSystem.UI.Web.Client.Models.AuthClient
 @using EduSystem.UI.Web.Client.Services.Auth
@@ -9,6 +10,8 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @inject ISnackbar Snackbar
 @inject IAuthService AuthService
+@inject Serilog.ILogger _logger
+@inject LoggingHelper _helper;
 
 <PageTitle>Login - EduSystem</PageTitle>
 
@@ -156,12 +159,16 @@
             }
             else
             {
-                Snackbar.Add(result.Message, Severity.Error);
+                var errUniCode = _helper.GenerateUniqueCode();
+                _logger.Error($"{errUniCode}-{result.Message}");
+                Snackbar.Add($"Internal server error-{errUniCode}", Severity.Error);
             }
         }
         catch (Exception ex)
         {
-            Snackbar.Add($"An unexpected error occurred: {ex.Message}", Severity.Error);
+            var errUniCode = _helper.GenerateUniqueCode();
+            _logger.Error($"{errUniCode}-{ex.StackTrace}");
+            Snackbar.Add($"An unexpected error occurred: {errUniCode}", Severity.Error);
         }
         finally
         {

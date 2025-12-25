@@ -1,20 +1,19 @@
-using EduSystem.UI.Web.Client.Pages;
+using System.Security.Claims;
+using EduSystem.Shared.Infrastructure.Extensions;
 using EduSystem.UI.Web.Client.Services;
 using EduSystem.UI.Web.Client.Services.Auth;
 using EduSystem.UI.Web.Client.Services.Base;
+using EduSystem.UI.Web.Components;
 using EduSystem.UI.Web.Services;
+using EduSystem.UI.Web.Services.Auth;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor.Services;
-using System.Security.Claims;
-using System.IdentityModel.Tokens.Jwt;
-using EduSystem.UI.Web.Components;
-using EduSystem.UI.Web.Services.Auth;
-using EduSystem.UI.Web.Client.Services.Auth;
-using System.Security.Claims;
-using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddCentralizedLoggin("WEBEDU");
 
 // Add Razor Components
 builder.Services.AddRazorComponents()
@@ -155,7 +154,7 @@ app.Use(async (context, next) =>
             }
         }
     }
-    
+
     await next();
 });
 

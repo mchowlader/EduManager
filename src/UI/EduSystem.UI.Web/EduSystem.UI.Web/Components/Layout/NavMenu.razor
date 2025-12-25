@@ -17,6 +17,9 @@
         <MudNavLink Href="/students" Icon="@Icons.Material.Filled.Person">
             Students
         </MudNavLink>
+        <MudNavLink Href="/section" Icon="@Icons.Material.Filled.Group">
+            Section
+        </MudNavLink>
     </MudNavGroup>
 
     <MudNavGroup Title="Academy"
@@ -43,6 +46,14 @@
             Students
         </MudNavLink>
     </MudNavGroup>
+
+    <MudNavGroup Title="Approve"
+        Icon="@Icons.Material.Filled.Approval">
+        <MudNavLink Href="/admissionPendingList" Icon="@Icons.Material.Filled.Create">
+            Amission
+        </MudNavLink>
+    </MudNavGroup>
+
 
     <MudNavLink Href="/classes" Icon="@Icons.Material.Filled.Class">
         Classes
@@ -75,7 +86,7 @@
     private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
     {
         UpdateExpandedStates();
-        InvokeAsync(StateHasChanged); // 👈 InvokeAsync use koro
+        InvokeAsync(StateHasChanged);
     }
 
     private void UpdateExpandedStates()
@@ -83,7 +94,7 @@
         var currentPath = new Uri(NavigationManager.Uri).AbsolutePath.ToLower();
 
         // More precise path matching
-        isDefinitionExpanded = IsPathMatch(currentPath, "/teachers", "/students");
+        isDefinitionExpanded = IsPathMatch(currentPath, "/teachers", "/students", "/section");
         isAcademyExpanded = IsPathMatch(currentPath, "/testmonial", "/transcript", "/admitcard");
         isAttendanceExpanded = IsPathMatch(currentPath, "/teachersattendance", "/studentsattendance");
     }

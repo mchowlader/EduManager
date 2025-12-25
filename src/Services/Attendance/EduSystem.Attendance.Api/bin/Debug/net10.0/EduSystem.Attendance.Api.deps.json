@@ -794,17 +794,17 @@
           }
         }
       },
-      "Serilog/4.2.0": {
+      "Serilog/4.3.0": {
         "runtime": {
           "lib/net9.0/Serilog.dll": {
-            "assemblyVersion": "4.2.0.0",
-            "fileVersion": "4.2.0.0"
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
           }
         }
       },
       "Serilog.AspNetCore/9.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0",
+          "Serilog": "4.3.0",
           "Serilog.Extensions.Hosting": "9.0.0",
           "Serilog.Formatting.Compact": "3.0.0",
           "Serilog.Settings.Configuration": "9.0.0",
@@ -821,7 +821,7 @@
       },
       "Serilog.Extensions.Hosting/9.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0",
+          "Serilog": "4.3.0",
           "Serilog.Extensions.Logging": "9.0.0"
         },
         "runtime": {
@@ -833,7 +833,7 @@
       },
       "Serilog.Extensions.Logging/9.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net9.0/Serilog.Extensions.Logging.dll": {
@@ -844,7 +844,7 @@
       },
       "Serilog.Formatting.Compact/3.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net8.0/Serilog.Formatting.Compact.dll": {
@@ -856,7 +856,7 @@
       "Serilog.Settings.Configuration/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "10.0.0",
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net9.0/Serilog.Settings.Configuration.dll": {
@@ -867,7 +867,7 @@
       },
       "Serilog.Sinks.Console/6.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Console.dll": {
@@ -878,7 +878,7 @@
       },
       "Serilog.Sinks.Debug/3.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.Debug.dll": {
@@ -889,7 +889,7 @@
       },
       "Serilog.Sinks.File/7.0.0": {
         "dependencies": {
-          "Serilog": "4.2.0"
+          "Serilog": "4.3.0"
         },
         "runtime": {
           "lib/net9.0/Serilog.Sinks.File.dll": {
@@ -1159,6 +1159,10 @@
         }
       },
       "EduSystem.Shared.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Serilog": "4.3.0",
+          "Serilog.Sinks.File": "7.0.0"
+        },
         "runtime": {
           "EduSystem.Shared.Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -1498,12 +1502,12 @@
       "path": "rabbitmq.client/7.1.2",
       "hashPath": "rabbitmq.client.7.1.2.nupkg.sha512"
     },
-    "Serilog/4.2.0": {
+    "Serilog/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
-      "path": "serilog/4.2.0",
-      "hashPath": "serilog.4.2.0.nupkg.sha512"
+      "sha512": "sha512-+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
+      "path": "serilog/4.3.0",
+      "hashPath": "serilog.4.3.0.nupkg.sha512"
     },
     "Serilog.AspNetCore/9.0.0": {
       "type": "package",

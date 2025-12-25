@@ -118,3 +118,7 @@ D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.pdb
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\EduSystem.UI.Web.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\obj\Debug\net10.0\ref\EduSystem.UI.Web.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Serilog.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\Serilog.Sinks.File.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.pdb

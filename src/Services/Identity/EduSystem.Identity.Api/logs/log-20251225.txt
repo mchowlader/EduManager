@@ -1,0 +1,177 @@
+2025-12-25 11:01:28.612 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-25 11:01:29.281 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-25 11:01:29.869 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-25 11:01:29.878 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-25 11:01:29.961 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-25 11:01:29.961 +06:00 [INF] Hosting environment: Development
+2025-12-25 11:01:29.962 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-25 11:01:30.092 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 218.4016ms
+2025-12-25 11:01:30.114 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-25 11:01:33.430 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:01:33.513 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 82.2237ms
+2025-12-25 11:01:33.543 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - null null
+2025-12-25 11:01:33.543 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - null null
+2025-12-25 11:01:33.561 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-25 11:01:33.562 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-25 11:01:33.563 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - 200 144929 text/css 20.0533ms
+2025-12-25 11:01:33.565 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-25 11:01:33.577 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-25 11:01:33.582 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 21.0551ms
+2025-12-25 11:01:33.589 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 46.0462ms
+2025-12-25 11:01:33.699 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:01:33.713 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:01:33.718 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 19.3831ms
+2025-12-25 11:01:33.755 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.6034ms
+2025-12-25 11:01:33.917 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:01:33.928 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2619ms
+2025-12-25 11:03:31.328 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-25 11:03:31.379 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 11:03:31.411 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-25 11:03:35.713 +06:00 [INF] Executed DbCommand (131ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-25 11:03:36.612 +06:00 [INF] Executed DbCommand (10ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-25 11:03:37.002 +06:00 [INF] Executed DbCommand (18ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-25 11:03:37.047 +06:00 [INF] Setting HTTP status code 200.
+2025-12-25 11:03:37.066 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-25 11:03:37.082 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 11:03:37.097 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 5769.8026ms
+2025-12-25 11:07:29.074 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:07:29.089 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 14.9716ms
+2025-12-25 11:07:29.141 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:07:29.142 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 1.0656ms
+2025-12-25 11:07:29.148 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:07:29.171 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8116ms
+2025-12-25 11:07:29.462 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:07:29.465 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - null null
+2025-12-25 11:07:29.466 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-25 11:07:29.466 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - 200 628 image/png 1.5198ms
+2025-12-25 11:07:29.472 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0363ms
+2025-12-25 11:09:05.522 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:09:05.540 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 17.9692ms
+2025-12-25 11:09:05.587 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:09:05.587 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:09:05.588 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 0.9699ms
+2025-12-25 11:09:05.598 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.5378ms
+2025-12-25 11:09:05.707 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:09:05.711 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.817ms
+2025-12-25 11:10:15.391 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:10:15.402 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 11.3425ms
+2025-12-25 11:10:15.446 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:10:15.449 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:10:15.450 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 0.8202ms
+2025-12-25 11:10:15.456 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.9071ms
+2025-12-25 11:10:15.685 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:10:15.689 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.8981ms
+2025-12-25 11:14:48.510 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:14:48.526 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 15.8278ms
+2025-12-25 11:14:48.590 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:14:48.591 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 1.012ms
+2025-12-25 11:14:48.592 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:14:48.609 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9621ms
+2025-12-25 11:14:48.848 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:14:48.852 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.5385ms
+2025-12-25 11:16:50.453 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:16:50.465 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 11.8965ms
+2025-12-25 11:16:50.510 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:16:50.511 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 1.0154ms
+2025-12-25 11:16:50.513 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:16:50.525 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2641ms
+2025-12-25 11:16:50.727 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:16:50.733 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.9555ms
+2025-12-25 11:17:08.122 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 11:17:08.130 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 7.6846ms
+2025-12-25 11:17:08.168 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 11:17:08.171 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 11:17:08.172 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 0.8162ms
+2025-12-25 11:17:08.178 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.2052ms
+2025-12-25 11:17:08.263 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 11:17:08.267 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.5127ms
+2025-12-25 12:17:45.347 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-25 12:17:45.915 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-25 12:17:46.385 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-25 12:17:46.544 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-25 12:17:46.620 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-25 12:17:46.620 +06:00 [INF] Hosting environment: Development
+2025-12-25 12:17:46.620 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-25 12:17:46.775 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 233.8306ms
+2025-12-25 12:17:46.796 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-25 12:17:53.815 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 12:17:53.893 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 78.496ms
+2025-12-25 12:17:53.949 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 12:17:53.950 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 12:17:53.955 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 4.9083ms
+2025-12-25 12:17:54.003 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.586ms
+2025-12-25 12:17:54.175 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 12:17:54.191 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3003ms
+2025-12-25 12:18:13.417 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-25 12:18:13.434 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 12:18:13.446 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-25 12:18:15.482 +06:00 [INF] Executed DbCommand (116ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-25 12:18:16.321 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-25 12:18:16.688 +06:00 [INF] Executed DbCommand (17ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-25 12:18:16.738 +06:00 [INF] Setting HTTP status code 200.
+2025-12-25 12:18:16.756 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-25 12:18:16.774 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 12:18:16.792 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 3375.1409ms
+2025-12-25 13:49:49.629 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-25 13:49:50.491 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-25 13:49:51.001 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-25 13:49:51.082 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-25 13:49:51.216 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-25 13:49:51.216 +06:00 [INF] Hosting environment: Development
+2025-12-25 13:49:51.216 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-25 13:49:51.424 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 345.034ms
+2025-12-25 13:49:51.455 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-25 13:49:59.244 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-25 13:49:59.337 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 95.3908ms
+2025-12-25 13:49:59.414 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-25 13:49:59.436 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-25 13:49:59.438 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 23.1743ms
+2025-12-25 13:49:59.479 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.044ms
+2025-12-25 13:49:59.549 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-25 13:49:59.557 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.6718ms
+2025-12-25 13:50:29.927 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-25 13:50:29.953 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 13:50:29.966 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-25 13:50:37.327 +06:00 [INF] Executed DbCommand (276ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-25 13:50:38.386 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-25 13:50:38.856 +06:00 [INF] Executed DbCommand (22ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-25 13:50:38.919 +06:00 [INF] Setting HTTP status code 200.
+2025-12-25 13:50:38.962 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-25 13:50:38.982 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-25 13:50:39.000 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 9072.5768ms
