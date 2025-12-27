@@ -85,9 +85,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "ChangePasswordV1",
+    "EndpointName": "ChangePassword",
     "Description": "Change password for authenticated user",
-    "Summary": "Change user password (V1)"
+    "Summary": "Change user password"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -122,9 +122,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "ForgotPasswordV1",
+    "EndpointName": "ForgotPassword",
     "Description": "Send password reset link to user\u0027s email",
-    "Summary": "Request password reset (V1)"
+    "Summary": "Request password reset"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -159,9 +159,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "LoginV1",
+    "EndpointName": "Login",
     "Description": "Authenticate user and return JWT tokens",
-    "Summary": "User login (V1)"
+    "Summary": "User login"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -190,9 +190,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "LogoutV1",
-    "Description": "Invalited users\u0027s refresh token",
-    "Summary": "User Logout (v1)"
+    "EndpointName": "Logout",
+    "Description": "Invalidate user\u0027s refresh token",
+    "Summary": "User Logout"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -221,9 +221,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "GetCurrentUserV1",
+    "EndpointName": "GetCurrentUser",
     "Description": "Retrieve current user information from JWT token",
-    "Summary": "Get current authenticated user (V1)"
+    "Summary": "Get current authenticated user"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -258,9 +258,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "RefreshTokenV1",
+    "EndpointName": "RefreshToken",
     "Description": "Refresh JWT access and refresh tokens",
-    "Summary": "Refresh JWT tokens (V1)"
+    "Summary": "Refresh JWT tokens"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -295,9 +295,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "ResetPasswordV1",
+    "EndpointName": "ResetPassword",
     "Description": "Reset password using token from email",
-    "Summary": "Reset password (V1)"
+    "Summary": "Reset password"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.AuthEndpoints",
@@ -326,9 +326,9 @@
     "Tags": [
       "Authentication"
     ],
-    "EndpointName": "VerifyTokenV1",
+    "EndpointName": "VerifyToken",
     "Description": "Check if current JWT token is valid",
-    "Summary": "Verify JWT token (V1)"
+    "Summary": "Verify JWT token"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
@@ -361,11 +361,11 @@
       }
     ],
     "Tags": [
-      "Tenants"
+      "Tenants (v1)"
     ],
     "EndpointName": "RegisterTenantV1",
-    "Description": "\u26A0\uFE0F This version is deprecated. Please use V2.",
-    "Summary": "Register a new tenant (V1)"
+    "Description": "Creates a new tenant in the system",
+    "Summary": "Register a new tenant"
   },
   {
     "ContainingType": "EduSystem.Identity.Api.Endpoints.TenantEndpoints",
@@ -398,10 +398,10 @@
       }
     ],
     "Tags": [
-      "Tenants"
+      "Tenants (v2)"
     ],
     "EndpointName": "RegisterTenantV2",
-    "Description": "Creates a new tenant in the system - Version 2",
-    "Summary": "Register a new tenant (V2)"
+    "Description": "Creates a new tenant in the system with enhanced validation",
+    "Summary": "Register a new tenant"
   }
 ]

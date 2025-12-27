@@ -10,34 +10,36 @@ public class TenantEndpoints : IEndpoints
 {
     public static void MapEndpoints(IEndpointRouteBuilder app)
     {
+        // ✅ Version set - শুধু Tenant এর v1 deprecated
         var versionSet = app.NewApiVersionSet()
-            .HasApiVersion(new ApiVersion(1, 0))
-            .HasDeprecatedApiVersion(new ApiVersion(1, 0))
-            .HasApiVersion(new ApiVersion(2, 0))
+            .HasDeprecatedApiVersion(new ApiVersion(1, 0))  // v1 deprecated
+            .HasApiVersion(new ApiVersion(2, 0))             // v2 current
             .ReportApiVersions()
             .Build();
 
+        // ============ V1 Tenant Endpoints (Deprecated) ============
         var groupV1 = app.MapGroup("/api/v{version:apiVersion}/tenants")
             .WithApiVersionSet(versionSet)
-            .HasApiVersion(1, 0)
-            .WithTags("Tenants");
+            .MapToApiVersion(1, 0)
+            .WithTags("Tenants (v1)");
 
         groupV1.MapPost("/register", RegisterTenantV1)
             .WithName("RegisterTenantV1")
-            .WithSummary("Register a new tenant (V1)")
-            .WithDescription("⚠️ This version is deprecated. Please use V2.")
+            .WithSummary("Register a new tenant")
+            .WithDescription("Creates a new tenant in the system")
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 
+        // ============ V2 Tenant Endpoints (Current) ============
         var groupV2 = app.MapGroup("/api/v{version:apiVersion}/tenants")
             .WithApiVersionSet(versionSet)
-            .HasApiVersion(2, 0)
-            .WithTags("Tenants");
+            .MapToApiVersion(2, 0)
+            .WithTags("Tenants (v2)");
 
         groupV2.MapPost("/register", RegisterTenantV2)
             .WithName("RegisterTenantV2")
-            .WithSummary("Register a new tenant (V2)")
-            .WithDescription("Creates a new tenant in the system - Version 2")
+            .WithSummary("Register a new tenant")
+            .WithDescription("Creates a new tenant in the system with enhanced validation")
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
     }

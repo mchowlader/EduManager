@@ -1,35 +1,55 @@
-using Asp.Versioning.ApiExplorer;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace EduSystem.Identity.Api.DependencyResolver;
 
 public static class SwaggerServiceExtensions
 {
-    public static IServiceCollection AddSwaggerConfiguration(
-        this IServiceCollection services,
-        IConfiguration configuration)
+    public static IServiceCollection AddSwaggerConfiguration(this IServiceCollection services)
     {
-        //enable/disable runtime decide
         services.AddEndpointsApiExplorer();
+
         services.AddSwaggerGen(options =>
         {
-            options.CustomSchemaIds(type => type.FullName);
-
+            // Version 1
             options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "EduSystem Identity API",
                 Version = "v1",
-                Description = "Identity and Tenant Management API - Version 1"
+                Description = "API Version 1"
             });
 
+            // Version 2
             options.SwaggerDoc("v2", new OpenApiInfo
             {
                 Title = "EduSystem Identity API",
                 Version = "v2",
-                Description = "Identity and Tenant Management API - Version 2"
+                Description = "API Version 2"
             });
 
-            // Add JWT Authentication
+            // ✅ এই filter টা নিশ্চিত করে যে প্রতিটি version এর জন্য শুধুমাত্র সেই version এর APIs দেখাবে
+            options.DocInclusionPredicate((docName, apiDesc) =>
+            {
+                if (apiDesc.RelativePath == null)
+                    return false;
+
+                // Route থেকে version extract করুন (e.g., "api/v1/tenants" or "api/v2/tenants")
+                var pathSegments = apiDesc.RelativePath.Split('/');
+
+                // Find the version segment (should be like "v1" or "v2")
+                var versionSegment = pathSegments.FirstOrDefault(s => s.StartsWith("v") && char.IsDigit(s.LastOrDefault()));
+
+                if (string.IsNullOrEmpty(versionSegment))
+                    return false; // Version না থাকলে কোনো document এ দেখাবে না
+
+                // Match with document name - শুধুমাত্র matching version দেখাবে
+                return versionSegment == docName;
+            });
+
+            // ✅ Deprecated warning শুধু description এ যোগ করবে
+            options.OperationFilter<DeprecatedOperationFilter>();
+
+            // JWT Authentication
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 Name = "Authorization",
@@ -37,7 +57,7 @@ public static class SwaggerServiceExtensions
                 Scheme = "Bearer",
                 BearerFormat = "JWT",
                 In = ParameterLocation.Header,
-                Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\""
+                Description = "Enter your JWT token in the format: Bearer {your-token}"
             });
 
             options.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -51,38 +71,34 @@ public static class SwaggerServiceExtensions
                             Id = "Bearer"
                         }
                     },
-                    new string[] {}
+                    Array.Empty<string>()
                 }
             });
         });
 
         return services;
     }
+}
 
-    public static IApplicationBuilder UseSwaggerConfiguration(
-        this WebApplication app)
+// ✅ Deprecated warning শুধু description/operation এ দেখাবে
+public class DeprecatedOperationFilter : IOperationFilter
+{
+    public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
-        var swaggerEnabled = app.Configuration.GetValue<bool>("Swagger:Enabled", true);
+        // Check if the route contains v1 and belongs to Tenants
+        var relativePath = context.ApiDescription.RelativePath;
 
-        if (!swaggerEnabled)
+        // শুধুমাত্র Tenant v1 endpoints এ deprecated mark করুন
+        if (relativePath != null &&
+            relativePath.Contains("/v1/tenants"))
         {
-            return app;
+
+            // ⚠️ Description এ deprecation notice যোগ করুন (endpoint expand করলে দেখাবে)
+            var deprecationNotice = "⚠️ **Deprecation Notice:** This endpoint is deprecated and will be removed in a future release. Please migrate to v2 API.";
+
+            operation.Description = string.IsNullOrEmpty(operation.Description)
+                ? deprecationNotice
+                : $"{deprecationNotice}\n\n{operation.Description}";
         }
-
-        var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-
-        app.UseSwagger();
-        app.UseSwaggerUI(options =>
-        {
-            foreach (var description in provider.ApiVersionDescriptions)
-            {
-                options.SwaggerEndpoint(
-                    $"/swagger/{description.GroupName}/swagger.json",
-                    $"EduSystem API {description.GroupName.ToUpperInvariant()}"
-                );
-            }
-        });
-
-        return app;
     }
 }

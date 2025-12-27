@@ -1,5 +1,4 @@
 using Asp.Versioning;
-using EduSystem.Identity.Infrastructure.EventHandlers;
 using EduSystem.Shared.Event;
 using EduSystem.Shared.Infrastructure.Security;
 using EduSystem.Shared.Messaging;
@@ -15,12 +14,17 @@ public static class DependencyInjection
         services.AddHealthChecks();
         services.AddAuthentication();
         services.AddAuthorization();
-        // API Versioning Configuration
+
+        // ✅ API Versioning with proper configuration
         services.AddApiVersioning(options =>
         {
-            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.DefaultApiVersion = new ApiVersion(2, 0);
             options.AssumeDefaultVersionWhenUnspecified = true;
             options.ReportApiVersions = true;
+            options.ApiVersionReader = ApiVersionReader.Combine(
+                new UrlSegmentApiVersionReader(),
+                new HeaderApiVersionReader("x-api-version")
+            );
         })
         .AddApiExplorer(options =>
         {
@@ -28,18 +32,16 @@ public static class DependencyInjection
             options.SubstituteApiVersionInUrl = true;
         });
 
-        // CORS Configuration
+        // CORS
         services.AddCors(options =>
         {
-            options.AddPolicy("AllowAll", builder =>
+            options.AddDefaultPolicy(policy =>
             {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
+                policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
             });
         });
 
-        // MassTransit with Consumer
+        // MassTransit
         services.AddMassTransit(x =>
         {
             x.UsingRabbitMq((context, cfg) =>
@@ -54,32 +56,14 @@ public static class DependencyInjection
                     h.Username(rabbitMqUsername);
                     h.Password(rabbitMqPassword);
                 });
-                // IMPORTANT: Configure message topology for fanout
-                cfg.Publish<TenantDatabaseCreatedEvent>(p =>
-                {
-                    p.ExchangeType = "fanout";
-                });
 
-                cfg.UseMessageRetry(r => r.Exponential(
-                    retryLimit: 3,
-                    minInterval: TimeSpan.FromSeconds(1),
-                    maxInterval: TimeSpan.FromMinutes(5),
-                    intervalDelta: TimeSpan.FromSeconds(2)
-                ));
-
+                cfg.Publish<TenantDatabaseCreatedEvent>(p => { p.ExchangeType = "fanout"; });
+                cfg.UseMessageRetry(r => r.Exponential(3, TimeSpan.FromSeconds(1), TimeSpan.FromMinutes(5), TimeSpan.FromSeconds(2)));
             });
         });
 
         services.AddScoped<IEventBus, MassTransitEventBus>();
-        services.AddCors(options =>
-        {
-            options.AddDefaultPolicy(policy =>
-            {
-                policy.AllowAnyOrigin()
-                      .AllowAnyMethod()
-                      .AllowAnyHeader();
-            });
-        });
+
         return services;
     }
 }

@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "EduSystem Identity API",
-    "description": "Identity and Tenant Management API - Version 1",
+    "description": "API Version 1",
     "version": "v1"
   },
   "paths": {
@@ -11,12 +11,12 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "LoginV1",
+        "operationId": "Login",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.LoginRequestDto"
+                "$ref": "#/components/schemas/LoginRequestDto"
               }
             }
           },
@@ -47,12 +47,12 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "RefreshTokenV1",
+        "operationId": "RefreshToken",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.RefreshTokenRequestDto"
+                "$ref": "#/components/schemas/RefreshTokenRequestDto"
               }
             }
           },
@@ -83,7 +83,7 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "LogoutV1",
+        "operationId": "Logout",
         "responses": {
           "200": {
             "description": "Success",
@@ -109,7 +109,7 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "GetCurrentUserV1",
+        "operationId": "GetCurrentUser",
         "responses": {
           "200": {
             "description": "Success",
@@ -135,12 +135,12 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "ChangePasswordV1",
+        "operationId": "ChangePassword",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.ChangePasswordRequestDto"
+                "$ref": "#/components/schemas/ChangePasswordRequestDto"
               }
             }
           },
@@ -179,12 +179,12 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "ForgotPasswordV1",
+        "operationId": "ForgotPassword",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.ForgotPasswordRequestDto"
+                "$ref": "#/components/schemas/ForgotPasswordRequestDto"
               }
             }
           },
@@ -215,12 +215,12 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "ResetPasswordV1",
+        "operationId": "ResetPassword",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.ResetPasswordRequestDto"
+                "$ref": "#/components/schemas/ResetPasswordRequestDto"
               }
             }
           },
@@ -251,7 +251,7 @@
         "tags": [
           "Authentication"
         ],
-        "operationId": "VerifyTokenV1",
+        "operationId": "VerifyToken",
         "responses": {
           "200": {
             "description": "Success",
@@ -272,53 +272,18 @@
         }
       }
     },
-    "/api/health/health": {
-      "get": {
-        "tags": [
-          "Health"
-        ],
-        "operationId": "HealthCheck",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": { }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/health/ping": {
-      "get": {
-        "tags": [
-          "Health"
-        ],
-        "operationId": "Ping",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": { }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v1/tenants/register": {
       "post": {
         "tags": [
-          "Tenants"
+          "Tenants (v1)"
         ],
+        "description": "⚠️ **Deprecation Notice:** This endpoint is deprecated and will be removed in a future release. Please migrate to v2 API.",
         "operationId": "RegisterTenantV1",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EduSystem.Identity.Application.DTOs.TenantRegistrationDto"
+                "$ref": "#/components/schemas/TenantRegistrationDto"
               }
             }
           },
@@ -347,7 +312,7 @@
   },
   "components": {
     "schemas": {
-      "EduSystem.Identity.Application.DTOs.ChangePasswordRequestDto": {
+      "ChangePasswordRequestDto": {
         "required": [
           "confirmPassword",
           "currentPassword",
@@ -371,7 +336,7 @@
         },
         "additionalProperties": false
       },
-      "EduSystem.Identity.Application.DTOs.ForgotPasswordRequestDto": {
+      "ForgotPasswordRequestDto": {
         "required": [
           "email"
         ],
@@ -385,7 +350,7 @@
         },
         "additionalProperties": false
       },
-      "EduSystem.Identity.Application.DTOs.LoginRequestDto": {
+      "LoginRequestDto": {
         "required": [
           "email",
           "password"
@@ -408,7 +373,7 @@
         },
         "additionalProperties": false
       },
-      "EduSystem.Identity.Application.DTOs.RefreshTokenRequestDto": {
+      "RefreshTokenRequestDto": {
         "required": [
           "accessToken",
           "refreshToken"
@@ -426,7 +391,7 @@
         },
         "additionalProperties": false
       },
-      "EduSystem.Identity.Application.DTOs.ResetPasswordRequestDto": {
+      "ResetPasswordRequestDto": {
         "required": [
           "confirmPassword",
           "newPassword",
@@ -450,7 +415,7 @@
         },
         "additionalProperties": false
       },
-      "EduSystem.Identity.Application.DTOs.TenantRegistrationDto": {
+      "TenantRegistrationDto": {
         "type": "object",
         "properties": {
           "schoolName": {
@@ -492,7 +457,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        "description": "Enter your JWT token in the format: Bearer {your-token}",
         "scheme": "Bearer",
         "bearerFormat": "JWT"
       }

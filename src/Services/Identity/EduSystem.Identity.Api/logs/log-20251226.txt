@@ -1,0 +1,731 @@
+2025-12-26 01:18:12.895 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 01:18:14.236 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 01:18:15.117 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 01:18:15.120 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 01:18:15.256 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 01:18:15.256 +06:00 [INF] Hosting environment: Development
+2025-12-26 01:18:15.257 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 01:18:15.646 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 536.7407ms
+2025-12-26 01:18:15.697 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 01:18:53.734 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 01:18:53.757 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 01:18:53.779 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 01:18:53.785 +06:00 [ERR] Error ID: 40000004-0006-f000-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:18:53.817 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 01:18:53.832 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 01:18:53.844 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 01:18:53.844 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:18:53.845 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 112.5555ms
+2025-12-26 01:20:02.331 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 01:20:02.337 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 01:20:02.340 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 01:20:02.341 +06:00 [ERR] Error ID: 40000015-0003-ff00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:20:02.342 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 01:20:02.345 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 01:20:02.347 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 01:20:02.347 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:20:02.348 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 16.8924ms
+2025-12-26 01:20:45.759 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 01:20:45.761 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 01:20:45.763 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 01:20:45.764 +06:00 [ERR] Error ID: 40000010-0005-fb00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:20:45.764 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 01:20:45.764 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 01:20:45.765 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 01:20:45.765 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 01:20:45.766 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 7.6413ms
+2025-12-26 01:21:08.921 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 01:21:09.502 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 01:21:09.886 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 01:21:10.050 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 01:21:10.151 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 01:21:10.151 +06:00 [INF] Hosting environment: Development
+2025-12-26 01:21:10.151 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 01:21:10.308 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 276.5056ms
+2025-12-26 01:21:10.329 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 01:21:33.143 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 01:21:33.258 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 115.6161ms
+2025-12-26 01:21:33.336 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - null null
+2025-12-26 01:21:33.336 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - null null
+2025-12-26 01:21:33.336 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 01:21:33.336 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-26 01:21:33.345 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 4.6687ms
+2025-12-26 01:21:33.356 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-26 01:21:33.357 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-26 01:21:33.359 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - 200 144929 text/css 54.5394ms
+2025-12-26 01:21:33.362 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 26.0547ms
+2025-12-26 01:21:33.364 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-26 01:21:33.383 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 47.4527ms
+2025-12-26 01:21:33.625 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 01:21:33.667 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.0903ms
+2025-12-26 01:21:33.816 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 01:21:33.828 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.8581ms
+2025-12-26 01:21:33.840 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - null null
+2025-12-26 01:21:33.844 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-26 01:21:33.844 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - 200 628 image/png 3.9557ms
+2025-12-26 01:23:26.055 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 01:23:26.619 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 01:23:27.101 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 01:23:27.293 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 01:23:27.429 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 01:23:27.429 +06:00 [INF] Hosting environment: Development
+2025-12-26 01:23:27.430 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 01:23:27.592 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 302.0189ms
+2025-12-26 01:23:27.616 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 01:23:30.562 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 01:23:30.649 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 88.1507ms
+2025-12-26 01:23:30.701 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 01:23:30.706 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 01:23:30.709 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 6.6675ms
+2025-12-26 01:23:30.757 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.3893ms
+2025-12-26 01:23:30.841 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 01:23:30.852 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.0089ms
+2025-12-26 01:24:05.231 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 01:24:05.252 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 01:24:05.269 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-26 01:24:13.176 +06:00 [INF] Executed DbCommand (172ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-26 01:24:14.063 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-26 01:24:14.511 +06:00 [INF] Executed DbCommand (35ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-26 01:24:14.555 +06:00 [INF] Setting HTTP status code 200.
+2025-12-26 01:24:14.573 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-26 01:24:14.590 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 01:24:14.608 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 9377.9148ms
+2025-12-26 01:24:41.659 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 01:24:41.672 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 12.2467ms
+2025-12-26 01:24:41.719 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 01:24:41.721 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 1.1818ms
+2025-12-26 01:24:41.721 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 01:24:41.743 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.7487ms
+2025-12-26 01:24:41.853 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 01:24:41.864 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.6186ms
+2025-12-26 01:24:49.664 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 01:24:49.668 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 3.5462ms
+2025-12-26 01:24:49.711 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 01:24:49.713 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 01:24:49.715 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 3.592ms
+2025-12-26 01:24:49.741 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0487ms
+2025-12-26 01:24:49.779 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 01:24:49.790 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.9197ms
+2025-12-26 01:25:06.344 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 01:25:06.347 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 01:25:07.552 +06:00 [INF] Executed DbCommand (300ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-26 01:25:07.722 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-26 01:25:07.751 +06:00 [INF] Executed DbCommand (27ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-26 01:25:07.752 +06:00 [INF] Setting HTTP status code 200.
+2025-12-26 01:25:07.775 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-26 01:25:07.776 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 01:25:07.777 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 1433.1568ms
+2025-12-26 11:55:06.128 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 11:55:06.794 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 11:55:07.410 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 11:55:07.496 +06:00 [INF] Now listening on: https://localhost:7001
+2025-12-26 11:55:07.499 +06:00 [INF] Now listening on: http://localhost:5268
+2025-12-26 11:55:07.588 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 11:55:07.590 +06:00 [INF] Hosting environment: Development
+2025-12-26 11:55:07.592 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 11:55:12.965 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/ - null null
+2025-12-26 11:55:13.296 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/ - 404 null null 351.6502ms
+2025-12-26 11:55:13.310 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/, Response status code: 404
+2025-12-26 11:55:33.707 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/index.html - null null
+2025-12-26 11:55:33.831 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/index.html - 200 null text/html;charset=utf-8 123.7582ms
+2025-12-26 11:55:33.917 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui.css - null null
+2025-12-26 11:55:33.924 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui-bundle.js - null null
+2025-12-26 11:55:33.929 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-26 11:55:33.933 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 11:55:34.036 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-26 11:55:34.036 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-26 11:55:34.043 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-26 11:55:34.051 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui.css - 200 144929 text/css 134.1504ms
+2025-12-26 11:55:34.051 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 122.1092ms
+2025-12-26 11:55:34.052 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 119.6109ms
+2025-12-26 11:55:34.052 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 128.7199ms
+2025-12-26 11:55:34.320 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-26 11:55:34.451 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.4888ms
+2025-12-26 11:55:34.653 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/v1/swagger.json - null null
+2025-12-26 11:55:34.695 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/favicon-32x32.png - null null
+2025-12-26 11:55:34.720 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-26 11:55:34.734 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/favicon-32x32.png - 200 628 image/png 38.7324ms
+2025-12-26 11:55:34.740 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.4577ms
+2025-12-26 11:58:19.891 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 11:58:20.259 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 11:58:20.572 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 11:58:20.725 +06:00 [INF] Now listening on: https://localhost:7001
+2025-12-26 11:58:20.729 +06:00 [INF] Now listening on: http://localhost:5268
+2025-12-26 11:58:20.788 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 11:58:20.790 +06:00 [INF] Hosting environment: Development
+2025-12-26 11:58:20.792 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 11:58:22.911 +06:00 [INF] Request starting HTTP/2 GET https://localhost:7001/ - null null
+2025-12-26 11:58:23.100 +06:00 [INF] Request finished HTTP/2 GET https://localhost:7001/ - 404 null null 190.9578ms
+2025-12-26 11:58:23.115 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/, Response status code: 404
+2025-12-26 12:00:47.267 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 12:00:47.590 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 12:00:47.974 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 12:00:48.027 +06:00 [INF] Now listening on: http://localhost:5268
+2025-12-26 12:00:48.079 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 12:00:48.082 +06:00 [INF] Hosting environment: Development
+2025-12-26 12:00:48.084 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 12:00:48.802 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/ - null null
+2025-12-26 12:00:49.161 +06:00 [WRN] Failed to determine the https port for redirect.
+2025-12-26 12:00:49.191 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/ - 404 null null 402.6ms
+2025-12-26 12:00:49.200 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/, Response status code: 404
+2025-12-26 12:00:58.486 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/index.html - null null
+2025-12-26 12:00:58.612 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/index.html - 200 null text/html;charset=utf-8 127.4353ms
+2025-12-26 12:00:58.663 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui.css - null null
+2025-12-26 12:00:58.674 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui-bundle.js - null null
+2025-12-26 12:00:58.680 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-26 12:00:58.684 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 12:00:58.759 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 75.3983ms
+2025-12-26 12:00:58.774 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-26 12:00:58.775 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-26 12:00:58.776 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-26 12:00:58.811 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 129.1047ms
+2025-12-26 12:00:58.812 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui.css - 200 144929 text/css 148.652ms
+2025-12-26 12:00:58.814 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 140.0865ms
+2025-12-26 12:00:58.827 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/_vs/browserLink - null null
+2025-12-26 12:00:58.915 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.1087ms
+2025-12-26 12:00:59.183 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/v1/swagger.json - null null
+2025-12-26 12:00:59.200 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.1562ms
+2025-12-26 12:00:59.247 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/favicon-32x32.png - null null
+2025-12-26 12:00:59.255 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-26 12:00:59.257 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/favicon-32x32.png - 200 628 image/png 9.9549ms
+2025-12-26 12:03:58.171 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 12:03:58.495 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 12:03:58.728 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 12:03:58.805 +06:00 [INF] Now listening on: http://localhost:5268
+2025-12-26 12:03:58.851 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 12:03:58.853 +06:00 [INF] Hosting environment: Development
+2025-12-26 12:03:58.855 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 12:04:00.099 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/ - null null
+2025-12-26 12:04:00.371 +06:00 [WRN] Failed to determine the https port for redirect.
+2025-12-26 12:04:00.402 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/ - 404 null null 320.4234ms
+2025-12-26 12:04:00.416 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5268/, Response status code: 404
+2025-12-26 12:04:05.074 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/index.html - null null
+2025-12-26 12:04:05.178 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/index.html - 200 null text/html;charset=utf-8 107.4535ms
+2025-12-26 12:04:05.231 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 12:04:05.245 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/_vs/browserLink - null null
+2025-12-26 12:04:05.255 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 25.1779ms
+2025-12-26 12:04:05.322 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.3239ms
+2025-12-26 12:04:05.459 +06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5268/swagger/v1/swagger.json - null null
+2025-12-26 12:04:05.498 +06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5268/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.2714ms
+2025-12-26 12:08:53.952 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 12:08:54.728 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 12:08:55.284 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 12:08:55.513 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 12:08:55.598 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 12:08:55.598 +06:00 [INF] Hosting environment: Development
+2025-12-26 12:08:55.598 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 12:08:55.826 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 325.3743ms
+2025-12-26 12:08:55.857 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 12:08:59.762 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 12:08:59.916 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 155.2856ms
+2025-12-26 12:08:59.998 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 12:09:00.057 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 12:09:00.060 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 60.0429ms
+2025-12-26 12:09:00.178 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 120.698ms
+2025-12-26 12:09:00.357 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 12:09:00.376 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.3851ms
+2025-12-26 12:10:50.344 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 12:10:50.446 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 12:10:50.557 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 12:10:50.662 +06:00 [ERR] Error ID: 40000005-0006-ff00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:10:50.813 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 12:10:50.855 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 12:10:50.864 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 12:10:50.865 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:10:50.868 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 524.3329ms
+2025-12-26 12:11:25.099 +06:00 [INF] Application is shutting down...
+2025-12-26 12:11:25.431 +06:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2025-12-26 12:13:22.113 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 12:13:23.008 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 12:13:23.633 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 12:13:23.858 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 12:13:23.953 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 12:13:23.953 +06:00 [INF] Hosting environment: Development
+2025-12-26 12:13:23.953 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 12:13:24.265 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 420.0921ms
+2025-12-26 12:13:24.293 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 12:13:30.875 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 12:13:30.982 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 107.946ms
+2025-12-26 12:13:31.047 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 12:13:31.059 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 12:13:31.150 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 80.0126ms
+2025-12-26 12:13:31.161 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.2812ms
+2025-12-26 12:13:31.475 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 12:13:31.501 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3567ms
+2025-12-26 12:17:22.888 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 12:17:22.939 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 12:17:22.966 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 12:17:22.981 +06:00 [ERR] Error ID: 4000000e-0005-fc00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:17:23.027 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 12:17:23.039 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 12:17:23.046 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 12:17:23.047 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:17:23.047 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 159.7107ms
+2025-12-26 12:19:22.633 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 12:19:22.637 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-26 12:19:22.649 +06:00 [INF] Executing endpoint '/api/error/'
+2025-12-26 12:19:22.649 +06:00 [ERR] Error ID: 40000007-0007-fb00-b63f-84710c7967bb | Path: /api/error | Message: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:19:22.650 +06:00 [INF] Setting HTTP status code 500.
+2025-12-26 12:19:22.651 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2025-12-26 12:19:22.651 +06:00 [INF] Executed endpoint '/api/error/'
+2025-12-26 12:19:22.651 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationServiceImpl.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-12-26 12:19:22.653 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 500 null application/problem+json 19.5047ms
+2025-12-26 12:21:48.182 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 12:21:49.244 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 12:21:49.867 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 12:21:50.089 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 12:21:50.212 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 12:21:50.213 +06:00 [INF] Hosting environment: Development
+2025-12-26 12:21:50.213 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 12:21:50.456 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 381.7637ms
+2025-12-26 12:21:50.497 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 12:21:56.148 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 12:21:56.252 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 108.6097ms
+2025-12-26 12:21:56.348 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 12:21:56.363 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 12:21:56.403 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 54.1856ms
+2025-12-26 12:21:56.456 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.3274ms
+2025-12-26 12:21:56.565 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 12:21:56.598 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.1301ms
+2025-12-26 12:23:48.448 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2025-12-26 12:23:48.484 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 12:23:48.510 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-26 12:23:59.327 +06:00 [INF] Executed DbCommand (170ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2025-12-26 12:24:00.115 +06:00 [INF] Executed DbCommand (20ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2025-12-26 12:24:00.406 +06:00 [INF] Executed DbCommand (48ms) [Parameters=[@p17='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Guid), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2025-12-26 12:24:00.441 +06:00 [INF] Setting HTTP status code 200.
+2025-12-26 12:24:00.459 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-26 12:24:00.474 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2025-12-26 12:24:00.491 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 12042.5738ms
+2025-12-26 13:06:45.679 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:06:46.499 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:06:47.120 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:06:47.319 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:06:47.400 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:06:47.400 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:06:47.400 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:06:47.625 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 318.0508ms
+2025-12-26 13:06:47.660 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:06:50.078 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:06:50.181 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 104.8086ms
+2025-12-26 13:06:50.198 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:06:50.199 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:06:50.231 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 32.68ms
+2025-12-26 13:06:50.257 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.3724ms
+2025-12-26 13:06:50.333 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:06:50.349 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3069ms
+2025-12-26 13:09:41.173 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:09:42.007 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:09:42.695 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:09:42.972 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:09:43.099 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:09:43.100 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:09:43.100 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:09:43.394 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 433.0125ms
+2025-12-26 13:09:43.464 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:09:45.669 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:09:45.789 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 123.3028ms
+2025-12-26 13:09:45.812 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:09:45.812 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:09:45.851 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 38.539ms
+2025-12-26 13:09:45.886 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.0599ms
+2025-12-26 13:09:45.967 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:09:45.981 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.4962ms
+2025-12-26 13:11:00.338 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:11:01.156 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:11:01.839 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:11:02.145 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:11:02.226 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:11:02.226 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:11:02.226 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:11:02.477 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 346.8256ms
+2025-12-26 13:11:02.541 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:11:05.070 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:11:05.251 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 182.3269ms
+2025-12-26 13:11:05.278 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:11:05.278 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:11:05.323 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 43.585ms
+2025-12-26 13:11:05.368 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.6935ms
+2025-12-26 13:11:05.473 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:11:05.495 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.0983ms
+2025-12-26 13:17:30.167 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:17:30.578 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:17:31.062 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:17:31.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:17:31.348 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:17:31.349 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:17:31.349 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:17:31.554 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 312.06ms
+2025-12-26 13:17:31.589 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:17:45.449 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:17:45.534 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 86.413ms
+2025-12-26 13:17:45.545 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:17:45.548 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:17:45.552 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 5.5905ms
+2025-12-26 13:17:45.593 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.5983ms
+2025-12-26 13:17:45.656 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:17:45.668 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.2192ms
+2025-12-26 13:24:07.043 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:24:07.347 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:24:07.679 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:24:07.794 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:24:07.853 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:24:07.854 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:24:07.854 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:24:08.000 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 213.9776ms
+2025-12-26 13:24:08.017 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:24:18.504 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:24:18.612 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 84.4826ms
+2025-12-26 13:24:18.612 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:24:18.612 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:24:18.616 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 3.7711ms
+2025-12-26 13:24:18.642 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.829ms
+2025-12-26 13:24:18.711 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:24:18.721 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.7795ms
+2025-12-26 13:27:06.712 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:27:07.045 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:27:07.341 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:27:07.446 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:27:07.499 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:27:07.500 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:27:07.500 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:27:07.609 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 167.1952ms
+2025-12-26 13:27:07.626 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:27:10.071 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:27:10.147 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 77.0521ms
+2025-12-26 13:27:10.181 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:27:10.181 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:27:10.186 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 3.5296ms
+2025-12-26 13:27:10.211 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.7307ms
+2025-12-26 13:27:10.280 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:27:10.289 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.626ms
+2025-12-26 13:33:16.242 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 13:33:16.685 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 13:33:17.133 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 13:33:17.306 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 13:33:17.379 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 13:33:17.380 +06:00 [INF] Hosting environment: Development
+2025-12-26 13:33:17.380 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 13:33:17.510 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 216.8892ms
+2025-12-26 13:33:17.533 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 13:33:20.237 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 13:33:20.341 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 106.1929ms
+2025-12-26 13:33:20.354 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 13:33:20.355 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 13:33:20.362 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 6.6596ms
+2025-12-26 13:33:20.400 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.3547ms
+2025-12-26 13:33:20.463 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 13:33:20.476 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.4863ms
+2025-12-26 14:02:49.035 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 14:02:49.827 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 14:02:50.404 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 14:02:50.557 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 14:02:50.644 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 14:02:50.644 +06:00 [INF] Hosting environment: Development
+2025-12-26 14:02:50.644 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 14:02:50.812 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 261.1931ms
+2025-12-26 14:02:50.840 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 14:02:55.595 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 14:02:55.737 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 142.8683ms
+2025-12-26 14:02:55.753 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 14:02:55.753 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 14:02:55.801 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 47.5991ms
+2025-12-26 14:02:55.836 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.4371ms
+2025-12-26 14:02:55.967 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-26 14:02:55.996 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.4147ms
+2025-12-26 14:08:30.669 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 14:08:31.378 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 14:08:31.918 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 14:08:32.109 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 14:08:32.203 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 14:08:32.204 +06:00 [INF] Hosting environment: Development
+2025-12-26 14:08:32.204 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 14:08:32.468 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 373.1683ms
+2025-12-26 14:08:32.497 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 14:08:35.635 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 14:08:35.725 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 91.6491ms
+2025-12-26 14:08:35.733 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 14:08:35.738 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 14:08:35.763 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 29.7426ms
+2025-12-26 14:08:35.791 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.269ms
+2025-12-26 14:08:35.875 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 14:08:35.884 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 9.3803ms
+2025-12-26 14:10:19.706 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 14:10:20.380 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 14:10:21.060 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 14:10:21.196 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 14:10:21.275 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 14:10:21.276 +06:00 [INF] Hosting environment: Development
+2025-12-26 14:10:21.276 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 14:10:21.430 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 245.6626ms
+2025-12-26 14:10:21.453 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 14:10:24.075 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 14:10:24.173 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 100.656ms
+2025-12-26 14:10:24.185 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 14:10:24.186 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 14:10:24.210 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 24.7442ms
+2025-12-26 14:10:24.236 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.0636ms
+2025-12-26 14:10:24.316 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 14:10:24.325 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 9.1004ms
+2025-12-26 14:18:16.882 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 14:18:17.360 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 14:18:17.734 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 14:18:17.903 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 14:18:17.903 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 14:18:17.969 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 14:18:17.970 +06:00 [INF] Hosting environment: Development
+2025-12-26 14:18:17.970 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 14:18:18.147 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 255.1303ms
+2025-12-26 14:18:18.165 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 14:18:18.279 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 388.1521ms
+2025-12-26 14:18:20.284 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 14:18:20.296 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 12.0622ms
+2025-12-26 14:18:20.309 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 14:18:20.315 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 14:18:20.316 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 5.9015ms
+2025-12-26 14:18:20.357 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.0815ms
+2025-12-26 14:18:20.411 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 14:18:20.416 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.6998ms
+2025-12-26 15:09:24.539 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 15:09:25.011 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 15:09:25.489 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 15:09:25.627 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 15:09:25.697 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 15:09:25.697 +06:00 [INF] Hosting environment: Development
+2025-12-26 15:09:25.697 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 15:09:25.861 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 246.8889ms
+2025-12-26 15:09:25.884 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 15:09:28.449 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 15:09:28.529 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 81.1112ms
+2025-12-26 15:09:28.537 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 15:09:28.541 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 15:09:28.543 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 5.2208ms
+2025-12-26 15:09:28.583 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.2823ms
+2025-12-26 15:09:28.682 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 15:09:28.686 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.0531ms
+2025-12-26 15:12:17.525 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 15:12:18.015 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 15:12:18.345 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 15:12:18.484 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 15:12:18.578 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 15:12:18.578 +06:00 [INF] Hosting environment: Development
+2025-12-26 15:12:18.578 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 15:12:18.692 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 216.8523ms
+2025-12-26 15:12:18.707 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 15:12:20.854 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 15:12:20.932 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 79.3851ms
+2025-12-26 15:12:20.945 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 15:12:20.945 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 15:12:20.970 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 24.3218ms
+2025-12-26 15:12:20.984 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.7505ms
+2025-12-26 15:12:21.061 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 15:12:21.065 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 3.9319ms
+2025-12-26 15:20:11.354 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 15:20:11.945 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 15:20:12.467 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 15:20:12.600 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 15:20:12.690 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 15:20:12.690 +06:00 [INF] Hosting environment: Development
+2025-12-26 15:20:12.690 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 15:20:12.935 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 346.7374ms
+2025-12-26 15:20:12.996 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 15:20:19.209 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 15:20:19.304 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 96.0097ms
+2025-12-26 15:20:19.319 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 15:20:19.319 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 15:20:19.331 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 10.4546ms
+2025-12-26 15:20:19.375 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.0951ms
+2025-12-26 15:20:19.410 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 15:20:19.416 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 6.1917ms
+2025-12-26 15:26:29.580 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 15:26:29.961 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 15:26:30.291 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 15:26:30.403 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 15:26:30.455 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 15:26:30.455 +06:00 [INF] Hosting environment: Development
+2025-12-26 15:26:30.455 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 15:26:30.565 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 168.8879ms
+2025-12-26 15:26:30.582 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 15:26:33.270 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 15:26:33.375 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 105.3492ms
+2025-12-26 15:26:33.381 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 15:26:33.384 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 15:26:33.407 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 25.4649ms
+2025-12-26 15:26:33.425 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8057ms
+2025-12-26 15:26:33.513 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 15:26:33.520 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 7.7081ms
+2025-12-26 15:29:24.807 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 15:29:25.315 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 15:29:25.700 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 15:29:25.823 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 15:29:25.899 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 15:29:25.900 +06:00 [INF] Hosting environment: Development
+2025-12-26 15:29:25.900 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 15:29:26.035 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 222.4094ms
+2025-12-26 15:29:26.061 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 15:29:28.368 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 15:29:28.440 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 73.2832ms
+2025-12-26 15:29:28.450 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 15:29:28.452 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 15:29:28.455 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 4.4594ms
+2025-12-26 15:29:28.489 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.8374ms
+2025-12-26 15:29:28.589 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 15:29:28.593 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 3.9348ms
+2025-12-26 21:39:20.757 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 21:42:14.826 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 21:49:56.704 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-26 21:50:33.687 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-26 21:50:34.009 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-26 21:50:34.152 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-26 21:50:34.193 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-26 21:50:34.193 +06:00 [INF] Hosting environment: Development
+2025-12-26 21:50:34.193 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-26 21:50:34.335 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 190.558ms
+2025-12-26 21:50:34.355 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-26 21:50:40.842 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-26 21:50:40.930 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 84.5319ms
+2025-12-26 21:50:40.934 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-26 21:50:40.940 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-26 21:50:40.959 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 21.4039ms
+2025-12-26 21:50:40.973 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.7397ms
+2025-12-26 21:50:41.053 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-26 21:50:41.059 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 6.032ms
+2025-12-26 21:53:10.537 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts

@@ -1,0 +1,106 @@
+2025-12-28 00:02:04.438 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-28 00:02:04.812 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-28 00:02:04.879 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-28 00:02:04.892 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-28 00:02:04.991 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-28 00:02:04.991 +06:00 [INF] Hosting environment: Development
+2025-12-28 00:02:04.992 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-28 00:02:05.087 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 212.995ms
+2025-12-28 00:02:05.119 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-28 00:02:09.340 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:02:09.340 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:02:09.354 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 11.9451ms
+2025-12-28 00:02:09.371 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.6857ms
+2025-12-28 00:02:09.445 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-28 00:02:09.451 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.1514ms
+2025-12-28 00:02:50.862 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-28 00:02:51.153 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-28 00:02:51.250 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-28 00:02:51.264 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-28 00:02:51.349 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-28 00:02:51.349 +06:00 [INF] Hosting environment: Development
+2025-12-28 00:02:51.349 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-28 00:02:51.424 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 180.9603ms
+2025-12-28 00:02:51.442 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-28 00:02:52.031 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:02:52.031 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:02:52.049 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 17.8754ms
+2025-12-28 00:02:52.083 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.4599ms
+2025-12-28 00:02:52.138 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-28 00:02:52.147 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.2664ms
+2025-12-28 00:03:41.093 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-28 00:03:41.438 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-28 00:03:41.518 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-28 00:03:41.533 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-28 00:03:41.616 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-28 00:03:41.616 +06:00 [INF] Hosting environment: Development
+2025-12-28 00:03:41.616 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-28 00:03:41.702 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 191.7484ms
+2025-12-28 00:03:41.718 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-28 00:03:58.342 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:03:58.342 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:03:58.362 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 17.1298ms
+2025-12-28 00:03:58.386 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.7341ms
+2025-12-28 00:03:58.456 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-28 00:03:58.464 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3007ms
+2025-12-28 00:04:01.459 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-28 00:04:01.564 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 104.9613ms
+2025-12-28 00:04:01.614 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - null null
+2025-12-28 00:04:01.614 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:04:01.614 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - null null
+2025-12-28 00:04:01.615 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:04:01.615 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-28 00:04:01.635 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-28 00:04:01.636 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-28 00:04:01.669 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - 200 144929 text/css 54.7576ms
+2025-12-28 00:04:01.669 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-28 00:04:01.670 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 55.0582ms
+2025-12-28 00:04:01.671 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 56.6271ms
+2025-12-28 00:04:01.686 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.4826ms
+2025-12-28 00:04:01.715 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 131.033ms
+2025-12-28 00:04:01.775 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-28 00:04:01.783 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - null null
+2025-12-28 00:04:01.784 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 8.4552ms
+2025-12-28 00:04:01.785 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-28 00:04:01.785 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - 200 628 image/png 2.0098ms
+2025-12-28 00:04:06.098 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-28 00:04:06.110 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.1838ms
+2025-12-28 00:04:23.603 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-28 00:04:23.863 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-28 00:04:23.928 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2025-12-28 00:04:23.940 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-28 00:04:24.042 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-28 00:04:24.042 +06:00 [INF] Hosting environment: Development
+2025-12-28 00:04:24.042 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2025-12-28 00:04:24.104 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 181.5751ms
+2025-12-28 00:04:24.122 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2025-12-28 00:04:27.807 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-28 00:04:27.904 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 66.6282ms
+2025-12-28 00:04:27.904 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:04:27.904 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:04:27.908 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 3.9086ms
+2025-12-28 00:04:27.936 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.4603ms
+2025-12-28 00:04:28.085 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-28 00:04:28.090 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 4.9995ms
+2025-12-28 00:04:30.197 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2025-12-28 00:04:30.201 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 4.0954ms
+2025-12-28 00:04:30.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - null null
+2025-12-28 00:04:30.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - null null
+2025-12-28 00:04:30.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2025-12-28 00:04:30.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-28 00:04:30.256 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-28 00:04:30.270 +06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-28 00:04:30.270 +06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-28 00:04:30.270 +06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-28 00:04:30.272 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui.css - 200 144929 text/css 16.1668ms
+2025-12-28 00:04:30.273 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.2429ms
+2025-12-28 00:04:30.278 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 22.0057ms
+2025-12-28 00:04:30.280 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16528 application/javascript; charset=utf-8 24.4402ms
+2025-12-28 00:04:30.290 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 34.6646ms
+2025-12-28 00:04:30.344 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - null null
+2025-12-28 00:04:30.347 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v2/swagger.json - 200 null application/json;charset=utf-8 3.5951ms
+2025-12-28 00:04:30.351 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - null null
+2025-12-28 00:04:30.353 +06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-28 00:04:30.353 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/favicon-32x32.png - 200 628 image/png 1.6767ms
+2025-12-28 00:04:40.973 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2025-12-28 00:04:40.979 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.27ms

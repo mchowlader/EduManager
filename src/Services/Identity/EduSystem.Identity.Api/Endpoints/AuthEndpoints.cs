@@ -11,90 +11,92 @@ public class AuthEndpoints : IEndpoints
 {
     public static void MapEndpoints(IEndpointRouteBuilder app)
     {
+        // ✅ Version set - শুধু v1
         var versionSet = app.NewApiVersionSet()
             .HasApiVersion(new ApiVersion(1, 0))
             .ReportApiVersions()
             .Build();
 
-        var groupV1 = app.MapGroup("/api/v{version:apiVersion}/auth")
+        // ✅ Authentication endpoints - শুধু v1 এ available
+        var auth = app.MapGroup("/api/v{version:apiVersion}/auth")
             .WithApiVersionSet(versionSet)
-            .HasApiVersion(1, 0)
+            .MapToApiVersion(1, 0)
             .WithTags("Authentication");
 
         // Login endpoint
-        groupV1.MapPost("/login", LoginV1)
-            .WithName("LoginV1")
-            .WithSummary("User login (V1)")
+        auth.MapPost("/login", LoginV1)
+            .WithName("Login")
+            .WithSummary("User login")
             .WithDescription("Authenticate user and return JWT tokens")
             .AllowAnonymous()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 
         // Refresh token endpoint
-        groupV1.MapPost("/refresh-token", RefreshTokenV1)
-            .WithName("RefreshTokenV1")
-            .WithSummary("Refresh JWT tokens (V1)")
+        auth.MapPost("/refresh-token", RefreshTokenV1)
+            .WithName("RefreshToken")
+            .WithSummary("Refresh JWT tokens")
             .WithDescription("Refresh JWT access and refresh tokens")
             .AllowAnonymous()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 
         // Logout endpoint
-        groupV1.MapPost("/logout", LogoutV1)
-            .WithName("LogoutV1")
-            .WithSummary("User Logout (v1)")
-            .WithDescription("Invalited users's refresh token")
+        auth.MapPost("/logout", LogoutV1)
+            .WithName("Logout")
+            .WithSummary("User Logout")
+            .WithDescription("Invalidate user's refresh token")
             .RequireAuthorization()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status401Unauthorized);
 
         // Get current user info
-        groupV1.MapPost("/me", GetCurrentUserV1)
-            .WithName("GetCurrentUserV1")
-            .WithSummary("Get current authenticated user (V1)")
+        auth.MapPost("/me", GetCurrentUserV1)
+            .WithName("GetCurrentUser")
+            .WithSummary("Get current authenticated user")
             .WithDescription("Retrieve current user information from JWT token")
             .RequireAuthorization()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status401Unauthorized);
 
         // Change password
-        groupV1.MapPost("/change-password", ChangePasswordV1)
-            .WithName("ChangePasswordV1")
-            .WithSummary("Change user password (V1)")
+        auth.MapPost("/change-password", ChangePasswordV1)
+            .WithName("ChangePassword")
+            .WithSummary("Change user password")
             .WithDescription("Change password for authenticated user")
             .RequireAuthorization()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest)
             .Produces<object>(StatusCodes.Status401Unauthorized);
 
-        // Forgot password (optional)
-        groupV1.MapPost("/forgot-password", ForgotPasswordV1)
-            .WithName("ForgotPasswordV1")
-            .WithSummary("Request password reset (V1)")
+        // Forgot password
+        auth.MapPost("/forgot-password", ForgotPasswordV1)
+            .WithName("ForgotPassword")
+            .WithSummary("Request password reset")
             .WithDescription("Send password reset link to user's email")
             .AllowAnonymous()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 
-        // Reset password (optional)
-        groupV1.MapPost("/reset-password", ResetPasswordV1)
-            .WithName("ResetPasswordV1")
-            .WithSummary("Reset password (V1)")
+        // Reset password
+        auth.MapPost("/reset-password", ResetPasswordV1)
+            .WithName("ResetPassword")
+            .WithSummary("Reset password")
             .WithDescription("Reset password using token from email")
             .AllowAnonymous()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status400BadRequest);
 
-        // Verify token (optional - for testing)
-        groupV1.MapGet("/verify-token", VerifyTokenV1)
-            .WithName("VerifyTokenV1")
-            .WithSummary("Verify JWT token (V1)")
+        // Verify token
+        auth.MapGet("/verify-token", VerifyTokenV1)
+            .WithName("VerifyToken")
+            .WithSummary("Verify JWT token")
             .WithDescription("Check if current JWT token is valid")
             .RequireAuthorization()
             .Produces<object>(StatusCodes.Status200OK)
             .Produces<object>(StatusCodes.Status401Unauthorized);
-
     }
+
 
     // Login handler
     private static async Task<IResult> LoginV1(
