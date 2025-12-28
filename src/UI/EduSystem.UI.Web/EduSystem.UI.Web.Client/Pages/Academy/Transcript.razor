@@ -1,0 +1,472 @@
+@page "/academy/transcript"
+@page "/academy/transcript/{studentId}"
+@rendermode InteractiveAuto
+@inject IAcademyService AcademyService
+@inject ISnackbar Snackbar
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Academic Transcript</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-1 mb-16">
+    <div class="no-print academic-header-modern">
+        <div class="academic-card-standard">
+            <h1 class="feature-title">Academic Transcript Generation</h1>
+            <div class="search-flex-container">
+                <MudTextField @bind-Value="_searchStudentId" 
+                             Label="Student ID" 
+                             Variant="Variant.Outlined" 
+                             Adornment="Adornment.Start" 
+                             AdornmentIcon="@Icons.Material.Filled.Search" 
+                             Placeholder="Enter Student ID (e.g. STU-001)" 
+                             Class="search-input-field"
+                             OnKeyUp="HandleKeyUp" />
+                <MudButton Variant="Variant.Filled" 
+                           Color="Color.Primary" 
+                           OnClick="SearchTranscript" 
+                           Disabled="_loading"
+                           Class="search-action-btn">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <span class="ms-2">Generating...</span>
+                    }
+                    else
+                    {
+                        <span>Generate</span>
+                    }
+                </MudButton>
+            </div>
+        </div>
+    </div>
+
+    @if (_transcript != null)
+    {
+        <MudStack Row="true" Justify="Justify.Center" Class="mb-4 no-print">
+            <MudButton Variant="Variant.Filled" 
+                       StartIcon="@Icons.Material.Filled.Print" 
+                       Color="Color.Secondary" 
+                       OnClick="PrintTranscript">Download / Print Transcript</MudButton>
+        </MudStack>
+
+        <div id="transcript-document" class="printable-area">
+            <div class="transcript-wrapper shadow-lg">
+                <!-- Header Section -->
+                <div class="transcript-header-flex mb-4">
+                    <div class="academy-logo-container">
+                        <img src="favicon.png" alt="Logo" style="height: 60px;" />
+                    </div>
+                    <div class="header-text-content">
+                        <h1 class="academy-name">EDU MANAGER INTERNATIONAL ACADEMY</h1>
+                        <p class="academy-address">Gazipur Sadar, Gazipur - 1700, Bangladesh</p>
+                        <div class="document-title mt-1">
+                            <span class="title-text">OFFICIAL ACADEMIC TRANSCRIPT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Info Grid -->
+                <div class="student-info-section mb-4">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">Student Name:</span>
+                            <span class="value">@_transcript.StudentName</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Student ID:</span>
+                            <span class="value">@_transcript.StudentId</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Class:</span>
+                            <span class="value">@_transcript.Class</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Session:</span>
+                            <span class="value">@_transcript.Session</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Department:</span>
+                            <span class="value">@_transcript.Department</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Roll No:</span>
+                            <span class="value">@_transcript.RollNo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grades Table -->
+                <div class="grades-table-container mb-4">
+                    <table class="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                                <th>GP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var grade in _transcript.Grades)
+                            {
+                                <tr>
+                                    <td>@grade.SubjectCode</td>
+                                    <td>@grade.SubjectName</td>
+                                    <td>@grade.Marks</td>
+                                    <td class="font-bold">@grade.Grade</td>
+                                    <td>@grade.GradePoint.ToString("0.00")</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr class="summary-row">
+                                <td colspan="3" class="text-right font-bold">GPA:</td>
+                                <td colspan="2" class="font-bold text-center gpa-value">@_transcript.GPA.ToString("0.00")</td>
+                            </tr>
+                            <tr class="summary-row">
+                                <td colspan="3" class="text-right font-bold">Final Result:</td>
+                                <td colspan="2" class="font-bold text-center result-value">@_transcript.Result</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Signature Section -->
+                <div class="signature-section mt-12 mt-20-print">
+                    <div class="sig-grid">
+                        <div class="sig-item">
+                            <div class="sig-line"></div>
+                            <p>Controller of Examinations</p>
+                        </div>
+                        <div class="sig-item">
+                            <div class="sig-line"></div>
+                            <p>Headmaster / Principal</p>
+                        </div>
+                        <div class="sig-item date-sig">
+                            <p>Date: @DateTime.Now.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer / Security -->
+                <div class="transcript-footer mt-8">
+                    <p class="text-center italic text-xs opacity-70">
+                        * Computer generated document.
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+    else if (_hasSearched && !_loading)
+    {
+        <div class="text-center mt-12 no-print">
+            <MudAlert Severity="Severity.Warning" Variant="Variant.Filled" Style="max-width: 400px; margin: 0 auto;">
+                No transcript found for Student ID: @_searchStudentId
+            </MudAlert>
+        </div>
+    }
+</MudContainer>
+
+<style>
+    /* Standard Academic Card Header Styles */
+    .academic-header-modern {
+        padding: 10px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .academic-card-standard {
+        background: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 25px 30px;
+        width: 100%;
+        max-width: 1100px;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    }
+
+    .feature-title {
+        color: #5c7cfa;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 2.6rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .search-flex-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .search-input-field {
+        flex-grow: 1;
+        background: white;
+        border-radius: 4px;
+    }
+
+    .search-action-btn {
+        height: 56px;
+        min-width: 150px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: none !important;
+        border-radius: 6px !important;
+        background-color: #5c7cfa !important;
+    }
+
+    .color-primary { color: var(--mud-palette-primary); }
+    .font-bold { font-weight: 700; }
+    
+    .transcript-wrapper {
+        background: white;
+        padding: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+        border: 1px solid #eee;
+        font-family: 'Times New Roman', Times, serif;
+        color: #333;
+    }
+
+    .transcript-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 2px solid #1a237e;
+        padding-bottom: 10px;
+    }
+
+    .header-text-content {
+        flex: 1;
+    }
+
+    .academy-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1a237e;
+        margin-bottom: 0px;
+        letter-spacing: 0.5px;
+    }
+
+    .academy-address {
+        font-size: 0.85rem;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .document-title {
+        display: inline-block;
+    }
+
+    .title-text {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #1a237e;
+        text-decoration: underline;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 30px;
+        border: 1px solid #eee;
+        padding: 10px 15px;
+        background-color: #fcfcfc;
+    }
+
+    .info-item {
+        display: flex;
+        border-bottom: 1px dashed #eee;
+        padding-bottom: 2px;
+        font-size: 0.9rem;
+    }
+
+    .label {
+        font-weight: bold;
+        width: 110px;
+        color: #555;
+    }
+
+    .value {
+        color: #000;
+        font-weight: 600;
+    }
+
+    .grades-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+
+    .grades-table th {
+        background-color: #1a237e;
+        color: white;
+        padding: 6px 10px;
+        text-align: left;
+        border: 1px solid #1a237e;
+    }
+
+    .grades-table td {
+        padding: 4px 10px;
+        border: 1px solid #eee;
+    }
+
+    .grades-table tr:nth-child(even) {
+        background-color: #fcfcfc;
+    }
+
+    .summary-row td {
+        background-color: #f7f7f7;
+        border-top: 1.5px solid #333;
+        padding: 6px 10px;
+    }
+
+    .gpa-value, .result-value {
+        font-size: 1rem;
+        color: #1a237e;
+    }
+
+    .sig-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 0.85rem;
+    }
+
+    .sig-item {
+        text-align: center;
+        width: 200px;
+    }
+
+    .sig-line {
+        border-top: 1px solid #333;
+        margin-bottom: 3px;
+    }
+
+    .date-sig {
+        text-align: right;
+    }
+
+    /* Print Styles - Aggressive Reset */
+    @@media print {
+        @@page {
+            size: A4;
+            margin: 0.5cm;
+        }
+
+        /* Hide all layout artifacts */
+        .mud-snackbar-container, 
+        .mud-appbar, 
+        .mud-drawer, 
+        .no-print, 
+        .mud-layout > *:not(.mud-main-content),
+        #blazor-error-ui {
+            display: none !important;
+        }
+
+        /* Reset Main Content and Containers */
+        .mud-layout, 
+        .mud-main-content, 
+        .mud-container, 
+        body, 
+        html {
+            background: white !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: block !important;
+            width: 100% !important;
+            min-height: auto !important;
+            height: auto !important;
+            position: static !important;
+            overflow: visible !important;
+            box-shadow: none !important;
+        }
+
+        .printable-area {
+            display: block !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .transcript-wrapper {
+            box-shadow: none !important;
+            border: 1px solid #eee !important; /* Keep subtle border for structure */
+            padding: 20px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            max-width: none !important;
+        }
+
+        .mt-32-print {
+            margin-top: 80px !important;
+        }
+    }
+</style>
+
+@code {
+    [Parameter] public string? StudentId { get; set; }
+    private string _searchStudentId = string.Empty;
+    private TranscriptModel? _transcript;
+    private bool _loading = false;
+    private bool _hasSearched = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrEmpty(StudentId))
+        {
+            _searchStudentId = StudentId;
+            await SearchTranscript();
+        }
+    }
+
+    private async Task SearchTranscript()
+    {
+        if (string.IsNullOrWhiteSpace(_searchStudentId))
+        {
+            Snackbar.Add("Please enter a valid Student ID", Severity.Error);
+            return;
+        }
+
+        _loading = true;
+        _hasSearched = true;
+        _transcript = null;
+        
+        try
+        {
+            _transcript = await AcademyService.GetTranscriptAsync(_searchStudentId);
+            if (_transcript == null)
+            {
+                Snackbar.Add("No transcript found for this ID", Severity.Warning);
+            }
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error fetching transcript: {ex.Message}", Severity.Error);
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task HandleKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await SearchTranscript();
+        }
+    }
+
+    private async Task PrintTranscript()
+    {
+        await JSRuntime.InvokeVoidAsync("window.print");
+    }
+}

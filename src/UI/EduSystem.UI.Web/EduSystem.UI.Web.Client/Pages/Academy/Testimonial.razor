@@ -1,0 +1,574 @@
+@using EduSystem.UI.Web.Client.Models.Academy
+@using EduSystem.UI.Web.Client.Services.Academy
+@inject IAcademyService AcademyService
+@inject ISnackbar Snackbar
+@inject IJSRuntime JSRuntime
+
+@page "/academy/testimonial"
+@page "/academy/testimonial/{studentId}"
+@rendermode InteractiveAuto
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+    
+    @@media print {
+        @@page {
+            size: A4 landscape;
+            margin: 0;
+        }
+        .no-print, .mud-drawer, .mud-appbar, .mud-popover-provider, .mud-dialog-provider, .mud-snackbar-provider, header, nav, aside {
+            display: none !important;
+        }
+        .mud-layout, .mud-main-content, .mud-container {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: none !important;
+            overflow: visible !important;
+        }
+        .testimonial-page {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            width: 240mm !important; 
+            height: 208mm !important; 
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: #fff !important;
+            z-index: 9999 !important;
+            overflow: visible !important;
+            page-break-after: avoid !important;
+            page-break-before: avoid !important;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+    }
+    
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 100px);
+        padding: 40px 0;
+    }
+
+    .testimonial-page {
+        width: 880px; 
+        height: 764px; 
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    .border-ornate {
+        border: 30px solid transparent;
+        border-image-source: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L100 0 L100 100 L0 100 Z' fill='none' stroke='%233649a8' stroke-width='4'/%3E%3Cpath d='M10 10 L90 10 L90 90 L10 90 Z' fill='none' stroke='%233649a8' stroke-width='0.5'/%3E%3Cpath d='M0 0 L100 100 M100 0 L0 100' stroke='%233649a8' stroke-width='0.2'/%3E%3Cpath d='M0 0 Q 25 10 50 0 T 100 0 M100 0 Q 90 25 100 50 T 100 100 M100 100 Q 75 90 50 100 T 0 100 M0 100 Q 10 75 0 50 T 0 0' fill='none' stroke='%233649a8' stroke-width='2'/%3E%3C/svg%3E");
+        border-image-slice: 30;
+        border-image-repeat: round;
+        flex-grow: 1;
+        padding: 5px 25px 12px 25px; /* Increased bottom padding */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .round-seal {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 115px;
+        height: 115px;
+        border: 1.2px solid rgba(139, 0, 0, 0.4);
+        border-radius: 50%;
+        color: rgba(139, 0, 0, 0.8);
+        font-family: 'EB Garamond', serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-15deg);
+        z-index: 10;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .school-name-arc {
+        font-size: 0.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        max-width: 75px;
+    }
+
+    .round-seal .seal-year {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .school-title {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #21308a;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+        margin: 0;
+    }
+
+    .school-subtitle {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #21308a;
+        margin: 0;
+    }
+
+    .doc-title {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #21308a;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 1px 0 0 0;
+    }
+
+    .title-wave {
+        font-size: 1.5rem;
+        color: #21308a;
+        margin-top: -10px;
+        margin-bottom: -5px;
+        font-weight: bold;
+    }
+
+    .meta-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-family: 'EB Garamond', serif;
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+    }
+
+    .certificate-body {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.12rem;
+        line-height: 1.45;
+        font-weight: 400;
+        color: #111;
+        text-align: justify;
+    }
+
+    .field-dot-line {
+        border-bottom: 1.1px dotted #222;
+        display: inline-block;
+        position: relative;
+        min-height: 22px;
+        text-align: center;
+        margin: 0 4px;
+        vertical-align: baseline;
+    }
+
+    .handwritten-value {
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.55rem;
+        color: #21308a;
+        position: absolute;
+        bottom: -2px; /* Adjusted to sit better on dotted line */
+        left: 0;
+        right: 0;
+        margin: auto;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    .wish-text {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.12rem;
+        margin: 4px 0;
+    }
+
+    .signature-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: auto;
+        padding-bottom: 2px;
+    }
+
+    .writer-side {
+        font-family: 'EB Garamond', serif;
+        font-size: 1.15rem;
+        width: 280px;
+    }
+
+    .writer-side .sig-hand {
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.9rem;
+        color: #21308a;
+        margin-bottom: -15px;
+        margin-left: 50px;
+        opacity: 0.9;
+    }
+
+    .writer-side p {
+        border-bottom: 1px dotted #444;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+    }
+
+    .headmaster-side {
+        text-align: center;
+        min-width: 280px;
+    }
+
+    .sig-bangla {
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.22rem;
+        color: #21308a;
+        margin-bottom: -18px;
+    }
+
+    .stamp-box {
+        color: #8b0000;
+        font-family: 'EB Garamond', serif;
+    }
+
+    .stamp-role {
+        font-weight: 800;
+        font-size: 1rem;
+        border-top: 1.5px solid #8b0000;
+        display: inline-block;
+        padding-top: 1px;
+        margin-top: 2px;
+        text-transform: uppercase;
+    }
+
+    .stamp-school {
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    /* Standard Academic Card Header Styles */
+    .testimonial-header-modern {
+        padding: 10px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .academic-card-standard {
+        background: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 25px 30px;
+        width: 100%;
+        max-width: 1100px;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    }
+
+    .feature-title {
+        color: #5c7cfa;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 2.6rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .search-flex-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .search-input-field {
+        flex-grow: 1;
+        background: white;
+        border-radius: 4px;
+    }
+
+    .search-action-btn {
+        height: 56px;
+        min-width: 150px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: none !important;
+        border-radius: 6px !important;
+        background-color: #5c7cfa !important;
+    }
+
+    /* Print color adjust */
+    @@media print {
+        .field-dot-line { border-bottom-color: #000 !important; }
+        .writer-side p { border-bottom-color: #000 !important; }
+    }
+</style>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-1">
+    <div class="no-print testimonial-header-modern">
+        <div class="academic-card-standard">
+            <h1 class="feature-title">Testimonial Generation</h1>
+            <div class="search-flex-container">
+                <MudTextField @bind-Value="_searchId" 
+                             Label="Student ID" 
+                             Variant="Variant.Outlined" 
+                             Adornment="Adornment.Start" 
+                             AdornmentIcon="@Icons.Material.Filled.Search" 
+                             Placeholder="Enter Student ID (e.g. STU-001)" 
+                             Class="search-input-field"
+                             OnKeyUp="HandleKeyUp" />
+                <MudButton Variant="Variant.Filled" 
+                           Color="Color.Primary" 
+                           OnClick="PerformSearch" 
+                           Disabled="_loading"
+                           Class="search-action-btn">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                        <span class="ms-2">Generating...</span>
+                    }
+                    else
+                    {
+                        <span>Generate</span>
+                    }
+                </MudButton>
+            </div>
+        </div>
+    </div>
+</MudContainer>
+
+@if (_testimonial != null && !_loading)
+{
+    <div class="no-print d-flex justify-center mb-4">
+        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Print" Color="Color.Secondary" OnClick="Print" Size="Size.Large">
+            Download / Print Testimonial
+        </MudButton>
+    </div>
+
+    <div class="testimonial-container">
+        <div class="testimonial-page shadow-2xl">
+        <div class="border-ornate">
+            <!-- Vintage Circular Seal -->
+            <div class="round-seal">
+                <div class="school-name-arc">Mirzapur Satpuquria High School</div>
+                <div class="seal-year">1947</div>
+                <div style="font-size: 0.5rem; font-weight: bold; text-transform: uppercase;">ESTD - PURBA MIRZAPUR</div>
+            </div>
+
+            <!-- Header -->
+            <div class="header-section">
+                <h1 class="school-title">MIRZAPUR SATPUQURIA HIGH SCHOOL</h1>
+                <p class="school-subtitle">P.O.: Chitoshi, P.S.: Monohorgonj, Dist. Comilla.</p>
+                <div class="doc-title">TESTIMONIAL</div>
+            </div>
+
+            <!-- Sl. No. and Date Row -->
+            <div class="meta-line">
+                <div>
+                    <span style="font-weight: 700;">Sl.No.:</span> 
+                    <div class="field-dot-line" style="width: 100px;">
+                        <span class="handwritten-value" style="font-family: 'EB Garamond', serif; font-size: 1.15rem; bottom: -2px;">@_testimonial.SlNo</span>
+                    </div>
+                </div>
+                <div>
+                    <span style="font-weight: 700;">Date:</span> 
+                    <div class="field-dot-line" style="width: 170px;">
+                        <span class="handwritten-value" style="font-family: 'EB Garamond', serif; font-size: 1.15rem; bottom: -2px;">@_testimonial.IssueDate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Content body -->
+            <div class="certificate-body">
+                <div style="white-space: nowrap;">
+                    <span>This is Certify that </span>
+                    <div class="field-dot-line" style="width: 480px;">
+                        <span class="handwritten-value">@_testimonial.StudentName</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: baseline;">
+                    <span style="white-space: nowrap;">Son/daughter of </span> 
+                    <div class="field-dot-line" style="flex-grow: 1; min-width: 250px;">
+                        <span class="handwritten-value">@_testimonial.FatherName</span>
+                    </div>
+                    <span style="white-space: nowrap; margin: 0 15px;">And </span> 
+                    <div class="field-dot-line" style="flex-grow: 1.2; min-width: 250px;">
+                        <span class="handwritten-value">@_testimonial.MotherName</span>
+                    </div>
+                </div>
+                <div style="white-space: nowrap;">
+                    <span>Village </span> 
+                    <div class="field-dot-line" style="width: 160px;">
+                        <span class="handwritten-value">@_testimonial.Village</span>
+                    </div>
+                    <span>P/O.: </span> 
+                    <div class="field-dot-line" style="width: 160px;">
+                        <span class="handwritten-value">@_testimonial.PostOffice</span>
+                    </div>
+                    <span>Upzilla </span> 
+                    <div class="field-dot-line" style="width: 160px;">
+                        <span class="handwritten-value">@_testimonial.Upazila</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Distric </span> 
+                    <div class="field-dot-line" style="width: 140px;">
+                        <span class="handwritten-value">@_testimonial.District</span>
+                    </div>
+                    <span>He is a irregular student and has obtained G.P.A </span> 
+                    <div class="field-dot-line" style="width: 80px;">
+                        <span class="handwritten-value" style="font-family: 'EB Garamond', serif; font-size: 1.15rem;">@_testimonial.GPA</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Group </span> 
+                    <div class="field-dot-line" style="width: 220px;">
+                        <span class="handwritten-value">@_testimonial.Group</span>
+                    </div>
+                    <span>in the Secondary Certificate Examination</span>
+                </div>
+                <div>
+                    <span>in the year </span> 
+                    <div class="field-dot-line" style="width: 120px;">
+                        <span class="handwritten-value" style="font-family: 'EB Garamond', serif;">@_testimonial.ExamYear</span>
+                    </div>
+                    <span>under the Secondary and Higher, Secondary</span>
+                </div>
+                <div>
+                    <span>Examination Board. He owns Roll </span> 
+                    <div class="field-dot-line" style="width: 210px;">
+                        <span class="handwritten-value">@_testimonial.Roll</span>
+                    </div>
+                    <span>No </span> 
+                    <div class="field-dot-line" style="width: 210px;">
+                        <span class="handwritten-value">@_testimonial.No</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Regi. No. </span> 
+                    <div class="field-dot-line" style="width: 220px;">
+                        <span class="handwritten-value">@_testimonial.RegistrationNo</span>
+                    </div>
+                    <span>Session </span> 
+                    <div class="field-dot-line" style="width: 220px;">
+                        <span class="handwritten-value" style="font-family: 'EB Garamond', serif;">@_testimonial.Session</span>
+                    </div>
+                </div>
+
+                <div style="margin-top: 35px;">
+                    <p style="margin: 0; text-align: left; font-weight: 400;">His character is satisfactory. So for I know during his tenuse in the college. He was not involved in any activities subversive to the state or the college.</p>
+                    <div class="wish-text" style="margin-top: 10px; text-align: left; font-weight: 400;">I wish him every success in future</div>
+                </div>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="signature-section">
+                <div class="writer-side">
+                    <div class="sig-hand">Akhtar</div>
+                    <p>Writer <span></span></p>
+                    <p style="margin-top: 10px;">Date <span></span></p>
+                </div>
+
+                <div class="headmaster-side">
+                    <div class="sig-bangla">মকবুল হোসেন</div>
+                    <div class="stamp-box">
+                        <span class="stamp-role">Asst. Headmaster</span>
+                        <div class="stamp-school">
+                            Mirzapur Satpuquria High School<br />
+                            P.O.: Chitoshi, P.S.: Monohorgonj<br />
+                            Dist. Comilla.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@code {
+    [Parameter] public string StudentId { get; set; } = string.Empty;
+    private string _searchId = string.Empty;
+    private bool _loading = false;
+    private TestimonialModel? _testimonial;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrEmpty(StudentId))
+        {
+            _searchId = StudentId;
+            await LoadTestimonial();
+        }
+    }
+
+    private async Task PerformSearch()
+    {
+        if (string.IsNullOrWhiteSpace(_searchId))
+        {
+            Snackbar.Add("Please enter a valid Student ID", Severity.Error);
+            return;
+        }
+
+        StudentId = _searchId;
+        await LoadTestimonial();
+    }
+
+    private async Task LoadTestimonial()
+    {
+        _loading = true;
+        _testimonial = null; // Clear previous result to match Transcript behavior
+        try
+        {
+            _testimonial = await AcademyService.GetTestimonialAsync(StudentId);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add("Error loading testimonial: " + ex.Message, Severity.Error);
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task HandleKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await PerformSearch();
+        }
+    }
+
+    private async Task Print()
+    {
+        await JSRuntime.InvokeVoidAsync("window.print");
+    }
+}

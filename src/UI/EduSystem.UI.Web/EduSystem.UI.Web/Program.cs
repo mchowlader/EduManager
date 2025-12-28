@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using EduSystem.Shared.Infrastructure.Extensions;
 using EduSystem.UI.Web.Client.Services;
+using EduSystem.UI.Web.Client.Services.Academy;
 using EduSystem.UI.Web.Client.Services.Auth;
 using EduSystem.UI.Web.Client.Services.Base;
 using EduSystem.UI.Web.Components;
@@ -28,11 +29,12 @@ builder.Services.AddScoped<ITeacherService, MockTeacherService>();
 
 // Tenant Service Registration
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddScoped<ITenantService, TenantService>();
+builder.Services.AddScoped<EduSystem.UI.Web.Services.ITenantService, EduSystem.UI.Web.Services.TenantService>();
 builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<IApiService, ApiService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAcademyService, AcademyService>();
 
 // Cookie Authentication for Server-side
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

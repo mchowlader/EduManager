@@ -1,5 +1,4 @@
-﻿@rendermode InteractiveServer
-@inject NavigationManager NavigationManager
+﻿@inject NavigationManager NavigationManager
 @implements IDisposable
 
 <MudNavMenu>
@@ -25,13 +24,13 @@
     <MudNavGroup Title="Academy"
                  Icon="@Icons.Material.Filled.Book"
                  @bind-Expanded="isAcademyExpanded">
-        <MudNavLink Href="/testmonial" Icon="@Icons.Material.Filled.Newspaper">
-            Testmonial
+        <MudNavLink Href="/academy/testimonial" Icon="@Icons.Material.Filled.Newspaper">
+            Testimonial
         </MudNavLink>
-        <MudNavLink Href="/transcript" Icon="@Icons.Material.Filled.Newspaper">
+        <MudNavLink Href="/academy/transcript" Icon="@Icons.Material.Filled.Newspaper">
             Transcript
         </MudNavLink>
-        <MudNavLink Href="/admitCard" Icon="@Icons.Material.Filled.Newspaper">
+        <MudNavLink Href="/academy/admitCard" Icon="@Icons.Material.Filled.Newspaper">
             AdmitCard
         </MudNavLink>
     </MudNavGroup>
@@ -95,7 +94,7 @@
 
         // More precise path matching
         isDefinitionExpanded = IsPathMatch(currentPath, "/teachers", "/students", "/section");
-        isAcademyExpanded = IsPathMatch(currentPath, "/testmonial", "/transcript", "/admitcard");
+        isAcademyExpanded = IsPathMatch(currentPath, "/academy/testimonial", "/academy/transcript", "/academy/admitcard");
         isAttendanceExpanded = IsPathMatch(currentPath, "/teachersattendance", "/studentsattendance");
     }
 

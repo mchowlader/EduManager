@@ -24,6 +24,7 @@ using EduSystem.UI.Web.Client.Services;
 using EduSystem.UI.Web.Client.Services.Auth;
 using EduSystem.UI.Web.Client.Services.Base;
 using EduSystem.UI.Web.Client.HttpHandlers;
+using EduSystem.UI.Web.Client.Services.Academy;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,10 +35,12 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.Services.AddMudServices();
 builder.Services.AddScoped<IStudentService, MockStudentService>();
 builder.Services.AddScoped<ITeacherService, MockTeacherService>();
+builder.Services.AddScoped<ITenantService, TenantService>();
 
 // ✅ Industrial Standard API Services
 builder.Services.AddScoped<IApiService, ApiService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAcademyService, AcademyService>();
 
 // ✅ Gateway URL - appsettings.json থেকে পড়বে
 // WASM mode এ appsettings.json wwwroot folder এ থাকে

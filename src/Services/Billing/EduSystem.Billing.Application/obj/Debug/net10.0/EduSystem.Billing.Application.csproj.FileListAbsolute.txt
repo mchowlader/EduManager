@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\refint\EduSystem.Billing.Application.dll
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.pdb
+D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\ref\EduSystem.Billing.Application.dll

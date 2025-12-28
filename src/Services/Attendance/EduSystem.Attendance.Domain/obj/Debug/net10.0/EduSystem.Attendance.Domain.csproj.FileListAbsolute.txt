@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\refint\EduSystem.Attendance.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\ref\EduSystem.Attendance.Domain.dll

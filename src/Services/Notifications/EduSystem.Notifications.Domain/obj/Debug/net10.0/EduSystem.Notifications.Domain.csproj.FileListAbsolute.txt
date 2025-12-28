@@ -1,0 +1,12 @@
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\bin\Debug\net10.0\EduSystem.Notifications.Domain.deps.json
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\bin\Debug\net10.0\EduSystem.Notifications.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\bin\Debug\net10.0\EduSystem.Notifications.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.AssemblyInfoInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.AssemblyInfo.cs
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.csproj.CoreCompileInputs.cache
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.sourcelink.json
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\refint\EduSystem.Notifications.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\EduSystem.Notifications.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\obj\Debug\net10.0\ref\EduSystem.Notifications.Domain.dll

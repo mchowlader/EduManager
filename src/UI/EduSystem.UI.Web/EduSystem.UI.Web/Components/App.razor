@@ -1,5 +1,5 @@
 ﻿@using EduSystem.UI.Web.Services
-@inject ITenantService TenantService
+@inject EduSystem.UI.Web.Services.ITenantService TenantService
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +70,7 @@
 </html>
 
 @code {
-    private TenantTheme _tenantTheme = new TenantTheme();
+    private EduSystem.UI.Web.Services.TenantTheme _tenantTheme = new EduSystem.UI.Web.Services.TenantTheme();
 
     protected override async Task OnInitializedAsync()
     {
