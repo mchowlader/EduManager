@@ -14,8 +14,8 @@ var logger = new LoggerConfiguration()
 builder.Host.UseSerilog(logger);
 
 builder.Services
-    .AddApiServices(builder.Configuration)  // ⚠️ API versioning আগে configure করুন
-    .AddSwaggerConfiguration()              // তারপর Swagger
+    .AddApiServices(builder.Configuration) 
+    .AddSwaggerConfiguration()              
     .AddApplicationServices(builder.Configuration)
     .AddInfrastructureServices(builder.Configuration);
 
@@ -25,13 +25,12 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
-    // ✅ v2 প্রথমে (default)
-    options.SwaggerEndpoint("/swagger/v2/swagger.json", "v2 - Latest");
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1 - Deprecated");
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+    options.SwaggerEndpoint("/swagger/v2/swagger.json", "API v2");
 
     options.DefaultModelsExpandDepth(-1); // Models section collapse
     options.DisplayRequestDuration(); // Request duration দেখান
-    options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None); // সব collapse থাকবে
+    options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
 });
 
 app.UseHttpsRedirection();
