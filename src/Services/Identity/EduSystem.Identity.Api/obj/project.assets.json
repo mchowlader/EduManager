@@ -2029,7 +2029,10 @@
         },
         "runtime": {
           "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "EduSystem.Shared.Messaging/1.0.0": {
         "type": "project",

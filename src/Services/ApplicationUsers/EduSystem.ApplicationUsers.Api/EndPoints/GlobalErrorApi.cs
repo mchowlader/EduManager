@@ -1,12 +1,12 @@
-
 using System.Diagnostics;
 using Microsoft.AspNetCore.Diagnostics;
+using EduSystem.Shared.Infrastructure.Interfaces;
 
 namespace EduSystem.ApplicationUsers.Api.EndPoints;
 
 public class GlobalErrorApi : IEndpoints
 {
-    public static void MapEndPoints(IEndpointRouteBuilder app)
+    public static void MapEndpoints(IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/error")
             .WithTags("Error");

@@ -229,7 +229,10 @@
         },
         "runtime": {
           "bin/placeholder/EduSystem.Shared.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "EduSystem.UI.Web.Client/1.0.0": {
         "type": "project",

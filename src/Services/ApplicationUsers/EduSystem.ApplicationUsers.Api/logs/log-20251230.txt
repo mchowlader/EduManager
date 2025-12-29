@@ -1,0 +1,32 @@
+2025-12-30 00:01:59.701 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 00:02:00.006 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 00:02:00.121 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 00:02:00.610 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 00:02:00.619 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 00:02:00.699 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 00:02:00.700 +06:00 [INF] Hosting environment: Development
+2025-12-30 00:02:00.700 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 00:02:00.862 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 259.1423ms
+2025-12-30 00:02:00.890 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 00:02:54.034 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 00:02:54.034 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 00:02:54.068 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 42.3554ms
+2025-12-30 00:02:54.081 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1473ms
+2025-12-30 00:02:54.172 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 00:02:54.178 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.9182ms
+2025-12-30 00:07:39.461 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 00:07:39.728 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 00:07:39.825 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 00:07:40.263 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 00:07:40.309 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 00:07:40.359 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 00:07:40.360 +06:00 [INF] Hosting environment: Development
+2025-12-30 00:07:40.360 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 00:07:40.496 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 193.6042ms
+2025-12-30 00:07:40.514 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 00:08:05.708 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 00:08:05.708 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 00:08:05.765 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 21.2807ms
+2025-12-30 00:08:05.786 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.0934ms
+2025-12-30 00:08:05.849 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 00:08:05.856 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.0287ms

@@ -20,12 +20,12 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 
         // ✅ EXPLICIT NULLABLE CONFIGURATION
         builder.Property(s => s.PresentAddressId)
-            .HasColumnType("bigint")  
-            .IsRequired(false);       
+            .HasColumnType("bigint")
+            .IsRequired(false);
 
         builder.Property(s => s.PermanentAddressId)
-            .HasColumnType("bigint")  
-            .IsRequired(false);       
+            .HasColumnType("bigint")
+            .IsRequired(false);
 
         builder.Property(s => s.DateOfBirth)
             .IsRequired();
@@ -34,13 +34,15 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
             .IsRequired()
             .HasMaxLength(50);
 
-        builder.Property(s => s.Class)
-            .IsRequired()
-            .HasConversion<string>();
+        builder.HasOne(c => c.Classes)
+            .WithMany(s => s.Student)
+            .HasForeignKey(c => c.ClassId)
+            .OnDelete(DeleteBehavior.Restrict);
 
-        builder.Property(s => s.Department)
-            .IsRequired()
-            .HasConversion<string>();
+        builder.HasOne(s => s.Department)
+            .WithMany(s => s.Student)
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
 
         // Relationships
         builder.HasOne(s => s.PresentAddress)
@@ -58,9 +60,9 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.HasMany(s => s.FamilyInfos)
             .WithOne(f => f.Student)
             .HasForeignKey(f => f.StudentId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasIndex(s => s.Name);
+        builder.HasIndex(s => s.StudentId);
         builder.HasIndex(s => s.DateOfBirthNo).IsUnique();
     }
 }

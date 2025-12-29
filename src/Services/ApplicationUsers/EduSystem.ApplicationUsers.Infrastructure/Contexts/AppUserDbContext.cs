@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using EduSystem.ApplicationUsers.Domain.Entities;
 using EduSystem.Shared.Infrastructure.MultiTenancy;
 using EduSystem.Shared.Infrastructure.Security;
@@ -57,6 +58,20 @@ public class AppUserDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        foreach(var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            if(typeof(BaseEntity).IsAssignableFrom(entityType.ClrType))
+            {
+                var parameter = Expression.Parameter(entityType.ClrType, "e");
+                var isDeletedProperty = Expression.Property(parameter, nameof(BaseEntity.IsDeleted));
+                var falseContent = Expression.Constant(false);
+
+                var body = Expression.Equal(isDeletedProperty, falseContent);
+                var lambda = Expression.Lambda(body, parameter);
+                modelBuilder.Entity(entityType.ClrType).HasQueryFilter(lambda);
+            }
+        }
 
         //automatically apply all configurations from the assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppUserDbContext).Assembly);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using EduSystem.ApplicationUsers.Application.IService;
 using EduSystem.ApplicationUsers.Domain.Entities;
+using EduSystem.Shared.Infrastructure.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
@@ -18,7 +19,7 @@ public class AuditInterceptor(ICurrentUserService currentUser) : SaveChangesInte
 
         var entries = context.ChangeTracker.Entries<AuditableEntity>();
         var currentUser = _currentUser.GetCurrentUserId();
-        var now = DateTime.UtcNow;
+        var now = DateTimeHelper.Now;
 
         foreach(var entry in entries)
         {

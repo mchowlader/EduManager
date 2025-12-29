@@ -1,0 +1,328 @@
+2025-12-29 21:56:05.018 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 21:56:05.489 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 21:56:05.647 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 21:56:06.062 +06:00 [FTL] Application startup exception
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+mediator            | Body (Inferred)
+pageNumber          | Query (Attribute)
+pageSize            | Query (Attribute)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.EnsureInitialized()
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationPolicyCache..ctor(EndpointDataSource dataSource)
+   at InvokeStub_AuthorizationPolicyCache..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at InvokeStub_AuthorizationMiddlewareInternal..ctor(Object, Object, Object, Object, Object)
+   at System.Reflection.ConstructorInvoker.InvokeImpl(Object arg1, Object arg2, Object arg3, Object arg4)
+   at System.Reflection.ConstructorInvoker.Invoke(Span`1 arguments)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-12-29 21:56:06.122 +06:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Body was inferred but the method does not allow inferred body parameters.
+Below is the list of parameters that we found: 
+
+Parameter           | Source                        
+---------------------------------------------------------------------------------
+mediator            | Body (Inferred)
+pageNumber          | Query (Attribute)
+pageSize            | Query (Attribute)
+
+
+Did you mean to register the "Body (Inferred)" parameter(s) as a Service or apply the [FromServices] or [FromBody] attribute?
+
+
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArguments(ParameterInfo[] parameters, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.CreateArgumentsAndInferMetadata(MethodInfo methodInfo, RequestDelegateFactoryContext factoryContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.InferMetadata(MethodInfo methodInfo, RequestDelegateFactoryOptions options)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.CreateRouteEndpointBuilder(RouteEntry entry, RoutePattern groupPrefix, IReadOnlyList`1 groupConventions, IReadOnlyList`1 groupFinallyConventions)
+   at Microsoft.AspNetCore.Routing.RouteEndpointDataSource.GetGroupedEndpoints(RouteGroupContext context)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.GetGroupedEndpointsWithNullablePrefix(RoutePattern prefix, IReadOnlyList`1 conventions, IReadOnlyList`1 finallyConventions, IServiceProvider applicationServices)
+   at Microsoft.AspNetCore.Routing.RouteGroupBuilder.GroupEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.CreateEndpointsUnsynchronized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.EnsureEndpointsInitialized()
+   at Microsoft.AspNetCore.Routing.CompositeEndpointDataSource.get_Endpoints()
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.EnsureInitialized()
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationPolicyCache..ctor(EndpointDataSource dataSource)
+   at InvokeStub_AuthorizationPolicyCache..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at InvokeStub_AuthorizationMiddlewareInternal..ctor(Object, Object, Object, Object, Object)
+   at System.Reflection.ConstructorInvoker.InvokeImpl(Object arg1, Object arg2, Object arg3, Object arg4)
+   at System.Reflection.ConstructorInvoker.Invoke(Span`1 arguments)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-12-29 21:56:06.132 +06:00 [WRN] Failed to stop bus: "rabbitmq://localhost/PTSLMITHUN_iisexpress_bus_mttyyynrrztj56fpbdxrphsgbj?temporary=true" (Not Started)
+2025-12-29 22:00:21.318 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 22:00:21.871 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 22:00:22.088 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 22:00:22.858 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 22:00:22.871 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 22:00:22.964 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 22:00:22.964 +06:00 [INF] Hosting environment: Development
+2025-12-29 22:00:22.964 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 22:00:23.085 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: string
+2025-12-29 22:00:23.086 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 3 seconds before migration...
+2025-12-29 22:00:23.250 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 405.4411ms
+2025-12-29 22:00:23.277 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 22:00:26.110 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 1/5)
+2025-12-29 22:00:26.121 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_string;Integrated Security=False;User ID=tenant_string_user;Password=JfMpHDD9QAk1ZvkG;Trust Server Certificate=True
+2025-12-29 22:00:26.121 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-29 22:00:28.817 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-29 22:00:28.846 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-29 22:00:28.881 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-29 22:00:29.483 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 1/5). Error: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:00:29.509 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 2 seconds before retry...
+2025-12-29 22:00:31.520 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 2/5)
+2025-12-29 22:00:31.520 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_string;Integrated Security=False;User ID=tenant_string_user;Password=JfMpHDD9QAk1ZvkG;Trust Server Certificate=True
+2025-12-29 22:00:31.520 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-29 22:00:31.587 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-29 22:00:31.587 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-29 22:00:31.589 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-29 22:00:31.764 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 2/5). Error: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:00:31.765 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 4 seconds before retry...
+2025-12-29 22:00:35.775 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 3/5)
+2025-12-29 22:00:35.775 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_string;Integrated Security=False;User ID=tenant_string_user;Password=JfMpHDD9QAk1ZvkG;Trust Server Certificate=True
+2025-12-29 22:00:35.776 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-29 22:00:35.778 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-29 22:00:35.778 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-29 22:00:35.780 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-29 22:00:35.885 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 3/5). Error: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:00:35.886 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 8 seconds before retry...
+2025-12-29 22:00:42.598 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2025-12-29 22:00:42.683 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 84.8069ms
+2025-12-29 22:00:42.723 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - null null
+2025-12-29 22:00:42.728 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.css - null null
+2025-12-29 22:00:42.728 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - null null
+2025-12-29 22:00:42.732 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - null null
+2025-12-29 22:00:42.735 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.js - null null
+2025-12-29 22:00:42.738 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 22:00:42.739 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.js - 200 null application/javascript;charset=utf-8 3.7906ms
+2025-12-29 22:00:42.743 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.css - 200 152 text/css 16.0583ms
+2025-12-29 22:00:42.744 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui.css - 200 23649 text/css 20.7329ms
+2025-12-29 22:00:42.744 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 6.1903ms
+2025-12-29 22:00:42.745 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 13.4585ms
+2025-12-29 22:00:42.934 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 205.6753ms
+2025-12-29 22:00:42.938 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 22:00:43.007 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.5952ms
+2025-12-29 22:00:43.128 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 22:00:43.139 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.0346ms
+2025-12-29 22:00:43.151 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - null null
+2025-12-29 22:00:43.155 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/favicon-32x32.png - 200 628 image/png 3.6966ms
+2025-12-29 22:00:43.902 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 4/5)
+2025-12-29 22:00:43.903 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_string;Integrated Security=False;User ID=tenant_string_user;Password=JfMpHDD9QAk1ZvkG;Trust Server Certificate=True
+2025-12-29 22:00:43.903 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-29 22:00:43.904 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-29 22:00:43.904 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-29 22:00:43.906 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-29 22:00:44.002 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 4/5). Error: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:00:44.002 +06:00 [INF] [ApplicationUsers] ⏳ Waiting 16 seconds before retry...
+2025-12-29 22:01:00.007 +06:00 [INF] [ApplicationUsers] 🔄 Applying migrations (Attempt 5/5)
+2025-12-29 22:01:00.008 +06:00 [INF] [ApplicationUsers] 🔍 Decrypted connection: Data Source=PTSL-MITHUN\MSSQLSERVER05;Initial Catalog=EduSystem_string;Integrated Security=False;User ID=tenant_string_user;Password=JfMpHDD9QAk1ZvkG;Trust Server Certificate=True
+2025-12-29 22:01:00.008 +06:00 [INF] [ApplicationUsers] 🔌 Testing database connection...
+2025-12-29 22:01:00.012 +06:00 [INF] [ApplicationUsers] Database connection test successful
+2025-12-29 22:01:00.012 +06:00 [INF] [ApplicationUsers] 🔍 Checking database connectivity...
+2025-12-29 22:01:00.014 +06:00 [INF] [ApplicationUsers] 🚀 Applying EF Core migrations...
+2025-12-29 22:01:00.073 +06:00 [WRN] [ApplicationUsers] ❌ Migration failed (Attempt 5/5). Error: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:01:00.073 +06:00 [ERR] [ApplicationUsers] ❌ FAILED: Could not apply migrations after 5 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 563
+   at EduSystem.Shared.Messaging.Handlers.BaseMigrationHandler`1.Consume(ConsumeContext`1 context) in D:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\Handlers\BaseMigrationHandler.cs:line 578
+2025-12-29 22:01:00.077 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2025-12-29 22:01:00.170 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2025-12-29 22:13:55.014 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 22:13:55.510 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 22:13:55.705 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 22:13:56.217 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 22:13:56.337 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 22:13:56.431 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 22:13:56.431 +06:00 [INF] Hosting environment: Development
+2025-12-29 22:13:56.432 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 22:13:56.614 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 292.2743ms
+2025-12-29 22:13:56.639 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 22:14:00.495 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 22:14:00.515 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 22:14:00.554 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 60.2194ms
+2025-12-29 22:14:00.575 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.436ms
+2025-12-29 22:14:00.710 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 22:14:00.729 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.7943ms
+2025-12-29 23:14:51.163 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:14:51.828 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:14:51.984 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:14:52.533 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:14:52.608 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:14:52.734 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:14:52.735 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:14:52.735 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:14:52.967 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 371.1859ms
+2025-12-29 23:14:52.997 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:14:53.209 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:14:53.230 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:14:53.244 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 42.2539ms
+2025-12-29 23:14:53.368 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 138.129ms
+2025-12-29 23:14:53.441 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:14:53.484 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.1453ms
+2025-12-29 23:30:41.389 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:30:41.777 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:30:41.878 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:30:42.319 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:30:42.365 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:30:42.430 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:30:42.430 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:30:42.430 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:30:42.565 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 205.9801ms
+2025-12-29 23:30:42.583 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:30:46.132 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:30:46.132 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:30:46.162 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 30.3773ms
+2025-12-29 23:30:46.174 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.288ms
+2025-12-29 23:30:46.356 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:30:46.376 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5293ms
+2025-12-29 23:35:45.418 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:35:45.987 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:35:46.136 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:35:46.559 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:35:46.607 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:35:46.681 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:35:46.681 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:35:46.681 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:35:46.852 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 250.0602ms
+2025-12-29 23:35:46.880 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:36:21.762 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:36:21.762 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:36:21.799 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 37.9985ms
+2025-12-29 23:36:21.810 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.6783ms
+2025-12-29 23:36:21.897 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:36:21.911 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.0466ms
+2025-12-29 23:42:26.367 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:42:26.653 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:42:26.767 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:42:27.144 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:42:27.172 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:42:27.312 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:42:27.312 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:42:27.312 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:42:27.484 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 319.2416ms
+2025-12-29 23:42:27.505 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:42:31.032 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:42:31.032 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:42:31.043 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 10.7264ms
+2025-12-29 23:42:31.071 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6133ms
+2025-12-29 23:42:31.164 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:42:31.173 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.5173ms
+2025-12-29 23:48:07.273 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:48:07.527 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:48:07.613 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:48:08.080 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:48:08.135 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:48:08.205 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:48:08.205 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:48:08.205 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:48:08.315 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 186.4867ms
+2025-12-29 23:48:08.333 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:48:19.543 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:48:19.543 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:48:19.572 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 30.6182ms
+2025-12-29 23:48:19.583 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.6765ms
+2025-12-29 23:48:19.662 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:48:19.670 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.774ms
+2025-12-29 23:56:50.002 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-29 23:56:50.347 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-29 23:56:50.445 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-29 23:56:50.833 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-29 23:56:50.859 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-29 23:56:50.896 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-29 23:56:50.897 +06:00 [INF] Hosting environment: Development
+2025-12-29 23:56:50.897 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-29 23:56:51.004 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 178.7676ms
+2025-12-29 23:56:51.022 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-29 23:56:54.918 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-29 23:56:54.918 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-29 23:56:54.946 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 27.9197ms
+2025-12-29 23:56:54.952 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.6279ms
+2025-12-29 23:56:55.035 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-29 23:56:55.043 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.8435ms

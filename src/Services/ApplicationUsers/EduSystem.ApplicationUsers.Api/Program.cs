@@ -4,6 +4,7 @@ using EduSystem.ApplicationUsers.Application.DependencyResolver;
 using EduSystem.ApplicationUsers.Infrastructure.DependencyResolver;
 using Serilog;
 using EduSystem.Shared.Infrastructure.MultiTenancy;
+using EduSystem.Shared.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

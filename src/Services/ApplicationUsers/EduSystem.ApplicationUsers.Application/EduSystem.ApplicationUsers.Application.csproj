@@ -9,10 +9,16 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="DTOs\" />
+    <Folder Include="Features\Base\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\EduSystem.ApplicationUsers.Shared\EduSystem.ApplicationUsers.Shared.csproj" />
   </ItemGroup>
 
 </Project>
