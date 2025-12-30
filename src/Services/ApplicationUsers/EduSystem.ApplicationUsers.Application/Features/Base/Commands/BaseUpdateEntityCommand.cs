@@ -6,7 +6,8 @@ using MediatR;
 namespace EduSystem.ApplicationUsers.Application.Features.Base.Commands;
 
 public record BaseUpdateEntityCommand<TEntity, TUpdateDto, TResponseDto>(Guid Id, TUpdateDto Data) : IRequest<Result<TResponseDto>>
-    where TEntity : class;
+    where TEntity : class
+    where TResponseDto : class, new();
 
 public class BaseUpdateEntityCommandHandler<TEntity, TUpdateDto, TResponseDto>(
     IGenericRepository<TEntity> repository,

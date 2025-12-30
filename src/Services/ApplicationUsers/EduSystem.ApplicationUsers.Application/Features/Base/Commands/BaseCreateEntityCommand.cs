@@ -6,7 +6,8 @@ using MediatR;
 namespace EduSystem.ApplicationUsers.Application.Features.Base.Commands;
 
 public record BaseCreateEntityCommand<TEntity, TCreateDto, TResponseDto>(TCreateDto Data) : IRequest<Result<TResponseDto>>
-    where TEntity : class;
+    where TEntity : class, new()
+    where TResponseDto : class, new();
 
 public class BaseCreateEntityCommandHandler<TEntity, TCreateDto, TResponseDto>(
     IGenericRepository<TEntity> repository,
@@ -20,7 +21,7 @@ public class BaseCreateEntityCommandHandler<TEntity, TCreateDto, TResponseDto>(
         try
         {
             var entity = new TEntity();
-            Map(request.Data, entity);
+            Map(request.Data!, entity);
 
             await repository.AddAsync(entity, cancellationToken);
             await unitOfWork.CommitAsync();

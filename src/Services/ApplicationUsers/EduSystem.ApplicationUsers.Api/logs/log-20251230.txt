@@ -30,3 +30,169 @@
 2025-12-30 00:08:05.786 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 78.0934ms
 2025-12-30 00:08:05.849 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
 2025-12-30 00:08:05.856 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.0287ms
+2025-12-30 11:54:14.782 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 11:54:29.554 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 11:54:29.651 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 11:54:30.137 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 11:54:30.182 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 11:54:30.236 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 11:54:30.236 +06:00 [INF] Hosting environment: Development
+2025-12-30 11:54:30.236 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 11:54:30.452 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 276.5963ms
+2025-12-30 11:54:30.476 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 11:54:33.653 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 11:54:33.653 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 11:54:33.699 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 19.6935ms
+2025-12-30 11:54:33.733 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.0839ms
+2025-12-30 11:54:33.880 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 11:54:33.898 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7059ms
+2025-12-30 11:55:02.831 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 45
+2025-12-30 11:55:02.850 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 11:55:02.866 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 11:57:58.123 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 11:58:12.333 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 11:58:12.414 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 11:58:12.806 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 11:58:12.807 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 11:58:12.862 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 11:58:12.862 +06:00 [INF] Hosting environment: Development
+2025-12-30 11:58:12.862 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 11:58:12.958 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 157.7228ms
+2025-12-30 11:58:12.972 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 11:58:15.846 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 11:58:15.846 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 11:58:15.873 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 26.9995ms
+2025-12-30 11:58:15.886 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.7859ms
+2025-12-30 11:58:15.997 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 11:58:16.012 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.3848ms
+2025-12-30 11:58:33.228 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 45
+2025-12-30 11:58:33.253 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 11:58:33.265 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:03:08.703 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 12:03:16.329 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 12:03:16.416 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 12:03:16.801 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 12:03:16.824 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 12:03:16.898 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 12:03:16.898 +06:00 [INF] Hosting environment: Development
+2025-12-30 12:03:16.898 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 12:03:17.024 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 207.7083ms
+2025-12-30 12:03:17.042 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 12:03:19.746 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 12:03:19.746 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 12:03:19.783 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 34.0675ms
+2025-12-30 12:03:19.793 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.4604ms
+2025-12-30 12:03:19.879 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 12:03:19.891 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7082ms
+2025-12-30 12:03:48.757 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 45
+2025-12-30 12:03:48.788 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:03:48.810 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-30 12:04:07.463 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:20:27.997 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 12:20:33.292 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 12:20:33.383 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 12:20:33.814 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 12:20:33.906 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 12:20:33.954 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 12:20:33.954 +06:00 [INF] Hosting environment: Development
+2025-12-30 12:20:33.954 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 12:20:34.113 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 216.155ms
+2025-12-30 12:20:34.135 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 12:20:36.781 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 12:20:36.781 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 12:20:36.813 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 31.3812ms
+2025-12-30 12:20:36.826 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.1449ms
+2025-12-30 12:20:36.933 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 12:20:36.946 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.9525ms
+2025-12-30 12:20:50.654 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 45
+2025-12-30 12:20:50.676 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:20:50.697 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-30 12:20:56.045 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:28:48.624 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-12-30 12:28:54.927 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2025-12-30 12:28:55.033 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 12:28:55.393 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2025-12-30 12:28:55.410 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2025-12-30 12:28:55.468 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 12:28:55.468 +06:00 [INF] Hosting environment: Development
+2025-12-30 12:28:55.468 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2025-12-30 12:28:55.596 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 192.936ms
+2025-12-30 12:28:55.613 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2025-12-30 12:28:58.423 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2025-12-30 12:28:58.423 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 12:28:58.456 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 30.6535ms
+2025-12-30 12:28:58.466 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.0457ms
+2025-12-30 12:28:58.536 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2025-12-30 12:28:58.549 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1693ms
+2025-12-30 12:29:18.219 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 45
+2025-12-30 12:29:18.237 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:29:18.252 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-12-30 12:29:28.264 +06:00 [ERR] Failed executing DbCommand (88ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-12-30 12:29:28.311 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Classes'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9680c3d9-4d0f-4537-a894-1009a7587d73
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Classes'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:9680c3d9-4d0f-4537-a894-1009a7587d73
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-12-30 12:32:45.153 +06:00 [INF] Setting HTTP status code 201.
+2025-12-30 12:32:45.157 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2025-12-30 12:32:47.105 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2025-12-30 12:32:47.974 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 201 null application/json; charset=utf-8 209755.354ms

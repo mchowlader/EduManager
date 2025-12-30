@@ -5,7 +5,8 @@ using MediatR;
 namespace EduSystem.ApplicationUsers.Application.Features.Base.Queries;
 
 public record BaseGetAllEntitiesQuery<TEntity, TResponseDto>(int PageNumber, int PageSize) : IRequest<Result<PagedList<TResponseDto>>>
-    where TEntity : class;
+    where TEntity : class
+    where TResponseDto : class, new();
 
 public class BaseGetAllEntitiesQueryHandler<TEntity, TResponseDto>(IGenericRepository<TEntity> repository)
     : IRequestHandler<BaseGetAllEntitiesQuery<TEntity, TResponseDto>, Result<PagedList<TResponseDto>>>

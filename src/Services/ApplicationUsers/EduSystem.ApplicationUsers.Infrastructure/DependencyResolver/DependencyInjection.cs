@@ -1,8 +1,10 @@
+using EduSystem.ApplicationUsers.Application.Contracts.Persistence;
 using EduSystem.ApplicationUsers.Application.IService;
 using EduSystem.ApplicationUsers.Infrastructure.EventHandlers;
 using EduSystem.ApplicationUsers.Infrastructure.Interceptors;
 using EduSystem.ApplicationUsers.Infrastructure.Service;
 using EduSystem.ApplicationUsers.Infrastructure.Services;
+using EduSystem.ApplicationUsers.Infrastructure.Repositories;
 using EduSystem.Shared.Event;
 using EduSystem.Shared.Messaging;
 using MassTransit;
@@ -15,6 +17,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddHttpContextAccessor();

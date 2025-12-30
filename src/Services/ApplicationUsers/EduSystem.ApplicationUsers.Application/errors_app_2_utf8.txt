@@ -1,0 +1,23 @@
+﻿  Determining projects to restore...
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary. [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.Extensions.Configuration will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary. [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+  All projects are up-to-date for restore.
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.Extensions.Configuration will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.
+  EduSystem.Shared.Infrastructure -> d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.dll
+  EduSystem.ApplicationUsers.Shared -> d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Shared\bin\Debug\net10.0\EduSystem.ApplicationUsers.Shared.dll
+  EduSystem.Shared.Event -> d:\MCH\PetProject\EduManager\src\Services\Shared\Events\EduSystem.Shared.Event\bin\Debug\net10.0\EduSystem.Shared.Event.dll
+  EduSystem.Shared.Messaging -> d:\MCH\PetProject\EduManager\src\Services\Shared\Messaging\EduSystem.Shared.Messaging\bin\Debug\net10.0\EduSystem.Shared.Messaging.dll
+d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\DependencyResolver\DependencyInjection.cs(5,34): error CS0234: The type or namespace name 'Domain' does not exist in the namespace 'EduSystem.ApplicationUsers' (are you missing an assembly reference?) [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+
+Build FAILED.
+
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary. [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.Extensions.Configuration will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary. [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.
+d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj : warning NU1510: PackageReference Microsoft.Extensions.Configuration will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.
+d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\DependencyResolver\DependencyInjection.cs(5,34): error CS0234: The type or namespace name 'Domain' does not exist in the namespace 'EduSystem.ApplicationUsers' (are you missing an assembly reference?) [d:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj]
+    4 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.64

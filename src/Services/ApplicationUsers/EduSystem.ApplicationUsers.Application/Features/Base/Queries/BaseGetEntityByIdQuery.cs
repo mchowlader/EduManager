@@ -5,7 +5,8 @@ using MediatR;
 namespace EduSystem.ApplicationUsers.Application.Features.Base.Queries;
 
 public record BaseGetEntityByIdQuery<TEntity, TResponseDto>(Guid Id) : IRequest<Result<TResponseDto>>
-    where TEntity : class;
+    where TEntity : class
+    where TResponseDto : class, new();
 
 public class BaseGetEntityByIdQueryHandler<TEntity, TResponseDto>(IGenericRepository<TEntity> repository)
     : IRequestHandler<BaseGetEntityByIdQuery<TEntity, TResponseDto>, Result<TResponseDto>>
