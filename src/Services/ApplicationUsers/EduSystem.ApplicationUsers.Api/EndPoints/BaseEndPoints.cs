@@ -1,11 +1,7 @@
 using Asp.Versioning;
-using Asp.Versioning.Builder;
-using EduSystem.ApplicationUsers.Application.Contracts.Persistence;
 using EduSystem.ApplicationUsers.Application.Features.Base.Commands;
 using EduSystem.ApplicationUsers.Application.Features.Base.Queries;
 using EduSystem.ApplicationUsers.Domain.Entities;
-using EduSystem.ApplicationUsers.Shared.Common;
-using EduSystem.Shared.Infrastructure.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

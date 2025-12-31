@@ -29,7 +29,7 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v2/swagger.json", "API v2");
 
     options.DefaultModelsExpandDepth(-1); // Models section collapse
-    options.DisplayRequestDuration(); // Request duration দেখান
+    options.DisplayRequestDuration(); // Request duration 
     options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
 });
 

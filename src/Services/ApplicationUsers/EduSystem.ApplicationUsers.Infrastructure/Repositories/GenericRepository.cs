@@ -1,4 +1,4 @@
-using EduSystem.ApplicationUsers.Application.Contracts.Persistence;
+using EduSystem.ApplicationUsers.Domain.IRepository;
 using EduSystem.ApplicationUsers.Domain.Entities;
 using EduSystem.ApplicationUsers.Infrastructure.Contexts;
 using EduSystem.Shared.Infrastructure.Utilities;

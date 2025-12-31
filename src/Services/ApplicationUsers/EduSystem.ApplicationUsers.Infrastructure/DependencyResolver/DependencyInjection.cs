@@ -1,4 +1,4 @@
-using EduSystem.ApplicationUsers.Application.Contracts.Persistence;
+using EduSystem.ApplicationUsers.Domain.IRepository;
 using EduSystem.ApplicationUsers.Application.IService;
 using EduSystem.ApplicationUsers.Infrastructure.EventHandlers;
 using EduSystem.ApplicationUsers.Infrastructure.Interceptors;

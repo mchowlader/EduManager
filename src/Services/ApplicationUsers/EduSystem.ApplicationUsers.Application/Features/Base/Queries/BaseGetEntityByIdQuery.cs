@@ -1,4 +1,4 @@
-using EduSystem.ApplicationUsers.Application.Contracts.Persistence;
+using EduSystem.ApplicationUsers.Domain.IRepository;
 using EduSystem.ApplicationUsers.Shared.Common;
 using MediatR;
 
