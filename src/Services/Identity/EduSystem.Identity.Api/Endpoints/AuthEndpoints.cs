@@ -156,7 +156,7 @@ public class AuthEndpoints : IEndpoints
     {
         var userIdClaims = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-        if (string.IsNullOrEmpty(userIdClaims) || !Guid.TryParse(userIdClaims, out var userId))
+        if (string.IsNullOrEmpty(userIdClaims) || !long.TryParse(userIdClaims, out var userId))
             return Results.Unauthorized();
 
         var command = new LogoutCommand { UserId = userId };
@@ -220,7 +220,7 @@ public class AuthEndpoints : IEndpoints
     {
         var userIdClaim = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-        if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+        if (string.IsNullOrEmpty(userIdClaim) || !long.TryParse(userIdClaim, out var userId))
         {
             return Results.Unauthorized();
         }

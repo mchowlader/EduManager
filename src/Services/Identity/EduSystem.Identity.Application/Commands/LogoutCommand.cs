@@ -8,7 +8,7 @@ namespace EduSystem.Identity.Application.Commands;
 
 public class LogoutCommand : IRequest<Result<bool>>
 {
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
 }
 
 public class LogoutCommandHandler(

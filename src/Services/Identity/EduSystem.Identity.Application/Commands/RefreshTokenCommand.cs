@@ -38,7 +38,7 @@ public class RefreshTokenCommandHandler(
             return Result<LoginResponseDto>.Failure("Invalid access token.");
 
         var userIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
+        if (string.IsNullOrEmpty(userIdClaim) || !long.TryParse(userIdClaim, out var userId))
             return Result<LoginResponseDto>.Failure("Invalid token claims.");
 
         // 2. Get user from database

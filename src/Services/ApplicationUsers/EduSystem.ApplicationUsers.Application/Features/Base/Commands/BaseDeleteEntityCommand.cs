@@ -5,7 +5,7 @@ using MediatR;
 
 namespace EduSystem.ApplicationUsers.Application.Features.Base.Commands;
 
-public record BaseDeleteEntityCommand<TEntity>(Guid Id) : IRequest<Result>
+public record BaseDeleteEntityCommand<TEntity>(long Id) : IRequest<Result>
     where TEntity : class;
 
 public class BaseDeleteEntityCommandHandler<TEntity>(

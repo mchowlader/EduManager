@@ -58,9 +58,9 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastruc
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Application.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Event.pdb
-D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Messaging.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\obj\Debug\net10.0\EduSystem.Identity.Infrastructure.csproj.AssemblyReference.cache
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\obj\Debug\net10.0\EduSystem.Identity.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig

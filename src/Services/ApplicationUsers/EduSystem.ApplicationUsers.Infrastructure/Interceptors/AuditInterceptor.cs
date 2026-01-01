@@ -13,25 +13,37 @@ public class AuditInterceptor(ICurrentUserService currentUser) : SaveChangesInte
 {
     private readonly ICurrentUserService _currentUser = currentUser;
 
+    public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
+    {
+        UpdateAuditFields(eventData.Context);
+        return base.SavingChanges(eventData, result);
+    }
+
+    public override ValueTask<InterceptionResult<int>> SavingChangesAsync(DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default)
+    {
+        UpdateAuditFields(eventData.Context);
+        return base.SavingChangesAsync(eventData, result, cancellationToken);
+    }
+
     private void UpdateAuditFields(DbContext? context)
     {
         if (context == null) return;
 
         var entries = context.ChangeTracker.Entries<AuditableEntity>();
-        var currentUser = _currentUser.GetCurrentUserId();
+        var currentUserId = _currentUser.GetCurrentUserId();
         var now = DateTimeHelper.Now;
 
-        foreach(var entry in entries)
+        foreach (var entry in entries)
         {
-            if(entry.State == EntityState.Added)
+            if (entry.State == EntityState.Added)
             {
                 entry.Entity.CreatedAt = now;
-                entry.Entity.CreatedBy = currentUser;
+                entry.Entity.CreatedBy = currentUserId;
             }
-            else if(entry.State == EntityState.Modified)
+            else if (entry.State == EntityState.Modified)
             {
                 entry.Entity.UpdatedAt = now;
-                entry.Entity.UpdatedBy = currentUser;
+                entry.Entity.UpdatedBy = currentUserId;
             }
         }
     }

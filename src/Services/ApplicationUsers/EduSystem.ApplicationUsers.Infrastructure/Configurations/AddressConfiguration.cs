@@ -17,18 +17,18 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
         // Properties
         builder.Property(a => a.Division)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(50);
 
         builder.Property(a => a.District)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(50);
 
         builder.Property(a => a.Thana)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(50);
 
         builder.Property(a => a.Village)
             .IsRequired()
-            .HasMaxLength(150);
+            .HasMaxLength(50);
     }
 }

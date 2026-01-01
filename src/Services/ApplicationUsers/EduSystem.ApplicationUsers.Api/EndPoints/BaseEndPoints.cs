@@ -27,7 +27,8 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
         var group = app.MapGroup($"/api/v{{version:apiVersion}}/{Route}")
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(version)
-            .WithTags(EntityName);
+            .WithTags(EntityName)
+            .RequireAuthorization();
 
         // GET Paged (GetAll internally)
         group.MapGet("/", GetAllV1)
@@ -38,7 +39,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
         .Produces<object>(StatusCodes.Status400BadRequest);
 
         // GET Single
-        group.MapGet("/{id:guid}", GetByIdV1)
+        group.MapGet("/{id:long}", GetByIdV1)
         .WithName($"Get{EntityName}ById")
         .WithSummary($"Get {EntityName} by ID")
         .WithDescription($"Retrieves a single {ToFriendlyName(EntityName)} record by its unique identifier.")
@@ -54,7 +55,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
         .Produces<object>(StatusCodes.Status400BadRequest);
 
         // PUT Update
-        group.MapPut("/{id:guid}", UpdateV1)
+        group.MapPut("/{id:long}", UpdateV1)
         .WithName($"Update{EntityName}")
         .WithSummary($"Update existing {EntityName}")
         .WithDescription($"Updates an existing {ToFriendlyName(EntityName)} record identified by ID.")
@@ -62,7 +63,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
         .Produces<object>(StatusCodes.Status400BadRequest);
 
         // DELETE
-        group.MapDelete("/{id:guid}", DeleteV1)
+        group.MapDelete("/{id:long}", DeleteV1)
         .WithName($"Delete{EntityName}")
         .WithSummary($"Delete {EntityName}")
         .WithDescription($"Performs a soft delete of a {ToFriendlyName(EntityName)} from the system.")
@@ -86,7 +87,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
     }
 
     private static async Task<IResult> GetByIdV1(
-        Guid id,
+        long id,
         [FromServices] IMediator mediator)
     {
         var result = await mediator.Send(new BaseGetEntityByIdQuery<TEntity, TResponseDto>(id));
@@ -111,7 +112,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
     }
 
     private static async Task<IResult> UpdateV1(
-        Guid id,
+        long id,
         TUpdateDto dto,
         [FromServices] IMediator mediator)
     {
@@ -124,7 +125,7 @@ public abstract class BaseEndPoints<TEntity, TCreateDto, TUpdateDto, TResponseDt
     }
 
     private static async Task<IResult> DeleteV1(
-        Guid id,
+        long id,
         [FromServices] IMediator mediator)
     {
         var result = await mediator.Send(new BaseDeleteEntityCommand<TEntity>(id));

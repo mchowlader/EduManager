@@ -1,8 +1,8 @@
-﻿namespace EduSystem.Identity.Domain.Entities;
+namespace EduSystem.Identity.Domain.Entities;
 
 public class Tenant
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string? Slug { get; set; } // URL-friendly identifier
     public string? ConnectionString { get; set; } // Tenant DB connection

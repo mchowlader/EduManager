@@ -42,7 +42,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return dbResult;
     }
 
-    public async Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    public async Task<T?> GetByIdAsync(long id, CancellationToken cancellationToken = default)
     {
         var dbResult = await _dbSet.FindAsync(new object[] { id }, cancellationToken);
         return dbResult;

@@ -44,10 +44,14 @@ public class BaseCreateEntityCommandHandler<TEntity, TCreateDto, TResponseDto>(
 
         foreach (var sourceProp in sourceProps)
         {
-            var targetProp = targetProps.FirstOrDefault(p => p.Name == sourceProp.Name && p.PropertyType == sourceProp.PropertyType);
+            if (sourceProp.Name == "Id") continue;
+
+            var value = sourceProp.GetValue(source);
+            var targetProp = targetProps.FirstOrDefault(p => p.Name.Equals(sourceProp.Name, StringComparison.OrdinalIgnoreCase) && p.PropertyType == sourceProp.PropertyType);
+            
             if (targetProp != null && targetProp.CanWrite)
             {
-                targetProp.SetValue(target, sourceProp.GetValue(source));
+                targetProp.SetValue(target, value);
             }
         }
     }

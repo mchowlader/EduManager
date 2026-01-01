@@ -10,5 +10,6 @@ public class Teacher : AuditableEntity
     public long? PermanentAddressId { get; set; }
     public Address? PermanentAddress { get; set; }
     public string Designation { get; set; } = string.Empty;
-    public IList<Family> FamilyInfos { get; set; } = new List<Family>();
+    public long FamilyId { get; set; }
+    public Family FamilyInfos { get; set; } = null!;
 }

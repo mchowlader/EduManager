@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EduSystem.Attendance.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitiateMigrationAttendance : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +24,11 @@ namespace EduSystem.Attendance.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Attendances", x => x.Id);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attendances_User_Date",
+                table: "Attendances",
+                columns: new[] { "AttendenctUserId", "AttendanceAt" });
         }
 
         /// <inheritdoc />

@@ -1,10 +1,10 @@
-﻿namespace EduSystem.ApplicationUsers.Domain.Entities;
+namespace EduSystem.ApplicationUsers.Domain.Entities;
 
-public class Address
+public class Address : AuditableEntity
 {
-    public long Id { get; set; }
-    public string Division { get; set; } = string.Empty;
-    public string District { get; set; } = string.Empty;
+    public new long Id { get; set; }
+    public string Village { get; set; } = string.Empty;
     public string Thana { get; set; } = string.Empty;
-    public string Village { get; set; } = string.Empty ;
+    public string District { get; set; } = string.Empty;
+    public string Division { get; set; } = string.Empty;
 }

@@ -24,45 +24,33 @@ public class TeacherConfiguration : IEntityTypeConfiguration<Teacher>
             .HasMaxLength(15);
 
         builder.Property(t => t.Email)
-            .IsRequired()
+            .IsRequired(false)
             .HasMaxLength(100);
 
         builder.Property(t => t.Designation)
             .IsRequired()
             .HasMaxLength(100);
 
-        // ✅ Foreign Key Properties (Explicitly nullable)
-        builder.Property(t => t.PresentAddressId)
-            .HasColumnName("PresentAddressId") // ✅ Column name fix
-            .HasColumnType("bigint")
-            .IsRequired(false);
+        builder.HasOne(s => s.PresentAddress)
+           .WithMany()
+           .HasForeignKey(s => s.PresentAddressId)
+           .IsRequired(false)
+           .OnDelete(DeleteBehavior.Restrict);
 
-        builder.Property(t => t.PermanentAddressId)
-            .HasColumnType("bigint")
-            .IsRequired(false);
+        builder.HasOne(s => s.PermanentAddress)
+          .WithMany()
+          .HasForeignKey(s => s.PermanentAddressId)
+          .IsRequired(false)
+          .OnDelete(DeleteBehavior.Restrict);
 
-        // ✅ Address Relationships (Restrict instead of SetNull)
-        builder.HasOne(t => t.PresentAddress)
-            .WithMany()
-            .HasForeignKey(t => t.PresentAddressId) // ✅ Use property instead of string
-            .IsRequired(false)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasOne(t => t.PermanentAddress)
-            .WithMany()
-            .HasForeignKey(t => t.PermanentAddressId)
-            .IsRequired(false)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        // ✅ Family Relationship (Cascade for dependent entities)
-        builder.HasMany(t => t.FamilyInfos)
-            .WithOne(f => f.Teacher)
-            .HasForeignKey(f => f.TeacherId)
-            .OnDelete(DeleteBehavior.Cascade); // ✅ Cascade instead of SetNull
+        builder.HasOne(s => s.FamilyInfos)
+          .WithMany()
+          .HasForeignKey(fk => fk.FamilyId)
+          .OnDelete(DeleteBehavior.Cascade);
 
         // Indexes
+        builder.HasIndex(t => t.Id).IsUnique();
         builder.HasIndex(t => t.Email).IsUnique();
-        builder.HasIndex(t => t.Phone);
-        builder.HasIndex(t => t.Name);
+        builder.HasIndex(t => t.Phone).IsUnique();
     }
 }

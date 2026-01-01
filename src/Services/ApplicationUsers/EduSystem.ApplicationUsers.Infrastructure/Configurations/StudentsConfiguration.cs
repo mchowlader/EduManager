@@ -11,40 +11,40 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.ToTable("Students");
         builder.HasKey(s => s.Id);
 
+        builder.Property(s => s.StudentCode)
+          .IsRequired()
+          .HasMaxLength(100);
+
         builder.Property(s => s.Name)
             .IsRequired()
             .HasMaxLength(100);
 
+        builder.Property(s => s.RollNo)
+         .IsRequired()
+         .HasMaxLength(100);
+
         builder.Property(s => s.Phone)
+            .IsRequired(false)
             .HasMaxLength(15);
 
-        // ✅ EXPLICIT NULLABLE CONFIGURATION
-        builder.Property(s => s.PresentAddressId)
-            .HasColumnType("bigint")
-            .IsRequired(false);
-
-        builder.Property(s => s.PermanentAddressId)
-            .HasColumnType("bigint")
-            .IsRequired(false);
-
         builder.Property(s => s.DateOfBirth)
-            .IsRequired();
+            .IsRequired(false);
 
         builder.Property(s => s.DateOfBirthNo)
-            .IsRequired()
+            .IsRequired(false)
             .HasMaxLength(50);
 
         builder.HasOne(c => c.Classes)
-            .WithMany(s => s.Student)
-            .HasForeignKey(c => c.ClassId)
+            .WithMany(s => s.Students)
+            .HasForeignKey(c => c.ClassesId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(s => s.Department)
-            .WithMany(s => s.Student)
+        builder.HasOne(s => s.Section)
+            .WithMany(se => se.Students)
+            .HasForeignKey(s => s.SectionId)
             .IsRequired(false)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // Relationships
         builder.HasOne(s => s.PresentAddress)
             .WithMany()
             .HasForeignKey(s => s.PresentAddressId)
@@ -57,12 +57,19 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
             .IsRequired(false)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasMany(s => s.FamilyInfos)
-            .WithOne(f => f.Student)
-            .HasForeignKey(f => f.StudentId)
+        builder.HasOne(s => s.Group)
+            .WithMany(s => s.Student)
+            .HasForeignKey(s => s.GroupId)
+            .IsRequired(false)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasIndex(s => s.StudentId);
+        builder.HasOne(s => s.FamilyInfos)
+          .WithMany()
+          .HasForeignKey(fk => fk.FamilyId)
+          .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasIndex(t => t.Id).IsUnique();
+        builder.HasIndex(s => s.StudentCode).IsUnique();
         builder.HasIndex(s => s.DateOfBirthNo).IsUnique();
     }
 }

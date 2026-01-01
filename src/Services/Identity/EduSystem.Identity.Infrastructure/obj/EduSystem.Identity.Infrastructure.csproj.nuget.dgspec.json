@@ -1087,6 +1087,9 @@
               },
               "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Domain\\EduSystem.Identity.Domain.csproj": {
                 "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Domain\\EduSystem.Identity.Domain.csproj"
+              },
+              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
               }
             }
           }

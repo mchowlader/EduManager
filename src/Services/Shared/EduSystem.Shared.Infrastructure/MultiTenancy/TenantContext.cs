@@ -6,7 +6,7 @@ namespace EduSystem.Shared.Infrastructure.MultiTenancy;
 
 public class TenantContext : ITenantContext
 {
-    public Guid? TenantId { get; set; }
+    public long? TenantId { get; set; }
     public string? TenantSlug { get; set; }
     public string? TenantName { get; set; }
     public string? ConnectionString { get; set; }

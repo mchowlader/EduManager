@@ -1,4 +1,4 @@
-﻿namespace EduSystem.ApplicationUsers.Domain.Entities;
+namespace EduSystem.ApplicationUsers.Domain.Entities;
 
 public enum Relation
 {   Mother = 0,

@@ -25,40 +25,8 @@ public class FamilyConfiguration : IEntityTypeConfiguration<Family>
         builder.Property(f => f.Description)
             .HasMaxLength(500);
 
-        builder.Property(f => f.RelationWith)
-            .IsRequired();
-
-        // FK: StudentId (Guid?)
-        builder.Property(f => f.StudentId)
-            .IsRequired(false); // EF maps Guid? → uniqueidentifier
-
-        // FK: TeacherId (Guid?)
-        builder.Property(f => f.TeacherId)
-            .IsRequired(false);
-
-        // FK: PresentAddressId (bigint)
-        builder.Property(f => f.PresentAddressId)
-            .HasColumnType("bigint")
-            .IsRequired(false);
-
-        // FK: PermanentAddressId (bigint)
-        builder.Property(f => f.PermanentAddressId)
-            .HasColumnType("bigint")
-            .IsRequired(false);
-
-        // Relationship: Student
-        builder.HasOne(f => f.Student)
-            .WithMany(s => s.FamilyInfos)
-            .HasForeignKey(f => f.StudentId)
-            .IsRequired(false)
-            .OnDelete(DeleteBehavior.SetNull);
-
-        // Relationship: Teacher
-        builder.HasOne(f => f.Teacher)
-            .WithMany(t => t.FamilyInfos)
-            .HasForeignKey(f => f.TeacherId)
-            .IsRequired(false)
-            .OnDelete(DeleteBehavior.SetNull);
+        builder.Property(r => r.RelationId)
+            .HasConversion<int>();
 
         // Relationship: Present Address
         builder.HasOne(f => f.PresentAddress)

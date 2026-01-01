@@ -6,7 +6,7 @@ namespace EduSystem.Shared.Infrastructure.MultiTenancy;
 
 public interface ITenantContext
 {
-    Guid? TenantId { get; }
+    long? TenantId { get; }
     string? TenantSlug { get; }
     string? TenantName { get; }
     string? ConnectionString { get; }

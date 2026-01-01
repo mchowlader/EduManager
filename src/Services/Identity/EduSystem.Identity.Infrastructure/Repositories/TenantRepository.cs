@@ -1,4 +1,4 @@
-﻿using EduSystem.Identity.Domain.Entities;
+using EduSystem.Identity.Domain.Entities;
 using EduSystem.Identity.Domain.IRepository;
 using EduSystem.Identity.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +17,7 @@ public class TenantRepository : ITenantRepository
 
     public async Task<Tenant> CreateAsync(Tenant tenant)
     {
-        tenant.Id = Guid.NewGuid();
+        //tenant.Id = Guid.NewGuid();
         tenant.CreatedAt = DateTime.UtcNow;
         _context.Tenants.Add(tenant);
         await _context.SaveChangesAsync();
@@ -35,7 +35,7 @@ public class TenantRepository : ITenantRepository
         return await _context.Tenants.AnyAsync(t => t.Slug == slug);
     }
 
-    public async Task<Tenant?> GetByIdAsync(Guid id)
+    public async Task<Tenant?> GetByIdAsync(long id)
     {
         return await _context.Tenants.FirstOrDefaultAsync(t => t.Id == id);
     }
@@ -53,7 +53,7 @@ public class TenantRepository : ITenantRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(long id)
     {
         var tenant = await GetByIdAsync(id);
         if (tenant != null)

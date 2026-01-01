@@ -14,6 +14,7 @@ public class AppUserDbContext : DbContext
     public DbSet<Family> Families { get; set; }
     public DbSet<Address> Address { get; set; }
     public DbSet<AppUser> AppUser { get; set; }
+    public DbSet<Section> Sections { get; set; }
 
     private readonly ITenantContext? _tenantContext;
     private readonly string? _masterConnectionString;
@@ -38,21 +39,34 @@ public class AppUserDbContext : DbContext
         if (optionsBuilder.IsConfigured)
             return;
 
-        if (_tenantContext == null || _encryptor == null)
-            return; // Skip if tenant context or encryptor is not available
-
         string? connectionString = null;
 
-        if (!string.IsNullOrWhiteSpace(_tenantContext.ConnectionString))
+        if (_tenantContext != null && !string.IsNullOrWhiteSpace(_tenantContext.ConnectionString))
         {
-            if (_encryptor.Decrypt(_tenantContext.ConnectionString, out string decryptedConnection))
+            if (_encryptor != null && _encryptor.Decrypt(_tenantContext.ConnectionString, out string decryptedConnection))
+            {
                 connectionString = decryptedConnection;
+            }
+            else
+            {
+                // Fallback to raw connection string if decryption fails or encryptor is missing
+                connectionString = _tenantContext.ConnectionString;
+            }
         }
 
         connectionString ??= _masterConnectionString;
 
-        if (!string.IsNullOrWhiteSpace(connectionString))
-            optionsBuilder.UseSqlServer(connectionString);
+        if (!string.IsNullOrEmpty(connectionString))
+        {
+            optionsBuilder.UseSqlServer(connectionString, sqlOptions =>
+            {
+                sqlOptions.CommandTimeout(60);
+                sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 3,
+                    maxRetryDelay: TimeSpan.FromSeconds(10),
+                    errorNumbersToAdd: null);
+            });
+        }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

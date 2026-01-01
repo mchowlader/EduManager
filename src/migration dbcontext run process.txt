@@ -1,24 +1,25 @@
 1. Go to the Infructructure project directory:
    ```bash
    cd D:\MCH\PetProject\EduManager\src\Services
-   cd EduSystem.Attendance.Infrastructure 
+   cd EduSystem.Identity.Infrastructure 
    ```
 2. Run the Entity Framework Core migration command:
    ```bash
    dotnet build
-   dotnet ef migrations add InitialCreate --startup-project ../EduSystem.Attendance.Api
+   dotnet ef migrations add UpdateIdType --startup-project ../EduSystem.Identity.Api
+   dotnet ef database update
    ```
 
    3. Register tanant request json
    ```
-	   {
-		  "schoolName": "Kamegha Muslim Secondary School",
-		  "slug": "KameghaMuslim",
-		  "adminEmail": "kalmegha@gmail.com",
-		  "adminPassword": "KameghaMuslim",
-		  "adminFullName": "Kamegha Muslim",
-		  "phoneNumber": "01710025023",
-		  "primaryColor": "red",
-		  "secondaryColor": "green"
-		}
+{
+"schoolName": "Kamegha Muslim Secondary School",
+"slug": "KameghaMuslim",
+"adminEmail": "kalmegha@gmail.com",
+"adminPassword": "KameghaMuslim",
+"adminFullName": "Kamegha Muslim",
+"phoneNumber": "01710025023",
+"primaryColor": "red",
+"secondaryColor": "green"
+}
    ```

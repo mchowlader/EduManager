@@ -30,25 +30,43 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("District")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Division")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Thana")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Village")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -57,9 +75,11 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
             modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.AppUser", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<int>("AccessFailedCount")
                         .ValueGeneratedOnAdd()
@@ -67,12 +87,13 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasDefaultValue(0);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -88,6 +109,9 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
                         .ValueGeneratedOnAdd()
@@ -117,8 +141,8 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -127,31 +151,74 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
+                    b.HasIndex("Id");
 
                     b.HasIndex("UserName")
                         .IsUnique();
 
-                    b.ToTable("AppUser");
+                    b.ToTable("AppUsers", (string)null);
                 });
 
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Family", b =>
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Classes", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Classes", (string)null);
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Family", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -168,61 +235,136 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.Property<long?>("PresentAddressId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("RelationWith")
+                    b.Property<int>("RelationId")
                         .HasColumnType("int");
-
-                    b.Property<Guid?>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("TeacherId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PermanentAddressId");
 
                     b.HasIndex("PresentAddressId");
-
-                    b.HasIndex("StudentId");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Families", (string)null);
                 });
 
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Student", b =>
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Group", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint");
 
-                    b.Property<string>("Class")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DateOfBirthNo")
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Groups", (string)null);
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Section", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ClassesId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Department")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassesId");
+
+                    b.ToTable("Sections", (string)null);
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Student", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ClassesId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DateOfBirthNo")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("FamilyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("GroupId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -239,37 +381,67 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                     b.Property<long?>("PresentAddressId")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("RollNo")
+                        .HasMaxLength(100)
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("SectionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("StudentCode")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DateOfBirthNo")
-                        .IsUnique();
+                    b.HasIndex("ClassesId");
 
-                    b.HasIndex("Name");
+                    b.HasIndex("DateOfBirthNo")
+                        .IsUnique()
+                        .HasFilter("[DateOfBirthNo] IS NOT NULL");
+
+                    b.HasIndex("FamilyId");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.HasIndex("PermanentAddressId");
 
                     b.HasIndex("PresentAddressId");
+
+                    b.HasIndex("SectionId");
+
+                    b.HasIndex("StudentCode")
+                        .IsUnique();
 
                     b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Teacher", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Designation")
                         .IsRequired()
@@ -277,9 +449,14 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<long>("FamilyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -295,25 +472,29 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<long?>("PresentAddressId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("PresentAddressId");
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
 
-                    b.HasIndex("Name");
+                    b.HasIndex("FamilyId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.HasIndex("PermanentAddressId");
 
-                    b.HasIndex("Phone");
+                    b.HasIndex("Phone")
+                        .IsUnique();
 
                     b.HasIndex("PresentAddressId");
 
@@ -332,67 +513,108 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
                         .HasForeignKey("PresentAddressId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Student", "Student")
-                        .WithMany("FamilyInfos")
-                        .HasForeignKey("StudentId")
+                    b.Navigation("PermanentAddress");
+
+                    b.Navigation("PresentAddress");
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Section", b =>
+                {
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Classes", "Classes")
+                        .WithMany("Sections")
+                        .HasForeignKey("ClassesId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Classes");
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Student", b =>
+                {
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Classes", "Classes")
+                        .WithMany("Students")
+                        .HasForeignKey("ClassesId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Family", "FamilyInfos")
+                        .WithMany()
+                        .HasForeignKey("FamilyId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Teacher", "Teacher")
-                        .WithMany("FamilyInfos")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Group", "Group")
+                        .WithMany("Student")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
+                        .WithMany()
+                        .HasForeignKey("PermanentAddressId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
+                        .WithMany()
+                        .HasForeignKey("PresentAddressId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Section", "Section")
+                        .WithMany("Students")
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Classes");
+
+                    b.Navigation("FamilyInfos");
+
+                    b.Navigation("Group");
 
                     b.Navigation("PermanentAddress");
 
                     b.Navigation("PresentAddress");
 
+                    b.Navigation("Section");
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Teacher", b =>
+                {
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Family", "FamilyInfos")
+                        .WithMany()
+                        .HasForeignKey("FamilyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
+                        .WithMany()
+                        .HasForeignKey("PermanentAddressId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
+                        .WithMany()
+                        .HasForeignKey("PresentAddressId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("FamilyInfos");
+
+                    b.Navigation("PermanentAddress");
+
+                    b.Navigation("PresentAddress");
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Classes", b =>
+                {
+                    b.Navigation("Sections");
+
+                    b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Group", b =>
+                {
                     b.Navigation("Student");
-
-                    b.Navigation("Teacher");
                 });
 
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Student", b =>
+            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Section", b =>
                 {
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
-                        .WithMany()
-                        .HasForeignKey("PermanentAddressId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
-                        .WithMany()
-                        .HasForeignKey("PresentAddressId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("PermanentAddress");
-
-                    b.Navigation("PresentAddress");
-                });
-
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Teacher", b =>
-                {
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PermanentAddress")
-                        .WithMany()
-                        .HasForeignKey("PermanentAddressId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("EduSystem.ApplicationUsers.Domain.Entities.Address", "PresentAddress")
-                        .WithMany()
-                        .HasForeignKey("PresentAddressId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("PermanentAddress");
-
-                    b.Navigation("PresentAddress");
-                });
-
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Student", b =>
-                {
-                    b.Navigation("FamilyInfos");
-                });
-
-            modelBuilder.Entity("EduSystem.ApplicationUsers.Domain.Entities.Teacher", b =>
-                {
-                    b.Navigation("FamilyInfos");
+                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }

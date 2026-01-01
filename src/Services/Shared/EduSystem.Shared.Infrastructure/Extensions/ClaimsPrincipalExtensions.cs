@@ -7,10 +7,15 @@ namespace EduSystem.Shared.Infrastructure.Extensions;
 
 public static class ClaimsPrincipalExtensions
 {
-    public static Guid GetUserId(this ClaimsPrincipal principal)
+    public static long GetUserId(this ClaimsPrincipal principal)
     {
-        var userIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        return Guid.TryParse(userIdClaim, out var userId) ? userId : Guid.Empty;
+        var userIdClaim = principal
+            .FindFirst(ClaimTypes.NameIdentifier)?
+            .Value;
+
+        return long.TryParse(userIdClaim, out var userId)
+            ? userId
+            : 0;
     }
     public static string GetEmail(this ClaimsPrincipal principal)
     {
@@ -27,10 +32,12 @@ public static class ClaimsPrincipalExtensions
         return principal.FindFirst(ClaimTypes.Role)?.Value ?? string.Empty;
     }
 
-    public static Guid GetTenantId(this ClaimsPrincipal principal)
+    public static long GetTenantId(this ClaimsPrincipal principal)
     {
         var tenantIdClaim = principal.FindFirst("tenant_id")?.Value;
-        return Guid.TryParse(tenantIdClaim, out var tenantId) ? tenantId : Guid.Empty;
+        return long.TryParse(tenantIdClaim, out var tenantId)
+            ? tenantId
+            : 0;
     }
 
     public static string GetTenantSlug(this ClaimsPrincipal principal)

@@ -8,7 +8,7 @@ namespace EduSystem.Identity.Application.Commands;
 
 public class ChangePasswordCommand : IRequest<Result<bool>>
 {
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
     public string CurrentPassword { get; set; } = string.Empty;
     public string NewPassword { get; set; } = string.Empty;
 }

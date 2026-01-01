@@ -8,13 +8,15 @@ public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICur
 {
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
-    public Guid? GetCurrentUserId()
+    public long? GetCurrentUserId()
     {
-        var userIdString = _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (Guid.TryParse(userIdString, out var userId))
+        var userIdString = _httpContextAccessor.HttpContext?
+            .User?
+            .FindFirstValue(ClaimTypes.NameIdentifier);
 
+        if (long.TryParse(userIdString, out var userId))
             return userId;
 
-        return Guid.Empty;
+        return null;
     }
 }

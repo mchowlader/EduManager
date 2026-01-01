@@ -25,14 +25,14 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<User?> GetByIdAsync(long id)
     {
         return await context.Users
             .Include(u => u.Tenant)
             .FirstOrDefaultAsync(u => u.Id == id);
     }
 
-    public async Task<IEnumerable<User>> GetByTenantIdAsync(Guid tenantId)
+    public async Task<IEnumerable<User>> GetByTenantIdAsync(long tenantId)
     {
         return await context.Users
             .Where(u => u.TenantId == tenantId)
@@ -56,12 +56,12 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
         throw new NotImplementedException();
     }
 
-    public Task<bool> UpdateLastLoginAsync(Guid userId, DateTime loginTime)
+    public Task<bool> UpdateLastLoginAsync(long userId, DateTime loginTime)
     {
         throw new NotImplementedException();
     }
 
-    public Task<bool> ClearRefreshTokenAsync(Guid userId)
+    public Task<bool> ClearRefreshTokenAsync(long userId)
     {
         throw new NotImplementedException();
     }

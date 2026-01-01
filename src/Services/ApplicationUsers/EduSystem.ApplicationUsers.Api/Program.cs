@@ -26,12 +26,19 @@ var app = builder.Build();
 // Middleware
 app.UseExceptionHandler("/api/error");
 app.UseHttpsRedirection();
-app.UseSwaggerConfiguration();
+app.UseCors();
+
 app.UseSwagger();
-app.UseSwaggerUI();
-app.UseAuthorization();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+
+    options.DefaultModelsExpandDepth(-1); // Models section collapse
+    options.DisplayRequestDuration(); // Request duration 
+    options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
+});
+app.UseAuthentication();
 app.UseMultiTenancy();
 app.UseAuthorization();
-app.MapControllers();
 app.MapEndpoints();
 app.Run();

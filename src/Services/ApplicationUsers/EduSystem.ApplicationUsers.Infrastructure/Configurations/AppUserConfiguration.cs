@@ -11,11 +11,9 @@ public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
 {
     public void Configure(EntityTypeBuilder<AppUser> builder)
     {
-        builder.HasKey(e => e.Id);
+        builder.ToTable("AppUsers");
 
-        // Indexes
-        builder.HasIndex(e => e.Email).IsUnique();
-        builder.HasIndex(e => e.UserName).IsUnique();
+        builder.HasKey(e => e.Id);
 
         // Properties
         builder.Property(e => e.Email).HasMaxLength(256).IsRequired();
@@ -30,6 +28,10 @@ public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
         builder.Property(e => e.PhoneConfirmed).HasDefaultValue(false);
         builder.Property(e => e.AccessFailedCount).HasDefaultValue(0);
         builder.Property(e => e.LockoutEnabled).HasDefaultValue(true);
-        builder.Property(e => e.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+        //builder.Property(e => e.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+
+        // Indexes
+        builder.HasIndex(e => e.Id);
+        builder.HasIndex(e => e.UserName).IsUnique();
     }
 }

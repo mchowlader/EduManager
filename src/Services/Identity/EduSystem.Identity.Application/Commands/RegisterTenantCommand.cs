@@ -10,7 +10,7 @@ using MediatR;
 
 namespace EduSystem.Identity.Application.Commands;
 
-public class RegisterTenantCommand : IRequest<Result<Guid>>
+public class RegisterTenantCommand : IRequest<Result<long>>
 {
     public TenantRegistrationDto? Registration { get; set; }
 }
@@ -21,7 +21,7 @@ public class RegisterTenantCommandHandler(
     IPasswordHasher passwordHasher,
     ITenantDatabaseProvisioner dbProvisioner,
     IUnitOfWork unitOfWork,
-    IEventBus eventBus) : IRequestHandler<RegisterTenantCommand, Result<Guid>>
+    IEventBus eventBus) : IRequestHandler<RegisterTenantCommand, Result<long>>
 {
     private readonly ITenantRepository _tenantRepository = tenantRepository;
     private readonly IUserRepository _userRepository = userRepository;
@@ -30,14 +30,14 @@ public class RegisterTenantCommandHandler(
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IEventBus _eventBus = eventBus;
 
-    public async Task<Result<Guid>> Handle(RegisterTenantCommand request, CancellationToken cancellationToken)
+    public async Task<Result<long>> Handle(RegisterTenantCommand request, CancellationToken cancellationToken)
     {
         var dto = request.Registration;
         if (dto == null)
-            return Result<Guid>.Failure("Invalid registration data.");
+            return Result<long>.Failure("Invalid registration data.");
 
         if (await _tenantRepository.ExistsAsync(dto.Slug))
-            return Result<Guid>.Failure("Tenant with the same slug already exists.");
+            return Result<long>.Failure("Tenant with the same slug already exists.");
 
         string? connectionString = null;
         bool success = false;
@@ -48,7 +48,7 @@ public class RegisterTenantCommandHandler(
             // 1. Create Database
             var dbResult = await _dbProvisioner.CreateDatabaseAsync(dto.Slug);
             if (!dbResult.Success)
-                return Result<Guid>.Failure("Failed to create tenant database.");
+                return Result<long>.Failure("Failed to create tenant database.");
 
             connectionString = dbResult.EncryptedConnectionString;
 
@@ -60,7 +60,7 @@ public class RegisterTenantCommandHandler(
             if (!tenantResult.IsSuccess)
             {
                 await HandleFailureAsync(dto.Slug, tenantResult.ErrorMessage);
-                return Result<Guid>.Failure(tenantResult.ErrorMessage!);
+                return Result<long>.Failure(tenantResult.ErrorMessage!);
             }
             var tenant = tenantResult.Data!;
 
@@ -69,7 +69,7 @@ public class RegisterTenantCommandHandler(
             if (!tenantAdminResult.IsSuccess)
             {
                 await HandleFailureAsync(dto.Slug, tenantAdminResult.ErrorMessage);
-                return Result<Guid>.Failure(tenantAdminResult.ErrorMessage!);
+                return Result<long>.Failure(tenantAdminResult.ErrorMessage!);
             }
             var tenantAdmin = tenantAdminResult.Data!;
 
@@ -88,12 +88,12 @@ public class RegisterTenantCommandHandler(
             }, cancellationToken).ConfigureAwait(false);
 
             success = true;
-            return Result<Guid>.Success(tenant.Id);
+            return Result<long>.Success(tenant.Id);
         }
         catch (Exception ex)
         {
             await HandleFailureAsync(dto.Slug, ex.Message);
-            return Result<Guid>.Failure("Tenant registration failed: " + ex.Message);
+            return Result<long>.Failure("Tenant registration failed: " + ex.Message);
         }
         finally
         {
@@ -150,7 +150,7 @@ public class RegisterTenantCommandHandler(
 
             var tenantAdmin = new User
             {
-                Id = Guid.NewGuid(),
+                //Id = Guid.NewGuid(),
                 Email = dto.AdminEmail,
                 PasswordHash = _passwordHasher.Hash(dto.AdminPassword.Trim()),
                 FullName = dto.AdminFullName,

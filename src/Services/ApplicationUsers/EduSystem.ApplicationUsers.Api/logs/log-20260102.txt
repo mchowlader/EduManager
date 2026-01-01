@@ -1,0 +1,325 @@
+2026-01-02 00:08:53.467 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 00:08:53.630 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 00:08:56.350 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 00:08:56.405 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 00:08:56.406 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 00:08:56.513 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 00:08:56.513 +06:00 [INF] Hosting environment: Development
+2026-01-02 00:08:56.513 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 00:08:56.626 +06:00 [INF] Request received at /. Authorization header present: false
+2026-01-02 00:08:56.646 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 299.1702ms
+2026-01-02 00:08:56.658 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 00:09:53.539 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 00:09:53.539 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 00:09:53.569 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 30.3148ms
+2026-01-02 00:09:53.615 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.1919ms
+2026-01-02 00:09:53.664 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 00:09:53.670 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.9612ms
+2026-01-02 00:10:48.253 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:10:48.264 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:10:48.269 +06:00 [INF] Request received at /api/v1/section. Authorization header present: false
+2026-01-02 00:10:48.284 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-02 00:10:48.289 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-02 00:10:48.291 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 401 null null 38.1834ms
+2026-01-02 00:11:26.628 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:11:26.629 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:11:26.632 +06:00 [INF] Request received at /api/v1/section. Authorization header present: true
+2026-01-02 00:11:26.695 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:11:26.699 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:11:26.710 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 00:11:57.089 +06:00 [INF] Executed DbCommand (45ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 00:11:57.150 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sections_Classes_ClassesId". The conflict occurred in database "EduSystem_Barguna2", table "dbo.Classes", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:69cbb1c3-3f0d-4d31-b8cc-8154310646a4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sections_Classes_ClassesId". The conflict occurred in database "EduSystem_Barguna2", table "dbo.Classes", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:69cbb1c3-3f0d-4d31-b8cc-8154310646a4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-02 00:12:33.925 +06:00 [INF] Setting HTTP status code 400.
+2026-01-02 00:12:33.928 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-02 00:12:33.931 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:12:33.939 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 400 null application/json; charset=utf-8 67311.2532ms
+2026-01-02 00:21:20.103 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 00:21:20.265 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 00:21:21.680 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 00:21:21.711 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 00:21:21.740 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 00:21:21.890 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 00:21:21.891 +06:00 [INF] Hosting environment: Development
+2026-01-02 00:21:21.891 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 00:21:22.180 +06:00 [INF] Request received at /. Authorization header present: false
+2026-01-02 00:21:22.249 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 539.3132ms
+2026-01-02 00:21:22.284 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 00:21:25.229 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 00:21:25.229 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 00:21:25.267 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 37.9972ms
+2026-01-02 00:21:25.275 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.8108ms
+2026-01-02 00:21:25.417 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 00:21:25.432 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.8744ms
+2026-01-02 00:22:23.114 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:22:23.134 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:22:23.162 +06:00 [INF] Request received at /api/v1/section. Authorization header present: true
+2026-01-02 00:22:23.258 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:22:23.266 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:22:23.278 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 00:23:34.489 +06:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 00:23:34.547 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sections_Classes_ClassesId". The conflict occurred in database "EduSystem_Barguna2", table "dbo.Classes", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:eec56abd-12b8-42df-951a-81688ec9a46f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Sections_Classes_ClassesId". The conflict occurred in database "EduSystem_Barguna2", table "dbo.Classes", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:eec56abd-12b8-42df-951a-81688ec9a46f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-02 00:24:55.881 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 00:29:34.760 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 00:29:34.918 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 00:29:36.246 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 00:29:36.306 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 00:29:36.324 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 00:29:36.423 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 00:29:36.423 +06:00 [INF] Hosting environment: Development
+2026-01-02 00:29:36.423 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 00:29:36.650 +06:00 [INF] Request received at /. Authorization header present: false
+2026-01-02 00:29:36.671 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 366.5908ms
+2026-01-02 00:29:36.686 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 00:29:39.735 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 00:29:39.735 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 00:29:39.764 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 29.7553ms
+2026-01-02 00:29:39.775 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.783ms
+2026-01-02 00:29:39.868 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 00:29:39.874 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.2011ms
+2026-01-02 00:31:29.262 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:31:29.277 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:31:29.316 +06:00 [INF] Request received at /api/v1/section. Authorization header present: false
+2026-01-02 00:31:29.334 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-02 00:31:29.342 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-02 00:31:29.345 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 401 null null 81.5385ms
+2026-01-02 00:31:39.390 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:31:39.391 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:31:39.406 +06:00 [INF] Request received at /api/v1/section. Authorization header present: true
+2026-01-02 00:31:39.511 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:31:39.520 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:31:39.540 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 00:31:55.113 +06:00 [INF] Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 00:32:03.324 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 00:32:03.328 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 00:32:03.333 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:32:03.342 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 201 null application/json; charset=utf-8 23952.1799ms
+2026-01-02 00:32:52.510 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 41
+2026-01-02 00:32:52.512 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:32:52.512 +06:00 [INF] Request received at /api/v1/section. Authorization header present: true
+2026-01-02 00:32:52.514 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:32:52.517 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:33:01.398 +06:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 00:33:04.585 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 00:33:04.585 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 00:33:04.586 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:33:04.586 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 201 null application/json; charset=utf-8 12076.1014ms
+2026-01-02 00:35:59.953 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 00:36:00.189 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 00:36:02.536 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 00:36:02.619 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 00:36:02.656 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 00:36:02.806 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 00:36:02.806 +06:00 [INF] Hosting environment: Development
+2026-01-02 00:36:02.806 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 00:36:03.067 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 450.8262ms
+2026-01-02 00:36:03.094 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 00:36:05.880 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 00:36:05.880 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 00:36:05.919 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16544 application/javascript; charset=utf-8 39.3733ms
+2026-01-02 00:36:05.927 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1148ms
+2026-01-02 00:36:06.039 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 00:36:06.048 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.7575ms
+2026-01-02 00:37:41.368 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 00:37:41.490 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:37:41.496 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 00:37:41.503 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 00:37:43.378 +06:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 00:37:43.437 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 00:37:43.437 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 00:37:43.542 +06:00 [INF] Executed DbCommand (32ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-02 00:37:43.628 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 00:37:43.634 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 00:37:43.641 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 00:37:43.654 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 2285.6091ms
+2026-01-02 00:38:04.365 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 00:38:04.367 +06:00 [INF] CORS policy execution successful.
+2026-01-02 00:38:04.377 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:38:04.379 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:38:07.407 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 00:38:07.429 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 00:38:07.429 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 00:38:07.431 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 00:38:07.466 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 201 null application/json; charset=utf-8 3100.5896ms
+2026-01-02 00:38:24.044 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 00:38:24.045 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 00:38:24.049 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 00:38:24.087 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 00:38:24.091 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-02 00:38:24.092 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 00:38:24.092 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 00:38:24.092 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 00:38:24.092 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 47.8437ms

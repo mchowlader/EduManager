@@ -5,6 +5,7 @@ using System.Text;
 using EduSystem.Identity.Application.IService;
 using EduSystem.Identity.Application.Settings;
 using EduSystem.Identity.Domain.Entities;
+using EduSystem.Shared.Infrastructure.Authentication;
 using Microsoft.IdentityModel.Tokens;
 
 namespace EduSystem.Identity.Infrastructure.Service;
@@ -26,10 +27,10 @@ public class TokenService : ITokenService
             new(ClaimTypes.Email, user.Email),
             new(ClaimTypes.Name, user.FullName),
             new(ClaimTypes.Role, user.Role.ToString()),
-            new("tenant_id", tenant.Id.ToString()),
-            new("tenant_slug", tenant.Slug ?? string.Empty),
-            new("tenant_name", tenant.Name),
-            new("tenant_connection", tenant.ConnectionString ?? string.Empty),
+            new(CustomClaimTypes.TenantId, tenant.Id.ToString()),
+            new(CustomClaimTypes.TenantSlug, tenant.Slug ?? string.Empty),
+            new(CustomClaimTypes.TenantName, tenant.Name),
+            new(CustomClaimTypes.ConnectionString, tenant.ConnectionString ?? string.Empty),
             new("is_active", user.IsActive.ToString()),
             new("phone_number", user.PhoneNumber ?? string.Empty)
         };
