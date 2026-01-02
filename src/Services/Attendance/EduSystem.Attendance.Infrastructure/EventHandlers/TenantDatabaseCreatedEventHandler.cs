@@ -1,4 +1,5 @@
-using EduSystem.Shared.Infrastructure.Security;
+using EduSystem.Attendance.Infrastructure.Contexts;
+using EduSystem.Shared.Infrastructure.MultiTenancy;
 using EduSystem.Shared.Messaging;
 using EduSystem.Shared.Messaging.Handlers;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +11,9 @@ public class TenantDatabaseCreatedEventHandler : BaseMigrationHandler<Attendance
 {
     protected override string ServiceName => "Attendance";
 
-    public TenantDatabaseCreatedEventHandler(IConnectionStringEncryptor encryptor, IEventBus eventBus,
+    public TenantDatabaseCreatedEventHandler(ITenantMigrationService<AttendanceDbContext> migrationService, IEventBus eventBus,
         ILogger<TenantDatabaseCreatedEventHandler> logger)
-        : base(encryptor, eventBus, logger)
+        : base(migrationService, eventBus, logger)
     {
     }
 

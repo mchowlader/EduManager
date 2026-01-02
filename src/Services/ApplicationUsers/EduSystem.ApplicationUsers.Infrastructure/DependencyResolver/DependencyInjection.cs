@@ -8,8 +8,11 @@ using EduSystem.ApplicationUsers.Infrastructure.Repositories;
 using EduSystem.Shared.Event;
 using EduSystem.Shared.Messaging;
 using MassTransit;
+using EduSystem.ApplicationUsers.Infrastructure.Contexts;
+using EduSystem.Shared.Infrastructure.MultiTenancy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace EduSystem.ApplicationUsers.Infrastructure.DependencyResolver;
 
@@ -19,6 +22,8 @@ public static class DependencyInjection
     {
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<ITenantProvider, TenantProvider>();
+        services.AddTenantMigration<AppUserDbContext>();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddHttpContextAccessor();
         services.AddScoped<AuditInterceptor>();

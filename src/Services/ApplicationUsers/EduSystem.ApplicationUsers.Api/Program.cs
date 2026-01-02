@@ -1,12 +1,16 @@
+using System.IdentityModel.Tokens.Jwt;
 using EduSystem.ApplicationUsers.Api.DependencyResolver;
-using EduSystem.ApplicationUsers.Api.EndPoints;
 using EduSystem.ApplicationUsers.Application.DependencyResolver;
 using EduSystem.ApplicationUsers.Infrastructure.DependencyResolver;
-using Serilog;
-using EduSystem.Shared.Infrastructure.MultiTenancy;
 using EduSystem.Shared.Infrastructure.Extensions;
+using EduSystem.Shared.Infrastructure.MultiTenancy;
+using EduSystem.ApplicationUsers.Api.Endpoints;
+using Serilog;
+using EduSystem.ApplicationUsers.Infrastructure.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
+
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // To avoid claim type mapping issues
 
 builder.Services.AddMultiTenancy();
 var logger = new LoggerConfiguration()
@@ -27,7 +31,6 @@ var app = builder.Build();
 app.UseExceptionHandler("/api/error");
 app.UseHttpsRedirection();
 app.UseCors();
-
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
@@ -41,4 +44,16 @@ app.UseAuthentication();
 app.UseMultiTenancy();
 app.UseAuthorization();
 app.MapEndpoints();
+app.MapMigrationEndpoints();
+
+// Startup Migrations for all tenants
+using (var scope = app.Services.CreateScope())
+{
+    var tenantProvider = scope.ServiceProvider.GetRequiredService<ITenantProvider>();
+    var migrationService = scope.ServiceProvider.GetRequiredService<ITenantMigrationService<AppUserDbContext>>();
+
+    var tenants = await tenantProvider.GetActiveTenantsAsync();
+    await migrationService.MigrateAllTenantsAsync(tenants);
+}
+
 app.Run();

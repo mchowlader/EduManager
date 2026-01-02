@@ -23,10 +23,18 @@ public class TokenService : ITokenService
     {
         var claims = new List<Claim>
         {
-            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new(ClaimTypes.Email, user.Email),
-            new(ClaimTypes.Name, user.FullName),
-            new(ClaimTypes.Role, user.Role.ToString()),
+            //new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+
+            //new(ClaimTypes.Email, user.Email),
+            new(JwtRegisteredClaimNames.Email, user.Email),
+
+            //new(ClaimTypes.Name, user.FullName),
+            new(JwtRegisteredClaimNames.Name, user.FullName),
+
+            //new(ClaimTypes.Role, user.Role.ToString()),
+            new("role", user.Role.ToString()),
+
             new(CustomClaimTypes.TenantId, tenant.Id.ToString()),
             new(CustomClaimTypes.TenantSlug, tenant.Slug ?? string.Empty),
             new(CustomClaimTypes.TenantName, tenant.Name),

@@ -23,7 +23,15 @@ public class BaseUpdateEntityCommandHandler<TEntity, TUpdateDto, TResponseDto>(
             var entity = await repository.GetByIdAsync(request.Id, cancellationToken);
             if (entity == null) return Result<TResponseDto>.Failure("Entity not found");
 
-            Map(request.Data, entity);
+            Map(request.Data!, entity);
+
+            // Dynamic Validation for Unique Constraints
+            var validationResult = await unitOfWork.ValidateAsync(entity, cancellationToken);
+            if (!validationResult.IsValid)
+            {
+                return Result<TResponseDto>.Failure(validationResult.Message);
+            }
+
             await repository.UpdateAsync(entity, cancellationToken);
             await unitOfWork.CommitAsync();
 

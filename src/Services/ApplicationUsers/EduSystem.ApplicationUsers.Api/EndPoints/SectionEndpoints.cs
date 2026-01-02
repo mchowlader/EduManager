@@ -4,7 +4,8 @@ using EduSystem.Shared.Infrastructure.Interfaces;
 
 namespace EduSystem.ApplicationUsers.Api.EndPoints;
 
-public class SectionEndpoints : BaseEndPoints<Section, SectionCreateDto, SectionUpdateDto, SectionResponseDto>, IEndpoints
+public class SectionEndpoints
+    : BaseEndPoints<Section, SectionCreateDto, SectionUpdateDto, SectionResponseDto>, IEndpoints
 {
     public static void MapEndpoints(IEndpointRouteBuilder app)
     {

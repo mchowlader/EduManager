@@ -21,5 +21,7 @@ public class SectionConfiguration : IEntityTypeConfiguration<Section>
             .HasForeignKey(fk => fk.ClassesId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasIndex(x => new { x.ClassesId, x.Name})
+            .IsUnique();
     }
 }

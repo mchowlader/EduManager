@@ -1,7 +1,7 @@
 1. Go to the Infructructure project directory:
    ```bash
    cd D:\MCH\PetProject\EduManager\src\Services
-   cd EduSystem.Identity.Infrastructure 
+   cd EduSystem.Application.Infrastructure 
    ```
 2. Run the Entity Framework Core migration command:
    ```bash

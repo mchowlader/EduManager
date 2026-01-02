@@ -192,6 +192,12 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique();
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
                     b.ToTable("Classes", (string)null);
                 });
 
@@ -325,7 +331,8 @@ namespace EduSystem.ApplicationUsers.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassesId");
+                    b.HasIndex("ClassesId", "Name")
+                        .IsUnique();
 
                     b.ToTable("Sections", (string)null);
                 });

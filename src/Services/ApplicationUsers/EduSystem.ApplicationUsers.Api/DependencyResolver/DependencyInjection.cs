@@ -30,6 +30,7 @@ public static class DependencyInjection
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
+                options.MapInboundClaims = false;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
@@ -41,8 +42,8 @@ public static class DependencyInjection
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(configuration["JwtSettings:SecretKey"] ?? "Staging-EduSystem-Secure-Key-2024-ABC123-XYZ789-@#$%^&")),
                     ClockSkew = TimeSpan.Zero,
-                    NameClaimType = ClaimTypes.NameIdentifier,
-                    RoleClaimType = ClaimTypes.Role
+                    NameClaimType = "name", //ClaimTypes.NameIdentifier,
+                    RoleClaimType = "role" //ClaimTypes.Role
                 };
 
                 options.Events = new JwtBearerEvents

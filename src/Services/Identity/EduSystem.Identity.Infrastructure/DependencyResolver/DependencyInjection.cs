@@ -8,6 +8,7 @@ using EduSystem.Identity.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using EduSystem.Shared.Infrastructure.MultiTenancy;
 
 namespace EduSystem.Identity.Infrastructure.DependencyResolver;
 
@@ -46,6 +47,7 @@ public static class DependencyInjection
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
         services.AddScoped<ITenantDatabaseProvisioner, TenantDatabaseProvisioner>();
+        services.AddTenantMigration<IdentityDbContext>();
 
         return services;
     }

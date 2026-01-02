@@ -24,5 +24,7 @@ public class ClassesConfiguration : IEntityTypeConfiguration<Classes>
             .HasForeignKey(fk => fk.ClassesId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasIndex(c => c.Name).IsUnique();
+        builder.HasIndex(i => i.Id).IsUnique();
     }
 }

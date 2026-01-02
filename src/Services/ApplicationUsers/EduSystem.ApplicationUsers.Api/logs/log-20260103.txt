@@ -1,0 +1,200 @@
+2026-01-03 00:01:31.787 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-03 00:01:31.884 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-03 00:01:34.430 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-03 00:01:34.438 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-03 00:01:34.884 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-03 00:01:34.884 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-03 00:01:35.663 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-03 00:01:35.664 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-03 00:01:36.014 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-03 00:01:36.014 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-03 00:01:36.409 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-03 00:01:36.410 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-03 00:01:36.762 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-03 00:01:36.762 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-03 00:01:37.150 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-03 00:01:37.151 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-03 00:01:37.793 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna2
+2026-01-03 00:01:37.794 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-03 00:01:38.113 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-03 00:01:38.286 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 00:01:38.846 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 00:01:38.949 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-03 00:01:38.999 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 00:01:39.159 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 00:01:39.159 +06:00 [INF] Hosting environment: Development
+2026-01-03 00:01:39.159 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-03 00:01:42.981 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 4047.6739ms
+2026-01-03 00:01:43.019 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-03 00:01:49.129 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 00:01:49.129 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-03 00:01:49.189 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 29.7516ms
+2026-01-03 00:01:49.219 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.4689ms
+2026-01-03 00:01:49.356 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-03 00:01:49.369 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.6423ms
+2026-01-03 00:04:23.723 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-03 00:04:23.745 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:04:23.821 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:04:32.534 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-03 00:04:32.546 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 00:07:28.139 +06:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:08:47.738 +06:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'SIX') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:09:07.719 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:09:07.723 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 00:09:07.728 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-03 00:09:07.735 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 400 null application/json; charset=utf-8 284012.4203ms
+2026-01-03 00:10:24.341 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-03 00:10:24.346 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:10:24.359 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:10:29.350 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-03 00:10:37.195 +06:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Sections] AS [s]
+        WHERE [s].[IsDeleted] = CAST(0 AS bit) AND [s].[ClassesId] = CAST(3 AS bigint) AND [s].[Name] = N'SIX-A') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:10:37.196 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:10:37.196 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 00:10:37.197 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-03 00:10:37.197 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 400 null application/json; charset=utf-8 12856.4731ms
+2026-01-03 00:13:38.750 +06:00 [INF] Request starting HTTP/2 PUT https://localhost:44318/api/v1/section/4 - application/json 40
+2026-01-03 00:13:38.751 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:13:38.751 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:13:40.972 +06:00 [INF] Executing endpoint 'HTTP: PUT /api/v{version:apiVersion}/section/{id:long} => UpdateV1'
+2026-01-03 00:13:41.125 +06:00 [INF] Executed DbCommand (23ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND [s].[Id] = @p
+2026-01-03 00:13:41.127 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:13:41.128 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 00:13:41.128 +06:00 [INF] Executed endpoint 'HTTP: PUT /api/v{version:apiVersion}/section/{id:long} => UpdateV1'
+2026-01-03 00:13:41.128 +06:00 [INF] Request finished HTTP/2 PUT https://localhost:44318/api/v1/section/4 - 400 null application/json; charset=utf-8 2378.4197ms
+2026-01-03 00:14:05.011 +06:00 [INF] Request starting HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - application/json 33
+2026-01-03 00:14:05.012 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:14:05.012 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:14:06.991 +06:00 [INF] Executing endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:14:07.011 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-03 00:14:11.181 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:14:11.195 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'string') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:17:02.701 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:17:02.701 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 00:17:02.702 +06:00 [INF] Executed endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:17:02.703 +06:00 [INF] Request finished HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - 400 null application/json; charset=utf-8 177691.434ms
+2026-01-03 00:18:05.164 +06:00 [INF] Request starting HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - application/json 30
+2026-01-03 00:18:05.164 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:18:05.165 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:18:17.037 +06:00 [INF] Executing endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:18:17.052 +06:00 [INF] Executed DbCommand (13ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-03 00:18:27.153 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(4 AS bigint) AND [c].[Id] <> CAST(4 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:18:27.164 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'SIX' AND [c].[Id] <> CAST(4 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:18:27.164 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:18:27.164 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 00:18:27.165 +06:00 [INF] Executed endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:18:27.165 +06:00 [INF] Request finished HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - 400 null application/json; charset=utf-8 22001.0446ms
+2026-01-03 00:18:49.509 +06:00 [INF] Request starting HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - application/json 31
+2026-01-03 00:18:49.509 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:18:49.510 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:18:51.301 +06:00 [INF] Executing endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:18:51.311 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-03 00:18:52.988 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(4 AS bigint) AND [c].[Id] <> CAST(4 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:18:53.002 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'NINE' AND [c].[Id] <> CAST(4 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-03 00:18:53.102 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-03 00:18:53.122 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 00:18:53.123 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 00:18:53.125 +06:00 [INF] Executed endpoint 'HTTP: PUT /api/v{version:apiVersion}/classes/{id:long} => UpdateV1'
+2026-01-03 00:18:53.126 +06:00 [INF] Request finished HTTP/2 PUT https://localhost:44318/api/v1/classes/4 - 200 null application/json; charset=utf-8 3617.0237ms
+2026-01-03 00:20:18.915 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/0 - null null
+2026-01-03 00:20:18.916 +06:00 [INF] CORS policy execution successful.
+2026-01-03 00:20:18.916 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:20:20.737 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-03 00:20:20.750 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-03 00:20:20.752 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 00:20:20.753 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-03 00:20:20.755 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-03 00:20:20.757 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/0 - 400 null application/json; charset=utf-8 1842.2253ms
+2026-01-03 00:20:37.969 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes/5 - null null
+2026-01-03 00:20:37.971 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-03 00:20:39.857 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/{id:long} => GetByIdV1'
+2026-01-03 00:20:39.864 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-03 00:20:39.903 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 00:20:39.904 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 00:20:39.904 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/{id:long} => GetByIdV1'
+2026-01-03 00:20:39.904 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes/5 - 200 null application/json; charset=utf-8 1935.1577ms

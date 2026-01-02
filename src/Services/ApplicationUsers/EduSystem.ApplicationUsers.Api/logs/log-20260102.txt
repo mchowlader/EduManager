@@ -323,3 +323,897 @@ OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
 2026-01-02 00:38:24.092 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
 2026-01-02 00:38:24.092 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
 2026-01-02 00:38:24.092 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 47.8437ms
+2026-01-02 10:56:20.983 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 10:56:21.165 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 10:56:30.161 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 10:56:30.193 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 10:56:35.760 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 10:56:35.786 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 10:56:35.786 +06:00 [INF] Hosting environment: Development
+2026-01-02 10:56:35.787 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 10:56:52.012 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 21854.8738ms
+2026-01-02 10:56:52.029 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 10:56:58.774 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 10:56:58.774 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 10:56:58.848 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 76.2191ms
+2026-01-02 10:56:58.911 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.3428ms
+2026-01-02 10:56:59.197 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 10:56:59.215 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8353ms
+2026-01-02 11:05:55.914 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/section - application/json 39
+2026-01-02 11:05:55.946 +06:00 [INF] CORS policy execution successful.
+2026-01-02 11:05:56.167 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 11:10:15.816 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 11:10:15.828 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 11:10:26.112 +06:00 [INF] Executed DbCommand (159ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int64), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Sections] ([ClassesId], [CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2026-01-02 11:10:45.780 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 11:10:45.783 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 11:10:45.787 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/section/ => CreateV1'
+2026-01-02 11:10:45.799 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/section - 201 null application/json; charset=utf-8 289884.4888ms
+2026-01-02 11:11:05.353 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 11:11:05.367 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 11:11:29.422 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 11:11:29.857 +06:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 11:11:29.881 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 11:11:29.881 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 11:11:29.935 +06:00 [INF] Executed DbCommand (15ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-02 11:11:29.954 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 11:11:29.957 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 11:11:29.959 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 11:11:29.960 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 24606.5589ms
+2026-01-02 11:11:52.449 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section/5 - null null
+2026-01-02 11:11:52.451 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 11:11:54.688 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/{id:long} => GetByIdV1'
+2026-01-02 11:11:54.768 +06:00 [INF] Executed DbCommand (16ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND [s].[Id] = @p
+2026-01-02 11:11:54.771 +06:00 [INF] Setting HTTP status code 404.
+2026-01-02 11:11:54.772 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-02 11:11:54.772 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/{id:long} => GetByIdV1'
+2026-01-02 11:11:54.773 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section/5 - 404 null application/json; charset=utf-8 2323.8571ms
+2026-01-02 11:12:14.421 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section/8 - null null
+2026-01-02 11:12:14.430 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 11:12:16.900 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/{id:long} => GetByIdV1'
+2026-01-02 11:12:16.910 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND [s].[Id] = @p
+2026-01-02 11:12:16.912 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 11:12:16.912 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 11:12:16.912 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/{id:long} => GetByIdV1'
+2026-01-02 11:12:16.913 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section/8 - 200 null application/json; charset=utf-8 2491.481ms
+2026-01-02 11:51:23.912 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 11:51:24.258 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 11:51:24.649 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 11:51:25.437 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 11:51:25.462 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 11:51:25.611 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 11:51:25.611 +06:00 [INF] Hosting environment: Development
+2026-01-02 11:51:25.612 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 11:51:28.374 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 2937.9583ms
+2026-01-02 11:51:28.394 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 11:51:37.829 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 11:51:37.829 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 11:51:37.863 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 30.6511ms
+2026-01-02 11:51:37.871 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.4363ms
+2026-01-02 11:51:38.059 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 11:51:38.067 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.2198ms
+2026-01-02 11:54:10.580 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 11:54:10.809 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 11:54:11.560 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 11:54:14.945 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 11:54:14.975 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 11:54:15.142 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 11:54:15.142 +06:00 [INF] Hosting environment: Development
+2026-01-02 11:54:15.143 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 11:54:15.859 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 924.1893ms
+2026-01-02 11:54:15.880 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 11:54:20.944 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 11:54:20.944 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 11:54:20.979 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 35.2381ms
+2026-01-02 11:54:20.991 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.3756ms
+2026-01-02 11:54:21.087 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 11:54:21.095 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.4487ms
+2026-01-02 11:59:56.733 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 11:59:56.823 +06:00 [INF] Authentication successful for user: 8
+2026-01-02 12:50:00.348 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 12:50:00.472 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 12:50:00.840 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 12:50:01.310 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 12:50:01.326 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 12:50:01.429 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 12:50:01.430 +06:00 [INF] Hosting environment: Development
+2026-01-02 12:50:01.430 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 12:50:07.686 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 6378.2094ms
+2026-01-02 12:50:07.700 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 12:50:11.598 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 12:50:11.598 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 12:50:11.632 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 30.9364ms
+2026-01-02 12:50:11.638 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.6369ms
+2026-01-02 12:50:11.724 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 12:50:11.735 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1531ms
+2026-01-02 12:52:44.405 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 12:52:44.484 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 12:59:56.398 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 12:59:56.503 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 12:59:58.404 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 12:59:58.441 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 12:59:58.454 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 12:59:58.533 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 12:59:58.533 +06:00 [INF] Hosting environment: Development
+2026-01-02 12:59:58.533 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 13:00:00.557 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 2116.9171ms
+2026-01-02 13:00:00.575 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 13:00:07.331 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 13:00:07.331 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 13:00:07.361 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 30.4463ms
+2026-01-02 13:00:07.368 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.6628ms
+2026-01-02 13:00:07.456 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 13:00:07.463 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.274ms
+2026-01-02 13:02:10.995 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-01-02 13:02:11.068 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 13:04:15.623 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 13:04:15.630 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 13:04:17.391 +06:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 13:04:17.429 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 13:04:17.430 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 13:04:17.505 +06:00 [INF] Executed DbCommand (30ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [s].[Id], [s].[ClassesId], [s].[CreatedAt], [s].[CreatedBy], [s].[DeleteAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt], [s].[UpdatedBy]
+FROM [Sections] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-02 13:04:17.572 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 13:04:17.575 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 13:04:17.579 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/section/ => GetAllV1'
+2026-01-02 13:04:35.405 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 144409.9651ms
+2026-01-02 14:56:00.212 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 14:56:00.334 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 14:56:01.064 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 14:56:01.128 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 14:56:01.145 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 14:56:01.250 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 14:56:01.250 +06:00 [INF] Hosting environment: Development
+2026-01-02 14:56:01.250 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 14:56:03.985 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 2869.077ms
+2026-01-02 14:56:04.002 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 14:56:08.619 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 14:56:08.619 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 14:56:08.647 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 28.157ms
+2026-01-02 14:56:08.653 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2314ms
+2026-01-02 14:56:08.785 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 14:56:08.795 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1189ms
+2026-01-02 14:57:10.800 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 14:57:10.910 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 14:57:12.241 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 14:57:12.309 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 14:57:12.324 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 14:57:12.435 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 14:57:12.435 +06:00 [INF] Hosting environment: Development
+2026-01-02 14:57:12.435 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 14:57:13.358 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 1054.4777ms
+2026-01-02 14:57:13.371 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 14:57:20.822 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 14:57:20.822 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 14:57:20.854 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 27.48ms
+2026-01-02 14:57:20.860 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.2892ms
+2026-01-02 14:57:21.009 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 14:57:21.016 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.1181ms
+2026-01-02 14:57:45.027 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 14:57:45.050 +06:00 [INF] CORS policy execution successful.
+2026-01-02 14:57:59.520 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-02 14:57:59.525 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-02 14:57:59.526 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 401 null null 14499.6646ms
+2026-01-02 14:59:39.165 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 14:59:39.167 +06:00 [INF] CORS policy execution successful.
+2026-01-02 14:59:39.225 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 14:59:53.015 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 14:59:53.027 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 14:59:53.108 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 15:00:31.928 +06:00 [INF] CORS policy execution successful.
+2026-01-02 15:00:41.593 +06:00 [INF] Executing endpoint '/api/error/'
+2026-01-02 15:00:41.595 +06:00 [ERR] Error ID: 40000036-0000-fe00-b63f-84710c7967bb | Path: /api/error | Message: No service for type 'MediatR.IRequestHandler`2[EduSystem.ApplicationUsers.Application.Features.Base.Commands.BaseCreateEntityCommand`3[EduSystem.ApplicationUsers.Domain.Entities.Classes,EduSystem.ApplicationUsers.Application.DTOs.ClassCreateDto,EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto],EduSystem.ApplicationUsers.Shared.Common.Result`1[EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[EduSystem.ApplicationUsers.Application.Features.Base.Commands.BaseCreateEntityCommand`3[EduSystem.ApplicationUsers.Domain.Entities.Classes,EduSystem.ApplicationUsers.Application.DTOs.ClassCreateDto,EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto],EduSystem.ApplicationUsers.Shared.Common.Result`1[EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at EduSystem.ApplicationUsers.Api.EndPoints.BaseEndPoints`4.CreateV1(TCreateDto dto, IMediator mediator) in D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api\EndPoints\BaseEndPoints.cs:line 105
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMiddleware.InvokeAsync(HttpContext context, ITenantContext tenantContext) in D:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-01-02 15:00:41.626 +06:00 [INF] Setting HTTP status code 500.
+2026-01-02 15:00:41.635 +06:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2026-01-02 15:00:41.642 +06:00 [INF] Executed endpoint '/api/error/'
+2026-01-02 15:00:42.035 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[EduSystem.ApplicationUsers.Application.Features.Base.Commands.BaseCreateEntityCommand`3[EduSystem.ApplicationUsers.Domain.Entities.Classes,EduSystem.ApplicationUsers.Application.DTOs.ClassCreateDto,EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto],EduSystem.ApplicationUsers.Shared.Common.Result`1[EduSystem.ApplicationUsers.Application.DTOs.ClassResponseDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at EduSystem.ApplicationUsers.Api.EndPoints.BaseEndPoints`4.CreateV1(TCreateDto dto, IMediator mediator) in D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api\EndPoints\BaseEndPoints.cs:line 105
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMiddleware.InvokeAsync(HttpContext context, ITenantContext tenantContext) in D:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-01-02 15:00:42.037 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 500 null application/problem+json 62870.8625ms
+2026-01-02 15:00:53.658 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 15:00:53.659 +06:00 [INF] CORS policy execution successful.
+2026-01-02 15:01:04.290 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 15:01:16.328 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 15:01:16.374 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 15:13:01.351 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 15:13:01.484 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 15:13:03.637 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 15:13:03.731 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 15:13:03.750 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 15:13:04.984 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 15:13:04.984 +06:00 [INF] Hosting environment: Development
+2026-01-02 15:13:04.984 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 15:13:06.651 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 2922.9509ms
+2026-01-02 15:13:06.668 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 15:13:12.349 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 15:13:12.349 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 15:13:12.376 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 28.7042ms
+2026-01-02 15:13:12.388 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.4317ms
+2026-01-02 15:13:12.482 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 15:13:12.491 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.0489ms
+2026-01-02 15:14:10.296 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 15:14:10.313 +06:00 [INF] CORS policy execution successful.
+2026-01-02 15:14:10.370 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 15:14:21.747 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 15:14:21.762 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 15:14:30.145 +06:00 [INF] Executed DbCommand (68ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-02 15:14:35.659 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 15:14:35.662 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 15:14:35.668 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 15:14:35.677 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 201 null application/json; charset=utf-8 25381.0992ms
+2026-01-02 15:14:50.263 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes?pageNumber=1&pageSize=10 - null null
+2026-01-02 15:14:50.272 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 15:14:52.510 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-02 15:14:52.867 +06:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-02 15:14:52.888 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 15:14:52.889 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-02 15:14:52.932 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-02 15:14:52.946 +06:00 [INF] Setting HTTP status code 200.
+2026-01-02 15:14:52.949 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 15:14:52.950 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-02 15:14:52.950 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes?pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 2687.9607ms
+2026-01-02 22:49:43.447 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-02 22:49:43.517 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-02 22:49:44.801 +06:00 [WRN] ❌ Migration failed for tenant: KameghaMuslim. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:46.882 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 2/3)
+2026-01-02 22:49:47.062 +06:00 [WRN] ❌ Migration failed for tenant: KameghaMuslim. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:51.071 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 3/3)
+2026-01-02 22:49:51.306 +06:00 [WRN] ❌ Migration failed for tenant: KameghaMuslim. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:51.307 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: KameghaMuslim after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:51.368 +06:00 [ERR] ⚠️ Skipping tenant KameghaMuslim due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:49:51.369 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-02 22:49:51.540 +06:00 [WRN] ❌ Migration failed for tenant: Hatempur. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:53.552 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 2/3)
+2026-01-02 22:49:53.607 +06:00 [WRN] ❌ Migration failed for tenant: Hatempur. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:57.621 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 3/3)
+2026-01-02 22:49:57.659 +06:00 [WRN] ❌ Migration failed for tenant: Hatempur. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:57.660 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Hatempur after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:57.691 +06:00 [ERR] ⚠️ Skipping tenant Hatempur due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:49:57.692 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-02 22:49:57.741 +06:00 [WRN] ❌ Migration failed for tenant: KM. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:49:59.747 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 2/3)
+2026-01-02 22:49:59.821 +06:00 [WRN] ❌ Migration failed for tenant: KM. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:03.836 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 3/3)
+2026-01-02 22:50:03.877 +06:00 [WRN] ❌ Migration failed for tenant: KM. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:03.878 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: KM after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:03.905 +06:00 [ERR] ⚠️ Skipping tenant KM due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:03.906 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-02 22:50:03.954 +06:00 [WRN] ❌ Migration failed for tenant: Taslima. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:05.967 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 2/3)
+2026-01-02 22:50:06.006 +06:00 [WRN] ❌ Migration failed for tenant: Taslima. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:10.014 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 3/3)
+2026-01-02 22:50:10.076 +06:00 [WRN] ❌ Migration failed for tenant: Taslima. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:10.076 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Taslima after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:10.105 +06:00 [ERR] ⚠️ Skipping tenant Taslima due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:10.105 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-02 22:50:10.154 +06:00 [WRN] ❌ Migration failed for tenant: Barguna. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:12.157 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 2/3)
+2026-01-02 22:50:12.195 +06:00 [WRN] ❌ Migration failed for tenant: Barguna. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:16.203 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 3/3)
+2026-01-02 22:50:16.237 +06:00 [WRN] ❌ Migration failed for tenant: Barguna. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:16.238 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Barguna after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:16.264 +06:00 [ERR] ⚠️ Skipping tenant Barguna due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:16.264 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-02 22:50:16.309 +06:00 [WRN] ❌ Migration failed for tenant: Green. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:18.312 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 2/3)
+2026-01-02 22:50:18.354 +06:00 [WRN] ❌ Migration failed for tenant: Green. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:22.355 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 3/3)
+2026-01-02 22:50:22.403 +06:00 [WRN] ❌ Migration failed for tenant: Green. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:22.403 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Green after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:22.435 +06:00 [ERR] ⚠️ Skipping tenant Green due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:22.435 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-02 22:50:22.516 +06:00 [WRN] ❌ Migration failed for tenant: Model. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:24.527 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 2/3)
+2026-01-02 22:50:24.571 +06:00 [WRN] ❌ Migration failed for tenant: Model. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:28.574 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 3/3)
+2026-01-02 22:50:28.614 +06:00 [WRN] ❌ Migration failed for tenant: Model. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:28.614 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Model after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:28.644 +06:00 [ERR] ⚠️ Skipping tenant Model due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:28.644 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-02 22:50:28.686 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 1/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:30.689 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 2/3)
+2026-01-02 22:50:30.734 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 2/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:34.746 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 3/3)
+2026-01-02 22:50:34.790 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 3/3
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:34.790 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Barguna2 after 3 attempts
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.ValidateMigrations(Boolean useTransaction, String targetMigration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+2026-01-02 22:50:34.815 +06:00 [ERR] ⚠️ Skipping tenant Barguna2 due to migration failure.
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppUserDbContext' has pending changes. Add a new migration before updating the database. See https://aka.ms/efcore-docs-pending-changes. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+2026-01-02 22:50:34.816 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-02 22:50:35.040 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 22:50:35.165 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 22:50:41.220 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 22:50:41.226 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 22:50:41.244 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 22:50:41.350 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 22:50:41.350 +06:00 [INF] Hosting environment: Development
+2026-01-02 22:50:41.350 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 22:50:44.374 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 3156.3054ms
+2026-01-02 22:50:44.397 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 22:50:58.416 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 22:50:58.416 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 22:50:58.450 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 30.6106ms
+2026-01-02 22:50:58.482 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.2909ms
+2026-01-02 22:50:58.641 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 22:50:58.650 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3052ms
+2026-01-02 23:05:35.837 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 23:05:35.868 +06:00 [INF] CORS policy execution successful.
+2026-01-02 23:05:35.982 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 23:05:55.477 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 23:05:55.492 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 23:06:00.352 +06:00 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-02 23:06:03.686 +06:00 [INF] Setting HTTP status code 201.
+2026-01-02 23:06:03.689 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-02 23:06:03.695 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 23:06:03.702 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 201 null application/json; charset=utf-8 27864.9562ms
+2026-01-02 23:12:59.580 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-02 23:12:59.693 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-02 23:13:01.868 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-02 23:13:01.875 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-02 23:13:02.538 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-02 23:13:02.538 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-02 23:13:03.330 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-02 23:13:03.330 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-02 23:13:04.189 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-02 23:13:04.189 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-02 23:13:04.946 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-02 23:13:04.946 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-02 23:13:05.727 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-02 23:13:05.728 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-02 23:13:06.456 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-02 23:13:06.457 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-02 23:13:07.361 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 1/3
+Microsoft.Data.SqlClient.SqlException (0x80131904): The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Classes' and the index name 'IX_Classes_Name'. The duplicate key value is (SIX).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<<MigrateAsync>b__22_1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+ClientConnectionId:4b8b8c4c-258e-4d51-ae88-5813b43b9b29
+Error Number:1505,State:1,Class:16
+2026-01-02 23:13:09.503 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 2/3)
+2026-01-02 23:13:09.743 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 2/3
+Microsoft.Data.SqlClient.SqlException (0x80131904): The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Classes' and the index name 'IX_Classes_Name'. The duplicate key value is (SIX).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<<MigrateAsync>b__22_1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+ClientConnectionId:4b8b8c4c-258e-4d51-ae88-5813b43b9b29
+Error Number:1505,State:1,Class:16
+2026-01-02 23:13:13.759 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 3/3)
+2026-01-02 23:13:15.423 +06:00 [WRN] ❌ Migration failed for tenant: Barguna2. Retry 3/3
+Microsoft.Data.SqlClient.SqlException (0x80131904): The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Classes' and the index name 'IX_Classes_Name'. The duplicate key value is (SIX).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<<MigrateAsync>b__22_1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+ClientConnectionId:4b8b8c4c-258e-4d51-ae88-5813b43b9b29
+Error Number:1505,State:1,Class:16
+2026-01-02 23:13:15.436 +06:00 [ERR] ❌❌ FAILED: Could not apply migrations for tenant: Barguna2 after 3 attempts
+Microsoft.Data.SqlClient.SqlException (0x80131904): The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Classes' and the index name 'IX_Classes_Name'. The duplicate key value is (SIX).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__193_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean beginTransaction, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQueryAsync(IReadOnlyList`1 migrationCommands, IRelationalConnection connection, MigrationExecutionState executionState, Boolean commitTransaction, Nullable`1 isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateImplementationAsync(DbContext context, String targetMigration, MigrationExecutionState state, Boolean useTransaction, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c.<<MigrateAsync>b__22_1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 47
+ClientConnectionId:4b8b8c4c-258e-4d51-ae88-5813b43b9b29
+Error Number:1505,State:1,Class:16
+2026-01-02 23:13:15.687 +06:00 [ERR] ⚠️ Skipping tenant Barguna2 due to migration failure.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Classes' and the index name 'IX_Classes_Name'. The duplicate key value is (SIX).
+The statement has been terminated.
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAsync(String encryptedConnectionString, String tenantSlug, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 68
+   at EduSystem.Shared.Infrastructure.MultiTenancy.TenantMigrationService`1.MigrateAllTenantsAsync(IEnumerable`1 tenants, CancellationToken cancellationToken) in d:\MCH\PetProject\EduManager\src\Services\Shared\EduSystem.Shared.Infrastructure\MultiTenancy\TenantMigrationService.cs:line 79
+ClientConnectionId:4b8b8c4c-258e-4d51-ae88-5813b43b9b29
+Error Number:1505,State:1,Class:16
+2026-01-02 23:13:15.688 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-02 23:13:16.459 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 23:13:16.823 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 23:13:22.031 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 23:13:22.033 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 23:13:22.051 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 23:13:22.154 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 23:13:22.155 +06:00 [INF] Hosting environment: Development
+2026-01-02 23:13:22.155 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 23:13:24.566 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 2534.5951ms
+2026-01-02 23:13:24.583 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 23:20:10.565 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-02 23:20:42.815 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-02 23:20:56.740 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-02 23:20:56.754 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-02 23:20:57.279 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-02 23:20:57.280 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-02 23:20:57.852 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-02 23:20:57.852 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-02 23:20:58.335 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-02 23:20:58.335 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-02 23:20:58.836 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-02 23:20:58.836 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-02 23:20:59.271 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-02 23:20:59.271 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-02 23:20:59.902 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-02 23:20:59.902 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-02 23:21:00.802 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna2
+2026-01-02 23:21:00.803 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-02 23:21:01.218 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-02 23:21:01.435 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-02 23:21:06.969 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-02 23:21:07.016 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-02 23:21:07.048 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-02 23:21:07.209 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-02 23:21:07.210 +06:00 [INF] Hosting environment: Development
+2026-01-02 23:21:07.210 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-02 23:21:10.604 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 3601.0434ms
+2026-01-02 23:21:10.629 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-02 23:22:36.411 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-02 23:22:36.417 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-01-02 23:22:36.444 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 16545 application/javascript; charset=utf-8 32.1695ms
+2026-01-02 23:22:36.472 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.9555ms
+2026-01-02 23:22:36.558 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-01-02 23:22:36.566 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.0143ms
+2026-01-02 23:25:24.428 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json 19
+2026-01-02 23:25:24.448 +06:00 [INF] CORS policy execution successful.
+2026-01-02 23:25:24.515 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-02 23:25:29.707 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-02 23:25:29.721 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-02 23:25:37.382 +06:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-02 23:25:37.435 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (SIX).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d77264d0-5508-4529-86d6-1d62ec3e934d
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (SIX).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d77264d0-5508-4529-86d6-1d62ec3e934d
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)

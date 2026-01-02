@@ -23,6 +23,13 @@ public class BaseCreateEntityCommandHandler<TEntity, TCreateDto, TResponseDto>(
             var entity = new TEntity();
             Map(request.Data!, entity);
 
+            // Dynamic Validation for Unique Constraints
+            var validationResult = await unitOfWork.ValidateAsync(entity, cancellationToken);
+            if (!validationResult.IsValid)
+            {
+                return Result<TResponseDto>.Failure(validationResult.Message);
+            }
+
             await repository.AddAsync(entity, cancellationToken);
             await unitOfWork.CommitAsync();
 

@@ -8,6 +8,8 @@ using EduSystem.Shared.Messaging;
 using MassTransit;
 using MassTransit.DependencyInjection;
 using MassTransit.RabbitMqTransport.Topology;
+using EduSystem.Attendance.Infrastructure.Contexts;
+using EduSystem.Shared.Infrastructure.MultiTenancy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,6 +25,7 @@ public static class DependencyInjection
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddHttpContextAccessor();
         services.AddScoped<AuditInterceptor>();
+        services.AddTenantMigration<AttendanceDbContext>();
 
         services.AddMassTransit(x =>
         {
