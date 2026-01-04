@@ -30,7 +30,7 @@
     <ProjectReference Include="..\..\ApplicationUsers\EduSystem.ApplicationUsers.Domain\EduSystem.ApplicationUsers.Domain.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Application\EduSystem.Identity.Application.csproj" />
     <ProjectReference Include="..\EduSystem.Identity.Domain\EduSystem.Identity.Domain.csproj" />
-    <ProjectReference Include="..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

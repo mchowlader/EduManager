@@ -77,7 +77,6 @@ D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\staticwebassets.development.json
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\swae.build.ex.cache
-D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\EduSyste.A0021F8D.Up2Date
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\EduSystem.Notifications.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\obj\Debug\net10.0\refint\EduSystem.Notifications.Api.dll

@@ -1166,8 +1166,19 @@
         }
       },
       "EduSystem.ApplicationUsers.Domain/1.0.0": {
+        "dependencies": {
+          "EduSystem.ApplicationUsers.Shared": "1.0.0"
+        },
         "runtime": {
           "EduSystem.ApplicationUsers.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EduSystem.ApplicationUsers.Shared/1.0.0": {
+        "runtime": {
+          "EduSystem.ApplicationUsers.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1834,6 +1845,11 @@
       "hashPath": "system.windows.extensions.9.0.0.nupkg.sha512"
     },
     "EduSystem.ApplicationUsers.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSystem.ApplicationUsers.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

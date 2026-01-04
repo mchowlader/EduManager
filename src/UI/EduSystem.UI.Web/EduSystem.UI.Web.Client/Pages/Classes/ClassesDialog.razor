@@ -1,0 +1,62 @@
+@using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Services
+@inject IClassesService ClassesService
+@inject ISnackbar Snackbar
+
+<MudDialog>
+    <DialogContent>
+        <MudForm @ref="form" @bind-IsValid="@success">
+            <MudTextField T="string" Label="Class Name" @bind-Value="ClassModel.Name" Required="true" RequiredError="Class name is required!" />
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!success)" OnClick="Submit">Save</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; } = default!;
+
+    [Parameter] public ClassesDto ClassModel { get; set; } = new ClassesDto();
+
+    private MudForm form = default!;
+    private bool success;
+
+    private void Cancel() => MudDialog.Cancel();
+
+    private async Task Submit()
+    {
+        await form.Validate();
+
+        if (form.IsValid)
+        {
+            if (ClassModel.Id == 0)
+            {
+                var response = await ClassesService.CreateClassAsync(ClassModel);
+                if (response.Success)
+                {
+                    Snackbar.Add("Class created successfully", Severity.Success);
+                    MudDialog.Close(DialogResult.Ok(true));
+                }
+                else
+                {
+                    Snackbar.Add(response.Message, Severity.Error);
+                }
+            }
+            else
+            {
+                var response = await ClassesService.UpdateClassAsync(ClassModel);
+                if (response.Success)
+                {
+                    Snackbar.Add("Class updated successfully", Severity.Success);
+                    MudDialog.Close(DialogResult.Ok(true));
+                }
+                else
+                {
+                    Snackbar.Add(response.Message, Severity.Error);
+                }
+            }
+        }
+    }
+}

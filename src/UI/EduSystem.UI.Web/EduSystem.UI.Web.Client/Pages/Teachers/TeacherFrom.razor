@@ -12,7 +12,7 @@
     <MudText Typo="Typo.h5" Class="mb-4">@(Id == 0 ? "Add New Teacher" : "Edit Teacher")</MudText>
 
     <MudPaper Class="pa-4">
-        <MudForm>
+        <MudForm @ref="form" @bind-IsValid="@success">
             <MudGrid>
                 <!-- Basic Info -->
                 <MudItem xs="12">

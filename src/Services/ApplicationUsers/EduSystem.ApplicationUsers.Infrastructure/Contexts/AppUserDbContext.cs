@@ -16,6 +16,7 @@ public class AppUserDbContext : DbContext
     public DbSet<AppUser> AppUser { get; set; }
     public DbSet<Section> Sections { get; set; }
 
+
     private readonly ITenantContext? _tenantContext;
     private readonly string? _masterConnectionString;
     private readonly IConnectionStringEncryptor? _encryptor;

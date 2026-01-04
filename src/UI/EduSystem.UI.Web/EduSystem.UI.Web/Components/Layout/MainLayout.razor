@@ -212,7 +212,7 @@
             };
             
             _tenantName = "EduSystem"; // Or get from theme if available
-            _tenantLogo = theme.LogoUrl;
+            _tenantLogo = theme.LogoUrl ?? "";
             _primaryColor = theme.PrimaryColor;
         }
         catch (Exception ex)

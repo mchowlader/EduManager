@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
     <ProjectReference Include="..\EduSystem.Attendance.Application\EduSystem.Attendance.Application.csproj" />
     <ProjectReference Include="..\EduSystem.Attendance.Infrastructure\EduSystem.Attendance.Infrastructure.csproj" />
     <ProjectReference Include="..\EduSystem.Attendance.Shared\EduSystem.Attendance.Shared.csproj" />

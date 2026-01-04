@@ -9,4 +9,5 @@ public class TenantInfoDto
     public string? PrimaryColor { get; set; }
     public string? SecondaryColor { get; set; }
     public string? BannerUrl { get; set; }
+    public bool IsActive { get; set; }
 }

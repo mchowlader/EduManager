@@ -15,15 +15,4 @@
 </CascadingAuthenticationState>
 
 @code {
-    private class RedirectToLogin : ComponentBase
-    {
-        [Inject] NavigationManager Navigation { get; set; } = default!;
-        protected override void OnInitialized() => Navigation.NavigateTo("/login", true);
-    }
-
-    private class RedirectToAccessDenied : ComponentBase
-    {
-        [Inject] NavigationManager Navigation { get; set; } = default!;
-        protected override void OnInitialized() => Navigation.NavigateTo("/access-denied", true);
-    }
 }

@@ -152,7 +152,7 @@
 
             var result = await AuthService.LoginAsync(_loginModel);
 
-            if (result.Success)
+            if (result.Success && result.Data != null)
             {
                 Snackbar.Add("Login Successful!", Severity.Success);
                 Navigation.NavigateTo("/", true);

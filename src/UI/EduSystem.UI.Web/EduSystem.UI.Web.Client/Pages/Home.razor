@@ -429,7 +429,6 @@
 @code {
     private UserInfo? _userInfo;
     private TenantInfo? _tenantInfo;
-    private bool _isLoading = true;
 
     // Chart Data
     public List<ChartSeries> Series = new List<ChartSeries>()
@@ -478,7 +477,6 @@
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading auth data: {ex.Message}");
-                _isLoading = false;
                 await InvokeAsync(StateHasChanged);
             }
         }
@@ -506,7 +504,6 @@
         }
         finally
         {
-            _isLoading = false;
             await InvokeAsync(StateHasChanged);
         }
     }

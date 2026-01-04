@@ -42,11 +42,11 @@
               "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj": {
                 "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -568,8 +568,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -1264,8 +1264,8 @@
               "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj": {
                 "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -1957,14 +1957,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
+        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
         "projectName": "EduSystem.Shared.Infrastructure",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
+        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\obj\\",
+        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2004,19 +2004,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[10.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[10.0.0, )"
             },
@@ -2466,14 +2458,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
+    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
+        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
         "projectName": "EduSystem.Shared.Event",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
+        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\obj\\",
+        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2806,14 +2798,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
+        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
         "projectName": "EduSystem.Shared.Messaging",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
+        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\obj\\",
+        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2835,11 +2827,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj"
+              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
+                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj"
               }
             }
           }

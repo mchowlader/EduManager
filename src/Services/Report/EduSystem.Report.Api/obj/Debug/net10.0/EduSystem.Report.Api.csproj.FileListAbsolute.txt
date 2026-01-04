@@ -77,7 +77,6 @@ D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\staticwebassets.development.json
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\swae.build.ex.cache
-D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\EduSyste.1E6A9A3E.Up2Date
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\EduSystem.Report.Api.dll
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\obj\Debug\net10.0\refint\EduSystem.Report.Api.dll

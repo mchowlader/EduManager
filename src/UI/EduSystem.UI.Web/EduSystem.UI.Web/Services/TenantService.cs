@@ -7,7 +7,7 @@ public class TenantTheme
     public string PrimaryColor { get; set; } = "#594AE2"; // Default Purple
     public string SecondaryColor { get; set; } = "#FF4081"; // Default Pink
     public string SidebarColor { get; set; } = "#1E1E2D"; // Default Dark
-    public string LogoUrl { get; set; } = "/icon.svg";
+    public string? LogoUrl { get; set; } = "/icon.svg";
 }
 
 public interface ITenantService

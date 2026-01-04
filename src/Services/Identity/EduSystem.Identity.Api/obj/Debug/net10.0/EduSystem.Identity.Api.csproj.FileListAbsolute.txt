@@ -215,6 +215,7 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.dll
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Application.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.dll
@@ -227,6 +228,7 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.pdb
+D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Shared.Event.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.pdb
@@ -254,4 +256,3 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\De
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSystem.Identity.Api.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\EduSystem.Identity.Api.genruntimeconfig.cache
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\ref\EduSystem.Identity.Api.dll
-D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

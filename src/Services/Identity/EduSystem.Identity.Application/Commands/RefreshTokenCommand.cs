@@ -85,13 +85,15 @@ public class RefreshTokenCommandHandler(
                 Email = user.Email,
                 FullName = user.FullName,
                 PhoneNumber = user.PhoneNumber,
-                Role = user.Role.ToString()
+                Role = user.Role.ToString(),
+                IsActive = user.IsActive
             },
             Tenant = new TenantInfoDto
             {
                 Id = tenant.Id,
                 Name = tenant.Name,
                 Slug = tenant.Slug ?? string.Empty,
+                IsActive = tenant.IsActive,
                 LogoUrl = tenant.LogoUrl,
                 PrimaryColor = tenant.PrimaryColor,
                 SecondaryColor = tenant.SecondaryColor

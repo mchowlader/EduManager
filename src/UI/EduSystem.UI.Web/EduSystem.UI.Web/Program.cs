@@ -35,6 +35,7 @@ builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IApiService, ApiService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAcademyService, AcademyService>();
+builder.Services.AddScoped<IClassesService, ClassesService>();
 
 // Cookie Authentication for Server-side
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -64,13 +65,17 @@ builder.Services.AddScoped<CustomAuthenticationStateProvider>(); // Keep for WAS
 var gatewayUrl = builder.Configuration["ApiGatewayUrl:GatewayApi"] ?? "https://localhost:44308/";
 Console.WriteLine($"[SERVER CONFIG] Gateway URL: {gatewayUrl}");
 
+// Register Authentication Handler for Server side (industrial grade)
+builder.Services.AddScoped<EduSystem.UI.Web.Client.HttpHandlers.AuthenticationHandler>();
+
 // ✅ Main Gateway Client (Server side rendering )
 builder.Services.AddHttpClient("GatewayClient", client =>
 {
     client.BaseAddress = new Uri(gatewayUrl);
     client.DefaultRequestHeaders.Add("Accept", "application/json");
     client.Timeout = TimeSpan.FromSeconds(30);
-});
+})
+.AddHttpMessageHandler<EduSystem.UI.Web.Client.HttpHandlers.AuthenticationHandler>();
 
 // Backward compatibility
 builder.Services.AddHttpClient("GatewayApi", client =>
@@ -88,7 +93,10 @@ builder.Services.AddHttpClient("IdentityApi", client =>
 {
     client.BaseAddress = new Uri($"{gatewayUrl}api/identity/");
 });
-
+builder.Services.AddHttpClient("ApplicationUserApi", client =>
+{
+    client.BaseAddress = new Uri($"{gatewayUrl}api/ApplicationUser/");
+});
 builder.Services.AddHttpClient("AdminApi", client =>
 {
     client.BaseAddress = new Uri($"{gatewayUrl}api/admin/");

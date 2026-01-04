@@ -1936,11 +1936,24 @@
       "EduSystem.ApplicationUsers.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EduSystem.ApplicationUsers.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/EduSystem.ApplicationUsers.Domain.dll": {}
+        }
+      },
+      "EduSystem.ApplicationUsers.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EduSystem.ApplicationUsers.Shared.dll": {}
         }
       },
       "EduSystem.Identity.Application/1.0.0": {
@@ -5205,6 +5218,11 @@
       "path": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj",
       "msbuildProject": "../../ApplicationUsers/EduSystem.ApplicationUsers.Domain/EduSystem.ApplicationUsers.Domain.csproj"
     },
+    "EduSystem.ApplicationUsers.Shared/1.0.0": {
+      "type": "project",
+      "path": "../../ApplicationUsers/EduSystem.ApplicationUsers.Shared/EduSystem.ApplicationUsers.Shared.csproj",
+      "msbuildProject": "../../ApplicationUsers/EduSystem.ApplicationUsers.Shared/EduSystem.ApplicationUsers.Shared.csproj"
+    },
     "EduSystem.Identity.Application/1.0.0": {
       "type": "project",
       "path": "../EduSystem.Identity.Application/EduSystem.Identity.Application.csproj",
@@ -5227,18 +5245,18 @@
     },
     "EduSystem.Shared.Event/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj",
-      "msbuildProject": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj"
+      "path": "../../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj",
+      "msbuildProject": "../../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj"
     },
     "EduSystem.Shared.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
-      "msbuildProject": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
+      "path": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
     },
     "EduSystem.Shared.Messaging/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj",
-      "msbuildProject": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj"
+      "path": "../../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj",
+      "msbuildProject": "../../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5300,8 +5318,8 @@
             "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj": {
               "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Shared\\EduSystem.Identity.Shared.csproj"
             },
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+            "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
             }
           }
         }

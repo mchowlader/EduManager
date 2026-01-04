@@ -38,3 +38,563 @@ WHERE [Id] = @p17;
 2026-01-03 00:03:42.570 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
 2026-01-03 00:03:42.583 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
 2026-01-03 00:03:42.601 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 6331.6931ms
+2026-01-03 15:45:14.698 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 15:45:15.196 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 15:45:15.375 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 15:45:15.386 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 15:45:15.516 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 15:45:15.516 +06:00 [INF] Hosting environment: Development
+2026-01-03 15:45:15.516 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 15:45:15.646 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 278.128ms
+2026-01-03 15:45:15.665 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2026-01-03 15:46:05.234 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2026-01-03 15:46:05.303 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 70.9229ms
+2026-01-03 15:46:05.353 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 15:46:05.355 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2026-01-03 15:46:05.376 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 22.8079ms
+2026-01-03 15:46:05.421 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.1987ms
+2026-01-03 15:46:05.583 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2026-01-03 15:46:05.591 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.6607ms
+2026-01-03 15:47:16.343 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 15:47:16.371 +06:00 [INF] CORS policy execution successful.
+2026-01-03 15:47:16.374 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 15:47:16.387 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 15:47:22.844 +06:00 [INF] Executed DbCommand (55ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 15:47:23.276 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 15:47:23.487 +06:00 [INF] Executed DbCommand (11ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 15:47:23.514 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 15:47:23.522 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 15:47:23.533 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 15:47:23.542 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 7199.0071ms
+2026-01-03 16:49:20.974 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 16:49:20.980 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:49:20.981 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 16:49:29.968 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 16:49:35.069 +06:00 [INF] Executed DbCommand (43ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 16:51:51.982 +06:00 [INF] Executed DbCommand (15ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 16:52:48.720 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 16:52:48.753 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 16:52:48.754 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 16:52:48.754 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 207781.4499ms
+2026-01-03 16:53:48.187 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 904
+2026-01-03 16:53:48.188 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:53:48.188 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:53:48.353 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 16:53:48.357 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 16:53:48.359 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 16:53:48.360 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:53:48.360 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 400 null application/json; charset=utf-8 173.477ms
+2026-01-03 16:56:38.359 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 904
+2026-01-03 16:56:38.360 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:56:38.360 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:56:38.369 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 16:56:38.370 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 16:56:38.370 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 16:56:38.371 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:56:38.371 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 400 null application/json; charset=utf-8 12.4136ms
+2026-01-03 16:56:58.366 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 905
+2026-01-03 16:56:58.367 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:56:58.367 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:56:58.384 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 16:56:58.385 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 16:56:58.385 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 16:56:58.386 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:56:58.386 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 400 null application/json; charset=utf-8 19.8767ms
+2026-01-03 16:57:31.834 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 95
+2026-01-03 16:57:31.835 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:57:31.835 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:57:31.884 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 16:57:31.884 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 16:57:31.885 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:57:31.885 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 400 null application/json; charset=utf-8 50.7151ms
+2026-01-03 16:57:43.794 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 906
+2026-01-03 16:57:43.795 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:57:43.796 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:57:43.814 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 16:57:43.819 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 16:57:43.820 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 16:57:43.820 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 16:57:43.821 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:57:43.821 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 200 null application/json; charset=utf-8 26.7784ms
+2026-01-03 16:59:17.151 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 906
+2026-01-03 16:59:17.152 +06:00 [INF] CORS policy execution successful.
+2026-01-03 16:59:17.152 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 16:59:44.562 +06:00 [INF] Executed DbCommand (17ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 17:00:21.571 +06:00 [INF] Executed DbCommand (13ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:00:57.933 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:00:57.933 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:00:57.934 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 17:00:57.934 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 200 null application/json; charset=utf-8 100783.52ms
+2026-01-03 17:01:48.449 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 906
+2026-01-03 17:01:48.449 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:01:48.450 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 17:01:59.222 +06:00 [INF] Executed DbCommand (15ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 17:02:06.894 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:02:45.283 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:02:45.283 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:02:45.283 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 17:02:45.284 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 200 null application/json; charset=utf-8 56835.4728ms
+2026-01-03 17:03:17.528 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - application/json 906
+2026-01-03 17:03:17.529 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:03:17.529 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 17:03:55.734 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Id] = @id
+2026-01-03 17:03:55.737 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:03:55.738 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:03:55.738 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:03:55.738 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/refresh-token => RefreshTokenV1'
+2026-01-03 17:03:55.738 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/refresh-token - 200 null application/json; charset=utf-8 38210.5224ms
+2026-01-03 17:03:56.794 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2026-01-03 17:03:56.812 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 18.3619ms
+2026-01-03 17:03:56.881 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 17:03:56.882 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 1.0401ms
+2026-01-03 17:03:56.904 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2026-01-03 17:03:56.912 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.9377ms
+2026-01-03 17:03:57.103 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2026-01-03 17:03:57.117 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.4205ms
+2026-01-03 17:04:16.434 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 17:04:16.434 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:04:16.435 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:04:18.139 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 17:04:18.279 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:04:18.286 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 17:04:18.286 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:04:18.288 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:04:18.290 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:04:18.290 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 1856.4831ms
+2026-01-03 17:05:22.370 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2026-01-03 17:05:22.379 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 8.8029ms
+2026-01-03 17:05:22.411 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2026-01-03 17:05:22.412 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 17:05:22.416 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 3.8925ms
+2026-01-03 17:05:22.422 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.2815ms
+2026-01-03 17:05:22.536 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2026-01-03 17:05:22.543 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.0615ms
+2026-01-03 17:05:40.738 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 17:05:40.739 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:05:40.739 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:05:42.585 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 17:05:42.725 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:05:42.731 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 17:05:42.732 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:05:42.735 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:05:42.736 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:05:42.736 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 1998.4042ms
+2026-01-03 17:06:04.886 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 17:06:04.887 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:06:04.887 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:06:39.185 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 17:06:39.362 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:06:39.365 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 17:06:39.366 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:06:39.366 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:06:39.367 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:06:39.367 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 34481.023ms
+2026-01-03 17:06:40.230 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2026-01-03 17:06:40.262 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 32.2877ms
+2026-01-03 17:06:40.309 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 17:06:40.309 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2026-01-03 17:06:40.309 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 0.876ms
+2026-01-03 17:06:40.332 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.1063ms
+2026-01-03 17:06:40.443 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2026-01-03 17:06:40.453 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.6634ms
+2026-01-03 17:06:51.832 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 17:06:51.833 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:06:51.834 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:06:53.656 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 17:06:53.800 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:06:53.806 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 17:06:53.806 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:06:53.808 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:06:53.809 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:06:53.810 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 1977.484ms
+2026-01-03 17:42:13.787 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json 89
+2026-01-03 17:42:13.787 +06:00 [INF] CORS policy execution successful.
+2026-01-03 17:42:13.788 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:42:15.917 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 17:42:16.055 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 17:42:16.061 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 17:42:16.061 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 17:42:16.062 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 17:42:16.062 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 17:42:16.062 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 2275.8611ms
+2026-01-03 19:57:42.995 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 19:57:43.368 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 19:57:43.515 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 19:57:43.577 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 19:57:43.660 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 19:57:43.660 +06:00 [INF] Hosting environment: Development
+2026-01-03 19:57:43.660 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 19:57:43.711 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 204.6351ms
+2026-01-03 19:57:43.727 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2026-01-03 19:57:47.308 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/index.html - null null
+2026-01-03 19:57:47.395 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/index.html - 200 null text/html;charset=utf-8 87.7552ms
+2026-01-03 19:57:47.446 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-03 19:57:47.448 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/_vs/browserLink - null null
+2026-01-03 19:57:47.471 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 24.5078ms
+2026-01-03 19:57:47.492 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.7551ms
+2026-01-03 19:57:47.606 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - null null
+2026-01-03 19:57:47.616 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.8946ms
+2026-01-03 19:58:58.701 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 19:58:58.763 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 19:58:58.779 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 19:59:01.211 +06:00 [INF] Executed DbCommand (233ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 19:59:01.787 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 19:59:02.100 +06:00 [INF] Executed DbCommand (20ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 19:59:02.126 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 19:59:02.137 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 19:59:02.145 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 19:59:02.157 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 3455.7405ms
+2026-01-03 20:00:34.915 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:00:34.920 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:00:37.659 +06:00 [INF] Executed DbCommand (20ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:00:51.175 +06:00 [INF] Executed DbCommand (15ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:00:59.896 +06:00 [INF] Executed DbCommand (16ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:01:28.826 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:01:28.826 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:01:28.858 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:01:28.861 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 53946.253ms
+2026-01-03 20:03:20.757 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 20:03:21.192 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 20:03:21.284 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 20:03:21.298 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 20:03:21.375 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 20:03:21.375 +06:00 [INF] Hosting environment: Development
+2026-01-03 20:03:21.375 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 20:03:21.452 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 170.4948ms
+2026-01-03 20:03:21.467 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2026-01-03 20:04:10.585 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:04:10.606 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:04:10.620 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 20:04:12.255 +06:00 [INF] Executed DbCommand (67ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:04:12.786 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:04:12.975 +06:00 [INF] Executed DbCommand (11ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:04:13.002 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:04:13.015 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:04:13.032 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:04:13.050 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 2465.9794ms
+2026-01-03 20:05:34.697 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:05:34.701 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:05:34.727 +06:00 [INF] Executed DbCommand (11ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:05:34.730 +06:00 [INF] Setting HTTP status code 400.
+2026-01-03 20:05:34.732 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-03 20:05:34.733 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:05:34.734 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 400 null application/json; charset=utf-8 36.8618ms
+2026-01-03 20:06:36.701 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:06:36.702 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:06:36.785 +06:00 [INF] Executed DbCommand (8ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:06:37.066 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:06:37.074 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:06:37.075 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:06:37.077 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:06:37.079 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:06:37.079 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 378.0259ms
+2026-01-03 20:07:38.342 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:07:38.342 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:07:38.351 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:07:38.494 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:07:38.502 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:07:38.502 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:07:38.502 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:07:38.503 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:07:38.503 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 161.019ms
+2026-01-03 20:10:09.654 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:10:09.656 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:10:09.664 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:10:09.807 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:10:09.814 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:10:09.814 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:10:09.816 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:10:09.817 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:10:09.818 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 163.7186ms
+2026-01-03 20:11:31.512 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 20:11:31.513 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:11:31.519 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 20:11:31.668 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 20:11:31.674 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 20:11:31.675 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 20:11:31.677 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 20:11:31.679 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 20:11:31.679 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 166.7068ms
+2026-01-03 22:56:42.329 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 22:56:42.744 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 22:56:42.827 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 22:56:42.847 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 22:56:42.934 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 22:56:42.935 +06:00 [INF] Hosting environment: Development
+2026-01-03 22:56:42.935 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 22:56:43.030 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 204.9792ms
+2026-01-03 22:56:43.053 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2026-01-03 22:57:44.555 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 22:57:44.582 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 22:57:44.602 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 22:57:47.600 +06:00 [INF] Executed DbCommand (120ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 22:57:48.343 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 22:57:48.655 +06:00 [INF] Executed DbCommand (35ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 22:57:48.689 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 22:57:48.704 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 22:57:48.724 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 22:57:48.738 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 4182.6072ms
+2026-01-03 23:37:48.572 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 23:37:49.230 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 23:37:49.370 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 23:37:49.403 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 23:37:49.581 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 23:37:49.581 +06:00 [INF] Hosting environment: Development
+2026-01-03 23:37:49.581 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 23:37:49.743 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 376.5515ms
+2026-01-03 23:37:49.785 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404
+2026-01-03 23:38:33.101 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/v1/auth/login - application/json; charset=utf-8 null
+2026-01-03 23:38:33.125 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 23:38:33.140 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-03 23:38:36.026 +06:00 [INF] Executed DbCommand (104ms) [Parameters=[@email='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[LastPasswordChangedAt], [u].[LockoutEnd], [u].[LoginAttempts], [u].[PasswordHash], [u].[PasswordResetToken], [u].[PasswordResetTokenExpiry], [u].[PhoneNumber], [u].[RefreshToken], [u].[RefreshTokenExpiryTime], [u].[Role], [u].[TenantId], [u].[UpdatedAt], [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Users] AS [u]
+INNER JOIN [Tenants] AS [t] ON [u].[TenantId] = [t].[Id]
+WHERE [u].[Email] = @email
+2026-01-03 23:38:36.881 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@id='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[BannerUrl], [t].[ConnectionString], [t].[CreatedAt], [t].[IsActive], [t].[LogoUrl], [t].[Name], [t].[PrimaryColor], [t].[SecondaryColor], [t].[Slug], [t].[UpdatedAt]
+FROM [Tenants] AS [t]
+WHERE [t].[Id] = @id
+2026-01-03 23:38:37.198 +06:00 [INF] Executed DbCommand (14ms) [Parameters=[@p17='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (Size = 256), @p2='?' (Size = 200), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32), @p8='?' (Size = 512), @p9='?' (Size = 512), @p10='?' (DbType = DateTime2), @p11='?' (Size = 20), @p12='?' (Size = 512), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Int64), @p16='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [CreatedAt] = @p0, [Email] = @p1, [FullName] = @p2, [IsActive] = @p3, [LastLoginAt] = @p4, [LastPasswordChangedAt] = @p5, [LockoutEnd] = @p6, [LoginAttempts] = @p7, [PasswordHash] = @p8, [PasswordResetToken] = @p9, [PasswordResetTokenExpiry] = @p10, [PhoneNumber] = @p11, [RefreshToken] = @p12, [RefreshTokenExpiryTime] = @p13, [Role] = @p14, [TenantId] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+2026-01-03 23:38:37.233 +06:00 [INF] Setting HTTP status code 200.
+2026-01-03 23:38:37.251 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-03 23:38:37.277 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/auth/login => LoginV1'
+2026-01-03 23:38:37.328 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/v1/auth/login - 200 null application/json; charset=utf-8 4227.8411ms
+2026-01-03 23:55:10.018 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-03 23:55:10.585 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-03 23:55:10.689 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44307/ - null null
+2026-01-03 23:55:10.721 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-03 23:55:10.841 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-03 23:55:10.842 +06:00 [INF] Hosting environment: Development
+2026-01-03 23:55:10.842 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api
+2026-01-03 23:55:10.952 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44307/ - 404 null null 268.3726ms
+2026-01-03 23:55:10.978 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44307/, Response status code: 404

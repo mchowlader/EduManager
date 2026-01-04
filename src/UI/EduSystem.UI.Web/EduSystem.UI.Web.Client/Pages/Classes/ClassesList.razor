@@ -1,0 +1,139 @@
+@page "/classes"
+@attribute [Authorize]
+@using EduSystem.UI.Web.Client.Models
+@using EduSystem.UI.Web.Client.Services
+@using EduSystem.UI.Web.Client.Models.Common
+@inject IClassesService ClassesService
+@inject NavigationManager Navigation
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@rendermode InteractiveAuto
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-4">
+    <div class="d-flex justify-space-between align-center mb-4">
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="font-weight: 700;">Classes</MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="AddClass">
+            Add New Class
+        </MudButton>
+    </div>
+
+    <MudTable Items="@classesList" Dense="true" Hover="true" Bordered="true" Striped="true" Filter="new Func<ClassesDto, bool>(FilterFunc1)" Loading="@loading">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Class List</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString" Placeholder="Search by Name" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>ID</MudTh>
+            <MudTh>Name</MudTh>
+            <MudTh Style="text-align:center">Actions</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="ID">@context.Id</MudTd>
+            <MudTd DataLabel="Name">
+                <div class="d-flex align-center">
+                    <MudAvatar Color="Color.Primary" Size="Size.Small" Class="mr-2">@(context.Name?.Length > 0 ? context.Name.Substring(0, 1) : "C")</MudAvatar>
+                    @context.Name
+                </div>
+            </MudTd>
+            <MudTd DataLabel="Actions" Style="text-align:center">
+                <MudTooltip Text="Edit">
+                    <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Warning" Size="Size.Small" OnClick="@(() => EditClass(context))" />
+                </MudTooltip>
+                <MudTooltip Text="Delete">
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" Size="Size.Small" OnClick="@(() => DeleteClass(context))" />
+                </MudTooltip>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</MudContainer>
+
+@code {
+    private List<ClassesDto> classesList = new List<ClassesDto>();
+    private string searchString = "";
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        loading = true;
+        var response = await ClassesService.GetAllClassesAsync();
+        if (response.Success)
+        {
+            classesList = response.Data?.Items ?? new List<ClassesDto>();
+        }
+        else
+        {
+            Snackbar.Add(response.Message, Severity.Error);
+        }
+        loading = false;
+    }
+
+    private async Task AddClass()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true, MaxWidth = MaxWidth.Small, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<ClassesDialog>("Add New Class", options);
+        var result = await dialog.Result;
+
+        if (result is { Canceled: false })
+        {
+            await LoadData();
+        }
+    }
+
+    private async Task EditClass(ClassesDto model)
+    {
+        var parameters = new DialogParameters<ClassesDialog> { { x => x.ClassModel, model } };
+        var options = new DialogOptions { CloseOnEscapeKey = true, MaxWidth = MaxWidth.Small, FullWidth = true };
+        
+        var dialog = await DialogService.ShowAsync<ClassesDialog>("Edit Class", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is { Canceled: false })
+        {
+            await LoadData();
+        }
+    }
+
+    private async Task DeleteClass(ClassesDto model)
+    {
+        bool? result = await DialogService.ShowMessageBox(
+            "Delete Class", 
+            $"Are you sure you want to delete {model.Name}?", 
+            yesText:"Delete", cancelText:"Cancel");
+
+        if (result == true)
+        {
+             var response = await ClassesService.DeleteClassAsync(model.Id);
+             if (response.Success)
+             {
+                 await LoadData();
+                 Snackbar.Add("Class deleted", Severity.Success);
+             }
+             else
+             {
+                 Snackbar.Add(response.Message, Severity.Error);
+             }
+        }
+    }
+
+    private bool FilterFunc1(ClassesDto model) => FilterFunc(model, searchString);
+
+    private bool FilterFunc(ClassesDto model, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (model.Name?.Contains(searchString, StringComparison.OrdinalIgnoreCase) == true)
+            return true;
+        if ($"{model.Id}".Contains(searchString))
+             return true;
+        return false;
+    }
+}

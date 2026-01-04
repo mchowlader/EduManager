@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSystem.Identity.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ddd722b3c58e54ce82b2f72a36d8b26aa276934")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff52290111ebe9145baed8f3cc1183708d612a35")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSystem.Identity.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSystem.Identity.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

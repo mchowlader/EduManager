@@ -1,0 +1,142 @@
+2026-01-04 22:26:47.352 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-04 22:26:47.637 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-04 22:26:49.554 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-04 22:26:49.561 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-04 22:26:49.931 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-04 22:26:49.931 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-04 22:26:50.341 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-04 22:26:50.342 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-04 22:26:50.593 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-04 22:26:50.593 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-04 22:26:50.895 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-04 22:26:50.896 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-04 22:26:51.146 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-04 22:26:51.146 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-04 22:26:51.377 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-04 22:26:51.377 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-04 22:26:51.656 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna2
+2026-01-04 22:26:51.657 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-04 22:26:51.891 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-04 22:26:52.007 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-04 22:26:52.425 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-04 22:26:52.452 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-04 22:26:52.563 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-04 22:26:52.577 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-04 22:26:52.577 +06:00 [INF] Hosting environment: Development
+2026-01-04 22:26:52.577 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-04 22:26:52.797 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 377.9931ms
+2026-01-04 22:26:52.814 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-04 22:27:33.569 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 22:27:33.685 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-04 22:27:33.696 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-04 22:27:33.702 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 401 null null 132.6947ms
+2026-01-04 22:29:25.568 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 22:29:25.574 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-04 22:29:25.575 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-04 22:29:25.575 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 401 null null 6.9701ms
+2026-01-04 22:31:50.053 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 22:31:50.055 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-04 22:31:50.055 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-04 22:31:50.056 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 401 null null 2.4933ms
+2026-01-04 23:10:18.663 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-04 23:10:18.746 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-04 23:10:20.856 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-04 23:10:20.863 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-04 23:10:21.292 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-04 23:10:21.292 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-04 23:10:21.751 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-04 23:10:21.751 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-04 23:10:22.074 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-04 23:10:22.074 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-04 23:10:22.388 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-04 23:10:22.388 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-04 23:10:22.707 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-04 23:10:22.708 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-04 23:10:23.033 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-04 23:10:23.033 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-04 23:10:23.410 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna2
+2026-01-04 23:10:23.410 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-04 23:10:23.691 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-04 23:10:23.830 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-04 23:10:24.328 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-04 23:10:24.359 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-04 23:10:24.361 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-04 23:10:24.490 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-04 23:10:24.490 +06:00 [INF] Hosting environment: Development
+2026-01-04 23:10:24.490 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-04 23:10:24.661 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 334.7977ms
+2026-01-04 23:10:24.683 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-04 23:16:23.444 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 23:16:23.571 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-04 23:16:23.582 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:16:23.587 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-04 23:16:24.096 +06:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-04 23:16:24.125 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-04 23:16:24.125 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-04 23:16:24.226 +06:00 [INF] Executed DbCommand (40ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-04 23:16:24.336 +06:00 [INF] Setting HTTP status code 200.
+2026-01-04 23:16:24.342 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-04 23:16:24.357 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:16:24.377 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 934.5566ms
+2026-01-04 23:20:36.146 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 23:20:36.160 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-04 23:20:36.163 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:20:37.385 +06:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-04 23:20:37.389 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-04 23:20:37.390 +06:00 [INF] Setting HTTP status code 200.
+2026-01-04 23:20:37.390 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-04 23:20:37.391 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:20:37.392 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 1245.3898ms
+2026-01-04 23:20:40.301 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 23:20:40.302 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-04 23:20:40.305 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:20:40.360 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-04 23:20:40.366 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-04 23:20:40.368 +06:00 [INF] Setting HTTP status code 200.
+2026-01-04 23:20:40.368 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-04 23:20:40.368 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:20:40.369 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 67.2794ms
+2026-01-04 23:21:44.810 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-04 23:21:44.811 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-04 23:21:44.811 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:21:44.823 +06:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-04 23:21:44.828 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-04 23:21:44.829 +06:00 [INF] Setting HTTP status code 200.
+2026-01-04 23:21:44.829 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-04 23:21:44.830 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-04 23:21:44.830 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 20.875ms

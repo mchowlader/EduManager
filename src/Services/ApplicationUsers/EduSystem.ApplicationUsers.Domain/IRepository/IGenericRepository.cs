@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+using EduSystem.ApplicationUsers.Shared.Common;
 
 namespace EduSystem.ApplicationUsers.Domain.IRepository;
 
@@ -13,13 +10,4 @@ public interface IGenericRepository<T> where T : class
     Task UpdateAsync(T entity, CancellationToken cancellationToken = default);
     Task DeleteAsync(T entity, CancellationToken cancellationToken = default);
     Task<PagedList<T>> GetPagedAsync(int pageNumber, int pageSize, CancellationToken cancellationToken = default);
-}
-
-public class PagedList<T>
-{
-    public List<T> Items { get; set; } = new();
-    public int TotalCount { get; set; }
-    public int PageNumber { get; set; }
-    public int PageSize { get; set; }
-    public int TotalPages => (int)Math.Ceiling(TotalCount / (double)PageSize);
 }

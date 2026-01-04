@@ -19,6 +19,9 @@
         <MudNavLink Href="/section" Icon="@Icons.Material.Filled.Group">
             Section
         </MudNavLink>
+        <MudNavLink Href="/classes" Icon="@Icons.Material.Filled.Elevator">
+            Class
+        </MudNavLink>
     </MudNavGroup>
 
     <MudNavGroup Title="Academy"
@@ -93,7 +96,7 @@
         var currentPath = new Uri(NavigationManager.Uri).AbsolutePath.ToLower();
 
         // More precise path matching
-        isDefinitionExpanded = IsPathMatch(currentPath, "/teachers", "/students", "/section");
+        isDefinitionExpanded = IsPathMatch(currentPath, "/teachers", "/students", "/section", "classes");
         isAcademyExpanded = IsPathMatch(currentPath, "/academy/testimonial", "/academy/transcript", "/academy/admitcard");
         isAttendanceExpanded = IsPathMatch(currentPath, "/teachersattendance", "/studentsattendance");
     }

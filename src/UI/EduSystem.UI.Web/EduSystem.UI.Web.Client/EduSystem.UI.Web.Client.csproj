@@ -19,7 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Layout\" />
+    <Folder Include="Pages\Sections\" />
   </ItemGroup>
 
 </Project>

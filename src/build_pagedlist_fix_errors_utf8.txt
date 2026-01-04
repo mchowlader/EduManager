@@ -1,0 +1,50 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  EduSystem.Admin.Shared -> D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Shared\bin\Debug\net10.0\EduSystem.Admin.Shared.dll
+  EduSystem.Admin.Application -> D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Application\bin\Debug\net10.0\EduSystem.Admin.Application.dll
+  EduSystem.Admin.Domain -> D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Domain\bin\Debug\net10.0\EduSystem.Admin.Domain.dll
+  EduSystem.Admin.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Infrastructure\bin\Debug\net10.0\EduSystem.Admin.Infrastructure.dll
+  EduSystem.Attendance.Domain -> D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.dll
+  EduSystem.ApplicationUsers.Shared -> D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Shared\bin\Debug\net10.0\EduSystem.ApplicationUsers.Shared.dll
+  EduSystem.Billing.Application -> D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.dll
+  EduSystem.Billing.Domain -> D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Domain\bin\Debug\net10.0\EduSystem.Billing.Domain.dll
+  EduSystem.Attendance.Shared -> D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\bin\Debug\net10.0\EduSystem.Attendance.Shared.dll
+  EduSystem.Billing.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Infrastructure\bin\Debug\net10.0\EduSystem.Billing.Infrastructure.dll
+  EduSystem.Shared.Event -> D:\MCH\PetProject\EduManager\src\Shared\Events\EduSystem.Shared.Event\bin\Debug\net10.0\EduSystem.Shared.Event.dll
+  EduSystem.Billing.Shared -> D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Shared\bin\Debug\net10.0\EduSystem.Billing.Shared.dll
+  EduSystem.Identity.Shared -> D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.dll
+  EduSystem.Notifications.Domain -> D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Domain\bin\Debug\net10.0\EduSystem.Notifications.Domain.dll
+  EduSystem.ApplicationUsers.Domain -> D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Domain\bin\Debug\net10.0\EduSystem.ApplicationUsers.Domain.dll
+  EduSystem.Notifications.Shared -> D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Shared\bin\Debug\net10.0\EduSystem.Notifications.Shared.dll
+  EduSystem.Notifications.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Infrastructure\bin\Debug\net10.0\EduSystem.Notifications.Infrastructure.dll
+  EduSystem.Report.Application -> D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.dll
+  EduSystem.Notifications.Application -> D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Application\bin\Debug\net10.0\EduSystem.Notifications.Application.dll
+  EduSystem.Report.Domain -> D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Domain\bin\Debug\net10.0\EduSystem.Report.Domain.dll
+  EduSystem.Shared.Infrastructure -> D:\MCH\PetProject\EduManager\src\Shared\EduSystem.Shared.Infrastructure\bin\Debug\net10.0\EduSystem.Shared.Infrastructure.dll
+  EduSystem.Shared.Messaging -> D:\MCH\PetProject\EduManager\src\Shared\Messaging\EduSystem.Shared.Messaging\bin\Debug\net10.0\EduSystem.Shared.Messaging.dll
+  EduSystem.Report.Shared -> D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Shared\bin\Debug\net10.0\EduSystem.Report.Shared.dll
+  EduSystem.Report.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Infrastructure\bin\Debug\net10.0\EduSystem.Report.Infrastructure.dll
+  EduSystem.Notifications.Api -> D:\MCH\PetProject\EduManager\src\Services\Notifications\EduSystem.Notifications.Api\bin\Debug\net10.0\EduSystem.Notifications.Api.dll
+  EduSystem.Identity.Domain -> D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Domain\bin\Debug\net10.0\EduSystem.Identity.Domain.dll
+  EduSystem.ApiGateway -> D:\MCH\PetProject\EduManager\src\Shared\Gateway\EduSystem.ApiGateway\bin\Debug\net10.0\EduSystem.ApiGateway.dll
+  EduSystem.Attendance.Application -> D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Application\bin\Debug\net10.0\EduSystem.Attendance.Application.dll
+  EduSystem.Billing.Api -> D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Api\bin\Debug\net10.0\EduSystem.Billing.Api.dll
+  EduSystem.Report.Api -> D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Api\bin\Debug\net10.0\EduSystem.Report.Api.dll
+  EduSystem.Attendance.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Infrastructure\bin\Debug\net10.0\EduSystem.Attendance.Infrastructure.dll
+  EduSystem.Identity.Application -> D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Application\bin\Debug\net10.0\EduSystem.Identity.Application.dll
+  EduSystem.Admin.Api -> D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Api\bin\Debug\net10.0\EduSystem.Admin.Api.dll
+  EduSystem.Attendance.Api -> D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Api\bin\Debug\net10.0\EduSystem.Attendance.Api.dll
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\Pages\Classes\ClassesList.razor(5,18): error CS0234: The type or namespace name 'ApplicationUsers' does not exist in the namespace 'EduSystem' (are you missing an assembly reference?) [D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\EduSystem.UI.Web.Client.csproj]
+  EduSystem.ApplicationUsers.Application -> D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Application\bin\Debug\net10.0\EduSystem.ApplicationUsers.Application.dll
+  EduSystem.Identity.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Infrastructure\bin\Debug\net10.0\EduSystem.Identity.Infrastructure.dll
+  EduSystem.ApplicationUsers.Infrastructure -> D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Infrastructure\bin\Debug\net10.0\EduSystem.ApplicationUsers.Infrastructure.dll
+  EduSystem.Identity.Api -> D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Api\bin\Debug\net10.0\EduSystem.Identity.Api.dll
+  EduSystem.ApplicationUsers.Api -> D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api\bin\Debug\net10.0\EduSystem.ApplicationUsers.Api.dll
+
+Build FAILED.
+
+D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\Pages\Classes\ClassesList.razor(5,18): error CS0234: The type or namespace name 'ApplicationUsers' does not exist in the namespace 'EduSystem' (are you missing an assembly reference?) [D:\MCH\PetProject\EduManager\src\UI\EduSystem.UI.Web\EduSystem.UI.Web.Client\EduSystem.UI.Web.Client.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:06.46

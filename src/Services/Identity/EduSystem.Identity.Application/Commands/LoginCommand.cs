@@ -147,6 +147,7 @@ public class LoginCommandHandler(
                 Id = tenant.Id,
                 Name = tenant.Name,
                 Slug = tenant.Slug ?? string.Empty,
+                IsActive = tenant.IsActive,
                 LogoUrl = tenant.LogoUrl,
                 BannerUrl = tenant.BannerUrl,
                 PrimaryColor = tenant.PrimaryColor,

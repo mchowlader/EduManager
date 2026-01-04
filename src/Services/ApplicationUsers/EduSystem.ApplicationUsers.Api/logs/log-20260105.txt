@@ -1,0 +1,662 @@
+2026-01-05 00:55:48.444 +06:00 [INF] 🚀 Starting bulk migration for 8 tenants...
+2026-01-05 00:55:48.537 +06:00 [INF] 🔄 Applying migrations for tenant: KameghaMuslim (Attempt 1/3)
+2026-01-05 00:55:51.232 +06:00 [INF] ✅ Migrations applied successfully for tenant: KameghaMuslim
+2026-01-05 00:55:51.243 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur (Attempt 1/3)
+2026-01-05 00:55:51.963 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur
+2026-01-05 00:55:51.963 +06:00 [INF] 🔄 Applying migrations for tenant: KM (Attempt 1/3)
+2026-01-05 00:55:52.706 +06:00 [INF] ✅ Migrations applied successfully for tenant: KM
+2026-01-05 00:55:52.706 +06:00 [INF] 🔄 Applying migrations for tenant: Taslima (Attempt 1/3)
+2026-01-05 00:55:53.345 +06:00 [INF] ✅ Migrations applied successfully for tenant: Taslima
+2026-01-05 00:55:53.345 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-01-05 00:55:53.752 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-01-05 00:55:53.752 +06:00 [INF] 🔄 Applying migrations for tenant: Green (Attempt 1/3)
+2026-01-05 00:55:54.119 +06:00 [INF] ✅ Migrations applied successfully for tenant: Green
+2026-01-05 00:55:54.120 +06:00 [INF] 🔄 Applying migrations for tenant: Model (Attempt 1/3)
+2026-01-05 00:55:54.628 +06:00 [INF] ✅ Migrations applied successfully for tenant: Model
+2026-01-05 00:55:54.628 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna2 (Attempt 1/3)
+2026-01-05 00:55:55.171 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna2
+2026-01-05 00:55:55.172 +06:00 [INF] 🏁 Bulk migration completed.
+2026-01-05 00:55:55.548 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-01-05 00:55:55.841 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-05 00:55:56.602 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-01-05 00:55:56.632 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-05 00:55:56.657 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-01-05 00:55:56.758 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-05 00:55:56.758 +06:00 [INF] Hosting environment: Development
+2026-01-05 00:55:56.758 +06:00 [INF] Content root path: D:\MCH\PetProject\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-01-05 00:55:57.173 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 575.262ms
+2026-01-05 00:55:57.203 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-01-05 00:57:52.201 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:57:52.391 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:57:52.403 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:57:52.409 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-05 00:57:52.979 +06:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:57:53.043 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-05 00:57:53.044 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-01-05 00:57:53.222 +06:00 [INF] Executed DbCommand (48ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:57:53.349 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:57:53.358 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:57:53.375 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:57:53.395 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 1195.3452ms
+2026-01-05 00:58:41.267 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/3 - null null
+2026-01-05 00:58:41.273 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:41.274 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:41.366 +06:00 [INF] Executed DbCommand (14ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-05 00:58:41.500 +06:00 [INF] Executed DbCommand (11ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-05 00:58:41.508 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:41.509 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-05 00:58:41.510 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:41.511 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/3 - 200 null application/json; charset=utf-8 243.7907ms
+2026-01-05 00:58:50.750 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:58:50.750 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:50.752 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:50.785 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:58:50.789 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:58:50.790 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:50.790 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:58:50.790 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:50.791 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 40.8661ms
+2026-01-05 00:58:55.358 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/4 - null null
+2026-01-05 00:58:55.359 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:55.360 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:55.366 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-05 00:58:55.371 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-05 00:58:55.371 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:55.372 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-05 00:58:55.372 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:55.373 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/4 - 200 null application/json; charset=utf-8 14.6292ms
+2026-01-05 00:58:55.396 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:58:55.397 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:55.397 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:55.402 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:58:55.404 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:58:55.405 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:55.406 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:58:55.406 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:55.406 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 10.5409ms
+2026-01-05 00:58:58.025 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/5 - null null
+2026-01-05 00:58:58.026 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:58.026 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:58.030 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-05 00:58:58.033 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-05 00:58:58.034 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:58.034 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-05 00:58:58.034 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:58:58.034 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/5 - 200 null application/json; charset=utf-8 9.1341ms
+2026-01-05 00:58:58.061 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:58:58.061 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:58:58.062 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:58.063 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:58:58.064 +06:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:58:58.065 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:58:58.065 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:58:58.065 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:58:58.065 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 4.6803ms
+2026-01-05 00:59:00.767 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/13 - null null
+2026-01-05 00:59:00.768 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:00.769 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:59:00.778 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-05 00:59:00.787 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-05 00:59:00.787 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:59:00.787 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-05 00:59:00.788 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:59:00.789 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/13 - 200 null application/json; charset=utf-8 21.12ms
+2026-01-05 00:59:00.803 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:59:00.805 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:00.805 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:59:00.808 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:59:00.811 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:59:00.811 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:59:00.811 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:59:00.812 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:59:00.812 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 8.5436ms
+2026-01-05 00:59:03.530 +06:00 [INF] Request starting HTTP/2 DELETE https://localhost:44318/api/v1/classes/14 - null null
+2026-01-05 00:59:03.531 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:03.531 +06:00 [INF] Executing endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:59:03.540 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @p
+2026-01-05 00:59:03.549 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@p7='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Classes] SET [CreatedAt] = @p0, [CreatedBy] = @p1, [DeleteAt] = @p2, [IsDeleted] = @p3, [Name] = @p4, [UpdatedAt] = @p5, [UpdatedBy] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2026-01-05 00:59:03.550 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:59:03.550 +06:00 [INF] Writing value of type '<>f__AnonymousType2`2' as Json.
+2026-01-05 00:59:03.552 +06:00 [INF] Executed endpoint 'HTTP: DELETE /api/v{version:apiVersion}/classes/{id:long} => DeleteV1'
+2026-01-05 00:59:03.553 +06:00 [INF] Request finished HTTP/2 DELETE https://localhost:44318/api/v1/classes/14 - 200 null application/json; charset=utf-8 22.7993ms
+2026-01-05 00:59:03.572 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 00:59:03.573 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:03.573 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:59:03.579 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 00:59:03.583 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 00:59:03.584 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 00:59:03.584 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 00:59:03.585 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 00:59:03.585 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 12.4965ms
+2026-01-05 00:59:11.025 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json; charset=utf-8 null
+2026-01-05 00:59:11.025 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:11.026 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 00:59:11.160 +06:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 00:59:11.182 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'ONE') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 00:59:11.262 +06:00 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-05 00:59:11.297 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-05 00:59:11.437 +06:00 [INF] Setting HTTP status code 400.
+2026-01-05 00:59:11.438 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-05 00:59:11.440 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 00:59:11.440 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 400 null application/json; charset=utf-8 415.5373ms
+2026-01-05 00:59:35.213 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json; charset=utf-8 null
+2026-01-05 00:59:35.214 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 00:59:35.215 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 00:59:35.230 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 00:59:35.237 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'ONE') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 00:59:35.246 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-05 00:59:35.250 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-05 00:59:35.369 +06:00 [INF] Setting HTTP status code 400.
+2026-01-05 00:59:35.369 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-05 00:59:35.370 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 00:59:35.370 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 400 null application/json; charset=utf-8 157.1239ms
+2026-01-05 01:00:19.332 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json; charset=utf-8 null
+2026-01-05 01:00:19.333 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:00:19.333 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 01:00:19.357 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 01:00:19.363 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'ONE') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 01:00:19.368 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-05 01:00:19.378 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-05 01:00:19.517 +06:00 [INF] Setting HTTP status code 400.
+2026-01-05 01:00:19.517 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-05 01:00:19.518 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 01:00:19.518 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 400 null application/json; charset=utf-8 185.7372ms
+2026-01-05 01:00:25.415 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 01:00:25.417 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:00:25.417 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:00:25.423 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 01:00:25.429 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 01:00:25.429 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 01:00:25.429 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 01:00:25.429 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:00:25.430 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 14.2537ms
+2026-01-05 01:00:25.925 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 01:00:25.925 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:00:25.926 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:00:25.937 +06:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 01:00:25.946 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 01:00:25.946 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 01:00:25.946 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 01:00:25.947 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:00:25.947 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 22.6531ms
+2026-01-05 01:01:28.675 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 01:01:28.676 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:01:28.676 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:01:28.683 +06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 01:01:28.688 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 01:01:28.689 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 01:01:28.689 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 01:01:28.690 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:01:28.690 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 15.2526ms
+2026-01-05 01:01:29.389 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-01-05 01:01:29.389 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:01:29.390 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:01:29.401 +06:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-01-05 01:01:29.409 +06:00 [INF] Executed DbCommand (6ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-01-05 01:01:29.409 +06:00 [INF] Setting HTTP status code 200.
+2026-01-05 01:01:29.409 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-01-05 01:01:29.410 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-01-05 01:01:29.410 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 21.399ms
+2026-01-05 01:02:31.953 +06:00 [INF] Request starting HTTP/2 POST https://localhost:44318/api/v1/classes - application/json; charset=utf-8 null
+2026-01-05 01:02:31.954 +06:00 [INF] Authentication successful for user: Barguna2
+2026-01-05 01:02:31.954 +06:00 [INF] Executing endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 01:02:31.960 +06:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = CAST(0 AS bigint)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 01:02:31.963 +06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Classes] AS [c]
+        WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Name] = N'ONE') THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-05 01:02:31.967 +06:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 20), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='60']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Classes] ([CreatedAt], [CreatedBy], [DeleteAt], [IsDeleted], [Name], [UpdatedAt], [UpdatedBy])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-01-05 01:02:31.972 +06:00 [ERR] An exception occurred in the database while saving changes for context type 'EduSystem.ApplicationUsers.Infrastructure.Contexts.AppUserDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Classes' with unique index 'IX_Classes_Name'. The duplicate key value is (ONE).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:10735dbf-4056-4038-bc96-c2ea1cc9e9ca
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-01-05 01:02:32.067 +06:00 [INF] Setting HTTP status code 400.
+2026-01-05 01:02:32.067 +06:00 [INF] Writing value of type '<>f__AnonymousType0`3' as Json.
+2026-01-05 01:02:32.067 +06:00 [INF] Executed endpoint 'HTTP: POST /api/v{version:apiVersion}/classes/ => CreateV1'
+2026-01-05 01:02:32.068 +06:00 [INF] Request finished HTTP/2 POST https://localhost:44318/api/v1/classes - 400 null application/json; charset=utf-8 114.4303ms

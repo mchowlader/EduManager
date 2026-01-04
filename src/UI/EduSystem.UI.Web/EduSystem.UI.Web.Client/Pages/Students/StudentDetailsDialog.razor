@@ -12,7 +12,7 @@
             <!-- Personal Info -->
             <MudItem xs="12" md="6">
                 <MudText Typo="Typo.subtitle2" Color="Color.Secondary">Personal Information</MudText>
-                <MudList T="string" Dense="true" DisablePadding="true">
+                <MudList T="string" Dense="true" Padding="false">
                     <MudListItem Text="@($"Phone: {Student.Phone}")" Icon="@Icons.Material.Filled.Phone" />
                     <MudListItem Text="@($"DOB: {Student.DateOfBirth:dd MMM yyyy}")" Icon="@Icons.Material.Filled.CalendarToday" />
                     <MudListItem Text="@($"Birth ID: {Student.DateOfBirthNo}")" Icon="@Icons.Material.Filled.PermIdentity" />
@@ -22,7 +22,7 @@
             <!-- Academic Info -->
             <MudItem xs="12" md="6">
                 <MudText Typo="Typo.subtitle2" Color="Color.Secondary">Academic Information</MudText>
-                <MudList T="string" Dense="true" DisablePadding="true">
+                <MudList T="string" Dense="true" Padding="false">
                     <MudListItem Text="@($"Class: {Student.Class}")" Icon="@Icons.Material.Filled.Class" />
                     <MudListItem Text="@($"Department: {Student.Department}")" Icon="@Icons.Material.Filled.School" />
                 </MudList>
@@ -59,5 +59,5 @@
     [CascadingParameter] IMudDialogInstance? DialogInstance { get; set; }
     [Parameter] public StudentModel Student { get; set; } = new StudentModel();
 
-    private void Cancel() => DialogInstance.Cancel();
+    private void Cancel() => DialogInstance?.Cancel();
 }

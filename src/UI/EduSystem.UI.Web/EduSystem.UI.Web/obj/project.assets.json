@@ -1640,8 +1640,8 @@
     },
     "EduSystem.Shared.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../../Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
-      "msbuildProject": "../../../Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
+      "path": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
     },
     "EduSystem.UI.Web.Client/1.0.0": {
       "type": "project",
@@ -1694,8 +1694,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+            "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
             },
             "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
               "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj"

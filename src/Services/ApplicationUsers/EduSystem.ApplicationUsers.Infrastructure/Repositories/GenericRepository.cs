@@ -2,6 +2,7 @@ using EduSystem.ApplicationUsers.Domain.IRepository;
 using EduSystem.ApplicationUsers.Domain.Entities;
 using EduSystem.ApplicationUsers.Infrastructure.Contexts;
 using EduSystem.Shared.Infrastructure.Utilities;
+using EduSystem.ApplicationUsers.Shared.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSystem.ApplicationUsers.Infrastructure.Repositories;

@@ -24,10 +24,11 @@
 </ItemGroup>
 
 <ItemGroup>
-  <ProjectReference Include="..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
-  <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
+  <ProjectReference Include="..\..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
+  <ProjectReference Include="..\..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
   <ProjectReference Include="..\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj" />
   <ProjectReference Include="..\EduSystem.ApplicationUsers.Domain\EduSystem.ApplicationUsers.Domain.csproj" />
+  <ProjectReference Include="..\EduSystem.ApplicationUsers.Shared\EduSystem.ApplicationUsers.Shared.csproj" />
 </ItemGroup>	
 
 	

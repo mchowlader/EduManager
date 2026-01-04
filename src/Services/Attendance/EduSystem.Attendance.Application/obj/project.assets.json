@@ -2491,18 +2491,18 @@
     },
     "EduSystem.Shared.Event/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj",
-      "msbuildProject": "../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj"
+      "path": "../../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj",
+      "msbuildProject": "../../../Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj"
     },
     "EduSystem.Shared.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
-      "msbuildProject": "../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
+      "path": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj",
+      "msbuildProject": "../../../Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj"
     },
     "EduSystem.Shared.Messaging/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj",
-      "msbuildProject": "../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj"
+      "path": "../../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj",
+      "msbuildProject": "../../../Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2544,8 +2544,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+            "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
             }
           }
         }

@@ -41,6 +41,7 @@ builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<IApiService, ApiService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAcademyService, AcademyService>();
+builder.Services.AddScoped<IClassesService, ClassesService>();
 
 // ✅ Gateway URL - appsettings.json থেকে পড়বে
 // WASM mode এ appsettings.json wwwroot folder এ থাকে

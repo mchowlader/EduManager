@@ -24,8 +24,8 @@
  </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
-    <ProjectReference Include="..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EduSystem.Shared.Infrastructure\EduSystem.Shared.Infrastructure.csproj" />
     <ProjectReference Include="..\EduSystem.ApplicationUsers.Application\EduSystem.ApplicationUsers.Application.csproj" />
     <ProjectReference Include="..\EduSystem.ApplicationUsers.Infrastructure\EduSystem.ApplicationUsers.Infrastructure.csproj" />
     <ProjectReference Include="..\EduSystem.ApplicationUsers.Shared\EduSystem.ApplicationUsers.Shared.csproj" />

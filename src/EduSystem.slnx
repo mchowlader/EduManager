@@ -51,18 +51,18 @@
     <Project Path="Services/Report/EduSystem.Report.Infrastructure/EduSystem.Report.Infrastructure.csproj" />
     <Project Path="Services/Report/EduSystem.Report.Shared/EduSystem.Report.Shared.csproj" />
   </Folder>
-  <Folder Name="/Services/Shared/">
-    <File Path="RabbitMQ_RunCmd.txt" />
-    <Project Path="Services/Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj" Id="b2381d9a-c319-4f6a-a93a-047c0897ef24" />
+  <Folder Name="/Shared/">
+    <File Path="Shared/RabbitMQ_RunCmd.txt" />
+    <Project Path="Shared/EduSystem.Shared.Infrastructure/EduSystem.Shared.Infrastructure.csproj" Id="b2381d9a-c319-4f6a-a93a-047c0897ef24" />
   </Folder>
-  <Folder Name="/Services/Shared/Events/">
-    <Project Path="Services/Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj" Id="bf1e3088-0618-4206-9740-b2cee38b840f" />
+  <Folder Name="/Shared/Events/">
+    <Project Path="Shared/Events/EduSystem.Shared.Event/EduSystem.Shared.Event.csproj" Id="bf1e3088-0618-4206-9740-b2cee38b840f" />
   </Folder>
-  <Folder Name="/Services/Shared/Gateway/">
-    <Project Path="Services/Shared/Gateway/EduSystem.ApiGateway/EduSystem.ApiGateway.csproj" Id="95fffc43-e720-4080-9c52-f92ed3411e76" />
+  <Folder Name="/Shared/Gateway/">
+    <Project Path="Shared/Gateway/EduSystem.ApiGateway/EduSystem.ApiGateway.csproj" Id="95fffc43-e720-4080-9c52-f92ed3411e76" />
   </Folder>
-  <Folder Name="/Services/Shared/Messaging/">
-    <Project Path="Services/Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj" Id="3ff04559-5345-45c0-a3af-09b9f2f25e7d" />
+  <Folder Name="/Shared/Messaging/">
+    <Project Path="Shared/Messaging/EduSystem.Shared.Messaging/EduSystem.Shared.Messaging.csproj" Id="3ff04559-5345-45c0-a3af-09b9f2f25e7d" />
   </Folder>
   <Folder Name="/UI/">
     <Project Path="UI/EduSystem.UI.Web/EduSystem.UI.Web.Client/EduSystem.UI.Web.Client.csproj" Id="32e27d98-7a9e-4f68-9fd7-8d8eacdd7654" />

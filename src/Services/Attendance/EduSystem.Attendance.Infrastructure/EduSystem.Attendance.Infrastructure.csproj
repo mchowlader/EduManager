@@ -24,7 +24,7 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Messaging\EduSystem.Shared.Messaging\EduSystem.Shared.Messaging.csproj" />
     <ProjectReference Include="..\EduSystem.Attendance.Application\EduSystem.Attendance.Application.csproj" />
     <ProjectReference Include="..\EduSystem.Attendance.Domain\EduSystem.Attendance.Domain.csproj" />
   </ItemGroup>
