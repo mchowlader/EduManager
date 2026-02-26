@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj": {}
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj": {}
   },
   "projects": {
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj": {
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
         "projectName": "EduSystem.Attendance.Api",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,20 +33,20 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj"
+              "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj"
+              "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj"
+              "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -61,7 +61,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -121,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -539,14 +539,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj",
         "projectName": "EduSystem.Attendance.Application",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -568,8 +568,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -584,7 +584,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -611,7 +611,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -889,14 +889,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj": {
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj",
         "projectName": "EduSystem.Attendance.Domain",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -930,7 +930,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -951,7 +951,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1229,14 +1229,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj": {
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
         "projectName": "EduSystem.Attendance.Infrastructure",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1258,14 +1258,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj"
+              "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Application\\EduSystem.Attendance.Application.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj"
+              "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Domain\\EduSystem.Attendance.Domain.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj"
               }
             }
           }
@@ -1280,7 +1280,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -1339,7 +1339,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1617,14 +1617,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj": {
+    "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj",
         "projectName": "EduSystem.Attendance.Shared",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\EduSystem.Attendance.Shared.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1658,7 +1658,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -1679,7 +1679,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1957,14 +1957,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+    "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
         "projectName": "EduSystem.Shared.Infrastructure",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1998,7 +1998,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -2040,7 +2040,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -2458,14 +2458,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
+    "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
         "projectName": "EduSystem.Shared.Event",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2499,7 +2499,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -2520,7 +2520,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -2798,14 +2798,14 @@
         }
       }
     },
-    "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
+    "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
         "projectName": "EduSystem.Shared.Messaging",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\EduSystem.Shared.Messaging.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\Shared\\Messaging\\EduSystem.Shared.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2827,11 +2827,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
               },
-              "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
-                "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj"
+              "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj": {
+                "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\Events\\EduSystem.Shared.Event\\EduSystem.Shared.Event.csproj"
               }
             }
           }
@@ -2846,7 +2846,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -2889,7 +2889,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

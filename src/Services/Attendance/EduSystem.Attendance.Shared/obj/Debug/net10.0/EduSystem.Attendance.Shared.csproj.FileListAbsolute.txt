@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\refint\EduSystem.Attendance.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\ref\EduSystem.Attendance.Shared.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\bin\Debug\net10.0\EduSystem.Attendance.Shared.deps.json
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\bin\Debug\net10.0\EduSystem.Attendance.Shared.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\bin\Debug\net10.0\EduSystem.Attendance.Shared.pdb
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.sourcelink.json
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\refint\EduSystem.Attendance.Shared.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\EduSystem.Attendance.Shared.pdb
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Shared\obj\Debug\net10.0\ref\EduSystem.Attendance.Shared.dll

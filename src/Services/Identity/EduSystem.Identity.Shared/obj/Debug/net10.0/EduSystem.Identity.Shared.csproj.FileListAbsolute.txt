@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\refint\EduSystem.Identity.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\ref\EduSystem.Identity.Shared.dll
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.deps.json
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.dll
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\bin\Debug\net10.0\EduSystem.Identity.Shared.pdb
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.sourcelink.json
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.dll
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\refint\EduSystem.Identity.Shared.dll
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\EduSystem.Identity.Shared.pdb
+E:\MCH\EduManager\src\Services\Identity\EduSystem.Identity.Shared\obj\Debug\net10.0\ref\EduSystem.Identity.Shared.dll

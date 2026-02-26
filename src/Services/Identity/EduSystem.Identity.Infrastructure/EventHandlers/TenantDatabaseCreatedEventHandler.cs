@@ -9,7 +9,7 @@ namespace EduSystem.Identity.Infrastructure.EventHandlers;
 
 public class TenantDatabaseCreatedEventHandler : BaseMigrationHandler<IdentityDbContext>
 {
-    protected override string ServiceName => "Attendance";
+    protected override string ServiceName => "Identity";
 
     public TenantDatabaseCreatedEventHandler(ITenantMigrationService<IdentityDbContext> migrationService, IEventBus eventBus,
         ILogger<TenantDatabaseCreatedEventHandler> logger)

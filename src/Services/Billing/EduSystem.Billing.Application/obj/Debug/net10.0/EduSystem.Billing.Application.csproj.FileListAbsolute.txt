@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\refint\EduSystem.Billing.Application.dll
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.pdb
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\ref\EduSystem.Billing.Application.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.deps.json
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\bin\Debug\net10.0\EduSystem.Billing.Application.pdb
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.sourcelink.json
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\refint\EduSystem.Billing.Application.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\EduSystem.Billing.Application.pdb
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Application\obj\Debug\net10.0\ref\EduSystem.Billing.Application.dll

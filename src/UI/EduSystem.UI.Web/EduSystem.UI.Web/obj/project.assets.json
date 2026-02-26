@@ -38,7 +38,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.App.Internal.Assets/10.0.1": {
+      "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.App.Internal.Assets.props": {},
@@ -216,7 +216,7 @@
           }
         }
       },
-      "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.101": {
+      "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.200-preview.0.26103.119": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll": {}
@@ -636,7 +636,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": "10.0.1",
-          "Microsoft.DotNet.HotReload.WebAssembly.Browser": "10.0.101",
+          "Microsoft.DotNet.HotReload.WebAssembly.Browser": "10.0.200-preview.0.26103.119",
           "MudBlazor": "8.15.0",
           "System.IdentityModel.Tokens.Jwt": "8.15.0"
         },
@@ -690,10 +690,10 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Microsoft.AspNetCore.App.Internal.Assets/10.0.1": {
-      "sha512": "rafnWkNfJPA0nCZ5u9bFLiIhCv+aGDWBPJMejuROFMHEpsNhTdv8Cvhv+2jIH+b5485FhndbiwOQJUBMeBa6BQ==",
+    "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
+      "sha512": "fMAqrUm+aspxRAsCJ6Hlgs96XSHwNIr9HBNt7wyBAzQkPlfE7w+0C4NzDoJnso5YZyDI0VcRtEXxG9odt3KiZA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.app.internal.assets/10.0.1",
+      "path": "microsoft.aspnetcore.app.internal.assets/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -709,7 +709,7 @@
         "build/Microsoft.AspNetCore.App.Internal.Assets.targets",
         "buildMultiTargeting/Microsoft.AspNetCore.App.Internal.Assets.targets",
         "buildTransitive/Microsoft.AspNetCore.App.Internal.Assets.targets",
-        "microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.app.internal.assets.10.0.2.nupkg.sha512",
         "microsoft.aspnetcore.app.internal.assets.nuspec"
       ]
     },
@@ -1072,10 +1072,10 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
       ]
     },
-    "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.101": {
-      "sha512": "30d2d7ti8GiDYf9zg4+w5cvH3jm9HAQMyXzZgCVpEjmh3WLErJazuu2tyoIO75uNYLWPD/NNTTRD9SoPpDiACw==",
+    "Microsoft.DotNet.HotReload.WebAssembly.Browser/10.0.200-preview.0.26103.119": {
+      "sha512": "kuTJn2H5ek5+YnEYjG+NsR5pKMPlnvT2yW5eEbmWrkadGj4PAAb6KTR1vzH6Js0lytQFL3AtlElVqYpw7Y6lGA==",
       "type": "package",
-      "path": "microsoft.dotnet.hotreload.webassembly.browser/10.0.101",
+      "path": "microsoft.dotnet.hotreload.webassembly.browser/10.0.200-preview.0.26103.119",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1086,7 +1086,7 @@
         "buildMultiTargeting/Microsoft.DotNet.HotReload.WebAssembly.Browser.props",
         "buildTransitive/Microsoft.DotNet.HotReload.WebAssembly.Browser.props",
         "lib/net10.0/Microsoft.DotNet.HotReload.WebAssembly.Browser.dll",
-        "microsoft.dotnet.hotreload.webassembly.browser.10.0.101.nupkg.sha512",
+        "microsoft.dotnet.hotreload.webassembly.browser.10.0.200-preview.0.26103.119.nupkg.sha512",
         "microsoft.dotnet.hotreload.webassembly.browser.nuspec",
         "staticwebassets/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js"
       ]
@@ -1653,7 +1653,7 @@
     "net10.0": [
       "EduSystem.Shared.Infrastructure >= 1.0.0",
       "EduSystem.UI.Web.Client >= 1.0.0",
-      "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.1",
+      "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 10.0.0",
       "MudBlazor >= 8.15.0",
       "Serilog >= 4.3.0",
@@ -1668,11 +1668,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\EduSystem.UI.Web.csproj",
+      "projectUniqueName": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\EduSystem.UI.Web.csproj",
       "projectName": "EduSystem.UI.Web",
-      "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\EduSystem.UI.Web.csproj",
+      "projectPath": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\EduSystem.UI.Web.csproj",
       "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-      "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\obj\\",
+      "outputPath": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1694,11 +1694,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
+            "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj": {
+              "projectPath": "E:\\MCH\\EduManager\\src\\Shared\\EduSystem.Shared.Infrastructure\\EduSystem.Shared.Infrastructure.csproj"
             },
-            "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj"
+            "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
+              "projectPath": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj"
             }
           }
         }
@@ -1713,7 +1713,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -1722,7 +1722,7 @@
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[10.0.1, )",
+            "version": "[10.0.2, )",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.Components.WebAssembly.Server": {
@@ -1765,7 +1765,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

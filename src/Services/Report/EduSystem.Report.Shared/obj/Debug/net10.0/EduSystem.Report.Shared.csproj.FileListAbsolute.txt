@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Deb
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\refint\EduSystem.Report.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\ref\EduSystem.Report.Shared.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\bin\Debug\net10.0\EduSystem.Report.Shared.deps.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\bin\Debug\net10.0\EduSystem.Report.Shared.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\bin\Debug\net10.0\EduSystem.Report.Shared.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.sourcelink.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\refint\EduSystem.Report.Shared.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\EduSystem.Report.Shared.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Shared\obj\Debug\net10.0\ref\EduSystem.Report.Shared.dll

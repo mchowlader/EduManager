@@ -1,0 +1,187 @@
+2026-02-27 00:10:53.321 +06:00 [INF] 🚀 Starting bulk migration for 1 tenants...
+2026-02-27 00:10:53.375 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur6 (Attempt 1/3)
+2026-02-27 00:10:54.917 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur6
+2026-02-27 00:10:54.922 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 00:10:55.163 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 00:10:55.255 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 00:10:55.671 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 00:10:55.726 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 00:10:55.746 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 00:10:55.855 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 00:10:55.855 +06:00 [INF] Hosting environment: Development
+2026-02-27 00:10:55.855 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 00:10:55.986 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 266.9663ms
+2026-02-27 00:10:55.995 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 00:11:02.902 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2026-02-27 00:11:02.977 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 75.6323ms
+2026-02-27 00:11:03.015 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-27 00:11:03.022 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 14965 application/javascript; charset=utf-8 5.9928ms
+2026-02-27 00:11:03.037 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-02-27 00:11:03.073 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.2141ms
+2026-02-27 00:11:03.222 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-02-27 00:11:03.232 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0587ms
+2026-02-27 00:11:20.087 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - null null
+2026-02-27 00:11:20.112 +06:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-27 00:11:20.118 +06:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-27 00:11:20.119 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/section?pageNumber=1&pageSize=10 - 401 null null 32.315ms
+2026-02-27 00:15:27.377 +06:00 [INF] 🚀 Starting bulk migration for 1 tenants...
+2026-02-27 00:15:27.442 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur6 (Attempt 1/3)
+2026-02-27 00:15:29.077 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur6
+2026-02-27 00:15:29.082 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 00:15:29.372 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 00:15:29.485 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 00:15:29.850 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 00:15:29.915 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 00:15:29.946 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 00:15:30.070 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 00:15:30.070 +06:00 [INF] Hosting environment: Development
+2026-02-27 00:15:30.070 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 00:15:30.223 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 310.695ms
+2026-02-27 00:15:30.228 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 00:15:38.721 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2026-02-27 00:15:38.792 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 73.0664ms
+2026-02-27 00:15:38.823 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-27 00:15:38.831 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-02-27 00:15:38.832 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 14965 application/javascript; charset=utf-8 8.4545ms
+2026-02-27 00:15:38.872 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.4002ms
+2026-02-27 00:15:38.952 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-02-27 00:15:38.961 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.1469ms
+2026-02-27 00:20:09.749 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Kalmegha
+2026-02-27 00:20:09.750 +06:00 [INF] 🔄 Applying migrations for tenant: Kalmegha (Attempt 1/3)
+2026-02-27 00:20:18.710 +06:00 [INF] ✅ Migrations applied successfully for tenant: Kalmegha
+2026-02-27 00:20:18.712 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2026-02-27 00:20:18.827 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2026-02-27 00:26:03.541 +06:00 [INF] 🚀 Starting bulk migration for 2 tenants...
+2026-02-27 00:26:03.650 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur6 (Attempt 1/3)
+2026-02-27 00:26:06.206 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur6
+2026-02-27 00:26:06.211 +06:00 [INF] 🔄 Applying migrations for tenant: Kalmegha (Attempt 1/3)
+2026-02-27 00:26:06.533 +06:00 [INF] ✅ Migrations applied successfully for tenant: Kalmegha
+2026-02-27 00:26:06.534 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 00:26:07.000 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 00:26:07.190 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 00:26:07.770 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 00:26:07.846 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 00:26:07.883 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 00:26:08.035 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 00:26:08.035 +06:00 [INF] Hosting environment: Development
+2026-02-27 00:26:08.035 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 00:26:08.227 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 384.8245ms
+2026-02-27 00:26:08.232 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 00:26:20.010 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2026-02-27 00:26:20.094 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 85.926ms
+2026-02-27 00:26:20.193 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-27 00:26:20.200 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 14965 application/javascript; charset=utf-8 6.2554ms
+2026-02-27 00:26:20.205 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-02-27 00:26:20.249 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.1753ms
+2026-02-27 00:26:20.339 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-02-27 00:26:20.353 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.7588ms
+2026-02-27 00:28:51.247 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Shymoli 
+2026-02-27 00:28:51.247 +06:00 [INF] 🔄 Applying migrations for tenant: Shymoli  (Attempt 1/3)
+2026-02-27 00:28:52.104 +06:00 [INF] ✅ Migrations applied successfully for tenant: Shymoli 
+2026-02-27 00:28:52.107 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2026-02-27 00:28:52.325 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2026-02-27 01:38:16.708 +06:00 [INF] 🚀 Starting bulk migration for 3 tenants...
+2026-02-27 01:38:16.787 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur6 (Attempt 1/3)
+2026-02-27 01:38:18.922 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur6
+2026-02-27 01:38:18.929 +06:00 [INF] 🔄 Applying migrations for tenant: Kalmegha (Attempt 1/3)
+2026-02-27 01:38:19.264 +06:00 [INF] ✅ Migrations applied successfully for tenant: Kalmegha
+2026-02-27 01:38:19.264 +06:00 [INF] 🔄 Applying migrations for tenant: Shymoli  (Attempt 1/3)
+2026-02-27 01:38:19.585 +06:00 [INF] ✅ Migrations applied successfully for tenant: Shymoli 
+2026-02-27 01:38:19.585 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 01:38:19.794 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 01:38:19.896 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 01:38:20.300 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 01:38:20.344 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 01:38:20.361 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 01:38:20.440 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 01:38:20.441 +06:00 [INF] Hosting environment: Development
+2026-02-27 01:38:20.441 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 01:38:20.614 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 272.5092ms
+2026-02-27 01:38:20.618 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 01:39:48.759 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2026-02-27 01:39:48.849 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 89.5238ms
+2026-02-27 01:39:48.909 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-02-27 01:39:48.909 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-27 01:39:48.915 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 14965 application/javascript; charset=utf-8 5.8019ms
+2026-02-27 01:39:48.964 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.4342ms
+2026-02-27 01:39:49.092 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-02-27 01:39:49.101 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3213ms
+2026-02-27 01:41:11.851 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Barguna
+2026-02-27 01:41:11.852 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-02-27 01:41:12.317 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-02-27 01:41:12.320 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2026-02-27 01:41:12.405 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2026-02-27 01:43:51.290 +06:00 [INF] 🚀 Starting bulk migration for 0 tenants...
+2026-02-27 01:43:51.338 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 01:43:51.639 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 01:43:51.764 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 01:43:52.075 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 01:43:52.182 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 01:43:52.200 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 01:43:52.311 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 01:43:52.311 +06:00 [INF] Hosting environment: Development
+2026-02-27 01:43:52.311 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 01:43:52.529 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 350.925ms
+2026-02-27 01:43:52.535 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 01:45:25.672 +06:00 [INF] 🚀 Starting bulk migration for 0 tenants...
+2026-02-27 01:45:25.714 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 01:45:26.055 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 01:45:26.174 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 01:45:26.710 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 01:45:26.793 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 01:45:26.812 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 01:45:26.916 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 01:45:26.916 +06:00 [INF] Hosting environment: Development
+2026-02-27 01:45:26.916 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 01:45:27.052 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 260.3676ms
+2026-02-27 01:45:27.056 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 01:47:53.968 +06:00 [INF] 🚀 Starting bulk migration for 0 tenants...
+2026-02-27 01:47:54.027 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 01:47:54.342 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 01:47:54.496 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 01:47:54.960 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 01:47:55.069 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 01:47:55.092 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 01:47:55.197 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 01:47:55.197 +06:00 [INF] Hosting environment: Development
+2026-02-27 01:47:55.197 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 01:47:55.345 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 281.4532ms
+2026-02-27 01:47:55.350 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 02:02:19.597 +06:00 [INF] 🚀 Starting bulk migration for 0 tenants...
+2026-02-27 02:02:19.642 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-27 02:02:20.031 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-27 02:02:20.162 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-27 02:02:20.712 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-27 02:02:20.776 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-27 02:02:20.799 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-27 02:02:20.914 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 02:02:20.914 +06:00 [INF] Hosting environment: Development
+2026-02-27 02:02:20.914 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-27 02:02:21.100 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 323.9051ms
+2026-02-27 02:02:21.106 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-27 02:04:24.133 +06:00 [INF] [ApplicationUsers] 📨 Received migration event for tenant: Barguna
+2026-02-27 02:04:24.147 +06:00 [INF] 🔄 Applying migrations for tenant: Barguna (Attempt 1/3)
+2026-02-27 02:04:33.670 +06:00 [INF] ✅ Migrations applied successfully for tenant: Barguna
+2026-02-27 02:04:33.674 +06:00 [INF] Publishing event: ServiceMigrationCompletedEvent
+2026-02-27 02:04:33.751 +06:00 [INF] Event published: ServiceMigrationCompletedEvent
+2026-02-27 02:05:34.859 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/api/v1/classes - null null
+2026-02-27 02:05:34.951 +06:00 [INF] Authentication successful for user: Barguna
+2026-02-27 02:05:34.960 +06:00 [INF] Executing endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-02-27 02:05:34.964 +06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-27 02:05:35.408 +06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+SELECT COUNT(*)
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2026-02-27 02:05:35.429 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-27 02:05:35.429 +06:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-02-27 02:05:35.499 +06:00 [INF] Executed DbCommand (22ms) [Parameters=[@p='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='60']
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeleteAt], [c].[IsDeleted], [c].[Name], [c].[UpdatedAt], [c].[UpdatedBy]
+FROM [Classes] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
+2026-02-27 02:05:35.505 +06:00 [INF] Setting HTTP status code 200.
+2026-02-27 02:05:35.509 +06:00 [INF] Writing value of type '<>f__AnonymousType1`3' as Json.
+2026-02-27 02:05:35.517 +06:00 [INF] Executed endpoint 'HTTP: GET /api/v{version:apiVersion}/classes/ => GetAllV1'
+2026-02-27 02:05:35.527 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/api/v1/classes - 200 null application/json; charset=utf-8 668.4113ms

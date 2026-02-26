@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q95hQy95E70=",
+  "dgSpecHash": "DczitmrzXvg=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Admin\\EduSystem.Admin.Api\\EduSystem.Admin.Api.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Admin\\EduSystem.Admin.Api\\EduSystem.Admin.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

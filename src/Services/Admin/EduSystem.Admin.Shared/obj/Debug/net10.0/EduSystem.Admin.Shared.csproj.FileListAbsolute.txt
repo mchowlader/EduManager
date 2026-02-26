@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug
 D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\refint\EduSystem.Admin.Shared.dll
 D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.pdb
 D:\MCH\PetProject\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\ref\EduSystem.Admin.Shared.dll
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\bin\Debug\net10.0\EduSystem.Admin.Shared.deps.json
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\bin\Debug\net10.0\EduSystem.Admin.Shared.dll
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\bin\Debug\net10.0\EduSystem.Admin.Shared.pdb
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.sourcelink.json
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.dll
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\refint\EduSystem.Admin.Shared.dll
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\EduSystem.Admin.Shared.pdb
+E:\MCH\EduManager\src\Services\Admin\EduSystem.Admin.Shared\obj\Debug\net10.0\ref\EduSystem.Admin.Shared.dll

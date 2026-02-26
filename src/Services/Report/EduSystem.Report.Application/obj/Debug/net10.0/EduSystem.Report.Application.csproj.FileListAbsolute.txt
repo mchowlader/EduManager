@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\ob
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\refint\EduSystem.Report.Application.dll
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.pdb
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\ref\EduSystem.Report.Application.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.deps.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\bin\Debug\net10.0\EduSystem.Report.Application.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.sourcelink.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\refint\EduSystem.Report.Application.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\EduSystem.Report.Application.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Application\obj\Debug\net10.0\ref\EduSystem.Report.Application.dll

@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Deb
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\refint\EduSystem.Report.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\ref\EduSystem.Report.Domain.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\bin\Debug\net10.0\EduSystem.Report.Domain.deps.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\bin\Debug\net10.0\EduSystem.Report.Domain.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\bin\Debug\net10.0\EduSystem.Report.Domain.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.sourcelink.json
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\refint\EduSystem.Report.Domain.dll
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\EduSystem.Report.Domain.pdb
+E:\MCH\EduManager\src\Services\Report\EduSystem.Report.Domain\obj\Debug\net10.0\ref\EduSystem.Report.Domain.dll

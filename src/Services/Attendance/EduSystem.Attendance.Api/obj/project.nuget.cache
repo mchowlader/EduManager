@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eo+QTTF2SxA=",
+  "dgSpecHash": "HcGPdaVDh4Y=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Api\\EduSystem.Attendance.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

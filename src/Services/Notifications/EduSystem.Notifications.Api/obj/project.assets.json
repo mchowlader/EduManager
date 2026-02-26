@@ -149,11 +149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\EduSystem.Notifications.Api.csproj",
+      "projectUniqueName": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\EduSystem.Notifications.Api.csproj",
       "projectName": "EduSystem.Notifications.Api",
-      "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\EduSystem.Notifications.Api.csproj",
+      "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\EduSystem.Notifications.Api.csproj",
       "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-      "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\obj\\",
+      "outputPath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -175,14 +175,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Application\\EduSystem.Notifications.Application.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Application\\EduSystem.Notifications.Application.csproj"
+            "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Application\\EduSystem.Notifications.Application.csproj": {
+              "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Application\\EduSystem.Notifications.Application.csproj"
             },
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj"
+            "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj": {
+              "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj"
             },
-            "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Shared\\EduSystem.Notifications.Shared.csproj": {
-              "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Shared\\EduSystem.Notifications.Shared.csproj"
+            "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Shared\\EduSystem.Notifications.Shared.csproj": {
+              "projectPath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Shared\\EduSystem.Notifications.Shared.csproj"
             }
           }
         }
@@ -197,7 +197,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -221,7 +221,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

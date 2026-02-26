@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {}
+    "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {}
   },
   "projects": {
-    "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
+    "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
+        "projectUniqueName": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
         "projectName": "EduSystem.UI.Web.Client",
-        "projectPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
+        "projectPath": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\EduSystem.UI.Web.Client.csproj",
         "packagesPath": "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\",
-        "outputPath": "D:\\MCH\\PetProject\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\obj\\",
+        "outputPath": "E:\\MCH\\EduManager\\src\\UI\\EduSystem.UI.Web\\EduSystem.UI.Web.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -54,7 +54,7 @@
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.1, )",
+              "version": "[10.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.AspNetCore.Components.Authorization": {
@@ -71,7 +71,7 @@
             },
             "Microsoft.DotNet.HotReload.WebAssembly.Browser": {
               "target": "Package",
-              "version": "[10.0.101, )",
+              "version": "[10.0.200-preview.0.26103.119, )",
               "autoReferenced": true
             },
             "Microsoft.Extensions.Http": {
@@ -81,13 +81,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.1, )",
+              "version": "[10.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.0, )",
+              "version": "[10.0.3, )",
               "autoReferenced": true
             },
             "MudBlazor": {
@@ -110,22 +110,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[10.0.0, 10.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[10.0.0, 10.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

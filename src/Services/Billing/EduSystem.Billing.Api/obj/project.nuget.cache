@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rq63+nrigJY=",
+  "dgSpecHash": "U9Ww7PRYIJc=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Billing\\EduSystem.Billing.Api\\EduSystem.Billing.Api.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Billing\\EduSystem.Billing.Api\\EduSystem.Billing.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.0\\microsoft.entityframeworkcore.10.0.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.0\\microsoft.entityframeworkcore.abstractions.10.0.0.nupkg.sha512",

@@ -73,7 +73,7 @@ builder.Services.AddHttpClient("GatewayClient", client =>
 {
     client.BaseAddress = new Uri(gatewayUrl);
     client.DefaultRequestHeaders.Add("Accept", "application/json");
-    client.Timeout = TimeSpan.FromSeconds(30);
+    client.Timeout = TimeSpan.FromSeconds(120);
 })
 .AddHttpMessageHandler<EduSystem.UI.Web.Client.HttpHandlers.AuthenticationHandler>();
 
@@ -82,7 +82,7 @@ builder.Services.AddHttpClient("GatewayApi", client =>
 {
     client.BaseAddress = new Uri(gatewayUrl);
     client.DefaultRequestHeaders.Add("Accept", "application/json");
-    client.Timeout = TimeSpan.FromSeconds(30);
+    client.Timeout = TimeSpan.FromSeconds(120);
 });
 
 // ❌ These separate service clients are not needed

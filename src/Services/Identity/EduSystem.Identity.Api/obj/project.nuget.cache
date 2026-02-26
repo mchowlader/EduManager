@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oFCK4+GjRsg=",
+  "dgSpecHash": "t53igXG+Puw=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Api\\EduSystem.Identity.Api.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Identity\\EduSystem.Identity.Api\\EduSystem.Identity.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

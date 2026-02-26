@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UK7cGZPRE8s=",
+  "dgSpecHash": "etOsfVdlgUI=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Notifications\\EduSystem.Notifications.Infrastructure\\EduSystem.Notifications.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\microsoft.build\\17.7.2\\microsoft.build.17.7.2.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q/J8/keGa4U=",
+  "dgSpecHash": "iu8Qx6BXqws=",
   "success": true,
-  "projectFilePath": "D:\\MCH\\PetProject\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
+  "projectFilePath": "E:\\MCH\\EduManager\\src\\Services\\Attendance\\EduSystem.Attendance.Infrastructure\\EduSystem.Attendance.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\PTSL-Mithun\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

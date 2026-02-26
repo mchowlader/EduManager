@@ -1,0 +1,24 @@
+2026-02-26 23:38:51.354 +06:00 [INF] 🚀 Starting bulk migration for 1 tenants...
+2026-02-26 23:38:51.400 +06:00 [INF] 🔄 Applying migrations for tenant: Hatempur6 (Attempt 1/3)
+2026-02-26 23:38:52.868 +06:00 [INF] ✅ Migrations applied successfully for tenant: Hatempur6
+2026-02-26 23:38:52.872 +06:00 [INF] 🏁 Bulk migration completed.
+2026-02-26 23:38:53.083 +06:00 [INF] Configured endpoint applicationusers-tenant-database-created, Consumer: EduSystem.ApplicationUsers.Infrastructure.EventHandlers.TenantDatabaseCreatedEventHandler
+2026-02-26 23:38:53.163 +06:00 [INF] User profile is available. Using 'C:\Users\PTSL-Mithun\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-26 23:38:53.526 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-26 23:38:53.545 +06:00 [INF] Bus started: "rabbitmq://localhost/"
+2026-02-26 23:38:53.549 +06:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-02-26 23:38:53.632 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-26 23:38:53.632 +06:00 [INF] Hosting environment: Development
+2026-02-26 23:38:53.632 +06:00 [INF] Content root path: E:\MCH\EduManager\src\Services\ApplicationUsers\EduSystem.ApplicationUsers.Api
+2026-02-26 23:38:53.748 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 231.8787ms
+2026-02-26 23:38:53.753 +06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-26 23:38:56.969 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/index.html - null null
+2026-02-26 23:38:57.029 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/index.html - 200 null text/html;charset=utf-8 60.098ms
+2026-02-26 23:38:57.079 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-26 23:38:57.087 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - 200 14965 application/javascript; charset=utf-8 7.629ms
+2026-02-26 23:38:57.101 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - null null
+2026-02-26 23:38:57.129 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.4319ms
+2026-02-26 23:38:57.232 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - null null
+2026-02-26 23:38:57.242 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44318/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2617ms
+2026-02-26 23:39:26.249 +06:00 [INF] Application is shutting down...
+2026-02-26 23:39:26.365 +06:00 [INF] Bus stopped: "rabbitmq://localhost/"

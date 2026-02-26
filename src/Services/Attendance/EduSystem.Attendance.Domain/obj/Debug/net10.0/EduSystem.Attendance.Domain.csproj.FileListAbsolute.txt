@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\refint\EduSystem.Attendance.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\ref\EduSystem.Attendance.Domain.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.deps.json
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\bin\Debug\net10.0\EduSystem.Attendance.Domain.pdb
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.sourcelink.json
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\refint\EduSystem.Attendance.Domain.dll
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\EduSystem.Attendance.Domain.pdb
+E:\MCH\EduManager\src\Services\Attendance\EduSystem.Attendance.Domain\obj\Debug\net10.0\ref\EduSystem.Attendance.Domain.dll

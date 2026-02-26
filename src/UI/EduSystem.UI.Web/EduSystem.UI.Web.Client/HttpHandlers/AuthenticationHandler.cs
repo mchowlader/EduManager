@@ -19,9 +19,7 @@ public class AuthenticationHandler : DelegatingHandler
         _serviceProvider = serviceProvider;
     }
 
-    protected override async Task<HttpResponseMessage> SendAsync(
-        HttpRequestMessage request,
-        CancellationToken cancellationToken)
+    protected override async Task<HttpResponseMessage> SendAsync( HttpRequestMessage request, CancellationToken cancellationToken)
     {
         var isAnonymous = request.Headers.Contains("X-Allow-Anonymous");
         
@@ -42,13 +40,16 @@ public class AuthenticationHandler : DelegatingHandler
             }
         }
 
-        var response = await base.SendAsync(request, cancellationToken);
+        using var timeoutCts = new CancellationTokenSource(TimeSpan.FromMinutes(5));
+        using var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutCts.Token);
+
+        var response = await base.SendAsync(request, linkedCts.Token);
 
         if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized && !isAnonymous)
         {
             try
             {
-                await _semaphore.WaitAsync(cancellationToken);
+                await _semaphore.WaitAsync(linkedCts.Token);
 
                 // Check again if token was refreshed by another thread
                 var authManager = _serviceProvider.GetRequiredService<IAuthManager>();
@@ -60,7 +61,7 @@ public class AuthenticationHandler : DelegatingHandler
                 if (currentToken != requestToken && !string.IsNullOrEmpty(currentToken))
                 {
                     // Token already refreshed, retry with new token
-                    return await RetryRequest(request, currentToken, cancellationToken);
+                    return await RetryRequest(request, currentToken, CancellationToken.None);
                 }
 
                 // Try to refresh
@@ -78,7 +79,7 @@ public class AuthenticationHandler : DelegatingHandler
                     if (refreshResult.Success && refreshResult.Data != null)
                     {
                         await authManager.UpdateTokensAsync(refreshResult.Data.AccessToken, refreshResult.Data.RefreshToken);
-                        return await RetryRequest(request, refreshResult.Data.AccessToken, cancellationToken);
+                        return await RetryRequest(request, refreshResult.Data.AccessToken, CancellationToken.None);
                     }
                 }
 

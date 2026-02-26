@@ -10,3 +10,15 @@ D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\D
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\refint\EduSystem.Billing.Domain.dll
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.pdb
 D:\MCH\PetProject\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\ref\EduSystem.Billing.Domain.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\bin\Debug\net10.0\EduSystem.Billing.Domain.deps.json
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\bin\Debug\net10.0\EduSystem.Billing.Domain.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\bin\Debug\net10.0\EduSystem.Billing.Domain.pdb
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.AssemblyInfoInputs.cache
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.AssemblyInfo.cs
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.csproj.CoreCompileInputs.cache
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.sourcelink.json
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\refint\EduSystem.Billing.Domain.dll
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\EduSystem.Billing.Domain.pdb
+E:\MCH\EduManager\src\Services\Billing\EduSystem.Billing.Domain\obj\Debug\net10.0\ref\EduSystem.Billing.Domain.dll
